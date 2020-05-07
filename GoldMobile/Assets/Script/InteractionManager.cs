@@ -4,28 +4,33 @@ using UnityEngine;
 
 public class InteractionManager : MonoBehaviour
 {
-    private int ID = 0;
-    private bool isIn = false;
-    public GhostManager ghost;
-    private void OnTriggerStay2D(Collider2D collision)
+    private int isPressed = 0;
+    public bool isPressedButton = false;
+
+    public void InteractionWithObject()
     {
-        if (collision.gameObject.CompareTag("GhostPlayer"))
-        {
-            isIn = true;
-        }
+        isPressed = 1;
+        ButtonPressed();
     }
 
-    void Update()
+    public void ButtonPressed()
     {
-        if (isIn && Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("Active");
-            ghost.ChangeControl();
+        StartCoroutine(WaitTime());
+        IEnumerator WaitTime(){
+            yield return new WaitForSeconds(0.2f);
+            isPressed = 0;
         }
+
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void Update()
     {
-        isIn = false;
+        if (isPressed != 0)
+        {
+            isPressedButton = true;
+        }
+        else isPressedButton = false;
     }
+
+    
 }

@@ -7,6 +7,7 @@ public class GhostManager : MonoBehaviour
     Rigidbody2D rb;
     private float speed;
     public bool isP2;
+    public Joystick joystick;
     public bool cam = false;
     public PlayerManager Player1;
 
@@ -26,7 +27,7 @@ public class GhostManager : MonoBehaviour
     {
         if (isP2)
         {
-            rb.MovePosition(transform.position + (new Vector3(0, 1, 0) * Input.GetAxis("Vertical") * speed) + (new Vector3(1, 0, 0) * Input.GetAxis("Horizontal") * speed));
+            rb.MovePosition(transform.position + (new Vector3(0, 1, 0) * joystick.Vertical * speed) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed));
             if (Input.GetKeyDown(KeyCode.Space))
                 ChangeControl();
 
