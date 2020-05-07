@@ -23,8 +23,8 @@ public class PlayerManager : MonoBehaviour
         if (isP1)
         {
             rb.MovePosition(transform.position + (new Vector3(0, 1, 0) * Input.GetAxis("Vertical") * speed) + (new Vector3(1, 0, 0) * Input.GetAxis("Horizontal") * speed));
-            if (Input.GetKeyDown(KeyCode.Space))
-                ChangeControl();
+            //if (Input.GetKeyDown(KeyCode.Space))
+            //    ChangeControl();
 
         }
 

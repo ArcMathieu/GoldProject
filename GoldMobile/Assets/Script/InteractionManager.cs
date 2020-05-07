@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class InteractionManager : MonoBehaviour
 {
+    private int ID = 0;
     private bool isIn = false;
+    public GhostManager ghost;
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("GhostPlayer"))
         {
             isIn = true;
         }
@@ -16,7 +18,10 @@ public class InteractionManager : MonoBehaviour
     void Update()
     {
         if (isIn && Input.GetKeyDown(KeyCode.E))
+        {
             Debug.Log("Active");
+            ghost.ChangeControl();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
