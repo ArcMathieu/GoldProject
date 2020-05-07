@@ -25,25 +25,21 @@ public class ObjectsInteractable : MonoBehaviour
 
     private void Update()
     {
-         if (interact.isPressedButton && isIn)
+         if (interact.isPressedButton)
         {
-            Debug.Log("activatedByGhost");
-            ghost.ChangeControl();
-            isIn = false;
+            if (isIn)
+            {
+                Debug.Log("activatedByGhost");
+                ghost.ChangeControl();
+                isIn = false;
+            }
+            if (isPIn)
+            {
+                Debug.Log("activatedByPlayer");
+                isPIn = false;
+            }
         }
-    }
-    public void Click()
-    {
-        if (isIn)
-        {
-            
-
-        } 
-        if (isPIn)
-        {
-            Debug.Log("activatedByPlayer");
-            isPIn = false;
-        }
+       
     }
 
     private void OnTriggerExit2D(Collider2D collision)

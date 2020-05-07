@@ -9,27 +9,20 @@ public class InteractionManager : MonoBehaviour
 
     public void InteractionWithObject()
     {
-        isPressed = 1;
-        ButtonPressed();
+        if (!isPressedButton)
+        {
+            isPressedButton = true;
+            ButtonPressed();
+        }
     }
 
     public void ButtonPressed()
     {
         StartCoroutine(WaitTime());
         IEnumerator WaitTime(){
-            yield return new WaitForSeconds(0.2f);
-            isPressed = 0;
+            yield return new WaitForSeconds(1);
+            isPressedButton = false;
         }
-
-    }
-
-    private void Update()
-    {
-        if (isPressed != 0)
-        {
-            isPressedButton = true;
-        }
-        else isPressedButton = false;
     }
 
     
