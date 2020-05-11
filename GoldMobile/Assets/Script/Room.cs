@@ -36,11 +36,11 @@ public class Room : MonoBehaviour
 
     private void ActivateEnemies()
     {
-        Debug.Log("isEntitiesActivated");
+        //Debug.Log("isEntitiesActivated");
     }
 
     private void DesactivateEnemies()
     {
-        Debug.Log("isEntitiesUnActivated");
+        //Debug.Log("isEntitiesUnActivated");
     }
 }

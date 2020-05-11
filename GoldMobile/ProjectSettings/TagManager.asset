@@ -7,6 +7,7 @@ TagManager:
   - Interactable
   - PlayerInteract
   - GhostPlayer
+  - touch
   layers:
   - Default
   - TransparentFX
