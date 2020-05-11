@@ -13,7 +13,6 @@ public class DisplayText : MonoBehaviour
     private bool DoneDisplaying = true;
     private bool DoneTalking = false;
 
-
     public float displaySPD;
     private int dialState = 0;
     private int totalvisibleChara;
@@ -25,6 +24,14 @@ public class DisplayText : MonoBehaviour
         dialState = dial.LesDialogues.Count - 1;
     }
 
+    public void DialPass(DialogueData thisDial)
+    {
+        dial = thisDial;
+        dialState = - 1;
+        DoneDisplaying = true;
+        DoneTalking = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -32,11 +39,11 @@ public class DisplayText : MonoBehaviour
         {
             if (isAutomatique == false)
             {
-                if (Input.GetKeyDown("e") && !DoneTalking)
+                if (Input.touchCount > 0 && !DoneTalking)
                 {
                     StartCoroutine(DisplayTextOverTime(displaySPD));
                 }
-                else if (Input.GetKeyDown("e") && DoneTalking)
+                else if (Input.touchCount > 0 && DoneTalking)
                 {
                     tmpro.text = null;
                 }
@@ -81,7 +88,7 @@ public class DisplayText : MonoBehaviour
             displaySPD = 0.02f;
         }
         DoneDisplaying = false;
-    int counter = 0;
+        int counter = 0;
         while (!DoneDisplaying)
         {
             visibleC = counter % (totalvisibleChara + 1);

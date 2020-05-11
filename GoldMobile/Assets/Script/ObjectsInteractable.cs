@@ -9,6 +9,9 @@ public class ObjectsInteractable : MonoBehaviour
     private bool isPIn = false;
     public InteractionManager interact;
     public GhostManager ghost;
+    public DialogueData dial;
+    public DisplayText tdialogue;
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (ID == 1 && collision.gameObject.CompareTag("GhostPlayer"))
@@ -16,30 +19,23 @@ public class ObjectsInteractable : MonoBehaviour
             isIn = true;
             
         }
-        if (ID == 0 && collision.gameObject.CompareTag("Player") && interact.isPressedButton)
+        if (ID == 0 && collision.gameObject.CompareTag("Player"))
         {
             isPIn = true;
 
         }
     }
 
-    private void Update()
+    public void setAction()
     {
-         if (interact.isPressedButton)
-         {
-            if (isIn)
-            {
-                Debug.Log("activatedByGhost");
-                ghost.ChangeControl();
-                isIn = false;
-            }
-            if (isPIn)
-            {
-                Debug.Log("activatedByPlayer");
-                isPIn = false;
-            }
-         }
-       
+        if(isPIn)
+         tdialogue.DialPass(dial);
+
+        if (isIn)
+        {
+            tdialogue.DialPass(dial);
+            ghost.ChangeControl();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

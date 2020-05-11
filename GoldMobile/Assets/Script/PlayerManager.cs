@@ -7,7 +7,7 @@ public class PlayerManager : MonoBehaviour
     Rigidbody2D rb;
     private float speed;
     public Joystick joystick;
-    public bool cam = true;
+    private bool cam = true;
     public bool isP1;
     public GhostManager Player2;
 

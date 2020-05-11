@@ -7,8 +7,8 @@ public class GhostManager : MonoBehaviour
     Rigidbody2D rb;
     private float speed;
     public bool isP2;
+    private bool cam = false;
     public Joystick joystick;
-    public bool cam = false;
     public PlayerManager Player1;
 
     public GameObject barM;

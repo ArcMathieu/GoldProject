@@ -8,26 +8,33 @@ public class Invocation : MonoBehaviour
     public GhostManager ghost;
     public GameObject ghostAppears;
     public InteractionManager interact;
-    public bool isAppears = false;
+    private bool firstTime = true;
+    private bool CanChange = false;
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (!isAppears && collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            if (interact.isPressedButton)
+            if (firstTime && !CanChange)
             {
-                player.ChangeControl();
-                ghostAppears.SetActive(true);
-                isAppears = true;
+                CanChange = true;
             }
         }
     }
-    //private void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    if (isAppears && collision.gameObject.CompareTag("Player"))
-    //    {
-    //        isAppears = false;
-    //    }
-    //}
+    
+    public void setAction()
+    {
+        if (firstTime && CanChange)
+        {
+            player.ChangeControl();
+            ghostAppears.SetActive(true);
+            firstTime = false;
+        }
+        
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        CanChange = false;
+    }
 
 
 }
