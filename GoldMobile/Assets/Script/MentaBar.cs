@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MentaBar : MonoBehaviour
@@ -32,7 +32,7 @@ public class MentaBar : MonoBehaviour
 public class Mental
 {
     public const int Mental_Max = 100;
-    //public GhostManager ghostPos;
+
     private float mentalAmount;
     private float mentalDamage;
 
@@ -44,8 +44,7 @@ public class Mental
 
     public void Update()
     {
-           //if (!ghostPos.detected)
-             mentalAmount += mentalDamage * Time.deltaTime;
+        mentalAmount += mentalDamage * Time.deltaTime;
 
     }
 
