@@ -11,6 +11,11 @@ public class GhostManager : MonoBehaviour
     public bool cam = false;
     public PlayerManager Player1;
 
+    public GameObject barM;
+    public Transform Player;
+    public bool detected;
+    public float distanceDetect = 10f;
+
     public GameObject footP1;
     public GameObject footP2;
 
@@ -38,6 +43,17 @@ public class GhostManager : MonoBehaviour
         }else
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, -1);
+        }
+
+        if (Player)
+        {
+            float distance = (Player.position - transform.position).sqrMagnitude;
+            if (distance < distanceDetect * distanceDetect)
+            {
+                detected = true;
+
+            }
+            else detected = false;
         }
 
     }

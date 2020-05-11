@@ -26,7 +26,7 @@ public class ObjectsInteractable : MonoBehaviour
     private void Update()
     {
          if (interact.isPressedButton)
-        {
+         {
             if (isIn)
             {
                 Debug.Log("activatedByGhost");
@@ -38,7 +38,7 @@ public class ObjectsInteractable : MonoBehaviour
                 Debug.Log("activatedByPlayer");
                 isPIn = false;
             }
-        }
+         }
        
     }
 
