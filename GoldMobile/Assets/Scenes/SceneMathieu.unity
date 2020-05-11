@@ -1166,8 +1166,6 @@ MonoBehaviour:
   ghost: {fileID: 2082903312}
   ghostAppears: {fileID: 2082903311}
   interact: {fileID: 1180113857}
-  isAppears: 0
-  Done: 0
 --- !u!61 &166617175
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3738,6 +3736,59 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &631298856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 631298857}
+  - component: {fileID: 631298858}
+  m_Layer: 5
+  m_Name: Inventory1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &631298857
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631298856}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 711711879}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &631298858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631298856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da6cbd5f140efd46a275bfc82e993e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridSize: 3
+  buttonList: []
+  buttonPrefab: {fileID: 5017470324539153269, guid: 0b859dc2934831c4f8a98f79d1774149,
+    type: 3}
+  buttonSize: 2
 --- !u!1 &632456988
 GameObject:
   m_ObjectHideFlags: 0
@@ -3928,6 +3979,7 @@ RectTransform:
   - {fileID: 1673797848}
   - {fileID: 171824094}
   - {fileID: 109290842}
+  - {fileID: 631298857}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8187,7 +8239,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6120d0d9ff4eb9b428c00c480c75b8c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Obj: {fileID: 265244472}
+  Obj:
+  - {fileID: 265244472}
+  - {fileID: 1646658187}
+  - {fileID: 1648143798}
   Circle: {fileID: 166617174}
 --- !u!1 &1690535890
 GameObject:
