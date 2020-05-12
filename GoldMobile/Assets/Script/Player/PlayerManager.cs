@@ -10,10 +10,12 @@ public class PlayerManager : MonoBehaviour
     private bool cam = true;
     public bool isP1;
     public GhostManager Player2;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
         speed = GameManager._instance.playerSpeed;
         isP1 = true;
@@ -25,6 +27,22 @@ public class PlayerManager : MonoBehaviour
         {
             rb.MovePosition(transform.position + (new Vector3(0, 1, 0) * joystick.Vertical * speed) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed));
 
+            if(joystick.Vertical != 0 || joystick.Horizontal != 0)
+            {
+                anim.SetBool("isWalking", true);
+                if(joystick.Horizontal < 0)
+                {
+                    GetComponentInChildren<SpriteRenderer>().flipX = true;
+                }
+                else
+                {
+                    GetComponentInChildren<SpriteRenderer>().flipX = false;
+                }
+            }
+            else
+            {
+                anim.SetBool("isWalking", false);
+            }
         }
 
     }

@@ -1,31 +1,34 @@
 fileFormatVersion: 2
-guid: 1602050c627c17c41a961a9f460122a6
+guid: b26139b3827e9a94e8144593ec6081d5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3227741138778021382
-    second: PriestIdleTile_0
+      213: -4015911364788017508
+    second: PriestIdleTile 2_0
   - first:
-      213: -8826053213106135991
-    second: PriestIdleTile_1
+      213: -220165914970525451
+    second: PriestIdleTile 2_1
   - first:
-      213: -1941914319511037272
-    second: PriestIdleTile_2
+      213: -1708751621918440073
+    second: PriestIdleTile 2_2
   - first:
-      213: -3890918298613809309
-    second: PriestIdleTile_3
+      213: -8030501698879036133
+    second: PriestIdleTile 2_3
   - first:
-      213: 7671790400317246780
-    second: PriestIdleTile_4
+      213: -654154214449849748
+    second: PriestIdleTile 2_4
   - first:
-      213: -8655835579623020339
-    second: PriestIdleTile_5
+      213: -2081376620913853977
+    second: PriestIdleTile 2_5
   - first:
-      213: -2741991127063609191
-    second: PriestIdleTile_6
+      213: -6120706022216325708
+    second: PriestIdleTile 2_6
   - first:
-      213: -3494870643067271573
-    second: PriestIdleTile_7
+      213: 6534032460166081162
+    second: PriestIdleTile 2_7
+  - first:
+      213: 4614764652200788860
+    second: PriestIdleTile 2_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -123,169 +126,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PriestIdleTile_0
+      name: PriestIdleTile 2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 840
+        y: 568
         width: 120
-        height: 280
+        height: 284
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60e57c3e67d3bcc20800000000000000
-      internalID: 3227741138778021382
+      spriteID: c962b5414ed9448c0800000000000000
+      internalID: -4015911364788017508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PriestIdleTile_1
+      name: PriestIdleTile 2_1
       rect:
         serializedVersion: 2
         x: 120
-        y: 840
+        y: 568
         width: 120
-        height: 280
+        height: 284
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94c1d187d5f838580800000000000000
-      internalID: -8826053213106135991
+      spriteID: 5f0788e4440d1fcf0800000000000000
+      internalID: -220165914970525451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PriestIdleTile_2
+      name: PriestIdleTile 2_2
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 568
+        width: 120
+        height: 284
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775cd26047b4948e0800000000000000
+      internalID: -1708751621918440073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PriestIdleTile 2_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 560
+        y: 284
         width: 120
-        height: 280
+        height: 284
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8aadc41173fec05e0800000000000000
-      internalID: -1941914319511037272
+      spriteID: b15e426904ded8090800000000000000
+      internalID: -8030501698879036133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PriestIdleTile_3
+      name: PriestIdleTile 2_4
       rect:
         serializedVersion: 2
         x: 120
-        y: 560
+        y: 284
         width: 120
-        height: 280
+        height: 284
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36f7e012c6ea00ac0800000000000000
-      internalID: -3890918298613809309
+      spriteID: c6a5463353afbe6f0800000000000000
+      internalID: -654154214449849748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PriestIdleTile_4
+      name: PriestIdleTile 2_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 280
+        x: 240
+        y: 284
         width: 120
-        height: 280
+        height: 284
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3d4922e8bca77a60800000000000000
-      internalID: 7671790400317246780
+      spriteID: 7e970aaadf67d13e0800000000000000
+      internalID: -2081376620913853977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PriestIdleTile_5
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 280
-        width: 120
-        height: 280
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc8e162a66b40e780800000000000000
-      internalID: -8655835579623020339
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PriestIdleTile_6
+      name: PriestIdleTile 2_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 120
-        height: 280
+        height: 284
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 990c91ef89d72f9d0800000000000000
-      internalID: -2741991127063609191
+      spriteID: 4b5a33b3d42ee0ba0800000000000000
+      internalID: -6120706022216325708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PriestIdleTile_7
+      name: PriestIdleTile 2_7
       rect:
         serializedVersion: 2
         x: 120
         y: 0
         width: 120
-        height: 280
+        height: 284
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b66c800baa9bf7fc0800000000000000
-      internalID: -3494870643067271573
+      spriteID: a8a221b57eb8daa50800000000000000
+      internalID: 6534032460166081162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PriestIdleTile 2_8
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 120
+        height: 284
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7305784000fa0040800000000000000
+      internalID: 4614764652200788860
       vertices: []
       indices: 
       edges: []
