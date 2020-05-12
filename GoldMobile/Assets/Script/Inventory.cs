@@ -5,44 +5,67 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     Rect rect;
-    public int gridSize;
-    [HideInInspector] public Button[] buttonList;
-    public GameObject buttonPrefab;
-    public int buttonSize;
+    public int InventorySize;
+    [HideInInspector] public GameObject[] caseList;
+    public GameObject slotPrefab;
+    public int slotSize;
+    public bool isP1 = false;
 
     void Start()
     {
-        buttonSize = Mathf.Min(Screen.width / (gridSize * gridSize) * 2, Screen.height / (gridSize * gridSize) * 2);
-        //CreateGrid();
-
+        slotSize = Mathf.Min(Screen.width / (InventorySize * InventorySize), Screen.height / (InventorySize * InventorySize));
+        CreateGrid();
+        DrawSlots();
     }
 
-    //void CreateGrid()
-    //{
-    //    for (int i = 0; i < gridSize * gridSize; i++)
-    //    {
-    //        buttonList[i] = buttonPrefab.GetComponent<Button>();
-    //        //Instantiate(buttonList[i]);
-    //        buttonList[i].GetComponent<RectTransform>().sizeDelta = new Vector2(buttonSize, buttonSize);
-    //    }
-    //}
-    //void DrawButtons()
-    //{
-    //    for (int i = 0; i < buttonList.Length; i++)
-    //    {
-    //        int xPos = i % gridSize;
-    //        int yPos = i / gridSize;
+    void CreateGrid()
+    {
+        for (int i = 0; i < InventorySize * InventorySize; i++)
+        {
+            caseList[i] = slotPrefab;
+            caseList[i].GetComponent<RectTransform>().sizeDelta = new Vector2(InventorySize, InventorySize);
+        }
+    }
+    void DrawSlots()
+    {
+        for (int i = 0; i < caseList.Length; i++)
+        {
+            int xPos = i % InventorySize;
+            int yPos = i / InventorySize;
+            Vector3 position;
+            if (isP1)
+            {
+                position = new Vector3(slotSize * (xPos - (InventorySize - 1) / 2) - Screen.width / 3, -(slotSize * (yPos - (InventorySize - 1) / 2)) + Screen.height / 4, 0);
+            } else
+            {
+                position = new Vector3(slotSize * (xPos - (InventorySize - 1) / 2) + Screen.width / 3, -(slotSize * (yPos - (InventorySize - 1) / 2)) + Screen.height / 4, 0);
+            }
 
-    //        Vector3 position = new Vector3(buttonSize * (xPos - (gridSize - 1) / 2), -(buttonSize * (yPos - (gridSize - 1) / 2)), 0);
-    //        transform.parent.position = new Vector3(0, 0, 0);
-    //        Instantiate(buttonList[i], position, Quaternion.identity, transform);
-    //        //buttonList[i].GetComponent<RectTransform>().position = position;
-    //    }
-    //}
+            transform.parent.position = new Vector3(0, 0, 0);
+            Instantiate(caseList[i], position, Quaternion.identity, transform);
+        }
+    }
+
+    
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        foreach (Touch touch in Input.touches)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(touch.position, Vector3.back);
+            for (int i = 0; i < caseList.Length; i++)
+            {
+                if (hit.collider != null)
+                {
+                    if (hit.collider.GetComponent<Slots>() != null && touch.phase == TouchPhase.Began)
+                    {
+                        hit.collider.GetComponent<Slots>().ChangeColor();
+
+                    }
+                }
+            }
+        }
     }
 }
