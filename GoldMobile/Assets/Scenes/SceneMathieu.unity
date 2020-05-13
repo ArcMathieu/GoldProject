@@ -152,6 +152,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   P1: {fileID: 798203668}
   P2: {fileID: 588641615}
+  ghost: {fileID: 0}
+  controleP1: 0
+  firstRoom: 0
+  player: {fileID: 0}
+  gh: {fileID: 0}
   playerSpeed: 0.1
 --- !u!4 &1173020
 Transform:
@@ -509,7 +514,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60284623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0000002682209, y: -1.8668222, z: -12}
+  m_LocalPosition: {x: 0.0000006556511, y: -1.8668222, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1309,8 +1314,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1639986338}
   ghost: {fileID: 2082903312}
+  gameManager: {fileID: 0}
   ghostAppears: {fileID: 2082903311}
   interact: {fileID: 1180113857}
+  zone: {fileID: 0}
 --- !u!61 &166617175
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1422,6 +1429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 171824094}
   - component: {fileID: 171824095}
+  - component: {fileID: 171824096}
   m_Layer: 5
   m_Name: mentalBar
   m_TagString: Untagged
@@ -1461,6 +1469,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca7b71656d516e84f9b354689db4cdb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &171824096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171824093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a245abbe5335e459a710362425dcd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &199588399
@@ -2220,6 +2240,7 @@ MonoBehaviour:
   ghost: {fileID: 0}
   dial: {fileID: 11400000, guid: 2b1475517053a5b4cbc63e1b79804902, type: 2}
   tdialogue: {fileID: 1624967777}
+  zone: {fileID: 0}
 --- !u!1 &291258355
 GameObject:
   m_ObjectHideFlags: 0
@@ -4226,7 +4247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &631298857
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5272,7 +5293,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 798203668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0000002682209, y: -11.57, z: -12}
+  m_LocalPosition: {x: 0.00000017881393, y: -11.57, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1765330060}
@@ -8376,7 +8397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1598271016
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9001,8 +9022,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystick: {fileID: 1886481374}
-  isP1: 0
+  gameManager: {fileID: 1173019}
   Player2: {fileID: 2082903312}
+  GhostContainer: {fileID: 0}
+  Ghost: {fileID: 2082903316}
+  currentRotation: 0
+  PlayerState: 0
 --- !u!1 &1646658186
 GameObject:
   m_ObjectHideFlags: 0
@@ -9040,6 +9065,7 @@ MonoBehaviour:
   ghost: {fileID: 2082903312}
   dial: {fileID: 11400000, guid: bc292389309317240aa56b86b2359b74, type: 2}
   tdialogue: {fileID: 1624967777}
+  zone: {fileID: 0}
 --- !u!61 &1646658188
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9193,6 +9219,7 @@ MonoBehaviour:
   ghost: {fileID: 0}
   dial: {fileID: 11400000, guid: c8e1f7e8fa5ed724296b43c23f63ed74, type: 2}
   tdialogue: {fileID: 1624967777}
+  zone: {fileID: 0}
 --- !u!61 &1648143799
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10587,6 +10614,71 @@ Transform:
   m_Father: {fileID: 1388339760}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2063765905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2063765908}
+  - component: {fileID: 2063765907}
+  - component: {fileID: 2063765906}
+  m_Layer: 0
+  m_Name: Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2063765906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063765905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bd0189285fb1604084a5f1dca98de8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1639986338}
+  gh: {fileID: 2082903312}
+  questEnd: 0
+  questStart: 0
+  illness: {fileID: 171824096}
+--- !u!58 &2063765907
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063765905}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3.21
+--- !u!4 &2063765908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063765905}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2082903311
 GameObject:
   m_ObjectHideFlags: 0
@@ -10618,8 +10710,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29567b6d512bd604b9c41b208fdcc3e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isP2: 0
   joystick: {fileID: 1886481374}
+  gameManager: {fileID: 1173019}
   Player1: {fileID: 1639986338}
   barM: {fileID: 171824093}
   Player: {fileID: 1639986337}
@@ -10627,6 +10719,8 @@ MonoBehaviour:
   distanceDetect: 10
   footP1: {fileID: 1780887408}
   footP2: {fileID: 632456988}
+  MyPlayer: {fileID: 1639986333}
+  GhostState: 0
 --- !u!50 &2082903313
 Rigidbody2D:
   serializedVersion: 4
