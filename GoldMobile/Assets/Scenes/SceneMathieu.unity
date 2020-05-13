@@ -158,6 +158,7 @@ MonoBehaviour:
   player: {fileID: 1639986338}
   gh: {fileID: 2082903312}
   playerSpeed: 0.1
+  incrementStep: 0
 --- !u!4 &1173020
 Transform:
   m_ObjectHideFlags: 0
@@ -609,7 +610,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60284623}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
