@@ -10,7 +10,7 @@ public class PlayerManager : MonoBehaviour
     private bool isP1 = true;
     public GameManager gameManager;
     public GhostManager Player2;
-    public Transform GhostContainer;
+    //public Transform GhostContainer;
     public Transform Ghost;
     public float currentRotation;
 

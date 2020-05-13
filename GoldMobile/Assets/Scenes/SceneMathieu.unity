@@ -152,11 +152,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   P1: {fileID: 798203668}
   P2: {fileID: 588641615}
-  ghost: {fileID: 0}
+  ghost: {fileID: 2082903311}
   controleP1: 0
   firstRoom: 0
-  player: {fileID: 0}
-  gh: {fileID: 0}
+  player: {fileID: 1639986338}
+  gh: {fileID: 2082903312}
   playerSpeed: 0.1
 --- !u!4 &1173020
 Transform:
@@ -514,7 +514,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60284623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0000006556511, y: -1.8668222, z: -12}
+  m_LocalPosition: {x: 0.0000002682209, y: -1.8668222, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1314,10 +1314,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1639986338}
   ghost: {fileID: 2082903312}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1173019}
   ghostAppears: {fileID: 2082903311}
   interact: {fileID: 1180113857}
-  zone: {fileID: 0}
+  zone: {fileID: 2063765906}
 --- !u!61 &166617175
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1436,7 +1436,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &171824094
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5293,7 +5293,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 798203668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00000017881393, y: -11.57, z: -12}
+  m_LocalPosition: {x: 0.0000002682209, y: -11.57, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1765330060}
@@ -9024,7 +9024,6 @@ MonoBehaviour:
   joystick: {fileID: 1886481374}
   gameManager: {fileID: 1173019}
   Player2: {fileID: 2082903312}
-  GhostContainer: {fileID: 0}
   Ghost: {fileID: 2082903316}
   currentRotation: 0
   PlayerState: 0
@@ -9065,7 +9064,7 @@ MonoBehaviour:
   ghost: {fileID: 2082903312}
   dial: {fileID: 11400000, guid: bc292389309317240aa56b86b2359b74, type: 2}
   tdialogue: {fileID: 1624967777}
-  zone: {fileID: 0}
+  zone: {fileID: 2063765906}
 --- !u!61 &1646658188
 BoxCollider2D:
   m_ObjectHideFlags: 0

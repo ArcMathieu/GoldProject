@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     public void openStep()
     {
         firstRoom = true;
+
     }
 
     public void ChangeState()
