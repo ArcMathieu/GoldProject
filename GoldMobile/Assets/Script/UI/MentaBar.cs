@@ -8,7 +8,7 @@ public class MentaBar : MonoBehaviour
 {
     private Image bar;
     private Mental mental;
-
+    private bool illnessUp;
     private void Awake()
     {
         bar = transform.Find("bar").GetComponent<Image>();
@@ -19,12 +19,26 @@ public class MentaBar : MonoBehaviour
 
     private void Update()
     {
-        mental.Update();
+        if (illnessUp)
+        {
+            mental.increase();
+        }
+        else
+        {
+            mental.decreased();
+        }
         bar.fillAmount = mental.GetMentalNormalized();
         if(bar.fillAmount == 1f)
         {
-            SceneManager.LoadScene("Menu");
+            
+            Debug.Log("Loose");
+            //SceneManager.LoadScene("Menu");
         }
+    }
+
+    public void modifyBar(bool increased)
+    {
+        illnessUp = increased;
     }
 
 }
@@ -35,17 +49,30 @@ public class Mental
 
     private float mentalAmount;
     private float mentalDamage;
-
+    public bool mentalIncrease;
     public Mental()
     {
         mentalAmount = 0;
         mentalDamage = 1f;
     }
 
-    public void Update()
+    public void increase()
     {
-        mentalAmount += mentalDamage * Time.deltaTime;
+        if (mentalAmount < 100) 
+        {
+            mentalDamage = 1f;
+            mentalAmount += mentalDamage * Time.deltaTime;
+                
+        }
+    }
+    public void decreased()
+    {
+        if (mentalAmount > 0)
+        {
+            mentalDamage = 2f;
+            mentalAmount -= mentalDamage * Time.deltaTime;
 
+        }
     }
 
     public float GetMentalNormalized()

@@ -6,9 +6,9 @@ public class GhostManager : MonoBehaviour
 {
     Rigidbody2D rb;
     private float speed;
-    public bool isP2;
-    private bool cam = false;
+    private bool isP1 = false;
     public Joystick joystick;
+    public GameManager gameManager;
     public PlayerManager Player1;
 
     public GameObject barM;
@@ -18,55 +18,81 @@ public class GhostManager : MonoBehaviour
 
     public GameObject footP1;
     public GameObject footP2;
+    public GameObject MyPlayer;
+
+    public enum State { CONTROLLED, WAIT, MOVABLE }
+
+    public State GhostState;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         speed = GameManager._instance.playerSpeed;
-        isP2 = false;
+        GhostState = State.WAIT;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isP2)
-        {
-            rb.MovePosition(transform.position + (new Vector3(0, 1, 0) * joystick.Vertical * speed) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed));
-            if (Input.GetKeyDown(KeyCode.Space))
-                ChangeControl();
 
+
+        switch (GhostState)
+        {
+            case State.CONTROLLED:
+                Controlled();
+                break;
+            case State.WAIT:
+                Wait();
+                break;
+            case State.MOVABLE:
+                Movable();
+                break;
+            default:
+                break;
         }
+
+        //passage de layer devant
         if (footP1.gameObject.transform.position.y > footP2.gameObject.transform.position.y)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, -3);
-        }else
+        }
+        else
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, -1);
         }
 
-        if (Player)
-        {
-            float distance = (Player.position - transform.position).sqrMagnitude;
-            if (distance < distanceDetect * distanceDetect)
-            {
-                detected = true;
+    }
 
-            }
-            else detected = false;
+    public void Movable()
+    {
+        if (!gameManager.controleP1)
+        {
+            rb.MovePosition(transform.position + (new Vector3(0, 1, 0) * joystick.Vertical * speed) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed));
         }
 
     }
 
+    public void Controlled()
+    {
+       rb.MovePosition(Vector2.MoveTowards(transform.position, MyPlayer.transform.position, speed));
+    }
+
+    public void Wait()
+    {
+        //Stay at this position
+    }
+
     public void ChangeControl()
     {
-        isP2 = false;
-        GameManager._instance.ChangeCamera(cam);
+        GameManager._instance.ChangeCamera(isP1);
         StartCoroutine(WaitToControl());
         IEnumerator WaitToControl()
         {
             yield return new WaitForSeconds(0.2f);
-            Player1.isP1 = true;
+            gameManager.controleP1 = true;
+            GameManager._instance.ChangeState();
+            //gameManager.showGhost(false);
         }
     }
 }

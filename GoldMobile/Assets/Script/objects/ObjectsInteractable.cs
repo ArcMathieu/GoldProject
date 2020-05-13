@@ -11,6 +11,7 @@ public class ObjectsInteractable : MonoBehaviour
     public GhostManager ghost;
     public DialogueData dial;
     public DisplayText tdialogue;
+    public Zone zone;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -33,6 +34,8 @@ public class ObjectsInteractable : MonoBehaviour
 
         if (isIn)
         {
+            zone.questStart = false;
+            zone.questEnd = true;
             tdialogue.DialPass(dial);
             ghost.ChangeControl();
         }
