@@ -18,7 +18,7 @@ public class Room : MonoBehaviour
     {
         if (other.gameObject.layer != layerRoom)
         {
-            Debug.Log(other.gameObject.name);
+            //Debug.Log(other.gameObject.name);
             MainCamera.Instance.RoomEnter(this);
             ActivateEnemies();
         }
@@ -28,7 +28,7 @@ public class Room : MonoBehaviour
     {
         if (other.gameObject.layer != layerRoom)
         {
-            Debug.Log(other.name);
+            //Debug.Log(other.name);
             DesactivateEnemies();
         }
 
