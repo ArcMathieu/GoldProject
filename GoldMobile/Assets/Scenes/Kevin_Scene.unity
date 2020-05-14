@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 117529875}
   - component: {fileID: 117529874}
   m_Layer: 5
-  m_Name: Button (5)
+  m_Name: ButtonUp1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -407,7 +407,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Suivant
 --- !u!222 &339328337
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 354415923}
   - component: {fileID: 354415922}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: ButtonDown3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -647,7 +647,7 @@ GameObject:
   - component: {fileID: 516825639}
   - component: {fileID: 516825638}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: ButtonUp3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -853,7 +853,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
+  m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -1008,7 +1008,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
+  m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -1141,7 +1141,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "Pr\xE9c\xE9dent"
 --- !u!222 &779130773
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1218,7 +1218,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "Pr\xE9c\xE9dent"
 --- !u!222 &809487819
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1295,7 +1295,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Suivant
 --- !u!222 &840314419
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1317,7 +1317,7 @@ GameObject:
   - component: {fileID: 995099500}
   - component: {fileID: 995099499}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: ButtonUp2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1501,7 +1501,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "Pr\xE9c\xE9dent"
 --- !u!222 &1162454708
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1523,7 +1523,7 @@ GameObject:
   - component: {fileID: 1236277586}
   - component: {fileID: 1236277585}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonDown1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1858,7 +1858,7 @@ GameObject:
   - component: {fileID: 1509270534}
   - component: {fileID: 1509270533}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ButtonDown2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2042,7 +2042,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Suivant
 --- !u!222 &1761517793
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2240,7 +2240,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
+  m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
