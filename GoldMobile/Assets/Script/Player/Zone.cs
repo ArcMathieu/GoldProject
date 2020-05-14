@@ -9,6 +9,7 @@ public class Zone : MonoBehaviour
     public bool questEnd;
     public bool questStart;
     public MentaBar illness;
+    public Switch switchButton;
     // Update is called once per frame
     void Update()
     {
@@ -19,21 +20,15 @@ public class Zone : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("GhostPlayer"))
         {
+            illness.modifyBar(false);
             if (questStart)
             {
-
-                //illness decrease
-                illness.modifyBar(false);
-
-                if (questEnd)
-                {
-                    gh.GhostState = GhostManager.State.WAIT;
-                }
-                else gh.GhostState = GhostManager.State.MOVABLE;
+                switchButton.CanSwitchInZone = false;
+                gh.GhostState = GhostManager.State.MOVABLE;
             }
             else
             {
-                illness.modifyBar(false);
+                
                 gh.GhostState = GhostManager.State.WAIT;
             }
 
@@ -44,16 +39,24 @@ public class Zone : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("GhostPlayer"))
         {
-            if (questStart)
+            illness.modifyBar(true);
+            if (player.PlayerState == PlayerManager.State.MOVABLE)
             {
-                //Illness start increase
-                illness.modifyBar(true);
-            }
-            else
-            {
-                illness.modifyBar(false);
                 gh.GhostState = GhostManager.State.CONTROLLED;
+
+            }else if (player.PlayerState == PlayerManager.State.WAIT) {
+                gh.GhostState = GhostManager.State.MOVABLE;
+
             }
+            if (!questStart)
+            {
+                gh.GhostState = GhostManager.State.CONTROLLED;
+
+            }else
+            {
+                switchButton.CanSwitchInZone = true;
+            }
+            
         }
 
     }

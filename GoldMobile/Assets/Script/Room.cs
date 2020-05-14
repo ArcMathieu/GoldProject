@@ -5,6 +5,8 @@ using UnityEngine;
 public class Room : MonoBehaviour
 {
     public int layerRoom = 17;
+    public bool RoomQuest = false;
+    public Switch switchButton;
 
     // Use this for initialization
     void Start()
@@ -20,7 +22,12 @@ public class Room : MonoBehaviour
         {
             //Debug.Log(other.gameObject.name);
             MainCamera.Instance.RoomEnter(this);
+            Debug.Log(other.gameObject.name);
             ActivateEnemies();
+        }
+        if (RoomQuest)
+        {
+            switchButton.CanSwitchInRoom = true;
         }
     }
 

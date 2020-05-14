@@ -29,10 +29,10 @@ public class PlayerManager : MonoBehaviour
         PlayerState = State.MOVABLE;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log(collision.gameObject.name);
-    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    Debug.Log(collision.gameObject.name);
+    //}
 
     void Update()
     {

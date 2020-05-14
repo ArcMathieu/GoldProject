@@ -20,6 +20,12 @@ public class InteractionManager : MonoBehaviour
                     hit.collider.GetComponent<Button>().testDebug();
 
                 }
+                
+                if (hit.collider.GetComponent<Switch>() != null && touch.phase == TouchPhase.Began)
+                {
+                    hit.collider.GetComponent<Switch>().DoAction();
+
+                }
             }
         }
         

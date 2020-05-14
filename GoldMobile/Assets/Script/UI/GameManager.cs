@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public PlayerManager player;
     public GhostManager gh;
 
+    public GameObject[] clés;
+
     public float playerSpeed;
     public int incrementStep = 0;
     private void Awake()

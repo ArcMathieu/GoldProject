@@ -20,9 +20,9 @@ TagManager:
   - Player
   - Wall
   - Camera
-  - 
-  - 
-  - 
+  - Ghost
+  - PlayerPass
+  - GhostPass
   - 
   - 
   - 
