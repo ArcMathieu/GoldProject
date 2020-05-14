@@ -20,6 +20,7 @@ public class cadena : MonoBehaviour
         else
         {
             number.GetComponent<currentNumber>().number++;
+            FindObjectOfType<SoundManager>().PlaySfx("Roulette");
         }
 
     }
@@ -33,6 +34,7 @@ public class cadena : MonoBehaviour
         else
         {
             number.GetComponent<currentNumber>().number--;
+            FindObjectOfType<SoundManager>().PlaySfx("Roulette");
         }
     }
 
