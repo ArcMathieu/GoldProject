@@ -20,6 +20,7 @@ public class GhostManager : MonoBehaviour
     public GameObject footP2;
     public GameObject MyPlayer;
 
+    private Animator anim;
     public enum State { CONTROLLED, WAIT, MOVABLE }
 
     public State GhostState;
@@ -30,6 +31,7 @@ public class GhostManager : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         speed = GameManager._instance.playerSpeed;
         GhostState = State.WAIT;
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -52,6 +54,15 @@ public class GhostManager : MonoBehaviour
                 break;
         }
 
+        if (footP1.gameObject.transform.position.x < footP2.gameObject.transform.position.x)
+        {
+            GetComponentInChildren<SpriteRenderer>().flipX = true;
+        }
+        else
+        {   
+            GetComponentInChildren<SpriteRenderer>().flipX = false;
+        }
+
         //passage de layer devant
         if (footP1.gameObject.transform.position.y > footP2.gameObject.transform.position.y)
         {
@@ -69,6 +80,7 @@ public class GhostManager : MonoBehaviour
         if (!gameManager.controleP1)
         {
             rb.MovePosition(transform.position + (new Vector3(0, 1, 0) * joystick.Vertical * speed) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed));
+            anim.SetBool("Walk", true);
         }
 
     }
@@ -76,11 +88,13 @@ public class GhostManager : MonoBehaviour
     public void Controlled()
     {
        rb.MovePosition(Vector2.MoveTowards(transform.position, MyPlayer.transform.position, speed));
+        anim.SetBool("Walk", true);
     }
 
     public void Wait()
     {
         //Stay at this position
+        anim.SetBool("Walk", false);
     }
 
     public void ChangeControl()
