@@ -13,8 +13,8 @@ public class Room : MonoBehaviour
     {
         DesactivateEnemies();
     }
-    List<string> namesOfActive = new List<string>();
-    private int numActiveObj = 0;
+    //List<string> namesOfActive = new List<string>();
+    //private int numActiveObj = 0;
 
     private void OnTriggerEnter2D(Collider2D other)
     {

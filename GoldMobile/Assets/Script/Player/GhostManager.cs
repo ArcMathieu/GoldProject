@@ -19,7 +19,7 @@ public class GhostManager : MonoBehaviour
     public GameObject footP1;
     public GameObject footP2;
     public GameObject MyPlayer;
-
+    public SpriteRenderer sp;
     private Animator anim;
     public enum State { CONTROLLED, WAIT, MOVABLE }
 
@@ -54,24 +54,16 @@ public class GhostManager : MonoBehaviour
                 break;
         }
 
-        if (footP1.gameObject.transform.position.x < footP2.gameObject.transform.position.x)
-        {
-            GetComponentInChildren<SpriteRenderer>().flipX = true;
-        }
-        else
-        {   
-            GetComponentInChildren<SpriteRenderer>().flipX = false;
-        }
 
-        //passage de layer devant
-        if (footP1.gameObject.transform.position.y > footP2.gameObject.transform.position.y)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -3);
-        }
-        else
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -1);
-        }
+        ////passage de layer devant
+        //if (footP1.gameObject.transform.position.y > footP2.gameObject.transform.position.y)
+        //{
+        //    transform.position = new Vector3(transform.position.x, transform.position.y, -3);
+        //}
+        //else
+        //{
+        //    transform.position = new Vector3(transform.position.x, transform.position.y, -1);
+        //}
 
     }
 
@@ -80,7 +72,22 @@ public class GhostManager : MonoBehaviour
         if (!gameManager.controleP1)
         {
             rb.MovePosition(transform.position + (new Vector3(0, 1, 0) * joystick.Vertical * speed) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed));
-            anim.SetBool("Walk", true);
+            if (joystick.Vertical != 0 || joystick.Horizontal != 0)
+            {
+                anim.SetBool("Walk", true);
+                if (joystick.Horizontal < 0)
+                {
+                    GetComponentInChildren<SpriteRenderer>().flipX = true;
+                }
+                else
+                {
+                    GetComponentInChildren<SpriteRenderer>().flipX = false;
+                }
+            }
+            else
+            {
+                anim.SetBool("Walk", false);
+            }
         }
 
     }
@@ -89,12 +96,29 @@ public class GhostManager : MonoBehaviour
     {
        rb.MovePosition(Vector2.MoveTowards(transform.position, MyPlayer.transform.position, speed));
         anim.SetBool("Walk", true);
+
+        if (footP1.gameObject.transform.position.x < footP2.gameObject.transform.position.x)
+        {
+            GetComponentInChildren<SpriteRenderer>().flipX = true;
+        }
+        else
+        {
+            GetComponentInChildren<SpriteRenderer>().flipX = false;
+        }
     }
 
     public void Wait()
     {
         //Stay at this position
         anim.SetBool("Walk", false);
+        if (footP1.gameObject.transform.position.x < footP2.gameObject.transform.position.x)
+        {
+            GetComponentInChildren<SpriteRenderer>().flipX = true;
+        }
+        else
+        {
+            GetComponentInChildren<SpriteRenderer>().flipX = false;
+        }
     }
 
     public void ChangeControl()

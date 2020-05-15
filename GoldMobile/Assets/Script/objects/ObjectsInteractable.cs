@@ -7,9 +7,15 @@ public class ObjectsInteractable : MonoBehaviour
     public int ID = 0;
     private bool isIn = false;
     private bool isPIn = false;
-    public InteractionManager interact;
+    private bool notFirstTalkP = false;
+    private bool notFirstTalkG = false;
+    public bool endQuest = false;
+    public bool picked = false;
+
+
     public GhostManager ghost;
-    public DialogueData dial;
+    public DialogueData[] dialPlayer;
+    public DialogueData[] dialGhost;
     public DisplayText tdialogue;
     public Zone zone;
 
@@ -29,15 +35,41 @@ public class ObjectsInteractable : MonoBehaviour
 
     public void setAction()
     {
-        if(isPIn)
-         tdialogue.DialPass(dial);
-
         if (isIn)
         {
-            zone.questStart = false;
-            zone.questEnd = true;
-            tdialogue.DialPass(dial);
-            ghost.ChangeControl();
+            if (!notFirstTalkG)
+            {
+                tdialogue.DialPass(dialGhost[0]);
+                notFirstTalkG = true;
+            }
+            else
+            {
+                tdialogue.DialPass(dialGhost[1]);
+            }
+        }
+
+        if (isPIn)
+        {
+            if (endQuest)
+            {
+                zone.questStart = false;
+                zone.questEnd = true;
+                ghost.GhostState = GhostManager.State.CONTROLLED;
+            }
+            if (!notFirstTalkP)
+            {
+                tdialogue.DialPass(dialPlayer[0]);
+                notFirstTalkP = true;
+            }
+            else
+            {
+                tdialogue.DialPass(dialPlayer[1]);
+            }
+            if (picked)
+            {
+                //ramasser l'obj
+                GetComponent<SpriteRenderer>().color = Color.red;
+            }
         }
     }
 

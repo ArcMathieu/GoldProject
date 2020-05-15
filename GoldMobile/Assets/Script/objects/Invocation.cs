@@ -13,7 +13,7 @@ public class Invocation : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (/*firstTime && */!CanChange)
+            if (firstTime && !CanChange)
             {
                 CanChange = true;
             }
@@ -24,10 +24,9 @@ public class Invocation : MonoBehaviour
     {
         if (firstTime && CanChange)
         {
-            
-            //ghostAppears.SetActive(true);
             GameManager._instance.showGhost(true);
             GameManager._instance.IsFollowingGirl();
+            //setAnimBougie true
             firstTime = false;
             switchButton.SetActive(true);
         }

@@ -10,17 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
-  m_Name: OK
+  m_Name: objetHonorP1
   m_EditorClassIdentifier: 
   LesDialogues:
-  - ok
-  - wilhelm
-  - "bien jou\xE9"
-  - "\xE7a fonctionne"
-  - top
+  - Cet objet me rappel mon enfance
   SpeedDialogues:
   - 0.2
-  - 0
-  - 0
-  - 0
-  - 0

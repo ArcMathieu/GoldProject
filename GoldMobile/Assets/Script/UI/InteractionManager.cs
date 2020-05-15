@@ -17,7 +17,7 @@ public class InteractionManager : MonoBehaviour
             {
                 if (hit.collider.GetComponent<Button>() != null && touch.phase == TouchPhase.Began)
                 {
-                    hit.collider.GetComponent<Button>().testDebug();
+                    hit.collider.GetComponent<Button>().onClick();
 
                 }
                 
