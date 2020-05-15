@@ -6,12 +6,20 @@ public class Tp : MonoBehaviour
 {
     public GameObject tpTo;
     public bool canPass = false;
+    public bool stairs = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && canPass)
         {
-            collision.transform.position = new Vector2(tpTo.transform.position.x, tpTo.transform.position.y - 3);
+            if (stairs)
+            {
+                collision.transform.position = new Vector2(tpTo.transform.position.x, tpTo.transform.position.y-5);
+            }
+            else
+            {
+                collision.transform.position = tpTo.transform.position;
+            }
 
             tpTo.SendMessage("CoroutToWait");
         }
