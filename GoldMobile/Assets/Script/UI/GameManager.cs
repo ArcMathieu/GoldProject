@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public GhostManager gh;
 
     public GameObject[] clés;
+    public Tp[] tp;
 
     public float playerSpeed;
     public int incrementStep = 0;
@@ -41,6 +42,14 @@ public class GameManager : MonoBehaviour
             ghost.SetActive(true);  
 
         }else ghost.SetActive(false);
+    }
+
+    public void IsFollowingGirl()
+    {
+        for (int i = 0; i < tp.Length; i++)
+        {
+            tp[i].ghostFollowing = true;
+        }
     }
 
     public void openStep()

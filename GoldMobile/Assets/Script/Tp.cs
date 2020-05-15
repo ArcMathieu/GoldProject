@@ -5,8 +5,10 @@ using UnityEngine;
 public class Tp : MonoBehaviour
 {
     public GameObject tpTo;
+    public GameObject ghost;
     public bool canPass = false;
     public bool stairs = false;
+    public bool ghostFollowing = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,6 +21,10 @@ public class Tp : MonoBehaviour
             else
             {
                 collision.transform.position = tpTo.transform.position;
+            }
+            if (ghostFollowing)
+            {
+                ghost.transform.position = new Vector2(collision.transform.position.x +0.5f, collision.transform.position.y + 0.5f);
             }
 
             tpTo.SendMessage("CoroutToWait");
