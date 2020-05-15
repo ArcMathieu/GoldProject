@@ -1,18 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Button : MonoBehaviour
 {
-    public ObjectsInteractable[] Obj;
+    //public ObjectsInteractable[] Obj;
+    public PlayerManager player;
     public Invocation Circle;
-    public void testDebug()
+    public void onClick()
     {
-        for (int i = 0; i < Obj.Length; i++)
+
+        Circle.setAction();
+
+        StartCoroutine(changeColor());
+        IEnumerator changeColor()
         {
-            Obj[i].setAction();
+            GetComponent<Image>().color = Color.green;
+            player.OnObject = true;
+            yield return new WaitForSeconds(0.2f);
+            GetComponent<Image>().color = Color.black;
+            player.OnObject = false;
 
         }
-        Circle.setAction();
     }
 }

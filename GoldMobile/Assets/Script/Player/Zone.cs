@@ -28,7 +28,7 @@ public class Zone : MonoBehaviour
             }
             else
             {
-                
+                questEnd = true;
                 gh.GhostState = GhostManager.State.WAIT;
             }
 

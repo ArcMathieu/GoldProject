@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Switch : MonoBehaviour
 {
@@ -23,7 +24,14 @@ public class Switch : MonoBehaviour
             zone.questEnd = false;
             
         }
-        
+        StartCoroutine(changeColor());
+        IEnumerator changeColor()
+        {
+            GetComponent<Image>().color = Color.green;
+            yield return new WaitForSeconds(0.2f);
+            GetComponent<Image>().color = Color.black;
+        }
+
         if (!controlePlayer)
         {
             StartCoroutine(Waiting());
@@ -38,6 +46,8 @@ public class Switch : MonoBehaviour
         {
             if (CanSwitchInZone)
             {
+                GetComponent<Image>().color = Color.black;
+                
                 StartCoroutine(Waiting());
                 IEnumerator Waiting()
                 {
@@ -48,6 +58,10 @@ public class Switch : MonoBehaviour
 
                 }
 
+
+            }else
+            {
+                GetComponent<Image>().color = Color.grey;
             }
         }
         

@@ -29,10 +29,26 @@ public class PlayerManager : MonoBehaviour
         PlayerState = State.MOVABLE;
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    Debug.Log(collision.gameObject.name);
-    //}
+    public bool OnObject = false;
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Interactable"))
+        {
+            if (OnObject)
+            {
+                collision.SendMessage("setAction");
+                OnObject = false;
+            }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Interactable"))
+        {
+            OnObject = true;
+        }
+    }
 
     void Update()
     {
@@ -57,21 +73,6 @@ public class PlayerManager : MonoBehaviour
         {
             rb.MovePosition(transform.position + (new Vector3(0, 1, 0) * joystick.Vertical * speed) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed));
 
-            //if (gameManager.firstRoom)
-            //{
-            //    Vector3 velocity = new Vector3();
-            //    velocity.x = joystick.Horizontal;
-            //    velocity.y = joystick.Vertical;
-            //    velocity = velocity.normalized;
-            //    Ghost.gameObject.SetActive(true);
-            //    float angle = Mathf.Atan2(velocity.y, velocity.x) * Mathf.Rad2Deg + currentRotation;
-            //    Quaternion rotationToReach = Quaternion.AngleAxis(angle, Vector3.forward);
-            //    GhostContainer.rotation = Quaternion.RotateTowards(GhostContainer.rotation, rotationToReach, 270 * Time.deltaTime);
-            //    //currentRotation = GhostContainer.rotation.z;
-            //    Ghost.rotation = Quaternion.LookRotation(new Vector3(0, 1, -2), new Vector3(0, 1, -2));
-            //    GhostContainer.position = transform.position;
-
-            //}
             if(joystick.Vertical != 0 || joystick.Horizontal != 0)
             {
                 anim.SetBool("isWalking", true);
