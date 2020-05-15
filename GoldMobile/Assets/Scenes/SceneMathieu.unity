@@ -158,6 +158,23 @@ MonoBehaviour:
   player: {fileID: 1639986338}
   gh: {fileID: 2082903312}
   "cl\xE9s": []
+  tp:
+  - {fileID: 168068056}
+  - {fileID: 1826526084}
+  - {fileID: 803728801}
+  - {fileID: 699927578}
+  - {fileID: 1812237011}
+  - {fileID: 120524946}
+  - {fileID: 393154332}
+  - {fileID: 1498171465}
+  - {fileID: 1256986069}
+  - {fileID: 1345943265}
+  - {fileID: 1718224699}
+  - {fileID: 902773245}
+  - {fileID: 1873728713}
+  - {fileID: 1392804861}
+  - {fileID: 579138073}
+  - {fileID: 107646959}
   playerSpeed: 0.1
   incrementStep: 0
 --- !u!4 &1173020
@@ -738,8 +755,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tpTo: {fileID: 579138071}
+  ghost: {fileID: 2082903311}
   canPass: 1
   stairs: 0
+  ghostFollowing: 0
 --- !u!61 &107646960
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -967,8 +986,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tpTo: {fileID: 1812237009}
+  ghost: {fileID: 2082903311}
   canPass: 1
   stairs: 0
+  ghostFollowing: 0
 --- !u!61 &120524947
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1369,8 +1390,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tpTo: {fileID: 1826526083}
+  ghost: {fileID: 2082903311}
   canPass: 1
   stairs: 1
+  ghostFollowing: 0
 --- !u!1 &171824093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,7 +1403,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 171824094}
-  - component: {fileID: 171824095}
   - component: {fileID: 171824096}
   m_Layer: 5
   m_Name: mentalBar
@@ -1411,18 +1433,6 @@ RectTransform:
   m_AnchoredPosition: {x: -277, y: 233}
   m_SizeDelta: {x: 300, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &171824095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 171824093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7b71656d516e84f9b354689db4cdb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &171824096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2929,8 +2939,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tpTo: {fileID: 1498171464}
+  ghost: {fileID: 2082903311}
   canPass: 1
   stairs: 0
+  ghostFollowing: 0
 --- !u!61 &393154333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3715,8 +3727,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tpTo: {fileID: 107646957}
+  ghost: {fileID: 2082903311}
   canPass: 1
   stairs: 0
+  ghostFollowing: 0
 --- !u!61 &579138074
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4599,8 +4613,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tpTo: {fileID: 803728799}
+  ghost: {fileID: 2082903311}
   canPass: 1
   stairs: 1
+  ghostFollowing: 0
 --- !u!61 &699927579
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5213,8 +5229,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tpTo: {fileID: 699927577}
+  ghost: {fileID: 2082903311}
   canPass: 1
   stairs: 1
+  ghostFollowing: 0
 --- !u!61 &803728802
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5775,8 +5793,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tpTo: {fileID: 1718224697}
+  ghost: {fileID: 2082903311}
   canPass: 1
   stairs: 0
+  ghostFollowing: 0
 --- !u!61 &902773246
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7488,8 +7508,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tpTo: {fileID: 1345943264}
+  ghost: {fileID: 2082903311}
   canPass: 1
   stairs: 0
+  ghostFollowing: 0
 --- !u!61 &1256986070
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7855,8 +7877,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tpTo: {fileID: 1256986067}
+  ghost: {fileID: 2082903311}
   canPass: 1
   stairs: 0
+  ghostFollowing: 0
 --- !u!61 &1345943266
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8116,8 +8140,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tpTo: {fileID: 1873728712}
+  ghost: {fileID: 2082903311}
   canPass: 1
   stairs: 0
+  ghostFollowing: 0
 --- !u!61 &1392804862
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8941,8 +8967,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tpTo: {fileID: 393154330}
+  ghost: {fileID: 2082903311}
   canPass: 1
   stairs: 0
+  ghostFollowing: 0
 --- !u!61 &1498171466
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10293,7 +10321,6 @@ MonoBehaviour:
   Obj:
   - {fileID: 265244472}
   - {fileID: 1646658187}
-  - {fileID: 0}
   Circle: {fileID: 166617174}
 --- !u!1 &1684235541
 GameObject:
@@ -10479,8 +10506,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tpTo: {fileID: 902773244}
+  ghost: {fileID: 2082903311}
   canPass: 1
   stairs: 0
+  ghostFollowing: 0
 --- !u!61 &1718224700
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11004,8 +11033,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tpTo: {fileID: 120524944}
+  ghost: {fileID: 2082903311}
   canPass: 1
   stairs: 0
+  ghostFollowing: 0
 --- !u!61 &1812237012
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11063,8 +11094,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tpTo: {fileID: 168068053}
+  ghost: {fileID: 2082903311}
   canPass: 1
   stairs: 1
+  ghostFollowing: 0
 --- !u!61 &1826526085
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11246,8 +11279,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tpTo: {fileID: 1392804859}
+  ghost: {fileID: 2082903311}
   canPass: 1
   stairs: 0
+  ghostFollowing: 0
 --- !u!61 &1873728714
 BoxCollider2D:
   m_ObjectHideFlags: 0

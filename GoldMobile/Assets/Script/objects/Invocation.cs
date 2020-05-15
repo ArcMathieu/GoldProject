@@ -25,7 +25,9 @@ public class Invocation : MonoBehaviour
         if (firstTime && CanChange)
         {
             
-            ghostAppears.SetActive(true);
+            //ghostAppears.SetActive(true);
+            GameManager._instance.showGhost(true);
+            GameManager._instance.IsFollowingGirl();
             firstTime = false;
             switchButton.SetActive(true);
         }
