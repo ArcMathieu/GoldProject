@@ -22,7 +22,7 @@ public class Switch : MonoBehaviour
         {
             zone.questStart = true;
             zone.questEnd = false;
-            
+
         }
         StartCoroutine(changeColor());
         IEnumerator changeColor()
@@ -42,12 +42,12 @@ public class Switch : MonoBehaviour
                 gameManager.openStep();
                 controlePlayer = true;
             }
-        }else
+        } else
         {
             if (CanSwitchInZone)
             {
                 GetComponent<Image>().color = Color.black;
-                
+
                 StartCoroutine(Waiting());
                 IEnumerator Waiting()
                 {
@@ -59,11 +59,64 @@ public class Switch : MonoBehaviour
                 }
 
 
-            }else
+            } else
             {
                 GetComponent<Image>().color = Color.grey;
             }
         }
-        
+
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R)) {
+            if (!zone.questStart && CanSwitchInRoom)
+            {
+                zone.questStart = true;
+                zone.questEnd = false;
+
+            }
+            StartCoroutine(changeColor());
+            IEnumerator changeColor()
+            {
+                GetComponent<Image>().color = Color.green;
+                yield return new WaitForSeconds(0.2f);
+                GetComponent<Image>().color = Color.black;
+            }
+
+            if (!controlePlayer)
+            {
+                StartCoroutine(Waiting());
+                IEnumerator Waiting()
+                {
+                    yield return new WaitForSeconds(0.2f);
+                    player.ChangeControl();
+                    gameManager.openStep();
+                    controlePlayer = true;
+                }
+            }
+            else
+            {
+                if (CanSwitchInZone)
+                {
+                    GetComponent<Image>().color = Color.black;
+
+                    StartCoroutine(Waiting());
+                    IEnumerator Waiting()
+                    {
+                        yield return new WaitForSeconds(0.2f);
+                        ghost.ChangeControl();
+                        gameManager.openStep();
+                        controlePlayer = false;
+
+                    }
+                }
+                else
+                {
+                    GetComponent<Image>().color = Color.grey;
+                }
+            }
+
+        } 
     }
 }

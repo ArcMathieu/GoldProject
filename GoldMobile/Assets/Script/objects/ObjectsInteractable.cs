@@ -5,10 +5,10 @@ using UnityEngine;
 public class ObjectsInteractable : MonoBehaviour
 {
     public int ID = 0;
-    private bool isIn = false;
-    private bool isPIn = false;
-    private bool notFirstTalkP = false;
-    private bool notFirstTalkG = false;
+    public bool isIn = false;
+    public bool isPIn = false;
+    public bool notFirstTalkP = false;
+    public bool notFirstTalkG = false;
     public bool endQuest = false;
     public bool picked = false;
 
@@ -19,23 +19,11 @@ public class ObjectsInteractable : MonoBehaviour
     public DisplayText tdialogue;
     public Zone zone;
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (ID == 1 && collision.gameObject.CompareTag("GhostPlayer"))
-        {
-            isIn = true;
-            
-        }
-        if (ID == 0 && collision.gameObject.CompareTag("Player"))
-        {
-            isPIn = true;
-
-        }
-    }
-
     public void setAction()
     {
-        if (isIn)
+        if (tdialogue.DoneTalking) {
+            tdialogue.NextDial();
+            if (isIn)
         {
             if (!notFirstTalkG)
             {
@@ -48,33 +36,48 @@ public class ObjectsInteractable : MonoBehaviour
             }
         }
 
-        if (isPIn)
-        {
-            if (endQuest)
+            if (isPIn)
             {
-                zone.questStart = false;
-                zone.questEnd = true;
-                ghost.GhostState = GhostManager.State.CONTROLLED;
-            }
-            if (!notFirstTalkP)
-            {
-                tdialogue.DialPass(dialPlayer[0]);
-                notFirstTalkP = true;
-            }
-            else
-            {
-                tdialogue.DialPass(dialPlayer[1]);
-            }
-            if (picked)
-            {
-                //ramasser l'obj
-                GetComponent<SpriteRenderer>().color = Color.red;
+                if (endQuest)
+                {
+
+                    zone.questStart = false;
+                    zone.questEnd = true;
+                    ghost.GhostState = GhostManager.State.CONTROLLED;
+                }
+                if (!notFirstTalkP)
+                {
+                    tdialogue.DialPass(dialPlayer[0]);
+                    notFirstTalkP = true;
+                }
+                else
+                {
+                    tdialogue.DialPass(dialPlayer[1]);
+                }
+                if (picked)
+                {
+                    //ramasser l'obj
+                    GetComponent<SpriteRenderer>().color = Color.red;
+                }
             }
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
 
+        if (ID == 1 && collision.gameObject.CompareTag("GhostPlayer"))
+        {
+            isIn = true;
+
+        }
+        if (ID == 0 && collision.gameObject.CompareTag("Player"))
+        {
+            isPIn = true;
+        }
+    }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        zone = null;
         isPIn = false;
         isIn = false;
     }

@@ -19,6 +19,9 @@ public class PlayerManager : MonoBehaviour
     public State PlayerState;
     private Animator anim;
 
+    //Objet dans lequel on est rentré en collision avec
+    public GameObject CurrentInteraction;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,22 +34,30 @@ public class PlayerManager : MonoBehaviour
 
     public bool OnObject = false;
 
-    private void OnTriggerStay2D(Collider2D collision)
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Interactable"))
+    //    {
+    //        if (OnObject)
+    //        {
+    //            collision.SendMessage("setAction");
+    //         // OnObject = false;
+    //        }
+    //    }
+    //}
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Interactable"))
         {
-            if (OnObject)
-            {
-                collision.SendMessage("setAction");
-                OnObject = false;
-            }
+            CurrentInteraction = collision.gameObject;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Interactable"))
         {
-            OnObject = true;
+            CurrentInteraction = null;
         }
     }
 
@@ -97,6 +108,7 @@ public class PlayerManager : MonoBehaviour
     public void Waiting()
     {
         //doNothing
+        anim.SetBool("isWalking", false);
         //Debug.Log("playerWait");
     }
 
