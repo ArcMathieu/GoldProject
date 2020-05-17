@@ -9933,6 +9933,7 @@ MonoBehaviour:
   Ghost: {fileID: 2082903316}
   currentRotation: 0
   PlayerState: 0
+  OnObject: 0
 --- !u!1 &1646658186
 GameObject:
   m_ObjectHideFlags: 0
@@ -10302,9 +10303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6120d0d9ff4eb9b428c00c480c75b8c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Obj:
-  - {fileID: 265244472}
-  - {fileID: 1646658187}
+  player: {fileID: 1639986338}
   Circle: {fileID: 166617174}
 --- !u!1 &1684235541
 GameObject:
