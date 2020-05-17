@@ -2205,7 +2205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265244467}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.7, y: -60.7, z: 48.707035}
+  m_LocalPosition: {x: 14.34, y: -0.56, z: 48.707035}
   m_LocalScale: {x: 0.18832976, y: 0.2187428, z: 1}
   m_Children: []
   m_Father: {fileID: 120624460}
@@ -2250,7 +2250,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.17880023, y: -0.9751568}
+  m_Offset: {x: 0.61240554, y: 0.70443916}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2261,7 +2261,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.264756, y: 6.9503136}
+  m_Size: {x: 14.374376, y: 10.309505}
   m_EdgeRadius: 0
 --- !u!114 &265244472
 MonoBehaviour:
@@ -2283,12 +2283,9 @@ MonoBehaviour:
   endQuest: 0
   picked: 0
   ghost: {fileID: 0}
-  dialPlayer:
-  - {fileID: 11400000, guid: 2b1475517053a5b4cbc63e1b79804902, type: 2}
-  - {fileID: 11400000, guid: f3616f8f42a550347b697ae6d91e4b8b, type: 2}
+  dialPlayer: []
   dialGhost:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 4210eb2342cd3104090b3ab55ab804c7, type: 2}
   tdialogue: {fileID: 1624967777}
   zone: {fileID: 0}
 --- !u!1 &266355346
@@ -2599,6 +2596,8 @@ GameObject:
   - component: {fileID: 282381786}
   - component: {fileID: 282381788}
   - component: {fileID: 282381787}
+  - component: {fileID: 282381790}
+  - component: {fileID: 282381789}
   m_Layer: 0
   m_Name: coffre_force
   m_TagString: Untagged
@@ -2696,6 +2695,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &282381789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282381785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016954e06cf8f0d4f927f56508599478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 0
+  isIn: 0
+  isPIn: 0
+  notFirstTalkP: 0
+  notFirstTalkG: 0
+  endQuest: 0
+  picked: 0
+  ghost: {fileID: 0}
+  dialPlayer:
+  - {fileID: 11400000, guid: 3bf93b05fdf64b84d864f27753db9d29, type: 2}
+  dialGhost: []
+  tdialogue: {fileID: 0}
+  zone: {fileID: 0}
+--- !u!61 &282381790
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282381785}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0016431212, y: -0.019977331}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.44, y: 0.43}
+    newSize: {x: 0.44, y: 0.43}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.909958, y: 0.8999547}
+  m_EdgeRadius: 0
 --- !u!1 &310206099
 GameObject:
   m_ObjectHideFlags: 0
@@ -9477,9 +9527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1486042979}
   - component: {fileID: 1486042983}
-  - component: {fileID: 1486042982}
   - component: {fileID: 1486042981}
-  - component: {fileID: 1486042980}
   m_Layer: 0
   m_Name: Object (1)
   m_TagString: Interactable
@@ -9501,34 +9549,6 @@ Transform:
   m_Father: {fileID: 120624460}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1486042980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486042978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 016954e06cf8f0d4f927f56508599478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 0
-  isIn: 0
-  isPIn: 0
-  notFirstTalkP: 0
-  notFirstTalkG: 0
-  endQuest: 0
-  picked: 0
-  ghost: {fileID: 0}
-  dialPlayer:
-  - {fileID: 11400000, guid: d6903021a4970df4c94f32c755149e20, type: 2}
-  - {fileID: 11400000, guid: 01765fc79e13d624eb3ad1d3855a9ad3, type: 2}
-  dialGhost:
-  - {fileID: 11400000, guid: 03f87f6c46b9e1b49b8a2e4137427fc8, type: 2}
-  - {fileID: 11400000, guid: 74abedfd82e175947b43b0894783df16, type: 2}
-  tdialogue: {fileID: 1624967777}
-  zone: {fileID: 0}
 --- !u!61 &1486042981
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9554,32 +9574,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.1811015, y: 0.3324331}
-  m_EdgeRadius: 0
---- !u!61 &1486042982
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486042978}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.00200665, y: 0.16213194}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.15, y: 0.32}
-    newSize: {x: 5, y: 5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.203064, y: 0.35699975}
   m_EdgeRadius: 0
 --- !u!212 &1486042983
 SpriteRenderer:
@@ -10701,9 +10695,9 @@ MonoBehaviour:
   picked: 0
   ghost: {fileID: 2082903312}
   dialPlayer:
-  - {fileID: 11400000, guid: bc292389309317240aa56b86b2359b74, type: 2}
-  - {fileID: 11400000, guid: bc292389309317240aa56b86b2359b74, type: 2}
-  dialGhost: []
+  - {fileID: 11400000, guid: e555fc07772fde243a6339cd5421e974, type: 2}
+  dialGhost:
+  - {fileID: 11400000, guid: 3f57853f620656e4c922b31a41d4ae13, type: 2}
   tdialogue: {fileID: 1624967777}
   zone: {fileID: 2063765906}
 --- !u!61 &1646658189
@@ -10719,7 +10713,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0034770817, y: -0.0034780987}
+  m_Offset: {x: 0.007719964, y: -0.18598497}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -10730,7 +10724,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16615552, y: 0.17297369}
+  m_Size: {x: 1.44, y: 1.64}
   m_EdgeRadius: 0
 --- !u!212 &1646658190
 SpriteRenderer:

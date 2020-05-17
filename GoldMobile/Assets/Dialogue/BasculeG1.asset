@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
-  m_Name: objetHonorG1
+  m_Name: BasculeG1
   m_EditorClassIdentifier: 
   LesDialogues:
-  - Je ne peux rien faire avec cet objet
+  - "C'est mon jeu pr\xE9f\xE9r\xE9! "
+  - "Mes petites soeurs adoraient jouer \xE0 \xE7a aussi..."
   SpeedDialogues:
-  - 0.2
+  - 0
+  - 0
