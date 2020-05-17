@@ -11,7 +11,7 @@ public class DisplayText : MonoBehaviour
 
     public bool isAutomatique = false;
     private bool DoneDisplaying = true;
-    private bool DoneTalking = false;
+    public bool DoneTalking = false;
 
     public float displaySPD;
     private int dialState = 0;
@@ -21,7 +21,6 @@ public class DisplayText : MonoBehaviour
     void Start()
     {
         tmpro = TextBox.GetComponent<TextMeshProUGUI>();
-        dialState = dial.LesDialogues.Count - 1;
     }
 
     public void DialPass(DialogueData thisDial)
@@ -39,14 +38,7 @@ public class DisplayText : MonoBehaviour
         {
             if (isAutomatique == false)
             {
-                if (Input.touchCount > 0 && !DoneTalking)
-                {
-                    StartCoroutine(DisplayTextOverTime(displaySPD));
-                }
-                else if (Input.touchCount > 0 && DoneTalking)
-                {
-                    tmpro.text = null;
-                }
+                NextDial();
             } else
             {
                 if (!DoneTalking)
@@ -57,14 +49,25 @@ public class DisplayText : MonoBehaviour
                     tmpro.text = null;
                 }
             }
-        }
-        if (DoneDisplaying == false)
+        } else if (DoneDisplaying == false)
         {
             tmpro.text = dial.LesDialogues[dialState];
             totalvisibleChara = tmpro.textInfo.characterCount;
         } 
     }
-    IEnumerator DisplayTextOverTime(float DisplaySpd = 0.03f)
+
+    public void NextDial()
+    {
+        if (!DoneTalking)
+        {
+            StartCoroutine(DisplayTextOverTime(displaySPD));
+        }
+        else if (DoneTalking)
+        {
+            tmpro.text = null;
+        }
+    }
+    public IEnumerator DisplayTextOverTime(float DisplaySpd = 0.03f)
     {
 
 
