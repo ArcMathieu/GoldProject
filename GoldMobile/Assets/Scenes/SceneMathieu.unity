@@ -1232,7 +1232,7 @@ GameObject:
   - component: {fileID: 166617178}
   m_Layer: 0
   m_Name: Invocation bougie
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8852,7 +8852,7 @@ GameObject:
   - component: {fileID: 1486042980}
   m_Layer: 0
   m_Name: Object (1)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10045,7 +10045,7 @@ GameObject:
   - component: {fileID: 1646658187}
   m_Layer: 0
   m_Name: Pendentif
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
