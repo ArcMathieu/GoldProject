@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
         }
+        openStep();
     }
 
     public void showGhost(bool canAppears)
@@ -52,21 +53,38 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void launchCorout(float time)
+    {
+        StartCoroutine(waitForCinematique());
+        IEnumerator waitForCinematique()
+        {
+            player.PlayerState = PlayerManager.State.WAIT;
+            yield return new WaitForSeconds(time);
+            player.PlayerState = PlayerManager.State.MOVABLE;
+        }
+    }
+
     public void openStep()
     {
         firstRoom = true;
         if (incrementStep == 0)
         {
-            //Exterieur
-            //cinematique
+            //Exterieur cinematique => coroutine
+            launchCorout(2);
             //chambre mother, sous sol 2, serre & librairy fermés
-
-            //incrementStep++;
+            for (int i = 0; i < 8; i++)
+            {
+                tp[i].precedentlyOpened = true;
+            }
+            //if fin cinématique 
+            incrementStep++;
         }
 
         if (incrementStep == 1)
         {
             //main hall
+            //active player mvmt
+            player.PlayerState = PlayerManager.State.MOVABLE;
             //lumière on + déplacement libre joueur
             //dialogue postIntro
             // dialogue chambre fille
@@ -83,7 +101,7 @@ public class GameManager : MonoBehaviour
 
             //Lily chambre
             //interaction => tapis+latte
-            //boite code 
+            //boite code
 
             //librairy closed, mother room closed 
 
@@ -96,6 +114,14 @@ public class GameManager : MonoBehaviour
             //serre (lié à chambre)
             //cinématique lié bout de verre
             //using sécateur => clé + journal
+            foreach (GameObject Item in player.GetComponent<InventorySystem>().PlayerItems)
+            {
+                if (Item.name == clés[1].name)
+                {
+                    //cut ronces
+                    break;
+                }
+            }
             //code sur pilier
 
             //incrementStep++;

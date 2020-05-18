@@ -12,6 +12,7 @@ public class ObjectsInteractable : MonoBehaviour
     private bool notFirstTalkG = false;
     private bool endQuest = false;
     public bool isPickable = false;
+    public bool isDiscoveredByHonoria = false;
 
 
     public GhostManager ghost;
@@ -28,17 +29,17 @@ public class ObjectsInteractable : MonoBehaviour
         if (tdialogue.DoneTalking) {
             tdialogue.NextDial();
             if (isIn)
-        {
-            if (!notFirstTalkG)
             {
-                tdialogue.DialPass(dialGhost[0]);
-                notFirstTalkG = true;
+                if (!notFirstTalkG)
+                {
+                    tdialogue.DialPass(dialGhost[0]);
+                    notFirstTalkG = true;
+                }
+                else
+                {
+                    tdialogue.DialPass(dialGhost[1]);
+                }
             }
-            else
-            {
-                tdialogue.DialPass(dialGhost[1]);
-            }
-        }
 
             if (isPIn)
             {
@@ -47,6 +48,10 @@ public class ObjectsInteractable : MonoBehaviour
                     Debug.Log("Picked up");
                     Player.GetComponent<InventorySystem>().AddItem(ItemName);
                     Destroy(gameObject);
+                }
+                if (isDiscoveredByHonoria)
+                {
+                    //action si Honoria à vu un obj
                 }
                 if (!endQuest)
                 {

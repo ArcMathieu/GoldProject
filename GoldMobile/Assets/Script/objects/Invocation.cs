@@ -15,8 +15,6 @@ public class Invocation : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             OnCircle = true;
-
-
         }
     }
 
@@ -33,10 +31,14 @@ public class Invocation : MonoBehaviour
     {
         if (CanChange)
         {
+            //fait apparaitre la petite fille
             GameManager._instance.showGhost(true);
             GameManager._instance.IsFollowingGirl();
+            //referme la porte de la chambre
+            GameManager._instance.tp[5].precedentlyOpened = false;
             //setAnimBougie true
             firstTime = false;
+            //fait apparaitre le bouton de switch de perso
             switchButton.SetActive(true);
         }
         

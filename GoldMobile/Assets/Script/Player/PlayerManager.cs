@@ -31,7 +31,7 @@ public class PlayerManager : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         speed = GameManager._instance.playerSpeed;
         currentRotation = 0f;
-        PlayerState = State.MOVABLE;
+        PlayerState = State.WAIT;
     }
 
     public bool OnObject = false;
@@ -53,7 +53,11 @@ public class PlayerManager : MonoBehaviour
         if (collision.gameObject.CompareTag("Interactable"))
         {
             CurrentInteraction.Add(collision.gameObject);
-            collision.gameObject.GetComponent<ObjectsInteractable>().Player = gameObject;
+            try
+            {
+                collision.gameObject.GetComponent<ObjectsInteractable>().Player = gameObject;
+            }
+            catch{}
             Debug.Log(collision.gameObject.name);
         }
     }
