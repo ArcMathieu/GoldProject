@@ -31,4 +31,15 @@ public class InteractionManager : MonoBehaviour
         
     }
 
+    public void pickObjectToInventory(GameObject objectPicked, GameObject objectinInventory)
+    {
+        StartCoroutine(waitingbeforedelete());
+        IEnumerator waitingbeforedelete()
+        {
+            yield return new WaitForSeconds(0.2f);
+            objectPicked.SetActive(false);
+            objectinInventory.SetActive(true);
+        }
+    }
+
 }

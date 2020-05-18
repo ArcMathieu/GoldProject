@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: objetHonorG1
   m_EditorClassIdentifier: 
   LesDialogues:
-  - je ne peux rien faire avec cet objet
+  - Je ne peux rien faire avec cet objet
   SpeedDialogues:
-  - 0.2
+  - 0.05

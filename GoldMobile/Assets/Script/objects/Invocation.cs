@@ -8,24 +8,31 @@ public class Invocation : MonoBehaviour
     public GameObject ghostAppears;
     
     public bool firstTime = true;
+    public bool OnCircle = false;
     public bool CanChange = false;
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (firstTime && !CanChange)
-            {
-                CanChange = true;
-            }
-            
+            OnCircle = true;
+
+
         }
     }
-    
+
+    private void Update()
+    {
+        if (OnCircle && firstTime)
+        {
+            CanChange = true;
+        }
+        else CanChange = false;
+    }
+
     public void setAction()
     {
-        if (firstTime && CanChange)
+        if (CanChange)
         {
-            Debug.Log("fr");
             GameManager._instance.showGhost(true);
             GameManager._instance.IsFollowingGirl();
             //setAnimBougie true
@@ -36,7 +43,7 @@ public class Invocation : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        CanChange = false;
+        OnCircle = false;
     }
 
 

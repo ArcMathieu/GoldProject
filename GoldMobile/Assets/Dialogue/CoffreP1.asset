@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
-  m_Name: objetHonorP1
+  m_Name: CoffreP1
   m_EditorClassIdentifier: 
   LesDialogues:
-  - Cet objet me rappel mon enfance
+  - "On dirait qu'il a \xE9t\xE9 forc\xE9"
   SpeedDialogues:
-  - 0.05
+  - 0
