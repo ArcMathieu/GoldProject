@@ -20,6 +20,7 @@ public class ObjectsInteractable : MonoBehaviour
     public Zone zone;
     public InteractionManager interact;
     public GameObject firstObj;
+    public GameObject Player;
 
     public void setAction()
     {
@@ -58,7 +59,7 @@ public class ObjectsInteractable : MonoBehaviour
                 }
                 if (picked)
                 {
-                    interact.pickObjectToInventory(this.gameObject, firstObj);
+                 
                 }
             }
         }

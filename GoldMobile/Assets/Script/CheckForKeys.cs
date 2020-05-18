@@ -10,9 +10,9 @@ public class CheckForKeys : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            for (int i = 0; i < collision.gameObject.GetComponent<KeySystem>().Keys.Count; i++)
+            for (int i = 0; i < collision.gameObject.GetComponent<InventorySystem>().Items.Count; i++)
             {
-                if (collision.gameObject.GetComponent<KeySystem>().Keys[i] == DesiredKey)
+                if (collision.gameObject.GetComponent<InventorySystem>().Items[i] == DesiredKey)
                 {
                     gameObject.SetActive(false);
                 }
