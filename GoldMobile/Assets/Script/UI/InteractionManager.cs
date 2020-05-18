@@ -31,4 +31,10 @@ public class InteractionManager : MonoBehaviour
         
     }
 
+    public void pickObjectToInventory(GameObject objectPicked, GameObject objectinInventory)
+    {
+        objectPicked.SetActive(false);
+        objectinInventory.SetActive(true);
+    }
+
 }

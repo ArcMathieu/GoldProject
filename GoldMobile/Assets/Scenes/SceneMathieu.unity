@@ -2405,6 +2405,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4210eb2342cd3104090b3ab55ab804c7, type: 2}
   tdialogue: {fileID: 1624967777}
   zone: {fileID: 0}
+  interact: {fileID: 0}
+  firstObj: {fileID: 0}
 --- !u!1 &266355346
 GameObject:
   m_ObjectHideFlags: 0
@@ -2837,6 +2839,8 @@ MonoBehaviour:
   dialGhost: []
   tdialogue: {fileID: 0}
   zone: {fileID: 0}
+  interact: {fileID: 0}
+  firstObj: {fileID: 0}
 --- !u!61 &282381790
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6802,6 +6806,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3966222baf7415742a13c1c3e9ad477b, type: 2}
   tdialogue: {fileID: 1624967777}
   zone: {fileID: 0}
+  interact: {fileID: 0}
+  firstObj: {fileID: 0}
 --- !u!61 &942989341
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7641,6 +7647,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3966222baf7415742a13c1c3e9ad477b, type: 2}
   tdialogue: {fileID: 1624967777}
   zone: {fileID: 0}
+  interact: {fileID: 0}
+  firstObj: {fileID: 0}
 --- !u!61 &1071127298
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8465,7 +8473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1203341325
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8900,6 +8908,8 @@ MonoBehaviour:
   - {fileID: 0}
   tdialogue: {fileID: 1624967777}
   zone: {fileID: 0}
+  interact: {fileID: 0}
+  firstObj: {fileID: 0}
 --- !u!61 &1298411656
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11078,6 +11088,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f3616f8f42a550347b697ae6d91e4b8b, type: 2}
   tdialogue: {fileID: 1624967777}
   zone: {fileID: 2063765906}
+  interact: {fileID: 0}
+  firstObj: {fileID: 0}
 --- !u!61 &1590753755
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11711,7 +11723,7 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   notFirstTalkG: 0
-  endQuest: 0
+  endQuest: 1
   picked: 1
   ghost: {fileID: 2082903312}
   dialPlayer:
@@ -11720,6 +11732,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3f57853f620656e4c922b31a41d4ae13, type: 2}
   tdialogue: {fileID: 1624967777}
   zone: {fileID: 2063765906}
+  interact: {fileID: 1180113857}
+  firstObj: {fileID: 1203341324}
 --- !u!61 &1646658189
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12496,6 +12510,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 74abedfd82e175947b43b0894783df16, type: 2}
   tdialogue: {fileID: 1624967777}
   zone: {fileID: 2063765906}
+  interact: {fileID: 0}
+  firstObj: {fileID: 0}
 --- !u!61 &1797476519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12842,6 +12858,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3966222baf7415742a13c1c3e9ad477b, type: 2}
   tdialogue: {fileID: 1624967777}
   zone: {fileID: 0}
+  interact: {fileID: 0}
+  firstObj: {fileID: 0}
 --- !u!61 &1817566873
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -18,6 +18,8 @@ public class ObjectsInteractable : MonoBehaviour
     public DialogueData[] dialGhost;
     public DisplayText tdialogue;
     public Zone zone;
+    public InteractionManager interact;
+    public GameObject firstObj;
 
     public void setAction()
     {
@@ -56,8 +58,7 @@ public class ObjectsInteractable : MonoBehaviour
                 }
                 if (picked)
                 {
-                    //ramasser l'obj
-                    GetComponent<SpriteRenderer>().color = Color.red;
+                    interact.pickObjectToInventory(this.gameObject, firstObj);
                 }
             }
         }
