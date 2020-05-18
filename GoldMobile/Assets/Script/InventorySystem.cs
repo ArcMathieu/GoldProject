@@ -18,7 +18,8 @@ public class InventorySystem : MonoBehaviour
 
     public void AddItem(string nameItem)
     {
-
+        Items.Add(nameItem);
+         
         foreach (GameObject Item in PlayerItems)
         {
             if (nameItem == Item.name)

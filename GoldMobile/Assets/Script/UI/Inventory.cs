@@ -13,7 +13,7 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
-        slotSize = Mathf.Min(Screen.width / (InventorySize * InventorySize), Screen.height / (InventorySize * InventorySize));
+        //slotSize = Mathf.Min(Screen.width / (InventorySize * InventorySize), Screen.height / (InventorySize * InventorySize));
         CreateGrid();
         DrawSlots();
     }

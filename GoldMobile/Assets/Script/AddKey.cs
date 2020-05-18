@@ -10,7 +10,6 @@ public class AddKey : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<InventorySystem>().AddItem(DesiredKey);
             collision.gameObject.GetComponent<InventorySystem>().Items.Add(DesiredKey);
             Destroy(gameObject);
         }

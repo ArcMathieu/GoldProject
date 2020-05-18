@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class ObjectsInteractable : MonoBehaviour
 {
+    public string ItemName;
     //public int ID = 0;
-    public bool isIn = false;
-    public bool isPIn = false;
-    public bool notFirstTalkP = false;
-    public bool notFirstTalkG = false;
-    public bool endQuest = false;
-    public bool picked = false;
+    private bool isIn = false;
+    private bool isPIn = false;
+    private bool notFirstTalkP = false;
+    private bool notFirstTalkG = false;
+    private bool endQuest = false;
+    public bool isPickable = false;
 
 
     public GhostManager ghost;
@@ -41,6 +42,12 @@ public class ObjectsInteractable : MonoBehaviour
 
             if (isPIn)
             {
+                if (isPickable && tdialogue.DoneTalking && ItemName != null && notFirstTalkP)
+                {
+                    Debug.Log("Picked up");
+                    Player.GetComponent<InventorySystem>().AddItem(ItemName);
+                    Destroy(gameObject);
+                }
                 if (!endQuest)
                 {
 
@@ -53,14 +60,11 @@ public class ObjectsInteractable : MonoBehaviour
                     tdialogue.DialPass(dialPlayer[0]);
                     notFirstTalkP = true;
                 }
-                else
+                else if (dialPlayer.Length == 2)
                 {
                     tdialogue.DialPass(dialPlayer[1]);
                 }
-                if (picked)
-                {
-                 
-                }
+             
             }
         }
     }

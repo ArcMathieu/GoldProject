@@ -1173,7 +1173,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 265244469}
   - {fileID: 1486042979}
   - {fileID: 271689308}
   - {fileID: 859561261}
@@ -1366,7 +1365,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 120624460}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &135043328
 SpriteRenderer:
@@ -1603,6 +1602,7 @@ MonoBehaviour:
   switchButton: {fileID: 910265902}
   ghostAppears: {fileID: 2082903311}
   firstTime: 1
+  OnCircle: 0
   CanChange: 0
 --- !u!61 &166617175
 BoxCollider2D:
@@ -2541,11 +2541,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265244467}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.53, y: 0.1, z: 48.707035}
+  m_LocalPosition: {x: 10.53, y: 0.099999465, z: 48.707043}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
-  m_Father: {fileID: 120624460}
-  m_RootOrder: 0
+  m_Father: {fileID: 904733304}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &265244470
 BoxCollider2D:
@@ -2586,7 +2586,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.61240554, y: 0.70443916}
+  m_Offset: {x: 0.060888648, y: 0.091638505}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -2597,7 +2597,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.374376, y: 10.309505}
+  m_Size: {x: 1.3126707, y: 0.9949647}
   m_EdgeRadius: 0
 --- !u!114 &265244472
 MonoBehaviour:
@@ -2611,13 +2611,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016954e06cf8f0d4f927f56508599478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
-  isIn: 0
-  isPIn: 0
-  notFirstTalkP: 0
-  notFirstTalkG: 0
-  endQuest: 0
-  picked: 0
+  ItemName: 
+  isPickable: 0
   ghost: {fileID: 0}
   dialPlayer: []
   dialGhost:
@@ -2626,6 +2621,7 @@ MonoBehaviour:
   zone: {fileID: 0}
   interact: {fileID: 0}
   firstObj: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!1 &266355346
 GameObject:
   m_ObjectHideFlags: 0
@@ -2837,7 +2833,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 120624460}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &271689309
 BoxCollider2D:
@@ -3028,7 +3024,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 120624460}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &282381787
 BoxCollider2D:
@@ -3118,13 +3114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016954e06cf8f0d4f927f56508599478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
-  isIn: 0
-  isPIn: 0
-  notFirstTalkP: 0
-  notFirstTalkG: 0
-  endQuest: 0
-  picked: 0
+  ItemName: 
+  isPickable: 0
   ghost: {fileID: 0}
   dialPlayer:
   - {fileID: 11400000, guid: 3bf93b05fdf64b84d864f27753db9d29, type: 2}
@@ -3133,6 +3124,7 @@ MonoBehaviour:
   zone: {fileID: 0}
   interact: {fileID: 0}
   firstObj: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!61 &282381790
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4669,10 +4661,10 @@ Transform:
   m_GameObject: {fileID: 570205820}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 20.21, y: 9.17, z: 49.707035}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 3.03, y: 3.03, z: 1.01}
   m_Children: []
   m_Father: {fileID: 120624460}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &570205822
 BoxCollider2D:
@@ -4973,7 +4965,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 120624460}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &600412486
 SpriteRenderer:
@@ -5247,6 +5239,140 @@ Transform:
   m_Father: {fileID: 2082903316}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &638944609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 638944610}
+  - component: {fileID: 638944613}
+  - component: {fileID: 638944612}
+  - component: {fileID: 638944611}
+  m_Layer: 0
+  m_Name: Pendentif (2)
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &638944610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638944609}
+  m_LocalRotation: {x: -0, y: -0, z: 0.24006811, w: 0.97075605}
+  m_LocalPosition: {x: -10.51, y: -58.45, z: 48.70705}
+  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_Children: []
+  m_Father: {fileID: 904733304}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 27.781002}
+--- !u!114 &638944611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638944609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016954e06cf8f0d4f927f56508599478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemName: Collier Lily
+  isPickable: 1
+  ghost: {fileID: 2082903312}
+  dialPlayer:
+  - {fileID: 11400000, guid: e555fc07772fde243a6339cd5421e974, type: 2}
+  - {fileID: 11400000, guid: bc292389309317240aa56b86b2359b74, type: 2}
+  dialGhost:
+  - {fileID: 11400000, guid: 3f57853f620656e4c922b31a41d4ae13, type: 2}
+  tdialogue: {fileID: 1624967777}
+  zone: {fileID: 2063765906}
+  interact: {fileID: 1180113857}
+  firstObj: {fileID: 0}
+  Player: {fileID: 0}
+--- !u!61 &638944612
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638944609}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.007719964, y: -0.18598497}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.15, y: 0.15}
+    newSize: {x: 5, y: 5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.44, y: 1.64}
+  m_EdgeRadius: 0
+--- !u!212 &638944613
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638944609}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 0b02dcfc423a5f7458f6e96c139e2d66, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5, y: 5}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &640219192
 GameObject:
   m_ObjectHideFlags: 0
@@ -6654,7 +6780,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 120624460}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &859561262
 SpriteRenderer:
@@ -7060,7 +7186,9 @@ Transform:
   - {fileID: 166617177}
   - {fileID: 1646658191}
   - {fileID: 1797476517}
-  - {fileID: 1590753752}
+  - {fileID: 265244469}
+  - {fileID: 1910816067}
+  - {fileID: 638944610}
   m_Father: {fileID: 1317782803}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7328,13 +7456,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016954e06cf8f0d4f927f56508599478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
-  isIn: 0
-  isPIn: 0
-  notFirstTalkP: 0
-  notFirstTalkG: 0
-  endQuest: 0
-  picked: 0
+  ItemName: 
+  isPickable: 0
   ghost: {fileID: 0}
   dialPlayer:
   - {fileID: 11400000, guid: 3966222baf7415742a13c1c3e9ad477b, type: 2}
@@ -7346,6 +7469,7 @@ MonoBehaviour:
   zone: {fileID: 0}
   interact: {fileID: 0}
   firstObj: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!61 &942989341
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8242,13 +8366,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016954e06cf8f0d4f927f56508599478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
-  isIn: 0
-  isPIn: 0
-  notFirstTalkP: 0
-  notFirstTalkG: 0
-  endQuest: 0
-  picked: 0
+  ItemName: 
+  isPickable: 0
   ghost: {fileID: 0}
   dialPlayer:
   - {fileID: 11400000, guid: 3966222baf7415742a13c1c3e9ad477b, type: 2}
@@ -8260,6 +8379,7 @@ MonoBehaviour:
   zone: {fileID: 0}
   interact: {fileID: 0}
   firstObj: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!61 &1071127298
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9416,7 +9536,7 @@ Transform:
   m_LocalScale: {x: 0.18832976, y: 0.2187428, z: 1}
   m_Children: []
   m_Father: {fileID: 120624460}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1298411655
 MonoBehaviour:
@@ -9430,13 +9550,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016954e06cf8f0d4f927f56508599478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
-  isIn: 0
-  isPIn: 0
-  notFirstTalkP: 0
-  notFirstTalkG: 0
-  endQuest: 0
-  picked: 0
+  ItemName: 
+  isPickable: 0
   ghost: {fileID: 0}
   dialPlayer:
   - {fileID: 11400000, guid: 2b1475517053a5b4cbc63e1b79804902, type: 2}
@@ -9448,6 +9563,7 @@ MonoBehaviour:
   zone: {fileID: 0}
   interact: {fileID: 0}
   firstObj: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!61 &1298411656
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9696,7 +9812,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 120624460}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1320632622
 BoxCollider2D:
@@ -9804,7 +9920,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 120624460}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1323798922
 BoxCollider2D:
@@ -11051,7 +11167,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 120624460}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1486042981
 BoxCollider2D:
@@ -11638,145 +11754,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1590753751
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1590753752}
-  - component: {fileID: 1590753756}
-  - component: {fileID: 1590753755}
-  - component: {fileID: 1590753753}
-  m_Layer: 0
-  m_Name: Object (3)
-  m_TagString: Interactable
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1590753752
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590753751}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.53, y: 0.61, z: 48.707047}
-  m_LocalScale: {x: 0.18833004, y: 0.21873999, z: 1}
-  m_Children: []
-  m_Father: {fileID: 904733304}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1590753753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590753751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 016954e06cf8f0d4f927f56508599478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 0
-  isIn: 0
-  isPIn: 0
-  notFirstTalkP: 0
-  notFirstTalkG: 0
-  endQuest: 0
-  picked: 0
-  ghost: {fileID: 2082903312}
-  dialPlayer:
-  - {fileID: 11400000, guid: 2b1475517053a5b4cbc63e1b79804902, type: 2}
-  - {fileID: 11400000, guid: 2b1475517053a5b4cbc63e1b79804902, type: 2}
-  dialGhost:
-  - {fileID: 11400000, guid: f3616f8f42a550347b697ae6d91e4b8b, type: 2}
-  - {fileID: 11400000, guid: f3616f8f42a550347b697ae6d91e4b8b, type: 2}
-  tdialogue: {fileID: 1624967777}
-  zone: {fileID: 2063765906}
-  interact: {fileID: 0}
-  firstObj: {fileID: 0}
---- !u!61 &1590753755
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590753751}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.113806725, y: 0.8720894}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5}
-    newSize: {x: 5, y: 5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 9.410286, y: 7.957918}
-  m_EdgeRadius: 0
---- !u!212 &1590753756
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590753751}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 819da96aebc440042a2b563c349bfed2, type: 3}
-  m_Color: {r: 0.1760413, g: 0.8679245, b: 0.19860274, a: 0}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 5, y: 5}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &1596601084
 GameObject:
   m_ObjectHideFlags: 0
@@ -12191,7 +12168,9 @@ GameObject:
   - component: {fileID: 1639986335}
   - component: {fileID: 1639986334}
   - component: {fileID: 1639986338}
+  - component: {fileID: 1639986340}
   - component: {fileID: 1639986336}
+  - component: {fileID: 1639986339}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -12296,8 +12275,51 @@ MonoBehaviour:
   Ghost: {fileID: 2082903316}
   currentRotation: 0
   PlayerState: 0
-  CurrentInteraction: {fileID: 0}
+  CurrentInteraction: []
   OnObject: 0
+--- !u!114 &1639986339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639986333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b0e0ba4666dbf4e9c9c9f971f2d323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Items: []
+  PlayerItems:
+  - {fileID: 690462360}
+  - {fileID: 1683838137}
+  - {fileID: 269696997}
+  - {fileID: 1330910363}
+  - {fileID: 489934123}
+  - {fileID: 75757221}
+  - {fileID: 1271701431}
+  - {fileID: 667991442}
+  - {fileID: 132921535}
+  - {fileID: 365806096}
+  - {fileID: 189876147}
+  - {fileID: 2116107143}
+--- !u!114 &1639986340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639986333}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da6cbd5f140efd46a275bfc82e993e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InventorySize: 0
+  caseList: []
+  slotPrefab: {fileID: 0}
+  slotSize: 0
+  isP1: 0
 --- !u!1 &1646658186
 GameObject:
   m_ObjectHideFlags: 0
@@ -12329,13 +12351,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016954e06cf8f0d4f927f56508599478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 1
-  isIn: 0
-  isPIn: 0
-  notFirstTalkP: 0
-  notFirstTalkG: 0
-  endQuest: 1
-  picked: 1
+  ItemName: Collier Lily
+  isPickable: 1
   ghost: {fileID: 2082903312}
   dialPlayer:
   - {fileID: 11400000, guid: e555fc07772fde243a6339cd5421e974, type: 2}
@@ -12345,6 +12362,7 @@ MonoBehaviour:
   zone: {fileID: 2063765906}
   interact: {fileID: 1180113857}
   firstObj: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!61 &1646658189
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13080,7 +13098,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 120624460}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1795516302
 SpriteRenderer:
@@ -13178,13 +13196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016954e06cf8f0d4f927f56508599478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
-  isIn: 0
-  isPIn: 0
-  notFirstTalkP: 0
-  notFirstTalkG: 0
-  endQuest: 0
-  picked: 0
+  ItemName: 
+  isPickable: 0
   ghost: {fileID: 2082903312}
   dialPlayer:
   - {fileID: 11400000, guid: d6903021a4970df4c94f32c755149e20, type: 2}
@@ -13196,6 +13209,7 @@ MonoBehaviour:
   zone: {fileID: 2063765906}
   interact: {fileID: 0}
   firstObj: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!61 &1797476519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13526,13 +13540,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016954e06cf8f0d4f927f56508599478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
-  isIn: 0
-  isPIn: 0
-  notFirstTalkP: 0
-  notFirstTalkG: 0
-  endQuest: 0
-  picked: 0
+  ItemName: 
+  isPickable: 0
   ghost: {fileID: 0}
   dialPlayer:
   - {fileID: 11400000, guid: 3966222baf7415742a13c1c3e9ad477b, type: 2}
@@ -13544,6 +13553,7 @@ MonoBehaviour:
   zone: {fileID: 0}
   interact: {fileID: 0}
   firstObj: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!61 &1817566873
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13986,7 +13996,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 120624460}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1895812030
 SpriteRenderer:
@@ -14070,6 +14080,139 @@ Transform:
   m_Father: {fileID: 1968919550}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1910816066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1910816067}
+  - component: {fileID: 1910816070}
+  - component: {fileID: 1910816069}
+  - component: {fileID: 1910816068}
+  m_Layer: 0
+  m_Name: Pendentif (1)
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1910816067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910816066}
+  m_LocalRotation: {x: -0, y: -0, z: 0.24006811, w: 0.97075605}
+  m_LocalPosition: {x: 2.1, y: -57.4, z: 48.70705}
+  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_Children: []
+  m_Father: {fileID: 904733304}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 27.781002}
+--- !u!114 &1910816068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910816066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016954e06cf8f0d4f927f56508599478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemName: Collier Lily
+  isPickable: 1
+  ghost: {fileID: 2082903312}
+  dialPlayer:
+  - {fileID: 11400000, guid: e555fc07772fde243a6339cd5421e974, type: 2}
+  dialGhost:
+  - {fileID: 11400000, guid: 3f57853f620656e4c922b31a41d4ae13, type: 2}
+  tdialogue: {fileID: 1624967777}
+  zone: {fileID: 2063765906}
+  interact: {fileID: 1180113857}
+  firstObj: {fileID: 0}
+  Player: {fileID: 0}
+--- !u!61 &1910816069
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910816066}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.007719964, y: -0.18598497}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.15, y: 0.15}
+    newSize: {x: 5, y: 5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.44, y: 1.64}
+  m_EdgeRadius: 0
+--- !u!212 &1910816070
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910816066}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 0b02dcfc423a5f7458f6e96c139e2d66, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5, y: 5}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1925850257
 GameObject:
   m_ObjectHideFlags: 0
@@ -14615,7 +14758,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 120624460}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2037507734
 BoxCollider2D:
@@ -15136,7 +15279,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 120624460}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2076137838
 BoxCollider2D:
@@ -15350,6 +15493,7 @@ MonoBehaviour:
   MyPlayer: {fileID: 1639986333}
   sp: {fileID: 0}
   GhostState: 0
+  CurrentInteraction: []
 --- !u!50 &2082903313
 Rigidbody2D:
   serializedVersion: 4
