@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectsInteractable : MonoBehaviour
 {
-    public int ID = 0;
+    //public int ID = 0;
     public bool isIn = false;
     public bool isPIn = false;
     public bool notFirstTalkP = false;
@@ -40,7 +40,7 @@ public class ObjectsInteractable : MonoBehaviour
 
             if (isPIn)
             {
-                if (endQuest)
+                if (!endQuest)
                 {
 
                     zone.questStart = false;
@@ -66,12 +66,12 @@ public class ObjectsInteractable : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (ID == 1 && collision.gameObject.CompareTag("GhostPlayer"))
+        if (/*ID == 1 && */collision.gameObject.CompareTag("GhostPlayer"))
         {
             isIn = true;
 
         }
-        if (ID == 0 && collision.gameObject.CompareTag("Player"))
+        if (/*ID == 0 && */collision.gameObject.CompareTag("Player"))
         {
             isPIn = true;
         }

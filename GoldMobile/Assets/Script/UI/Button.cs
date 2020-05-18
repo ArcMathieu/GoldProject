@@ -14,7 +14,11 @@ public class Button : MonoBehaviour
         if (player.CurrentInteraction != null)
         {
         //Lance la fonction setAction sur l'objet avec lequel le perso est en collision
-            player.CurrentInteraction.SendMessage("setAction");
+            foreach(GameObject myObject in player.CurrentInteraction)
+            {
+                myObject.SendMessage("setAction");
+
+            }
         }
      
 
@@ -36,7 +40,11 @@ public class Button : MonoBehaviour
         {
             if (player.CurrentInteraction != null)
             {
-                player.CurrentInteraction.SendMessage("setAction");
+                foreach (GameObject myObject in player.CurrentInteraction)
+                {
+                    myObject.SendMessage("setAction");
+
+                }
             }
     
             StartCoroutine(changeColor());

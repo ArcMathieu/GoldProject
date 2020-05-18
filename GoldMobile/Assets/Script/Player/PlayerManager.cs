@@ -20,7 +20,7 @@ public class PlayerManager : MonoBehaviour
     private Animator anim;
 
     //Objet dans lequel on est rentré en collision avec
-    public GameObject CurrentInteraction;
+    public List<GameObject> CurrentInteraction;
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +50,8 @@ public class PlayerManager : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Interactable"))
         {
-            CurrentInteraction = collision.gameObject;
+
+            CurrentInteraction.Add(collision.gameObject);
             Debug.Log(collision.gameObject.name);
         }
     }
@@ -58,7 +59,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Interactable"))
         {
-            CurrentInteraction = null;
+            CurrentInteraction.Remove(collision.gameObject);
         }
     }
 
