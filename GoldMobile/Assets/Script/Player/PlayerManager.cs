@@ -14,9 +14,11 @@ public class PlayerManager : MonoBehaviour
     public Transform Ghost;
     public float currentRotation;
 
+    //differents état du joueur
     public enum State {WAIT, MOVABLE }
-
     public State PlayerState;
+
+    //Animation du joueur
     private Animator anim;
 
     //Objet dans lequel on est rentré en collision avec

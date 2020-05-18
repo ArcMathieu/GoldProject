@@ -22,8 +22,10 @@ public class GhostManager : MonoBehaviour
     public SpriteRenderer sp;
     private Animator anim;
     public enum State { CONTROLLED, WAIT, MOVABLE }
-
     public State GhostState;
+
+    //Objet dans lequel on est rentré en collision avec
+    public List<GameObject> CurrentInteraction;
 
     // Start is called before the first frame update
     void Start()
@@ -109,6 +111,23 @@ public class GhostManager : MonoBehaviour
         else
         {
             GetComponentInChildren<SpriteRenderer>().flipX = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Interactable"))
+        {
+
+            CurrentInteraction.Add(collision.gameObject);
+            Debug.Log(collision.gameObject.name);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Interactable"))
+        {
+            CurrentInteraction.Remove(collision.gameObject);
         }
     }
 

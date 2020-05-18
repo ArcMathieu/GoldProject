@@ -78,7 +78,7 @@ public class ObjectsInteractable : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        zone = null;
+        //zone = null;
         isPIn = false;
         isIn = false;
     }
