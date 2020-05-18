@@ -7,8 +7,8 @@ public class Invocation : MonoBehaviour
     public GameObject switchButton;
     public GameObject ghostAppears;
     
-    private bool firstTime = true;
-    private bool CanChange = false;
+    public bool firstTime = true;
+    public bool CanChange = false;
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -17,6 +17,7 @@ public class Invocation : MonoBehaviour
             {
                 CanChange = true;
             }
+            
         }
     }
     
@@ -24,6 +25,7 @@ public class Invocation : MonoBehaviour
     {
         if (firstTime && CanChange)
         {
+            Debug.Log("fr");
             GameManager._instance.showGhost(true);
             GameManager._instance.IsFollowingGirl();
             //setAnimBougie true

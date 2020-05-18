@@ -51,6 +51,7 @@ public class PlayerManager : MonoBehaviour
         if (collision.gameObject.CompareTag("Interactable"))
         {
             CurrentInteraction = collision.gameObject;
+            Debug.Log(collision.gameObject.name);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
