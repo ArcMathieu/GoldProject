@@ -21,7 +21,6 @@ public class ObjectsInteractable : MonoBehaviour
     public DisplayText tdialogue;
     public Zone zone;
     public InteractionManager interact;
-    public GameObject firstObj;
     public GameObject Player;
 
     public void setAction()
@@ -43,11 +42,19 @@ public class ObjectsInteractable : MonoBehaviour
 
             if (isPIn)
             {
-                if (isPickable && tdialogue.DoneTalking && ItemName != null && notFirstTalkP)
+                if (isPickable && tdialogue.DoneTalking && ItemName != null)
                 {
-                    Debug.Log("Picked up");
-                    Player.GetComponent<InventorySystem>().AddItem(ItemName);
-                    Destroy(gameObject);
+                    StartCoroutine(waitForDestroy());
+                    IEnumerator waitForDestroy()
+                    {
+                        Debug.Log("Picked up");
+                        tdialogue.DialPass(dialPlayer[0]);
+                        Player.GetComponent<InventorySystem>().AddItem(ItemName);
+                        GameManager._instance.TakeObject(ItemName);
+                        yield return new WaitForSeconds(1);
+                        Destroy(gameObject);
+                    }
+
                 }
                 if (isDiscoveredByHonoria)
                 {

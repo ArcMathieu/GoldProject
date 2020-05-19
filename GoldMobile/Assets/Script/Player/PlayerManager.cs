@@ -34,20 +34,6 @@ public class PlayerManager : MonoBehaviour
         PlayerState = State.WAIT;
     }
 
-    public bool OnObject = false;
-
-    //private void OnTriggerStay2D(Collider2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Interactable"))
-    //    {
-    //        if (OnObject)
-    //        {
-    //            collision.SendMessage("setAction");
-    //         // OnObject = false;
-    //        }
-    //    }
-    //}
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Interactable"))

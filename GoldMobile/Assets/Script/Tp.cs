@@ -10,8 +10,10 @@ public class Tp : MonoBehaviour
     public bool precedentlyOpened = false;
     public bool stairs = false;
     public bool ghostFollowing = false;
+    public bool secreteTrap = false;
     public DisplayText tdialogue;
     public DialogueData dialPlayer;
+    public StoryGame storyManager;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -40,6 +42,12 @@ public class Tp : MonoBehaviour
 
             } else {
                 tdialogue.DialPass(dialPlayer);
+            }
+            //Secrete trap
+            if (storyManager.Lockpick && secreteTrap)
+            {
+                storyManager.DoorToSecreteCave = true;
+                GameManager._instance.openStep();
             }
         }
     }

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Invocation : MonoBehaviour
 {
-    public GameObject switchButton;
     public GameObject ghostAppears;
+    public StoryGame storyManager;
+    public ObjectsInteractable collier;
     
     public bool firstTime = true;
     public bool OnCircle = false;
@@ -31,15 +32,12 @@ public class Invocation : MonoBehaviour
     {
         if (CanChange)
         {
-            //fait apparaitre la petite fille
-            GameManager._instance.showGhost(true);
-            GameManager._instance.IsFollowingGirl();
-            //referme la porte de la chambre
-            GameManager._instance.tp[5].precedentlyOpened = false;
+            storyManager.cinRituel = true;
+            GameManager._instance.openStep();
+            collier.isPickable = true;
             //setAnimBougie true
             firstTime = false;
             //fait apparaitre le bouton de switch de perso
-            switchButton.SetActive(true);
         }
         
     }

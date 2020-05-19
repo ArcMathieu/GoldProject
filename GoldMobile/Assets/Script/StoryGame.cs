@@ -4,23 +4,49 @@ using UnityEngine;
 
 public class StoryGame : MonoBehaviour
 {
-    public bool cinématique1;
-    public bool cinématique2;
-    public bool cinématique3;
-    public bool cinématique4;
-    public bool cinématique5;
+    //début du jeu
+    public bool cinSTART;
+    public float cin1Time = 2;
 
-    public bool object1Picked;
-    public bool object2Picked;
-    public bool object3Picked;
-    public bool object4Picked;
-    public bool object5Picked;
-    public bool object6Picked;
-    public bool object7Picked;
-    public bool object8Picked;
-    public bool object9Picked;
-    public bool object10Picked;
-    public bool object11Picked;
-    public bool object12Picked;
+    public bool cinRituel;
+    public float cin2Time = 2;
+
+    public bool cinVerre;
+    public float cin3Time = 2;
+
+    public bool cinJournal;
+    public float cin4Time = 2;
+
+    //fin du jeu
+    public bool cinENDING;
+    public float cin5Time = 2;
+
+    //objectPicked
+    public bool CollierKatia; //ouvre la chambre Honoria + a garder pour la fin
+    public bool Secateur; //enleve ronces dans la serre
+    public bool BolRituel; //A colecter for ending
+    public bool journalHonoria; //Dialogue
+    //public bool CleParentsRoom; //Dialogue && ouvre chambre
+    public bool placardMoved; //Retenir position
+    public bool BrosseACheveux; //Dialogue
+    public bool CleSecretaire; //openBibli
+    public bool PageLivre; //Dialogue
+    public bool Lockpick; //openTrappe
+    public bool LivreRituel; //A colecter for ending
+
+    //door
+    public bool Tuto;
+    public bool DoorToSerre;
+    public bool DoorToBibli;
+    public bool DoorToMother;
+    public bool DoorToSecreteCave;
+
+    //obj bonus
+    public bool dessin;
+    public bool lettreFamille;
+    public bool bibleChevet;
+
+    //Enigme
+    public bool coffre;//coffre fort de katia
 
 }

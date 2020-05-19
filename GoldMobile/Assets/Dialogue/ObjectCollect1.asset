@@ -14,7 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LesDialogues:
   - Cet objet t'appartient
-  - je vais te le ramener
   SpeedDialogues:
   - 0.05
-  - 0

@@ -7,20 +7,23 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager _instance;
 
-    public GameObject P1;
-    public GameObject P2;
+    public GameObject CamP1;
+    public GameObject CamP2;
+    public GameObject Player;
     public GameObject ghost;
     public bool controleP1 = false;
-    public bool firstRoom = false;
 
+    public StoryGame storyManager;
     public PlayerManager player;
     public GhostManager gh;
 
-    public GameObject[] clés;
+    public GameObject switchButton;
+    public ObjectsInteractable openSecretaire;
+    public ObjectsInteractable clesParents;
+
     public Tp[] tp;
 
     public float playerSpeed;
-    public int incrementStep = 0;
     private void Awake()
     {
         controleP1 = true;
@@ -33,6 +36,7 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
         }
+        storyManager.Tuto = true;
         openStep();
     }
 
@@ -64,101 +68,174 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void TakeObject(string ItemName)
+    {
+        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[0].name)
+        {
+            //collier
+            storyManager.CollierKatia = true;
+        }
+        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[1].name)
+        {
+            //secateur
+            Debug.Log("sécateur");
+            storyManager.Secateur = true;
+        }
+        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[2].name)
+        {
+            //RecipRituel
+            storyManager.BolRituel = true;
+        }
+        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[3].name)
+        {
+            //cléCahmbreParents
+            storyManager.DoorToMother = true;
+        }
+        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[4].name)
+        {
+            //CléSecretaire
+            storyManager.CleSecretaire = true;
+        }
+        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[5].name)
+        {
+            //LockPick
+            storyManager.Lockpick = true;
+        }
+        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[6].name)
+        {
+            //LockPick
+            storyManager.BrosseACheveux = true;
+        }
+        openStep();
+    }
+
     public void openStep()
     {
-        firstRoom = true;
-        if (incrementStep == 0)
+        if (!storyManager.cinSTART)
         {
             //Exterieur cinematique => coroutine
-            launchCorout(2);
+            launchCorout(storyManager.cin1Time);
             //chambre mother, sous sol 2, serre & librairy fermés
             for (int i = 0; i < 8; i++)
             {
                 tp[i].precedentlyOpened = true;
             }
-            //if fin cinématique 
-            incrementStep++;
+            //if fin cinématique
+            storyManager.cinSTART = true;
         }
 
-        if (incrementStep == 1)
+        if (storyManager.cinSTART)
         {
             //main hall
             //active player mvmt
-            player.PlayerState = PlayerManager.State.MOVABLE;
-            //lumière on + déplacement libre joueur
-            //dialogue postIntro
-            // dialogue chambre fille
-            //incrementStep++;
+            //player.PlayerState = PlayerManager.State.MOVABLE;
+            if (storyManager.Tuto)
+            {
+                if (!storyManager.CollierKatia)
+                {
+                    //lumière on + déplacement libre joueur
+                    if (storyManager.cinRituel) //a declencher quand rituel invocation
+                    {
+                        //lumière off
+                        showGhost(true);
+                        IsFollowingGirl();
+                        switchButton.SetActive(true);
+                    }
+                }
+                else
+                {
+                    storyManager.Tuto = false;
+                    switchButton.SetActive(false);
+                }
 
-            //chambre girl
-            //wait invocation 
-            //tuto sel
-            //lumière off && invoc petite fille + halo de lumière
+            }
+
+
+            //quand entre dans chambre honoria => story.tuto = true
+            if (!storyManager.Tuto)
+            {
+                tp[5].precedentlyOpened = true;
+            }
+            else
+            {
+                tp[5].precedentlyOpened = false;
+            }
 
             //sous sol 1
-            //secateur
+            
             //flashBack / vision de fantome
 
-            //Lily chambre
+            //katia chambre
             //interaction => tapis+latte
             //boite code
 
             //librairy closed, mother room closed 
+            
 
-            //incrementStep++;
+            if (storyManager.coffre)
+            {
+                clesParents.isPickable = true;
+
+            }
 
         }
 
-        if (incrementStep == 2)
+        if (storyManager.DoorToSerre)
         {
             //serre (lié à chambre)
+            tp[8].precedentlyOpened = true;
+            tp[9].precedentlyOpened = true;
             //cinématique lié bout de verre
             //using sécateur => clé + journal
-            foreach (GameObject Item in player.GetComponent<InventorySystem>().PlayerItems)
-            {
-                if (Item.name == clés[1].name)
-                {
-                    //cut ronces
-                    break;
-                }
-            }
+
             //code sur pilier
 
-            //incrementStep++;
         }
-
-        if (incrementStep == 3)
+        else
         {
-            //library
-            //labyrinthe
-            //wait for doors 
-            //clé to mother room
-
-            //incrementStep++;
-
+            tp[8].precedentlyOpened = false;
         }
 
-        if (incrementStep == 4)
+
+        if (storyManager.DoorToMother)
         {
             //mother room
+            tp[10].precedentlyOpened = true;
+            tp[11].precedentlyOpened = true;
             //pages livre
+            if (storyManager.CleSecretaire)
+            {
+                openSecretaire.isPickable = true;
+            }
             //cinématique
-            //outil to trappe du sous sol
-
-            //incrementStep++;
+            if (storyManager.BrosseACheveux)
+            {
+                //bruit bibli
+                storyManager.DoorToBibli = true;
+            }
 
         }
 
-        if (incrementStep == 5)
+        if (storyManager.DoorToBibli)
         {
-            //sous sol 2 fond de la librairy
-            //R sauf cinématique
+            //library
+            tp[12].precedentlyOpened = true;
+            tp[13].precedentlyOpened = true;
 
-            //incrementStep++;
+            //labyrinthe
+            if (storyManager.Lockpick && storyManager.DoorToSecreteCave)
+            {
+                tp[14].precedentlyOpened = true;
+                tp[15].precedentlyOpened = true;
+                //open secrete cave
+
+                //sous sol 2 fond de la librairy
+                //R sauf cinématique
+            }
 
         }
 
-        if (incrementStep == 6)
+        if (storyManager.cinENDING)
         {
             //end
         }
@@ -189,12 +266,12 @@ public class GameManager : MonoBehaviour
     {
         if (!selectPlayer)
         {
-            P1.gameObject.SetActive(true);
-            P2.gameObject.SetActive(false);
+            CamP1.gameObject.SetActive(true);
+            CamP2.gameObject.SetActive(false);
         }else if (selectPlayer)
         {
-            P1.gameObject.SetActive(false);
-            P2.gameObject.SetActive(true);
+            CamP1.gameObject.SetActive(false);
+            CamP2.gameObject.SetActive(true);
         }
     }
 }
