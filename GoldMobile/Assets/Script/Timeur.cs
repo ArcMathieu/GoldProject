@@ -27,6 +27,7 @@ public class Timeur : MonoBehaviour
         if (currentTime >= 600)  // && rajouter une condition pour quand le jeu se termine
         {
             FindObjectOfType<Achievement>().UnlockTripleParked();
+
         }
 
     }

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class cadena : MonoBehaviour
 {
+    public float currentTime = 0;
     public GameObject number1;
     public GameObject number2;
     public GameObject number3;
@@ -54,13 +55,17 @@ public class cadena : MonoBehaviour
                 {
                     if (pasword[2] == number3.GetComponent<currentNumber>().number)
                     {
-                        Debug.Log("coucou");
-                        //Cadena.SetActive(false);
-                        noRepeat = true;
-                        FindObjectOfType<Achievement>().UnlockWhatinTheBox();
+                        currentTime += 1 * Time.deltaTime;
+                        if (currentTime >= 0.7)
+                        {
+                            Cadena.SetActive(false);
+                            noRepeat = true;
+                            FindObjectOfType<Achievement>().UnlockWhatinTheBox();
+                        }
                     }
                 }
             }
         }
+
     }
 }
