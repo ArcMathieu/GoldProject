@@ -24,7 +24,12 @@
 
 public static class GPGSIds
 {
+        public const string achievement_dqzzq = "CgkIuKrc7IwREAIQBQ"; // <GPGSID>
+        public const string achievement_dzqdqz = "CgkIuKrc7IwREAIQBA"; // <GPGSID>
+        public const string achievement_dfgh = "CgkIuKrc7IwREAIQBg"; // <GPGSID>
+        public const string achievement_truefalse_exorcist = "CgkIuKrc7IwREAIQAg"; // <GPGSID>
         public const string leaderboard_41 = "CgkIuKrc7IwREAIQAA"; // <GPGSID>
+        public const string achievement_more_than_a_distant_memory = "CgkIuKrc7IwREAIQAw"; // <GPGSID>
 
 }
 

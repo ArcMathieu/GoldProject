@@ -11,7 +11,12 @@ public class GoldM_Authentification : MonoBehaviour
 
     void Start()
     {
-        if(platform == null)
+        login();
+    }
+
+    public void login()
+    {
+        if (platform == null)
         {
             PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
             PlayGamesPlatform.InitializeInstance(config);
@@ -20,7 +25,7 @@ public class GoldM_Authentification : MonoBehaviour
             platform = PlayGamesPlatform.Activate();
         }
 
-        Social.Active.localUser.Authenticate(success =>
+        Social.Active.localUser.Authenticate((bool success) =>
         {
             if (success)
             {
@@ -32,6 +37,5 @@ public class GoldM_Authentification : MonoBehaviour
             }
         });
     }
-
     
 }
