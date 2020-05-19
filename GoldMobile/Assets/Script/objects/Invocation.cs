@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Invocation : MonoBehaviour
 {
-    public GameObject switchButton;
     public GameObject ghostAppears;
+    public StoryGame storyManager;
+    public ObjectsInteractable collier;
     
     public bool firstTime = true;
     public bool OnCircle = false;
@@ -15,8 +16,6 @@ public class Invocation : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             OnCircle = true;
-
-
         }
     }
 
@@ -33,11 +32,12 @@ public class Invocation : MonoBehaviour
     {
         if (CanChange)
         {
-            GameManager._instance.showGhost(true);
-            GameManager._instance.IsFollowingGirl();
+            storyManager.cinRituel = true;
+            GameManager._instance.openStep();
+            collier.isPickable = true;
             //setAnimBougie true
             firstTime = false;
-            switchButton.SetActive(true);
+            //fait apparaitre le bouton de switch de perso
         }
         
     }

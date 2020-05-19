@@ -7,27 +7,48 @@ public class Tp : MonoBehaviour
     public GameObject tpTo;
     public GameObject ghost;
     public bool canPass = false;
+    public bool precedentlyOpened = false;
     public bool stairs = false;
     public bool ghostFollowing = false;
+    public bool secreteTrap = false;
+    public DisplayText tdialogue;
+    public DialogueData dialPlayer;
+    public StoryGame storyManager;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && canPass)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            if (stairs)
-            {
-                collision.transform.position = new Vector2(tpTo.transform.position.x, tpTo.transform.position.y-5);
-            }
-            else
-            {
-                collision.transform.position = tpTo.transform.position;
-            }
-            if (ghostFollowing)
-            {
-                ghost.transform.position = new Vector2(collision.transform.position.x +0.5f, collision.transform.position.y + 0.5f);
-            }
+            if (precedentlyOpened){
+                if (canPass)
+                {
+                    if (stairs)
+                    {
+                        collision.transform.position = new Vector2(tpTo.transform.position.x, tpTo.transform.position.y-5);
+                    }
+                    else
+                    {
+                        collision.transform.position = tpTo.transform.position;
+                    }
+                    if (ghostFollowing)
+                    {
+                        ghost.transform.position = new Vector2(collision.transform.position.x +0.5f, collision.transform.position.y + 0.5f);
+                    }
 
-            tpTo.SendMessage("CoroutToWait");
+                    tpTo.SendMessage("CoroutToWait");
+
+                }
+
+            } else {
+                tdialogue.DialPass(dialPlayer);
+            }
+            //Secrete trap
+            if (storyManager.Lockpick && secreteTrap)
+            {
+                storyManager.DoorToSecreteCave = true;
+                GameManager._instance.openStep();
+            }
         }
     }
 
@@ -37,7 +58,7 @@ public class Tp : MonoBehaviour
         IEnumerator WaitToPass()
         {
             canPass = false;
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1);
             canPass = true;
         }
     }

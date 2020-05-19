@@ -12,6 +12,7 @@ public class ObjectsInteractable : MonoBehaviour
     private bool notFirstTalkG = false;
     private bool endQuest = false;
     public bool isPickable = false;
+    public bool isDiscoveredByHonoria = false;
 
 
     public GhostManager ghost;
@@ -20,7 +21,6 @@ public class ObjectsInteractable : MonoBehaviour
     public DisplayText tdialogue;
     public Zone zone;
     public InteractionManager interact;
-    public GameObject firstObj;
     public GameObject Player;
 
     public void setAction()
@@ -28,25 +28,37 @@ public class ObjectsInteractable : MonoBehaviour
         if (tdialogue.DoneTalking) {
             tdialogue.NextDial();
             if (isIn)
-        {
-            if (!notFirstTalkG)
             {
-                tdialogue.DialPass(dialGhost[0]);
-                notFirstTalkG = true;
+                if (!notFirstTalkG)
+                {
+                    tdialogue.DialPass(dialGhost[0]);
+                    notFirstTalkG = true;
+                }
+                else
+                {
+                    tdialogue.DialPass(dialGhost[1]);
+                }
             }
-            else
-            {
-                tdialogue.DialPass(dialGhost[1]);
-            }
-        }
 
             if (isPIn)
             {
-                if (isPickable && tdialogue.DoneTalking && ItemName != null && notFirstTalkP)
+                if (isPickable && tdialogue.DoneTalking && ItemName != null)
                 {
-                    Debug.Log("Picked up");
-                    Player.GetComponent<InventorySystem>().AddItem(ItemName);
-                    Destroy(gameObject);
+                    StartCoroutine(waitForDestroy());
+                    IEnumerator waitForDestroy()
+                    {
+                        Debug.Log("Picked up");
+                        tdialogue.DialPass(dialPlayer[0]);
+                        Player.GetComponent<InventorySystem>().AddItem(ItemName);
+                        GameManager._instance.TakeObject(ItemName);
+                        yield return new WaitForSeconds(1);
+                        Destroy(gameObject);
+                    }
+
+                }
+                if (isDiscoveredByHonoria)
+                {
+                    //action si Honoria à vu un obj
                 }
                 if (!endQuest)
                 {

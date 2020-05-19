@@ -20,25 +20,30 @@ public class InteractionManager : MonoBehaviour
                     hit.collider.GetComponent<Button>().onClick();
 
                 }
-                
-                if (hit.collider.GetComponent<Switch>() != null && touch.phase == TouchPhase.Began)
-                {
-                    hit.collider.GetComponent<Switch>().DoAction();
 
+                if (!isPressedButton)
+                {
+
+                    if (hit.collider.GetComponent<Switch>() != null && touch.phase == TouchPhase.Began)
+                    {
+                        hit.collider.GetComponent<Switch>().DoAction();
+
+                    }
+                    isPressedButton = true;
+                    waitForFrame();
                 }
             }
         }
-        
+
     }
 
-    public void pickObjectToInventory(GameObject objectPicked, GameObject objectinInventory)
+    public void waitForFrame()
     {
-        StartCoroutine(waitingbeforedelete());
-        IEnumerator waitingbeforedelete()
+        StartCoroutine(waitBeforePushAgain());
+        IEnumerator waitBeforePushAgain()
         {
-            yield return new WaitForSeconds(0.2f);
-            objectPicked.SetActive(false);
-            objectinInventory.SetActive(true);
+            yield return new WaitForSeconds(1);
+            isPressedButton = false;
         }
     }
 

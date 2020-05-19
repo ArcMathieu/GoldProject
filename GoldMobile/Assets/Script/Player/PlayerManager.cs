@@ -31,29 +31,19 @@ public class PlayerManager : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         speed = GameManager._instance.playerSpeed;
         currentRotation = 0f;
-        PlayerState = State.MOVABLE;
+        PlayerState = State.WAIT;
     }
-
-    public bool OnObject = false;
-
-    //private void OnTriggerStay2D(Collider2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Interactable"))
-    //    {
-    //        if (OnObject)
-    //        {
-    //            collision.SendMessage("setAction");
-    //         // OnObject = false;
-    //        }
-    //    }
-    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Interactable"))
         {
             CurrentInteraction.Add(collision.gameObject);
-            collision.gameObject.GetComponent<ObjectsInteractable>().Player = gameObject;
+            try
+            {
+                collision.gameObject.GetComponent<ObjectsInteractable>().Player = gameObject;
+            }
+            catch{}
             Debug.Log(collision.gameObject.name);
         }
 
