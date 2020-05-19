@@ -7,20 +7,34 @@ public class Button : MonoBehaviour
 {
     //public ObjectsInteractable[] Obj;
     public PlayerManager player;
+    public GhostManager ghost;
     public Invocation Circle;
     public ObjectsInteractable Interactable;
     public void onClick()
     {
-        if (player.CurrentInteraction != null)
+        if (player.PlayerState == PlayerManager.State.MOVABLE)
         {
-        //Lance la fonction setAction sur l'objet avec lequel le perso est en collision
-            foreach(GameObject myObject in player.CurrentInteraction)
+            if (player.CurrentInteraction != null)
             {
-                myObject.SendMessage("setAction");
+                foreach (GameObject myObject in player.CurrentInteraction)
+                {
+                    myObject.SendMessage("setAction");
 
+                }
             }
         }
-     
+        else
+        {
+            if (ghost.CurrentInteraction != null)
+            {
+                foreach (GameObject myObject in ghost.CurrentInteraction)
+                {
+                    myObject.SendMessage("setAction");
+
+                }
+            }
+        }
+
 
         StartCoroutine(changeColor());
         IEnumerator changeColor()
@@ -38,12 +52,27 @@ public class Button : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (player.CurrentInteraction != null)
+            if (player.PlayerState == PlayerManager.State.MOVABLE)
             {
-                foreach (GameObject myObject in player.CurrentInteraction)
+                if (player.CurrentInteraction != null)
                 {
-                    myObject.SendMessage("setAction");
+                    foreach (GameObject myObject in player.CurrentInteraction)
+                    {
+                        Debug.Log("help");
+                        myObject.SendMessage("setAction");
 
+                    }
+                }
+            }
+            else
+            {
+                if (ghost.CurrentInteraction != null)
+                {
+                    foreach (GameObject myObject in ghost.CurrentInteraction)
+                    {
+                        myObject.SendMessage("setAction");
+
+                    }
                 }
             }
     
