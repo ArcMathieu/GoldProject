@@ -17,9 +17,12 @@ public class DisplayText : MonoBehaviour
     private int dialState = 0;
     private int totalvisibleChara;
     private int visibleC;
+    public AudioSource Audio;
+    public AudioClip KeyStroke;
     // Start is called before the first frame update
     void Start()
     {
+        Audio = GetComponent<AudioSource>();
         tmpro = TextBox.GetComponent<TextMeshProUGUI>();
     }
 
@@ -94,6 +97,8 @@ public class DisplayText : MonoBehaviour
         int counter = 0;
         while (!DoneDisplaying)
         {
+            Audio.pitch = Random.Range(0.9f, 1.1f);
+            Audio.Play();
             visibleC = counter % (totalvisibleChara + 1);
             tmpro.maxVisibleCharacters = visibleC;
 
