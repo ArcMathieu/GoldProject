@@ -5,7 +5,7 @@ using UnityEngine;
 public class Room : MonoBehaviour
 {
     public int layerRoom = 17;
-    public bool RoomQuest = false;
+    //public bool RoomQuest = false;
     public Switch switchButton;
 
     // Use this for initialization
@@ -25,10 +25,10 @@ public class Room : MonoBehaviour
             Debug.Log(other.gameObject.name);
             ActivateEnemies();
         }
-        if (RoomQuest)
-        {
-            switchButton.CanSwitchInRoom = true;
-        }
+        //if (RoomQuest)
+        //{
+        //    switchButton.CanSwitchInRoom = true;
+        //}
     }
 
     private void OnTriggerExit2D(Collider2D other)

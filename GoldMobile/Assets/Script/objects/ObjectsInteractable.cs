@@ -6,11 +6,11 @@ public class ObjectsInteractable : MonoBehaviour
 {
     public string ItemName;
     //public int ID = 0;
-    private bool isIn = false;
-    private bool isPIn = false;
+    public bool isIn = false;
+    public bool isPIn = false;
     private bool notFirstTalkP = false;
     private bool notFirstTalkG = false;
-    private bool endQuest = false;
+    //private bool endQuest = false;
     public bool isPickable = false;
     public bool isDiscoveredByHonoria = false;
 
@@ -60,13 +60,13 @@ public class ObjectsInteractable : MonoBehaviour
                 {
                     //action si Honoria à vu un obj
                 }
-                if (!endQuest)
-                {
+                //if (!endQuest)
+                //{
 
-                    zone.questStart = false;
-                    zone.questEnd = true;
-                    ghost.GhostState = GhostManager.State.CONTROLLED;
-                }
+                //    zone.questStart = false;
+                //    zone.questEnd = true;
+                //    ghost.GhostState = GhostManager.State.CONTROLLED;
+                //}
                 if (!notFirstTalkP)
                 {
                     tdialogue.DialPass(dialPlayer[0]);

@@ -19,15 +19,14 @@ public class GhostManager : MonoBehaviour
     public GameObject footP1;
     public GameObject footP2;
     public GameObject MyPlayer;
-    public SpriteRenderer sp;
     private Animator anim;
     public enum State { CONTROLLED, WAIT, MOVABLE }
     public State GhostState;
 
-    public void Awake()
-    {
-        FindObjectOfType<Achievement>().UnlockTrueFalseExorcist();
-    }
+    //public void Awake()
+    //{
+    //    FindObjectOfType<Achievement>().UnlockTrueFalseExorcist();
+    //}
 
     //Objet dans lequel on est rentré en collision avec
     public List<GameObject> CurrentInteraction;
@@ -39,6 +38,7 @@ public class GhostManager : MonoBehaviour
         speed = GameManager._instance.playerSpeed;
         GhostState = State.WAIT;
         anim = GetComponentInChildren<Animator>();
+        FindObjectOfType<Achievement>().UnlockTrueFalseExorcist();
     }
 
     // Update is called once per frame

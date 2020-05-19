@@ -10,6 +10,7 @@ TagManager:
   - touch
   - DialogueManager
   - SpecialDoor
+  - creature
   layers:
   - Default
   - TransparentFX

@@ -497,6 +497,7 @@ GameObject:
   - component: {fileID: 60284631}
   - component: {fileID: 60284630}
   - component: {fileID: 60284629}
+  - component: {fileID: 60284632}
   m_Layer: 10
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -711,6 +712,37 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &60284632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60284623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &107366413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,6 +1231,7 @@ Transform:
   - {fileID: 1323798921}
   - {fileID: 2037507733}
   - {fileID: 1320632621}
+  - {fileID: 1055178470}
   m_Father: {fileID: 1317782803}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5181,7 +5214,7 @@ GameObject:
   - component: {fileID: 607192517}
   - component: {fileID: 607192519}
   - component: {fileID: 607192518}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HonoriaZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5196,11 +5229,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 607192516}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -85.4, y: 31.9, z: 49.097656}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1579975267}
-  m_RootOrder: 1
+  m_Father: {fileID: 2082903316}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &607192518
 MonoBehaviour:
@@ -6563,7 +6596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   RoomQuest: 0
-  switchButton: {fileID: 0}
+  switchButton: {fileID: 910265904}
 --- !u!1 &835443684
 GameObject:
   m_ObjectHideFlags: 0
@@ -7220,8 +7253,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  RoomQuest: 0
-  switchButton: {fileID: 0}
+  RoomQuest: 1
+  switchButton: {fileID: 910265904}
 --- !u!1 &897246994
 GameObject:
   m_ObjectHideFlags: 0
@@ -8250,6 +8283,87 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 819da96aebc440042a2b563c349bfed2, type: 3}
   m_Color: {r: 0.1981132, g: 0.1971787, b: 0.1971787, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5, y: 5}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &1055178469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1055178470}
+  - component: {fileID: 1055178471}
+  m_Layer: 0
+  m_Name: Object (3)
+  m_TagString: creature
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1055178470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055178469}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.31, y: -54.2, z: 48.707035}
+  m_LocalScale: {x: 0.18832976, y: 0.2187428, z: 1}
+  m_Children: []
+  m_Father: {fileID: 120624460}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1055178471
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055178469}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 819da96aebc440042a2b563c349bfed2, type: 3}
+  m_Color: {r: 0.8372152, g: 0.8666667, b: 0.17647058, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10590,7 +10704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   RoomQuest: 0
-  switchButton: {fileID: 0}
+  switchButton: {fileID: 910265904}
 --- !u!1 &1389322575
 GameObject:
   m_ObjectHideFlags: 0
@@ -12411,7 +12525,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2063765908}
-  - {fileID: 607192517}
   - {fileID: 1639986337}
   - {fileID: 2082903316}
   m_Father: {fileID: 0}
@@ -12700,6 +12813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1624967776}
   - component: {fileID: 1624967777}
+  - component: {fileID: 1624967778}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: DialogueManager
@@ -12738,6 +12852,104 @@ MonoBehaviour:
   isAutomatique: 0
   DoneTalking: 1
   displaySPD: 0.2
+  Audio: {fileID: 1624967778}
+  KeyStroke: {fileID: 8300000, guid: df02b7bd5e20bdb42917b8b887dab98b, type: 3}
+--- !u!82 &1624967778
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624967775}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: df02b7bd5e20bdb42917b8b887dab98b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1631631152
 GameObject:
   m_ObjectHideFlags: 0
@@ -12996,7 +13208,7 @@ Transform:
   - {fileID: 314892088}
   - {fileID: 1780887409}
   m_Father: {fileID: 1579975267}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1639986338
 MonoBehaviour:
@@ -13011,6 +13223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystick: {fileID: 1886481374}
+  isP1: 1
   gameManager: {fileID: 1173019}
   Player2: {fileID: 2082903312}
   Ghost: {fileID: 2082903316}
@@ -13362,8 +13575,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1639986338}
+  ghost: {fileID: 2082903312}
   Circle: {fileID: 166617174}
-  Interactable: {fileID: 0}
 --- !u!1 &1684235541
 GameObject:
   m_ObjectHideFlags: 0
@@ -14888,8 +15101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  RoomQuest: 0
-  switchButton: {fileID: 0}
+  RoomQuest: 1
+  switchButton: {fileID: 910265904}
 --- !u!1 &1948686610
 GameObject:
   m_ObjectHideFlags: 0
@@ -16234,7 +16447,6 @@ MonoBehaviour:
   footP1: {fileID: 1780887408}
   footP2: {fileID: 632456988}
   MyPlayer: {fileID: 1639986333}
-  sp: {fileID: 0}
   GhostState: 0
   CurrentInteraction: []
 --- !u!50 &2082903313
@@ -16297,8 +16509,9 @@ Transform:
   m_Children:
   - {fileID: 1297944825}
   - {fileID: 632456989}
+  - {fileID: 607192517}
   m_Father: {fileID: 1579975267}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2086174197
 GameObject:
@@ -16580,8 +16793,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  RoomQuest: 0
-  switchButton: {fileID: 0}
+  RoomQuest: 1
+  switchButton: {fileID: 910265904}
 --- !u!1 &2142739682
 GameObject:
   m_ObjectHideFlags: 0

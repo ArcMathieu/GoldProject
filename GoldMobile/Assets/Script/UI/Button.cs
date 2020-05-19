@@ -5,11 +5,9 @@ using UnityEngine.UI;
 
 public class Button : MonoBehaviour
 {
-    //public ObjectsInteractable[] Obj;
     public PlayerManager player;
     public GhostManager ghost;
     public Invocation Circle;
-    public ObjectsInteractable Interactable;
     public void onClick()
     {
         if (player.PlayerState == PlayerManager.State.MOVABLE)
@@ -29,6 +27,7 @@ public class Button : MonoBehaviour
             {
                 foreach (GameObject myObject in ghost.CurrentInteraction)
                 {
+                    Debug.Log("sdfghjk");
                     myObject.SendMessage("setAction");
 
                 }
