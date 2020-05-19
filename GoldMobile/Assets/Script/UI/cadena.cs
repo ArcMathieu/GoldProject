@@ -57,6 +57,7 @@ public class cadena : MonoBehaviour
                         Debug.Log("coucou");
                         //Cadena.SetActive(false);
                         noRepeat = true;
+                        FindObjectOfType<Achievement>().UnlockWhatinTheBox();
                     }
                 }
             }

@@ -6,6 +6,8 @@ public class InventorySystem : MonoBehaviour
 {
     public List<string> Items;
     public List<GameObject> PlayerItems;
+    private int numberofitems;
+    private int numberofitemsrituel;
 
     // Update is called once per frame
     void Start()
@@ -25,8 +27,23 @@ public class InventorySystem : MonoBehaviour
             if (nameItem == Item.name)
             {
                 Item.SetActive(true);
-                break;
+                numberofitems++;
+                if(nameItem == PlayerItems[0].name || nameItem == PlayerItems[1].name || nameItem == PlayerItems[2].name)
+                {
+                    numberofitemsrituel++;
+                }
             }
         }
+
+        if (numberofitems == 11)
+        {
+            FindObjectOfType<Achievement>().UnlockSyllogomania();
+        }
+
+        if (numberofitemsrituel == 3)
+        {
+            FindObjectOfType<Achievement>().UnlockNeverSayDieKindaGuy();
+        }
     }
+
 }

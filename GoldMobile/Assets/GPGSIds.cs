@@ -24,16 +24,16 @@
 
 public static class GPGSIds
 {
-        public const string achievement_just_a_distant_memory = "CgkIuKrc7IwREAIQAw"; // <GPGSID>
         public const string achievement_jill_would_be_proud = "CgkIuKrc7IwREAIQBQ"; // <GPGSID>
         public const string leaderboard_41 = "CgkIuKrc7IwREAIQAA"; // <GPGSID>
         public const string achievement_reconstructed_memory = "CgkIuKrc7IwREAIQCA"; // <GPGSID>
         public const string achievement_lumos_maxima = "CgkIuKrc7IwREAIQBg"; // <GPGSID>
         public const string achievement_syllogomania = "CgkIuKrc7IwREAIQBA"; // <GPGSID>
         public const string achievement_triple_parked = "CgkIuKrc7IwREAIQCw"; // <GPGSID>
-        public const string achievement_notsofake_exorcist = "CgkIuKrc7IwREAIQAg"; // <GPGSID>
-        public const string achievement_a_promise_made_is_a_promise_kept = "CgkIuKrc7IwREAIQCQ"; // <GPGSID>
         public const string achievement_whats_in_the_box = "CgkIuKrc7IwREAIQBw"; // <GPGSID>
+        public const string achievement_the_boys_are_back_in_town = "CgkIuKrc7IwREAIQDA"; // <GPGSID>
+        public const string achievement_a_promise_made_is_a_promise_kept = "CgkIuKrc7IwREAIQCQ"; // <GPGSID>
+        public const string achievement_notsofake_exorcist = "CgkIuKrc7IwREAIQAg"; // <GPGSID>
         public const string achievement_neversaydie_kinda_guy = "CgkIuKrc7IwREAIQCg"; // <GPGSID>
 
 }

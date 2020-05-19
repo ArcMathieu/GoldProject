@@ -56,6 +56,11 @@ public class PlayerManager : MonoBehaviour
             collision.gameObject.GetComponent<ObjectsInteractable>().Player = gameObject;
             Debug.Log(collision.gameObject.name);
         }
+
+        if(collision.gameObject.CompareTag("creature"))
+        {
+            FindObjectOfType<Achievement>().UnlockCreature();
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

@@ -15,6 +15,7 @@ public class CheckForKeys : MonoBehaviour
                 if (collision.gameObject.GetComponent<InventorySystem>().Items[i] == DesiredKey)
                 {
                     gameObject.SetActive(false);
+                    FindObjectOfType<Achievement>().UnlockJillWouldBeProud();
                 }
             }
            
