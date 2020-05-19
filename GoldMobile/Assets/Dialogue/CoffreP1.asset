@@ -15,4 +15,4 @@ MonoBehaviour:
   LesDialogues:
   - "On dirait qu'il a \xE9t\xE9 forc\xE9"
   SpeedDialogues:
-  - 0
+  - 0.05

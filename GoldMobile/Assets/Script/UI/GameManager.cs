@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
     public float playerSpeed;
     private void Awake()
     {
-        controleP1 = true;
 
         if (_instance != null && _instance != this)
         {
@@ -36,7 +35,10 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
         }
+
         storyManager.Tuto = true;
+        controleP1 = true;
+        ChangeState();
         openStep();
     }
 
@@ -128,7 +130,6 @@ public class GameManager : MonoBehaviour
         {
             //main hall
             //active player mvmt
-            //player.PlayerState = PlayerManager.State.MOVABLE;
             if (storyManager.Tuto)
             {
                 if (!storyManager.CollierKatia)

@@ -6,6 +6,7 @@ public class HonoriaZone : MonoBehaviour
 {
     public GhostManager Honoria;
     public StoryGame storyManager;
+    public GameObject Door;
 
     void Update()
     {
@@ -21,6 +22,8 @@ public class HonoriaZone : MonoBehaviour
         {
             Debug.Log("PorteOuverte");
             storyManager.DoorToSerre = true;
+            GameManager._instance.openStep();
+            Door.SetActive(false);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -32,6 +35,9 @@ public class HonoriaZone : MonoBehaviour
         if (collision.gameObject.CompareTag("SpecialDoor"))
         {
             storyManager.DoorToSerre = false;
+            GameManager._instance.openStep();
+            Door.SetActive(true);
+
         }
     }
 

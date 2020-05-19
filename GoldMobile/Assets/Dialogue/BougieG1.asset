@@ -16,5 +16,5 @@ MonoBehaviour:
   - "Cette douce lumi\xE8re"
   - j'aimerai beaucoup pouvoir sentir sa chaleur
   SpeedDialogues:
-  - 0.2
-  - 0
+  - 0.05
+  - 0.05

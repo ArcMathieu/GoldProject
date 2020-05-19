@@ -19,8 +19,8 @@ MonoBehaviour:
   - "tu cherche \xE0 comprendre"
   - "et d\xE9couvre l'impensable"
   SpeedDialogues:
-  - 0.09
-  - 0
-  - 0
-  - 0
-  - 0
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05

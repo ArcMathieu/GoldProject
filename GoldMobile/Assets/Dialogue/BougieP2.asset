@@ -15,4 +15,6 @@ MonoBehaviour:
   LesDialogues:
   - "Cette bougie est d\xE9j\xE0 allum\xE9e"
   SpeedDialogues:
-  - 0.09
+  - 0.05
+  - 0.05
+  - 0.05

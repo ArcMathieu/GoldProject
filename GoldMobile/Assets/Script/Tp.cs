@@ -25,15 +25,15 @@ public class Tp : MonoBehaviour
                 {
                     if (stairs)
                     {
-                        collision.transform.position = new Vector2(tpTo.transform.position.x, tpTo.transform.position.y-5);
+                        collision.transform.position = new Vector3(tpTo.transform.position.x, tpTo.transform.position.y-5, 0);
                     }
                     else
                     {
-                        collision.transform.position = tpTo.transform.position;
+                        collision.transform.position = new Vector3(tpTo.transform.position.x, tpTo.transform.position.y, 0);
                     }
                     if (ghostFollowing)
                     {
-                        ghost.transform.position = new Vector2(collision.transform.position.x +0.5f, collision.transform.position.y + 0.5f);
+                        ghost.transform.position = new Vector3(collision.transform.position.x +0.5f, collision.transform.position.y + 0.5f, 0);
                     }
 
                     tpTo.SendMessage("CoroutToWait");
