@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
-  m_Name: lockPick
+  m_Name: DarknessP1
   m_EditorClassIdentifier: 
   LesDialogues:
-  - " Elle a forc\xE9 le coffre de sa fille pour r\xE9cup\xE9rer son journal ?"
-  - "Question intimit\xE9 on est loin du compte dans cette famille."
+  - "C\u2019est la porte de la serre"
+  - "Katia s\u2019occupait bien des plantes de m\xE8re"
+  - "Cette chose semble r\xE9agir \xE0 ta pr\xE9sence, Honoria !"
   SpeedDialogues:
+  - 0.09
   - 0.09
   - 0.09

@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
-  m_Name: lockPick
+  m_Name: RoncesP1
   m_EditorClassIdentifier: 
   LesDialogues:
-  - " Elle a forc\xE9 le coffre de sa fille pour r\xE9cup\xE9rer son journal ?"
-  - "Question intimit\xE9 on est loin du compte dans cette famille."
+  - "Eh bien ce s\xE9cateur va me servir, finalement."
   SpeedDialogues:
-  - 0.09
   - 0.09

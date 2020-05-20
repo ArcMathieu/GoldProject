@@ -57,7 +57,6 @@ public class Button : MonoBehaviour
                 {
                     foreach (GameObject myObject in player.CurrentInteraction)
                     {
-                        Debug.Log("help");
                         myObject.SendMessage("setAction");
 
                     }

@@ -82,7 +82,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -176,9 +176,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 877861307319908863}
   gh: {fileID: 877861306990483533}
-  questEnd: 0
-  questStart: 0
   illness: {fileID: 0}
+  switchButton: {fileID: 0}
 --- !u!1 &877861306990483538
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,6 +283,7 @@ MonoBehaviour:
   footP2: {fileID: 877861308457699905}
   MyPlayer: {fileID: 877861307319908800}
   GhostState: 0
+  CurrentInteraction: []
 --- !u!1 &877861307225399853
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,11 +410,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystick: {fileID: 0}
+  isP1: 1
   gameManager: {fileID: 0}
   Player2: {fileID: 877861306990483533}
   Ghost: {fileID: 877861306990483529}
   currentRotation: 0
   PlayerState: 0
+  CurrentInteraction: []
 --- !u!70 &877861307319908861
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -481,7 +483,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

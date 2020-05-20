@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
+  m_Name: JournalHonoriaP1
+  m_EditorClassIdentifier: 
+  LesDialogues:
+  - "Je le reconnais ce journal ! Je crois que c\u2019est le miens\u2026"
+  - "Oui ! C\u2019est bien mon \xE9criture ! Pourquoi est-il ici ? "
+  - "J\u2019ai l\u2019impression que tu es tomb\xE9e avec\u2026 Des pages sont d\xE9chir\xE9es."
+  - "Je crois que je me souviens\u2026 "
+  - "M\xE8re voulait lire mon journal, mais c\u2019\xE9tait secret, alors j\u2019ai
+    tent\xE9 de le r\xE9cup\xE9rer\u2026 "
+  - "Et apr\xE8s\u2026 Et apr\xE8s\u2026 Je n\u2019arrive pas \xE0 me rappeler de
+    ce qui s\u2019est pass\xE9 apr\xE8s ! "
+  - "Ne t\u2019inqui\xE8te pas, \xE7a va revenir."
+  SpeedDialogues:
+  - 0.09
+  - 0.09
+  - 0.09
+  - 0.09
+  - 0.09
+  - 0.09
+  - 0.09

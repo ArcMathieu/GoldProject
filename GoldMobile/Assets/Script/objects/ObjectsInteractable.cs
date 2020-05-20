@@ -8,27 +8,36 @@ public class ObjectsInteractable : MonoBehaviour
     //public int ID = 0;
     public bool isIn = false;
     public bool isPIn = false;
-    private bool notFirstTalkP = false;
+    public bool notFirstTalkP = false;
     private bool notFirstTalkG = false;
     //private bool endQuest = false;
     public bool isPickable = false;
     public bool isDiscoveredByHonoria = false;
 
 
-    public GhostManager ghost;
+    //public GhostManager ghost;
     public DialogueData[] dialPlayer;
     public DialogueData[] dialGhost;
     public DisplayText tdialogue;
-    public Zone zone;
-    public InteractionManager interact;
+//    public InteractionManager interact;
     public GameObject Player;
 
+    private CheckForKeys DoorSytem;
+
+    private void Start()
+    { 
+       Player = GameObject.FindGameObjectWithTag("Player");
+        tdialogue = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DisplayText>();
+        DoorSytem = GetComponent<CheckForKeys>();
+    }
     public void setAction()
     {
+       
         if (tdialogue.DoneTalking) {
             tdialogue.NextDial();
             if (isIn)
             {
+                //ghost = GameObject.FindGameObjectWithTag("GhostPlayer").GetComponent<GhostManager>();
                 if (!notFirstTalkG)
                 {
                     tdialogue.DialPass(dialGhost[0]);
@@ -42,6 +51,12 @@ public class ObjectsInteractable : MonoBehaviour
 
             if (isPIn)
             {
+                if (DoorSytem != null)
+                {
+                    Debug.Log("Collision");
+                    DoorSytem.actionDoor(Player);
+                }
+
                 if (isPickable && tdialogue.DoneTalking && ItemName != null)
                 {
                     StartCoroutine(waitForDestroy());
