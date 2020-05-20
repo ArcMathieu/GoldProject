@@ -10,13 +10,17 @@ public class cadena : MonoBehaviour
     public GameObject number2;
     public GameObject number3;
     public GameObject Cadena;
-    public GameObject Coffre;
+    public GameObject itemUnlock;
+    public GameObject CoffreClosed;
+    public GameObject CoffreOpened;
+    public GameObject joystick;
+    public GameObject interactButton;
     public List<int> pasword;
     public bool noRepeat;
 
     public void numberUp(GameObject number)
     {
-        if(number.GetComponent<currentNumber>().number + 1 > 9)
+        if (number.GetComponent<currentNumber>().number + 1 > 9)
         {
             number.GetComponent<currentNumber>().number = 0;
         }
@@ -43,32 +47,35 @@ public class cadena : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
+        joystick.SetActive(false);
+        interactButton.SetActive(false);
     }
 
-    private void Update()
+
+    public void TestCombinaison()
     {
-       if(!noRepeat)
-       {
-            if (pasword[0] == number1.GetComponent<currentNumber>().number)
-            {
-                if (pasword[1] == number2.GetComponent<currentNumber>().number)
-                {
-                    if (pasword[2] == number3.GetComponent<currentNumber>().number)
-                    {
-                        Time.timeScale = 1;
-                        currentTime += 1 * Time.deltaTime;
-                        if (currentTime >= 0.7)
-                        {
-                            Cadena.SetActive(false);
-                            Coffre.SetActive(false);
-                            noRepeat = true;
-                            FindObjectOfType<Achievement>().UnlockWhatinTheBox();
-                        }
-                    }
-                }
-            }
+
+        if (pasword[0] == number1.GetComponent<currentNumber>().number && pasword[1] == number2.GetComponent<currentNumber>().number && pasword[2] == number3.GetComponent<currentNumber>().number)
+        {
+
+           //Time.timeScale = 1;
+            joystick.SetActive(true);
+            interactButton.SetActive(true);
+            CoffreClosed.GetComponent<ActivateLock>().CodeFound = true;
+            CoffreOpened.SetActive(true);
+            Cadena.SetActive(false);
+            itemUnlock.SetActive(true);
+
+            FindObjectOfType<Achievement>().UnlockWhatinTheBox();
         }
 
+        else
+        {
+            //Time.timeScale = 1;
+            joystick.SetActive(true);
+            interactButton.SetActive(true);
+            Cadena.SetActive(false);
+        }
     }
 }

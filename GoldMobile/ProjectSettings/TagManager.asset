@@ -12,6 +12,8 @@ TagManager:
   - SpecialDoor
   - creature
   - GEHUD
+  - coffre
+  - Canvas
   layers:
   - Default
   - TransparentFX
