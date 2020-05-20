@@ -193,11 +193,11 @@ public class GameManager : MonoBehaviour
             //librairy closed, mother room closed 
             
 
-            if (storyManager.coffre)
-            {
-                clesParents.isPickable = true;
+            //if (storyManager.coffre)
+            //{
+            //    clesParents.isPickable = true;
 
-            }
+            //}
 
         }
 
