@@ -47,7 +47,7 @@ public class cadena : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         joystick.SetActive(false);
         interactButton.SetActive(false);
     }
@@ -59,7 +59,7 @@ public class cadena : MonoBehaviour
         if (pasword[0] == number1.GetComponent<currentNumber>().number && pasword[1] == number2.GetComponent<currentNumber>().number && pasword[2] == number3.GetComponent<currentNumber>().number)
         {
 
-            Time.timeScale = 1;
+           //Time.timeScale = 1;
             joystick.SetActive(true);
             interactButton.SetActive(true);
             CoffreClosed.GetComponent<ActivateLock>().CodeFound = true;
