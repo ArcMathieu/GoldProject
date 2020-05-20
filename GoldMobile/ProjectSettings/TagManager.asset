@@ -11,6 +11,7 @@ TagManager:
   - DialogueManager
   - SpecialDoor
   - creature
+  - coffre
   layers:
   - Default
   - TransparentFX
