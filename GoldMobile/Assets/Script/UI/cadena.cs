@@ -72,7 +72,7 @@ public class cadena : MonoBehaviour
 
         else
         {
-            Time.timeScale = 1;
+            //Time.timeScale = 1;
             joystick.SetActive(true);
             interactButton.SetActive(true);
             Cadena.SetActive(false);
