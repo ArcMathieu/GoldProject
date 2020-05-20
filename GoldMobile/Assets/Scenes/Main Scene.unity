@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3321,7 +3321,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192610125}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: 0.576, y: 0.338, z: 10}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 196783002}
@@ -3359,7 +3359,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.6, y: 0.6}
-    newSize: {x: 5.28, y: 3.85}
+    newSize: {x: 4.8962655, y: 3.6246026}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
@@ -3422,7 +3422,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 5.28, y: 3.85}
+  m_Size: {x: 4.8962655, y: 3.6246026}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -19428,8 +19428,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324073866}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.0900006, y: -12.7, z: 10}
-  m_LocalScale: {x: 1.1222662, y: 4.6888237, z: 1}
+  m_LocalPosition: {x: 18.63, y: -42.4, z: 10}
+  m_LocalScale: {x: 18.74876, y: 24.252283, z: 1}
   m_Children: []
   m_Father: {fileID: 1838804244}
   m_RootOrder: 1
@@ -19444,7 +19444,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -25
+  m_SortingOrder: -50
 --- !u!212 &1324073869
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -28105,8 +28105,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899126325}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.78, y: 14.17, z: 0}
-  m_LocalScale: {x: 0.05, y: 3.7, z: 0.983966}
+  m_LocalPosition: {x: 0.888, y: 14.17, z: 0}
+  m_LocalScale: {x: 0.054834407, y: 3.7, z: 0.983966}
   m_Children: []
   m_Father: {fileID: 1333331641}
   m_RootOrder: 2
