@@ -23,13 +23,16 @@ public class ObjectsInteractable : MonoBehaviour
     public GameObject Player;
 
     private CheckForKeys DoorSytem;
+    private ActivateLock LockSytem;
 
     private void Start()
     { 
        Player = GameObject.FindGameObjectWithTag("Player");
         tdialogue = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DisplayText>();
         DoorSytem = GetComponent<CheckForKeys>();
+        LockSytem = GetComponent<ActivateLock>();
     }
+
     public void setAction()
     {
        
@@ -51,6 +54,12 @@ public class ObjectsInteractable : MonoBehaviour
 
             if (isPIn)
             {
+             
+                if(LockSytem != null && tdialogue.DoneTalking && notFirstTalkP)
+                {
+                    LockSytem.Action(Player);
+                }
+                
                 if (DoorSytem != null)
                 {
                     Debug.Log("Collision");
