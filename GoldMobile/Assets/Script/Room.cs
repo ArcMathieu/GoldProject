@@ -18,22 +18,18 @@ public class Room : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer != layerRoom)
+        if (other.gameObject.layer != layerRoom && other.gameObject.CompareTag("Player"))
         {
             //Debug.Log(other.gameObject.name);
             MainCamera.Instance.RoomEnter(this);
             Debug.Log(other.gameObject.name);
             ActivateEnemies();
         }
-        //if (RoomQuest)
-        //{
-        //    switchButton.CanSwitchInRoom = true;
-        //}
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.layer != layerRoom)
+        if (other.gameObject.layer != layerRoom && other.gameObject.CompareTag("Player"))
         {
             //Debug.Log(other.name);
             DesactivateEnemies();
