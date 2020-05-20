@@ -74,38 +74,38 @@ public class GameManager : MonoBehaviour
     {
         if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[0].name)
         {
-            //collier
-            storyManager.CollierKatia = true;
-        }
-        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[1].name)
-        {
             //secateur
             Debug.Log("sécateur");
             storyManager.Secateur = true;
         }
-        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[2].name)
-        {
-            //RecipRituel
-            storyManager.BolRituel = true;
-        }
-        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[3].name)
-        {
-            //cléCahmbreParents
-            storyManager.DoorToMother = true;
-        }
-        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[4].name)
-        {
-            //CléSecretaire
-            storyManager.CleSecretaire = true;
-        }
-        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[5].name)
+        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[1].name)
         {
             //LockPick
             storyManager.Lockpick = true;
         }
+        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[3].name)
+        {
+            //collier
+            storyManager.CollierKatia = true;
+        }
+        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[4].name)
+        {
+            //RecipRituel
+            storyManager.BolRituel = true;
+        }
+        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[7].name)
+        {
+            //cléCahmbreParents
+            storyManager.DoorToMother = true;
+        }
         if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[6].name)
         {
-            //LockPick
+            //CléSecretaire
+            storyManager.CleSecretaire = true;
+        }
+        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[8].name)
+        {
+            //Brosse
             storyManager.BrosseACheveux = true;
         }
         openStep();
