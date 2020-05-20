@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour
     public bool isP1 = true;
     public GameManager gameManager;
     public GhostManager Player2;
+    public GameObject cadena;
     //public Transform GhostContainer;
     public Transform Ghost;
     public float currentRotation;
@@ -51,6 +52,13 @@ public class PlayerManager : MonoBehaviour
         {
             FindObjectOfType<Achievement>().UnlockCreature();
         }
+
+        if(collision.gameObject.CompareTag("coffre"))
+        {
+            cadena.SetActive(true);
+
+        }
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

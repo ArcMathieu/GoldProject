@@ -10,6 +10,7 @@ public class cadena : MonoBehaviour
     public GameObject number2;
     public GameObject number3;
     public GameObject Cadena;
+    public GameObject Coffre;
     public List<int> pasword;
     public bool noRepeat;
 
@@ -40,9 +41,9 @@ public class cadena : MonoBehaviour
         }
     }
 
-    private void Start()
+    void Start()
     {
-    
+        Time.timeScale = 0;
     }
 
     private void Update()
@@ -55,10 +56,12 @@ public class cadena : MonoBehaviour
                 {
                     if (pasword[2] == number3.GetComponent<currentNumber>().number)
                     {
+                        Time.timeScale = 1;
                         currentTime += 1 * Time.deltaTime;
                         if (currentTime >= 0.7)
                         {
                             Cadena.SetActive(false);
+                            Coffre.SetActive(false);
                             noRepeat = true;
                             FindObjectOfType<Achievement>().UnlockWhatinTheBox();
                         }
