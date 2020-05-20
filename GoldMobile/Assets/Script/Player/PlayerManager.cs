@@ -45,6 +45,11 @@ public class PlayerManager : MonoBehaviour
                 collision.gameObject.GetComponent<ObjectsInteractable>().Player = gameObject;
             }
             catch{}
+            if (collision.gameObject.name == "cadena")
+            {
+                cadena.SetActive(true);
+
+            }
             Debug.Log(collision.gameObject.name);
         }
 
@@ -53,11 +58,10 @@ public class PlayerManager : MonoBehaviour
             FindObjectOfType<Achievement>().UnlockCreature();
         }
 
-        if(collision.gameObject.CompareTag("coffre"))
-        {
-            cadena.SetActive(true);
+        //if(collision.gameObject.CompareTag("coffre"))
+        //{
 
-        }
+        //}
 
     }
     private void OnTriggerExit2D(Collider2D collision)

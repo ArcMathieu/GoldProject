@@ -8,6 +8,8 @@ public class Zone : MonoBehaviour
     public GhostManager gh;
     public MentaBar illness;
     public Switch switchButton;
+
+    public bool AlreadyInZone;
     // Update is called once per frame
     void Update()
     {
@@ -18,6 +20,7 @@ public class Zone : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("GhostPlayer"))
         {
+            AlreadyInZone = true;
             illness.modifyBar(false);
             if (!switchButton.controlePlayer)
             {
@@ -35,16 +38,17 @@ public class Zone : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("GhostPlayer"))
         {
+            AlreadyInZone = false;
             illness.modifyBar(true);
             if (switchButton.controlePlayer)
             {
                 gh.GhostState = GhostManager.State.CONTROLLED;
-
-            }else {
-                gh.GhostState = GhostManager.State.MOVABLE;
-
             }
-            
+            else
+            {
+                gh.GhostState = GhostManager.State.MOVABLE;
+            }
+
         }
 
     }

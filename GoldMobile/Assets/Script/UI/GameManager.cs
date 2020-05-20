@@ -83,6 +83,11 @@ public class GameManager : MonoBehaviour
             //LockPick
             storyManager.Lockpick = true;
         }
+        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[2].name)
+        {
+            //pagesManquante
+            storyManager.PageLivre = true;
+        }
         if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[3].name)
         {
             //collier
@@ -93,20 +98,35 @@ public class GameManager : MonoBehaviour
             //RecipRituel
             storyManager.BolRituel = true;
         }
-        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[7].name)
+        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[5].name)
         {
-            //cléCahmbreParents
-            storyManager.DoorToMother = true;
+            //pagesManquante
+            storyManager.journalHonoria = true;
         }
         if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[6].name)
         {
             //CléSecretaire
             storyManager.CleSecretaire = true;
         }
+        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[7].name)
+        {
+            //cléCahmbreParents
+            storyManager.DoorToMother = true;
+        }
         if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[8].name)
         {
             //Brosse
             storyManager.BrosseACheveux = true;
+        }
+        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[9].name)
+        {
+            //Brosse
+            storyManager.LivreRituel = true;
+        }
+        if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[10].name)
+        {
+            //Brosse
+            storyManager.dague = true;
         }
         openStep();
     }
@@ -232,6 +252,10 @@ public class GameManager : MonoBehaviour
 
                 //sous sol 2 fond de la librairy
                 //R sauf cinématique
+            }
+            if(storyManager.LivreRituel && storyManager.BolRituel && storyManager.dague)
+            {
+                Debug.Log("vous avez les 3 objets du rituel");
             }
 
         }

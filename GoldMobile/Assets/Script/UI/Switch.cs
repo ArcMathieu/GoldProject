@@ -24,7 +24,7 @@ public class Switch : MonoBehaviour
             GetComponent<Image>().color = Color.black;
         }
 
-        if (!controlePlayer)
+        if (!controlePlayer && !zone.AlreadyInZone)
         {
             StartCoroutine(Waiting());
             IEnumerator Waiting()

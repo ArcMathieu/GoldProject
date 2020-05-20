@@ -22,7 +22,7 @@ public class StoryGame : MonoBehaviour
     public float cin5Time = 2;
 
     //objectPicked
-    public bool CollierKatia; //ouvre la chambre Honoria + a garder pour la fin
+    public bool CollierKatia; //ouvre la chambre Honoria
     public bool Secateur; //enleve ronces dans la serre
     public bool BolRituel; //A colecter for ending
     public bool journalHonoria; //Dialogue
@@ -33,6 +33,7 @@ public class StoryGame : MonoBehaviour
     public bool PageLivre; //Dialogue
     public bool Lockpick; //openTrappe
     public bool LivreRituel; //A colecter for ending
+    public bool dague; //A colecter for ending
 
     //door
     public bool Tuto;
