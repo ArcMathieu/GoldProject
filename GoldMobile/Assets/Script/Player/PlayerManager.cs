@@ -97,7 +97,6 @@ public class PlayerManager : MonoBehaviour
 
             if(joystick.Vertical != 0 || joystick.Horizontal != 0)
             {
-                Debug.Log("why");
                 anim.SetBool("isWalking", true);
                 if(joystick.Horizontal < 0)
                 {
