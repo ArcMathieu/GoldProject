@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: ObjectCollect1
   m_EditorClassIdentifier: 
   LesDialogues:
-  - Cet objet t'appartient
-  - je vais te le ramener
+  - <color=#dbc08e> Cet objet t'appartiens.
+  - <color=#dbc08e> Je vais te le ramenner.
+  - Woah merci <3
+  - <color=#dbc08e> ;)
   SpeedDialogues:
-  - 0.05
-  - 0.05
+  - 0.09
+  - 0.09
+  - 0.09
+  - 0.18

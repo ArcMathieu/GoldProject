@@ -10,7 +10,7 @@ public class DisplayText : MonoBehaviour
     public DialogueData dial;
 
     public bool isAutomatique = false;
-    private bool DoneDisplaying = true;
+    public bool DoneDisplaying = true;
     public bool DoneTalking = false;
 
     public float displaySPD;

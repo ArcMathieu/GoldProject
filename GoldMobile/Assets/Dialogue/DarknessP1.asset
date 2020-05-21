@@ -13,10 +13,17 @@ MonoBehaviour:
   m_Name: DarknessP1
   m_EditorClassIdentifier: 
   LesDialogues:
-  - "C\u2019est la porte de la serre"
-  - "Katia s\u2019occupait bien des plantes de m\xE8re"
-  - "Cette chose semble r\xE9agir \xE0 ta pr\xE9sence, Honoria !"
+  - "C\u2019est la porte de la serre, Katia s\u2019occupait bien des plantes de m\xE8re."
+  - "<color=#dbc08e>Et \xE7a c\u2019est aussi une des plantes de ta m\xE8re ? "
+  - " Non \xE7a ce sont les m\xE9chantes ombres. Ne t\u2019approche pas, elles pourraient
+    te faire mal."
+  - "<color=#dbc08e>Ca doit \xEAtre \xE7a qui tourmente les parents. "
+  - "<color=#dbc08e>Enfin, en supposant que tout ceci est r\xE9el..."
+  - "<color=#dbc08e> Cela semble r\xE9agir \xE0 ta pr\xE9sence !"
   SpeedDialogues:
+  - 0.09
+  - 0.09
+  - 0.09
   - 0.09
   - 0.09
   - 0.09

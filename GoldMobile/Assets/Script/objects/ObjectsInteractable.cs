@@ -19,25 +19,37 @@ public class ObjectsInteractable : MonoBehaviour
     public DialogueData[] dialPlayer;
     public DialogueData[] dialGhost;
     public DisplayText tdialogue;
-//    public InteractionManager interact;
+    //    public InteractionManager interact;
     public GameObject Player;
 
     private CheckForKeys DoorSytem;
     private ActivateLock LockSytem;
 
+    public bool HasItem;
+
     private void Start()
-    { 
-       Player = GameObject.FindGameObjectWithTag("Player");
+    {
+        Player = GameObject.FindGameObjectWithTag("Player");
         tdialogue = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DisplayText>();
         DoorSytem = GetComponent<CheckForKeys>();
         LockSytem = GetComponent<ActivateLock>();
     }
 
+    private void Update()
+    {
+
+    }
+
     public void setAction()
     {
-       
-        if (tdialogue.DoneTalking) {
-            tdialogue.NextDial();
+
+        if (tdialogue.DoneTalking)
+        {
+            if (DoorSytem == null)
+            {
+                tdialogue.NextDial();
+            }
+
             if (isIn)
             {
                 //ghost = GameObject.FindGameObjectWithTag("GhostPlayer").GetComponent<GhostManager>();
@@ -54,31 +66,45 @@ public class ObjectsInteractable : MonoBehaviour
 
             if (isPIn)
             {
-             
-                if(LockSytem != null && tdialogue.DoneTalking && notFirstTalkP)
+
+                if (LockSytem != null && tdialogue.DoneTalking && notFirstTalkP)
                 {
+                    Debug.Log("hpppiooii");
                     LockSytem.Action(Player);
                 }
-                
-                if (DoorSytem != null)
+                else if (DoorSytem != null)
                 {
-                    Debug.Log("Collision");
                     DoorSytem.actionDoor(Player);
+                    Debug.Log("hiii");
                 }
-
-                if (isPickable && tdialogue.DoneTalking && ItemName != null)
+                else if (isPickable && tdialogue.DoneTalking && ItemName != null)
                 {
+                    Debug.Log("hiooii");
                     StartCoroutine(waitForDestroy());
                     IEnumerator waitForDestroy()
                     {
-                        Debug.Log("Picked up");
                         tdialogue.DialPass(dialPlayer[0]);
                         Player.GetComponent<InventorySystem>().AddItem(ItemName);
                         GameManager._instance.TakeObject(ItemName);
                         yield return new WaitForSeconds(1);
                         Destroy(gameObject);
                     }
-
+                }
+                if (DoorSytem == null)
+                {
+                    if (!notFirstTalkP)
+                    {
+                        if (tdialogue.DoneTalking && DoorSytem != null)
+                        {
+                            DoorSytem.gameObject.SetActive(false);
+                        }
+                        tdialogue.DialPass(dialPlayer[0]);
+                        notFirstTalkP = true;
+                    }
+                    else if (dialPlayer.Length == 2)
+                    {
+                        tdialogue.DialPass(dialPlayer[1]);
+                    }
                 }
                 if (isDiscoveredByHonoria)
                 {
@@ -91,16 +117,8 @@ public class ObjectsInteractable : MonoBehaviour
                 //    zone.questEnd = true;
                 //    ghost.GhostState = GhostManager.State.CONTROLLED;
                 //}
-                if (!notFirstTalkP)
-                {
-                    tdialogue.DialPass(dialPlayer[0]);
-                    notFirstTalkP = true;
-                }
-                else if (dialPlayer.Length == 2)
-                {
-                    tdialogue.DialPass(dialPlayer[1]);
-                }
-             
+
+
             }
         }
     }

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
+  m_Name: HallTrigger
+  m_EditorClassIdentifier: 
+  LesDialogues:
+  - "<color=#dbc08e>D'apr\xE8s les parents, ce serait leur fille d\xE9c\xE9d\xE9e
+    qui les hanterait."
+  - "<color=#dbc08e>Allons jeter un oeil dans sa chambre, plus vite j\u2019aurais
+    fini ce cirque, plus vite je rentrerai."
+  SpeedDialogues:
+  - 0.08
+  - 0.08

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
+  m_Name: CorriderAfterHonoriaTrigger
+  m_EditorClassIdentifier: 
+  LesDialogues:
+  - "<color=#dbc08e>Comment est ce que tu t\u2019appelles ?"
+  - Matthew.
+  - "<color=#dbc08e>Matthew\u2026 Je l\u2019aime bien ton pr\xE9nom ! Moi c\u2019est
+    Honoria ! "
+  - Je sais.
+  SpeedDialogues:
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08

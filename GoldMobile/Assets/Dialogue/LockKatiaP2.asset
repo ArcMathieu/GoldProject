@@ -13,6 +13,40 @@ MonoBehaviour:
   m_Name: LockKatiaP2
   m_EditorClassIdentifier: 
   LesDialogues:
-  - Good old' open chest!! :)
+  - "C\u2019est le p\xE8re et la m\xE8re de Katia, et \xE7a c\u2019est son petit
+    fr\xE8re. "
+  - "Elle me lisait ce qu\u2019ils lui envoyaient. "
+  - "Je ne comprenais pas le polonais, mais j\u2019aimais voir son regard lorsqu\u2019elle
+    lisait les lettres de sa famille. "
+  - Ils lui manquaient beaucoup.
+  - "<color=#dbc08e> S\u2019ils lui manquaient tant que \xE7a, elle n\u2019aurait
+    pas d\xFB les laisser."
+  - "<color=#dbc08e>Certains n\u2019ont pas la chance d'avoir encore leur famille
+    \xE0 leurs c\xF4t\xE9s. "
+  - "Ou es ta famille \xE0 toi ? "
+  - "<color=#dbc08e>Loin d\u2019ici."
+  - "C\u2019est le livre de son Dieu. C\u2019est ce qu\u2019elle disait."
+  - "Elle avait un double de toutes les cl\xE9s de la maison, juste au cas o\xF9.
+    Je ne crois pas que m\xE8re le savait"
+  - "C\u2019est mon dessin ! Elle l\u2019a gard\xE9 dans son coffre \xE0 tr\xE9sors
+    !"
+  - <color=#dbc08e>Tu comptais beaucoup pour elle apparemment.
+  - "C\u2019est elle qui s\u2019occupait de moi. M\xE8re et p\xE8re n\u2019avaient
+    pas de temps \xE0 m\u2019accorder."
+  - "Ils \xE9taient tr\xE8s occup\xE9s. Mais je suis s\xFBre qu\u2019ils auraient
+    bien voulu passer du temps avec moi !"
   SpeedDialogues:
-  - 0.09
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08

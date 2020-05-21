@@ -10,7 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
-  m_Name: CleeSecretaireP1
+  m_Name: HallAfterKatiaTrigger
   m_EditorClassIdentifier: 
-  LesDialogues: []
-  SpeedDialogues: []
+  LesDialogues:
+  - 'Comment s''appellent tes soeurs ? '
+  - <color=#dbc08e>Lily et Alice.
+  - 'Elles sont avec tes parents ? '
+  - "<color=#dbc08e>J\u2019esp\xE8re\u2026"
+  SpeedDialogues:
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
+  m_Name: PagesManquantesP1
+  m_EditorClassIdentifier: 
+  LesDialogues:
+  - "M\xE8re a lu mon journal . . .  Elle \xE9tait tr\xE8s en col\xE8re \xE0 cause
+    de ce que j\u2019avais \xE9crit dedans\u2026"
+  - "J\u2019ai essay\xE9 de le r\xE9cup\xE9rer, mais elle a arrach\xE9 les pages.
+    J\u2019avais tr\xE8s peur, j\u2019ai gliss\xE9 et . . . "
+  - '. . . '
+  - " . . .  et je suis tomb\xE9e par la fen\xEAtre. C\u2019\xE9tait un accident."
+  - "<color=#dbc08e> Il semblerait que la religion de Katia lui ait caus\xE9 quelques
+    ennuis avec ta m\xE8re . . ."
+  - "<color=#dbc08e>Je pense qu\u2019elle ne supportait pas que tu t\u2019attaches
+    autant \xE0 elle."
+  - " Mais Katia \xE9tait gentille, elle s\u2019est toujours occup\xE9e de moi."
+  - " Qu\u2019est ce que \xE7a change qu\u2019elle ne croit pas en la m\xEAme chose
+    que nous ?"
+  - "<color=#dbc08e>Les adultes sont compliqu\xE9s."
+  - . . .
+  - "<color=#dbc08e>Continuons \xE0 chercher."
+  SpeedDialogues:
+  - 0.09
+  - 0.09
+  - 0.15
+  - 0.09
+  - 0.09
+  - 0.09
+  - 0.09
+  - 0.09
+  - 0.12
+  - 0.15
+  - 0.09

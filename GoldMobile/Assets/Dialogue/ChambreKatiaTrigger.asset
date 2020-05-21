@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
+  m_Name: ChambreKatiaTrigger
+  m_EditorClassIdentifier: 
+  LesDialogues:
+  - "C\u2019est la chambre de Katia. J\u2019aimais bien venir ici lorsque m\xE8re
+    \xE9tait en ville. Katia me parlait de son pays. . ."
+  - 'La Po . . . '
+  - La Pologne!
+  - J'aimerais bien y aller un jour...
+  - "<color=#dbc08e>Je ne suis pas s\xFBr que tu saisisses ce que le mot \u201Cfant\xF4me\u201D
+    implique."
+  SpeedDialogues:
+  - 0.08
+  - 0.15
+  - 0.05
+  - 0.08
+  - 0.08

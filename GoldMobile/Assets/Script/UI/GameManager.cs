@@ -222,12 +222,14 @@ public class GameManager : MonoBehaviour
         {
             //mother room
             tp[10].precedentlyOpened = true;
-            tp[11].precedentlyOpened = true;
+            tp[11].precedentlyOpened = true;       
             //pages livre
-            if (storyManager.CleSecretaire)
-            {
-                openSecretaire.isPickable = true;
-            }
+            //Tu m'as fait perdre 2h de ma précieuse vie avec cette connerie :)
+            //if (storyManager.CleSecretaire)
+            //{
+            //    openSecretaire.isPickable = true;
+            //}
+
             //cinématique
             if (storyManager.BrosseACheveux)
             {
