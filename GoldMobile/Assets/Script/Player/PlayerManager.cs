@@ -20,7 +20,7 @@ public class PlayerManager : MonoBehaviour
     public State PlayerState;
 
     //Animation du joueur
-    private Animator anim;
+    public Animator anim;
 
     //Objet dans lequel on est rentré en collision avec
     public List<GameObject> CurrentInteraction;
@@ -28,7 +28,7 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponentInChildren<Animator>();
+        anim = gameObject.GetComponentsInChildren<Animator>()[1];
         rb = GetComponent<Rigidbody2D>();
         speed = GameManager._instance.playerSpeed;
         currentRotation = 0f;
@@ -97,6 +97,7 @@ public class PlayerManager : MonoBehaviour
 
             if(joystick.Vertical != 0 || joystick.Horizontal != 0)
             {
+                Debug.Log("why");
                 anim.SetBool("isWalking", true);
                 if(joystick.Horizontal < 0)
                 {

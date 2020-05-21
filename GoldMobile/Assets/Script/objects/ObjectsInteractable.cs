@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 public class ObjectsInteractable : MonoBehaviour
 {
     public string ItemName;
     //public int ID = 0;
+    public TimelineAsset Cinematic;
     public bool isIn = false;
     public bool isPIn = false;
     public bool notFirstTalkP = false;
@@ -13,6 +16,7 @@ public class ObjectsInteractable : MonoBehaviour
     //private bool endQuest = false;
     public bool isPickable = false;
     public bool isDiscoveredByHonoria = false;
+
 
 
     //public GhostManager ghost;
@@ -42,9 +46,11 @@ public class ObjectsInteractable : MonoBehaviour
 
     public void setAction()
     {
-
         if (tdialogue.DoneTalking)
         {
+
+         
+
             if (DoorSytem == null)
             {
                 tdialogue.NextDial();
@@ -122,6 +128,8 @@ public class ObjectsInteractable : MonoBehaviour
             }
         }
     }
+
+    public bool isReadyForCinematic;
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -133,6 +141,14 @@ public class ObjectsInteractable : MonoBehaviour
         if (/*ID == 0 && */collision.gameObject.CompareTag("Player"))
         {
             isPIn = true;
+
+            if (Cinematic != null && !notFirstTalkP && isReadyForCinematic)
+            {
+                PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
+                DP.Play(Cinematic);
+                tdialogue.DialPass(dialPlayer[0]);
+                notFirstTalkP = true;
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
