@@ -14,6 +14,7 @@ TagManager:
   - GEHUD
   - coffre
   - Canvas
+  - LD
   layers:
   - Default
   - TransparentFX
