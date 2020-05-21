@@ -6,7 +6,7 @@ public class StoryGame : MonoBehaviour
 {
     //début du jeu
     public bool cinSTART;
-    public float cin1Time = 2;
+    public float cin1Time = 1;
 
     public bool cinRituel;
     public float cin2Time = 2;
