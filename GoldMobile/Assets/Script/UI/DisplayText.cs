@@ -35,7 +35,7 @@ public class DisplayText : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (DoneDisplaying == true)
         {
@@ -97,8 +97,11 @@ public class DisplayText : MonoBehaviour
         int counter = 0;
         while (!DoneDisplaying)
         {
-            Audio.pitch = Random.Range(0.9f, 1.1f);
-            Audio.Play();
+            if (Time.timeScale == 1)
+            {
+                Audio.pitch = Random.Range(0.9f, 1.1f);
+                Audio.Play();
+            }
             visibleC = counter % (totalvisibleChara + 1);
             tmpro.maxVisibleCharacters = visibleC;
 
@@ -113,7 +116,7 @@ public class DisplayText : MonoBehaviour
                 if (dialState >= dial.LesDialogues.Count - 1)
                 {
                     yield return new WaitForSeconds(1f);
-                    DoneDisplaying = true;
+                        DoneDisplaying = true;
                     DoneTalking = true;
                 }
                 else

@@ -22,7 +22,7 @@ MonoBehaviour:
   - "<color=#dbc08e>sed a per\xEDculis cunctis l\xEDbera nos semper"
   - "<color=#dbc08e>Virgo glori\xF3sa et bened\xEDcta."
   - "<color=#dbc08e>Mais\u2026 Qu\u2019est ce qui se passe ? Que\u2026"
-  - '  . . .'
+  - ' '
   - 'Ou suis-je ? '
   - Qui es-tu toi ?
   - 'Non ! '
@@ -86,9 +86,9 @@ MonoBehaviour:
   - "<color=#dbc08e> On commence bien\u2026 Me voil\xE0 bloqu\xE9 avec un fant\xF4me
     de gamine amn\xE9sique\u2026"
   - "Peut \xEAtre qu\u2019en me rappelant de tout, je pourrais partir ?"
-  - "Peut-\xEAtre\u2026 Faisons un tour de la maison, des souvenirs referont s\xFBrement
-    surface. "
-  - 'Enfin, si tu veux bien me laisser sortir. '
+  - "<color=#dbc08e> Peut-\xEAtre\u2026 Faisons un tour de la maison, des souvenirs
+    referont s\xFBrement surface. "
+  - '<color=#dbc08e> Enfin, si tu veux bien me laisser sortir. '
   SpeedDialogues:
   - 0.08
   - 0.08

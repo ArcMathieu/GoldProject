@@ -1980,7 +1980,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60284623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -123.09086, y: 112.13319, z: -10}
+  m_LocalPosition: {x: -104.81489, y: 48.78254, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2032,7 +2032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ae32d8aed66ee45acf22cbb4542ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentRoom: {fileID: 1838804246}
+  currentRoom: {fileID: 410303753}
   confiner: {fileID: 1536784125}
   confinerGhost: {fileID: 1410782678}
 --- !u!114 &60284632
@@ -4833,6 +4833,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &133405440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 133405441}
+  - component: {fileID: 133405442}
+  m_Layer: 0
+  m_Name: TimeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &133405441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133405440}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 590219570}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &133405442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133405440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46706239616083b41bbfecf192f36af1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &137214582
 GameObject:
   m_ObjectHideFlags: 0
@@ -6014,8 +6057,16 @@ PlayableDirector:
     value: {fileID: 1440400487}
   - key: {fileID: 7724137929746180057, guid: 18fad45c07047e04cb4e1f1ab7e50ca6, type: 2}
     value: {fileID: 193466133}
+  - key: {fileID: 9014425016020832672, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+    value: {fileID: 1361921001}
+  - key: {fileID: -4721814875188952891, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 4210243462955302556, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
-    m_References: []
+    m_References:
+    - f1167542eb772c44cb2629db1bfaeac8: {fileID: 271813776}
+    - 7c9347b17ef487c46bc9bf2be0a3c5ea: {fileID: 672439020}
 --- !u!95 &193466133
 Animator:
   serializedVersion: 3
@@ -16272,6 +16323,7 @@ Transform:
   - {fileID: 1829114192}
   - {fileID: 979059963}
   - {fileID: 320916826}
+  - {fileID: 133405441}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22125,7 +22177,7 @@ MonoBehaviour:
   isPickable: 0
   isDiscoveredByHonoria: 0
   dialPlayer:
-  - {fileID: 11400000, guid: d6903021a4970df4c94f32c755149e20, type: 2}
+  - {fileID: 11400000, guid: c876db4ea78e8c04c8961ebca556654b, type: 2}
   dialGhost: []
   tdialogue: {fileID: 1829114194}
   Player: {fileID: 0}
@@ -35802,7 +35854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ConfineMode: 0
   m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 1838804245}
+  m_BoundingShape2D: {fileID: 410303752}
   m_ConfineScreenEdges: 1
   m_Damping: 0
 --- !u!114 &1410782679
@@ -38619,7 +38671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ConfineMode: 0
   m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 1838804245}
+  m_BoundingShape2D: {fileID: 410303752}
   m_ConfineScreenEdges: 1
   m_Damping: 0
 --- !u!114 &1536784126
