@@ -140,7 +140,7 @@ public class GameManager : MonoBehaviour
             //chambre mother, sous sol 2, serre & librairy fermés
             for (int i = 0; i < 8; i++)
             {
-              //  tp[i].precedentlyOpened = true;
+               tp[i].precedentlyOpened = true;
             }
             //if fin cinématique
             storyManager.cinSTART = true;

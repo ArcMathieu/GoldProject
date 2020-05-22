@@ -8,6 +8,8 @@ public class HonoriaZone : MonoBehaviour
     public StoryGame storyManager;
     public GameObject Door;
 
+    public List<GameObject> CurrentInteraction;
+
     void Update()
     {
         transform.position = Honoria.transform.position;
@@ -23,7 +25,8 @@ public class HonoriaZone : MonoBehaviour
             Debug.Log("PorteOuverte");
             storyManager.DoorToSerre = true;
             GameManager._instance.openStep();
-            Door.SetActive(false);
+            collision.gameObject.SetActive(false);
+            //Door.SetActive(false);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -36,9 +39,10 @@ public class HonoriaZone : MonoBehaviour
         {
             storyManager.DoorToSerre = false;
             GameManager._instance.openStep();
-            Door.SetActive(true);
+            collision.gameObject.SetActive(true);
 
         }
     }
+
 
 }

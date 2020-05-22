@@ -7,7 +7,7 @@ public class GhostManager : MonoBehaviour
     Rigidbody2D rb;
     private float speed;
     private bool isP1 = false;
-    public  GameObject GhostEffectHUD;
+    //public  GameObject GhostEffectHUD;
     public Joystick joystick;
     public GameManager gameManager;
     public PlayerManager Player1;
@@ -65,7 +65,7 @@ public class GhostManager : MonoBehaviour
     {
         if (!gameManager.controleP1)
         {
-            GhostEffectHUD.SetActive(true);
+            //GhostEffectHUD.SetActive(true);
             rb.MovePosition(transform.position + (new Vector3(0, 1, 0) * joystick.Vertical * speed) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed));
             if (joystick.Vertical != 0 || joystick.Horizontal != 0)
             {
@@ -89,7 +89,7 @@ public class GhostManager : MonoBehaviour
 
     public void Controlled()
     {
-        GhostEffectHUD.SetActive(false);
+        //GhostEffectHUD.SetActive(false);
         rb.MovePosition(Vector2.MoveTowards(transform.position, MyPlayer.transform.position, speed));
         anim.SetBool("Walk", true);
 
@@ -105,7 +105,7 @@ public class GhostManager : MonoBehaviour
 
     public void Wait()
     {
-        GhostEffectHUD.SetActive(false);
+        //GhostEffectHUD.SetActive(false);
         //Stay at this position
         anim.SetBool("Walk", false);
         if (footP1.gameObject.transform.position.x < footP2.gameObject.transform.position.x)
