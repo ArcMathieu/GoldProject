@@ -91,7 +91,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Movable()
     {
-        if (gameManager.controleP1)
+        if (gameManager.controleP1 && GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DisplayText>().DoneTalking)
         {
             rb.MovePosition(transform.position + (new Vector3(0, 1, 0) * joystick.Vertical * speed * Time.deltaTime) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed * Time.deltaTime));
 
@@ -112,13 +112,18 @@ public class PlayerManager : MonoBehaviour
                 anim.SetBool("isWalking", false);
             }
         }
+        else
+        {
+            anim.SetBool("isWalking", false);
+        }
 
-        
+
     }
     
     public void Waiting()
     {
         //doNothing
+
         anim.SetBool("isWalking", false);
         //Debug.Log("playerWait");
     }

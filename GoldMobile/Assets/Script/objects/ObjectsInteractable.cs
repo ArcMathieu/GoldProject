@@ -17,8 +17,6 @@ public class ObjectsInteractable : MonoBehaviour
     public bool isPickable = false;
     public bool isDiscoveredByHonoria = false;
 
-
-
     //public GhostManager ghost;
     public DialogueData[] dialPlayer;
     public DialogueData[] dialGhost;
@@ -37,11 +35,6 @@ public class ObjectsInteractable : MonoBehaviour
         tdialogue = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DisplayText>();
         DoorSytem = GetComponent<CheckForKeys>();
         LockSytem = GetComponent<ActivateLock>();
-    }
-
-    private void Update()
-    {
-
     }
 
     public void setAction()
@@ -132,7 +125,7 @@ public class ObjectsInteractable : MonoBehaviour
     public bool isReadyForCinematic;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
+        
         if (/*ID == 1 && */collision.gameObject.CompareTag("GhostPlayer"))
         {
             isIn = true;
@@ -148,23 +141,24 @@ public class ObjectsInteractable : MonoBehaviour
     {
         if (/*ID == 0 && */collision.gameObject.CompareTag("Player") && tdialogue.DoneTalking)
         {
-            if (Cinematic != null && !notFirstTalkP && isReadyForCinematic && DoorSytem == null)
-            {
-                PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
-                DP.Play(Cinematic);
-                tdialogue.DialPass(dialPlayer[0]);
-                notFirstTalkP = true;
-            }
-            else if (Cinematic != null && !notFirstTalkP && isReadyForCinematic && DoorSytem != null)
-            {
-                DoorSytem.actionDoor(Player);
-                if (DoorSytem.HasItem)
+                if (Cinematic != null && !notFirstTalkP && isReadyForCinematic && DoorSytem == null)
                 {
                     PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
                     DP.Play(Cinematic);
+                    tdialogue.DialPass(dialPlayer[0]);
                     notFirstTalkP = true;
                 }
-            }
+                else if (Cinematic != null && !notFirstTalkP && isReadyForCinematic && DoorSytem != null)
+                {
+                    DoorSytem.actionDoor(Player);
+                    if (DoorSytem.HasItem)
+                    {
+                        PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
+                        DP.Play(Cinematic);
+                        notFirstTalkP = true;
+                    }
+                }
+
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

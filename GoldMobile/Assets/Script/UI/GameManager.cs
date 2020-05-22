@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     public GameObject switchButton;
     public ObjectsInteractable openSecretaire;
     public ObjectsInteractable clesParents;
+    public ObjectsInteractable CinAfterTuto;
+    public ObjectsInteractable CinClesParents;
+    
 
     public Tp[] tp;
 
@@ -125,7 +128,7 @@ public class GameManager : MonoBehaviour
         }
         if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[10].name)
         {
-            //Brosse
+            //dague
             storyManager.dague = true;
         }
         openStep();
@@ -143,7 +146,6 @@ public class GameManager : MonoBehaviour
                tp[i].precedentlyOpened = true;
             }
             //if fin cinématique
-            storyManager.cinSTART = true;
         }
 
         if (storyManager.cinSTART)
@@ -158,13 +160,15 @@ public class GameManager : MonoBehaviour
                     if (storyManager.cinRituel) //a declencher quand rituel invocation
                     {
                         //lumière off
-                  //      showGhost(true);
+                        showGhost(true);
+                        Debug.Log("okfre");
                         IsFollowingGirl();
                         switchButton.SetActive(true);
                     }
                 }
                 else
                 {
+                    CinAfterTuto.isReadyForCinematic = true;
                     storyManager.Tuto = false;
                     switchButton.SetActive(false);
                 }
@@ -184,20 +188,6 @@ public class GameManager : MonoBehaviour
 
             //sous sol 1
             
-            //flashBack / vision de fantome
-
-            //katia chambre
-            //interaction => tapis+latte
-            //boite code
-
-            //librairy closed, mother room closed 
-            
-
-            //if (storyManager.coffre)
-            //{
-            //    clesParents.isPickable = true;
-
-            //}
 
         }
 
@@ -208,7 +198,7 @@ public class GameManager : MonoBehaviour
             tp[9].precedentlyOpened = true;
             //cinématique lié bout de verre
             //using sécateur => clé + journal
-
+            CinClesParents.isReadyForCinematic = true;
             //code sur pilier
 
         }
@@ -222,7 +212,8 @@ public class GameManager : MonoBehaviour
         {
             //mother room
             tp[10].precedentlyOpened = true;
-            tp[11].precedentlyOpened = true;       
+            tp[11].precedentlyOpened = true;   
+            
             //pages livre
             //Tu m'as fait perdre 2h de ma précieuse vie avec cette connerie :)
             //if (storyManager.CleSecretaire)

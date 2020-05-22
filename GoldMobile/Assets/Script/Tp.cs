@@ -11,6 +11,7 @@ public class Tp : MonoBehaviour
     //public bool stairs = false;
     public bool ghostFollowing = false;
     public bool secreteTrap = false;
+    public bool honoriaDoor = false;
     public DisplayText tdialogue;
     public DialogueData dialPlayer;
     public StoryGame storyManager;
@@ -23,14 +24,8 @@ public class Tp : MonoBehaviour
             if (precedentlyOpened){
                 if (canPass)
                 {
-                    //if (stairs)
-                    //{
-                    //    collision.transform.position = new Vector3(tpTo.transform.position.x, tpTo.transform.position.y-5, 0);
-                    //}
-                    //else
-                    //{
-                        collision.transform.position = new Vector2(tpTo.transform.position.x, tpTo.transform.position.y);
-                    //}
+                    
+                    collision.transform.position = new Vector2(tpTo.transform.position.x, tpTo.transform.position.y);
                     if (ghostFollowing)
                     {
                         ghost.transform.position = new Vector3(collision.transform.position.x +0.5f, collision.transform.position.y + 0.5f, 0);
@@ -48,6 +43,10 @@ public class Tp : MonoBehaviour
             {
                 storyManager.DoorToSecreteCave = true;
                 GameManager._instance.openStep();
+            }
+            if (honoriaDoor)
+            {
+                storyManager.cinSTART = true;
             }
         }
     }

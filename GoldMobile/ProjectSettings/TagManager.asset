@@ -15,6 +15,7 @@ TagManager:
   - coffre
   - Canvas
   - LD
+  - Story
   layers:
   - Default
   - TransparentFX

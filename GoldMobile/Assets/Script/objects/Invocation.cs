@@ -13,38 +13,44 @@ public class Invocation : MonoBehaviour
     public bool CanChange = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && firstTime)
         {
-            OnCircle = true;
-        }
-    }
-
-    private void Update()
-    {
-        if (OnCircle && firstTime)
-        {
-            CanChange = true;
-        }
-        else CanChange = false;
-    }
-
-    public void setAction()
-    {
-        if (CanChange)
-        {
+            //OnCircle = true;
+            Debug.Log("freee");
             storyManager.cinRituel = true;
             GameManager._instance.openStep();
             collier.isPickable = true;
             //setAnimBougie true
             firstTime = false;
-            //fait apparaitre le bouton de switch de perso
         }
+    }
+
+    //private void Update()
+    //{
+    //    if (OnCircle && firstTime)
+    //    {
+    //        CanChange = true;
+    //    }
+    //    else CanChange = false;
+    //}
+
+    //public void setAction()
+    //{
+    //    if (CanChange)
+    //    {
+    //        storyManager.cinRituel = true;
+    //        GameManager._instance.openStep();
+    //        collier.isPickable = true;
+    //        //setAnimBougie true
+    //        firstTime = false;
+    //        //fait apparaitre le bouton de switch de perso
+    //    }
         
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        OnCircle = false;
-    }
+    //}
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    OnCircle = false;
+    //}
 
 
 }
