@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: CorriderAfterHonoriaTrigger
   m_EditorClassIdentifier: 
   LesDialogues:
-  - "<color=#dbc08e>Comment est ce que tu t\u2019appelles ?"
-  - Matthew.
-  - "<color=#dbc08e>Matthew\u2026 Je l\u2019aime bien ton pr\xE9nom ! Moi c\u2019est
-    Honoria ! "
-  - Je sais.
+  - "Comment est ce que tu t\u2019appelles ?"
+  - <color=#dbc08e>Matthew.
+  - "Matthew\u2026 Je l\u2019aime bien ton pr\xE9nom ! Moi c\u2019est Honoria ! "
+  - <color=#dbc08e>Je sais.
   SpeedDialogues:
   - 0.08
   - 0.08

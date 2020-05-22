@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
+  m_Name: PostCoffreTrigger
+  m_EditorClassIdentifier: 
+  LesDialogues:
+  - "Katia \xE9tait forte pour inventer des \xE9nigmes, on faisait souvent des chasses
+    au tr\xE9sor toutes les deux. "
+  - "C\u2019est mon jeu pr\xE9f\xE9r\xE9. C\u2019\xE9tait quoi toi ton jeu pr\xE9f\xE9r\xE9
+    ?"
+  - "<color=#dbc08e>On jouait souvent \xE0 cache-cache avec mes petites s\u0153urs."
+  - "Oh j\u2019aime beaucoup jouer \xE0 cache-cache ! Tu y joues encore ?"
+  - Je pourrais jouer avec vous ?
+  - <color=#dbc08e>Ca ne sera pas possible.
+  - "Parce que je suis morte, c\u2019est \xE7a ? Ce n\u2019est pas juste !"
+  - Je peux toujours me cacher tu sais !
+  - "<color=#dbc08e>Non, parce qu\u2019elles sont parties. Et qu\u2019elles ne reviendront
+    pas."
+  - "Parties o\xF9 ?"
+  - '<color=#dbc08e>La ou je ne peux pas les rejoindre. '
+  - "<color=#dbc08e>Continuons \xE0 avancer, il faut comprendre ce qu\u2019il t\u2019est
+    arriv\xE9."
+  SpeedDialogues:
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08
+  - 0.08

@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
+  m_Name: GhostAppear
+  m_EditorClassIdentifier: 
+  LesDialogues:
+  - "<color=#dbc08e>Une bougie, \xE7a fera l'affaire. Que le spectacle commence."
+  - <color=#dbc08e>In nomine Patris, et Filii, et Spiritus Sancti. Amen.
+  - "<color=#dbc08e>Sub tuum pr\xE6s\xEDdium"
+  - "<color=#dbc08e>conf\xFAgimus, Sancta Dei G\xE9netrix."
+  - "<color=#dbc08e>Nostras deprecati\xF3nes ne desp\xEDcias"
+  - "<color=#dbc08e>in necessit\xE1tibus"
+  - "<color=#dbc08e>sed a per\xEDculis cunctis l\xEDbera nos semper"
+  - "<color=#dbc08e>Virgo glori\xF3sa et bened\xEDcta."
+  - "<color=#dbc08e>Mais\u2026 Qu\u2019est ce qui se passe ? Que\u2026"
+  - '  . . .'
+  - 'Ou suis-je ? '
+  - Qui es-tu toi ?
+  - 'Non ! '
+  - Ne pars pas ! Ne me laisse pas !
+  - "Les m\xE9chantes ombres  . . . elles sont apr\xE8s moi !"
+  - "<color=#dbc08e>Ne t\u2019approche pas de moi ! Qu\u2019est-ce que tu es ?"
+  - "<color=#dbc08e>D\u2019o\xF9 est-ce que tu sors ? Laisse-moi partir !"
+  - "J\u2019\xE9tais perdue dans le noir"
+  - "mais ta voix m\u2019a guid\xE9e vers la sortie."
+  - "O\xF9 sont m\xE8re et p\xE8re ? O\xF9 est Katia ?"
+  - Que fais-tu dans ma chambre ?
+  - "<color=#dbc08e>C\u2019est moi qui pose les questions ! Qu\u2019est ce que tu
+    es ? "
+  - "<color=#dbc08e>Un fant\xF4me ? Impossible, \xE7a n\u2019existe pas ! "
+  - "<color=#dbc08e> C\u2019est un pi\xE8ge de ce couple, c\u2019est s\xFBr et certain
+    !"
+  - "<color=#dbc08e>Par quel proc\xE9d\xE9 tout \xE7a est-il possible ? Des miroirs
+    ? De la lumi\xE8re ?"
+  - "Non ! Monsieur ! Il faut que tu m\u2019aides !"
+  - "Les m\xE9chantes ombres, elles vont venir me chercher ! Je veux Katia !"
+  - "<color=#dbc08e>Qui est Katia ? Et les m\xE9chantes ombres?"
+  - "<color=#dbc08e> Qu\u2019est-ce que c\u2019est ?"
+  - "Ma gouvernante, elle me prot\xE8ge des m\xE9chants."
+  - "Elle m\u2019a promis de toujours me prot\xE9ger des m\xE9chants"
+  - " Mais elle n\u2019\xE9tait pas l\xE0 lorsque j\u2019\xE9tais dans le noir !
+    Je veux Katia !"
+  - "<color=#dbc08e>Il n\u2019y a pas de Katia ici ! Pourquoi je te r\xE9ponds, tu
+    n\u2019es qu\u2019une illusion cr\xE9\xE9e pour me duper !"
+  - "<color=#dbc08e>Par quel proc\xE9d\xE9 tout \xE7a est-il possible ? Des miroirs
+    ? De la lumi\xE8re ?"
+  - " Je suis r\xE9elle ! Je m\u2019appelle Honoria, je vis ici ! C\u2019est ma chambre
+    !"
+  - ' '
+  - "<color=#dbc08e>Qu\u2019est ce que\u2026 Qu\u2019est ce que c\u2019est que \xE7a
+    !  Aah !"
+  - "Les m\xE9chantes ombres ! Laissez le tranquille !"
+  - 
+  - "<color=#dbc08e>Mais qu\u2019est ce qui se passe ici ? Qu\u2019est ce que c\u2019\xE9tait
+    que \xE7a\u2026 Je ne comprends pas."
+  - "<color=#dbc08e>Les fant\xF4mes n\u2019existent pas, et pourtant\u2026 J\u2019ai
+    bel et bien senti quelque chose qui essayait de m\u2019attraper\u2026"
+  - " Tu dois m\u2019aider, si les m\xE9chantes ombres m\u2019attrapent, elles vont
+    me ramener dans le noir."
+  - "<color=#dbc08e>En admettant que tu sois bien un fant\xF4me, comment veux-tu
+    que je t\u2019aide ?"
+  - "Je ne sais pas\u2026 Mais je sais que je dois rentrer !"
+  - "<color=#dbc08e>Rentrer o\xF9 ? Chez toi ? Tu es chez toi."
+  - "Non, je sais que je ne devrais pas \xEAtre l\xE0, je crois qu\u2019on m\u2019attend
+    ailleurs, mais je ne peux pas y aller, "
+  - on ne me laisse pas passer !
+  - "<color=#dbc08e>Calme toi\u2026 Je n\u2019en reviens pas de ce que je vais dire,
+    mais je vais t\u2019aider."
+  - "<color=#dbc08e>De toutes fa\xE7ons ce n\u2019est pas comme si j\u2019avais le
+    choix."
+  - "<color=#dbc08e>Bon, commen\xE7ons par le d\xE9but. Te rappelles-tu la fa\xE7on
+    dont tu es morte ?"
+  - " \u2026Non, je me souviens juste du noir. J\u2019y suis rest\xE9e longtemps."
+  - "<color=#dbc08e>Aurais-tu une id\xE9e d\u2019o\xF9 peut \xEAtre cette Katia ?
+    Peut \xEAtre qu\u2019elle sait quelque chose ?"
+  - "Non, elle devrait \xEAtre l\xE0."
+  - "<color=#dbc08e> On commence bien\u2026 Me voil\xE0 bloqu\xE9 avec un fant\xF4me
+    de gamine amn\xE9sique\u2026"
+  - "Peut \xEAtre qu\u2019en me rappelant de tout, je pourrais partir ?"
+  - "Peut-\xEAtre\u2026 Faisons un tour de la maison, des souvenirs referont s\xFBrement
+    surface. "
+  - 'Enfin, si tu veux bien me laisser sortir. '
+  - "<color=#dbc08e>Ils ont voulu me d\xE9masquer ! Il faut que je sorte d\u2019ici
+    avant l\u2019arriv\xE9e de la police !"
+  - "<color=#dbc08e>Ils ont voulu me d\xE9masquer ! Il faut que je sorte d\u2019ici
+    avant l\u2019arriv\xE9e de la police !"
+  - "<color=#dbc08e>Ils ont voulu me d\xE9masquer ! Il faut que je sorte d\u2019ici
+    avant l\u2019arriv\xE9e de la police !"
+  SpeedDialogues:
+  - 0

@@ -6,6 +6,7 @@ public class ActivateLock : MonoBehaviour
 {
     public GameObject UILock;
     public bool CodeFound;
+    public GameObject Clee;
 
     private void Start()
     {
@@ -16,6 +17,7 @@ public class ActivateLock : MonoBehaviour
     {
         if(CodeFound == true)
         {
+            Clee.GetComponent<ObjectsInteractable>().isReadyForCinematic = true;
             Destroy(gameObject);
         }
     }
