@@ -66,7 +66,7 @@ public class GhostManager : MonoBehaviour
         if (!gameManager.controleP1)
         {
             //GhostEffectHUD.SetActive(true);
-            rb.MovePosition(transform.position + (new Vector3(0, 1, 0) * joystick.Vertical * speed) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed));
+            rb.MovePosition(transform.position + (new Vector3(0, 1, 0) * joystick.Vertical * speed * Time.deltaTime) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed * Time.deltaTime));
             if (joystick.Vertical != 0 || joystick.Horizontal != 0)
             {
                 anim.SetBool("Walk", true);
@@ -90,7 +90,7 @@ public class GhostManager : MonoBehaviour
     public void Controlled()
     {
         //GhostEffectHUD.SetActive(false);
-        rb.MovePosition(Vector2.MoveTowards(transform.position, MyPlayer.transform.position, speed));
+        rb.MovePosition(Vector2.MoveTowards(transform.position, MyPlayer.transform.position, speed * Time.deltaTime));
         anim.SetBool("Walk", true);
 
         if (footP1.gameObject.transform.position.x < footP2.gameObject.transform.position.x)

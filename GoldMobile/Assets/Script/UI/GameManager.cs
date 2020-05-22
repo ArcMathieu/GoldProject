@@ -136,7 +136,7 @@ public class GameManager : MonoBehaviour
         if (!storyManager.cinSTART)
         {
             //Exterieur cinematique => coroutine
-            launchCorout(storyManager.cin1Time);
+            //launchCorout(storyManager.cin1Time);
             //chambre mother, sous sol 2, serre & librairy fermés
             for (int i = 0; i < 8; i++)
             {

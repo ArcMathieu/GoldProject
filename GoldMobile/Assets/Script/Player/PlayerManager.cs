@@ -32,7 +32,7 @@ public class PlayerManager : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         speed = GameManager._instance.playerSpeed;
         currentRotation = 0f;
-        PlayerState = State.WAIT;
+        PlayerState = State.MOVABLE;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -93,7 +93,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (gameManager.controleP1)
         {
-            rb.MovePosition(transform.position + (new Vector3(0, 1, 0) * joystick.Vertical * speed) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed));
+            rb.MovePosition(transform.position + (new Vector3(0, 1, 0) * joystick.Vertical * speed * Time.deltaTime) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed * Time.deltaTime));
 
             if(joystick.Vertical != 0 || joystick.Horizontal != 0)
             {
