@@ -66,7 +66,6 @@ public class cadena : MonoBehaviour
             CoffreOpened.SetActive(true);
             Cadena.SetActive(false);
             itemUnlock.SetActive(true);
-            FindObjectOfType<SoundManager>().PlaySfx("Keys");
 
             FindObjectOfType<Achievement>().UnlockWhatinTheBox();
         }
