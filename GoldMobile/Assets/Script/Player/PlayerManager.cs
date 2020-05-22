@@ -11,6 +11,7 @@ public class PlayerManager : MonoBehaviour
     public GameManager gameManager;
     public GhostManager Player2;
     public GameObject cadena;
+    public GameObject Fondu2;
     //public Transform GhostContainer;
     public Transform Ghost;
     public float currentRotation;
@@ -28,6 +29,7 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Fondu2.SetActive(true);
         anim = gameObject.GetComponentsInChildren<Animator>()[1];
         rb = GetComponent<Rigidbody2D>();
         speed = GameManager._instance.playerSpeed;
