@@ -18542,6 +18542,7 @@ MonoBehaviour:
   gameManager: {fileID: 249889312}
   Player2: {fileID: 1969605188}
   cadena: {fileID: 0}
+  Fondu2: {fileID: 1829105255}
   Ghost: {fileID: 1969605185}
   currentRotation: 0
   PlayerState: 1
@@ -44561,12 +44562,12 @@ GameObject:
   - component: {fileID: 1829105258}
   - component: {fileID: 1829105257}
   m_Layer: 5
-  m_Name: FadeIn
+  m_Name: Fondu2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1829105256
 RectTransform:
   m_ObjectHideFlags: 0
