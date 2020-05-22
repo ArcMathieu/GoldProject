@@ -85,10 +85,11 @@ MonoBehaviour:
   - "Non, elle devrait \xEAtre l\xE0."
   - "<color=#dbc08e> On commence bien\u2026 Me voil\xE0 bloqu\xE9 avec un fant\xF4me
     de gamine amn\xE9sique\u2026"
-  - "Peut \xEAtre qu\u2019en me rappelant de tout, je pourrais partir ?"
-  - "<color=#dbc08e> Peut-\xEAtre\u2026 Faisons un tour de la maison, des souvenirs
-    referont s\xFBrement surface. "
-  - '<color=#dbc08e> Enfin, si tu veux bien me laisser sortir. '
+  - "<color=#dbc08e>Peut-\xEAtre qu'en faisant un tour de la maison tes souvenirs
+    referont surface."
+  - <color=#dbc08e> Enfin, si tu veux bien me laisser sortir.
+  - "D'accord mais \xE0 une condition, pourrait tu me retrouver le collier de Katia
+    ? C'est le seul souvenir qu'il me reste d'elle..."
   SpeedDialogues:
   - 0.08
   - 0.08

@@ -160,10 +160,10 @@ public class GameManager : MonoBehaviour
                     if (storyManager.cinRituel) //a declencher quand rituel invocation
                     {
                         //lumière off
-                        showGhost(true);
+                        //showGhost(true);
                         Debug.Log("okfre");
                         IsFollowingGirl();
-                        switchButton.SetActive(true);
+                        //switchButton.SetActive(true);
                     }
                 }
                 else

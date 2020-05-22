@@ -1980,7 +1980,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60284623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -104.81489, y: 48.78254, z: -10}
+  m_LocalPosition: {x: -97.43258, y: 54.878242, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6063,6 +6063,18 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 4210243462955302556, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 3676110162044777655, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+    value: {fileID: 691163786}
+  - key: {fileID: -4033959428186646068, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+    value: {fileID: 414171490}
+  - key: {fileID: 1770766111821323874, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+    value: {fileID: 1969605189}
+  - key: {fileID: -8904350957741190145, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+    value: {fileID: 1542421536}
+  - key: {fileID: 2252624950300533910, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+    value: {fileID: 414171490}
+  - key: {fileID: -6280357189130873903, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+    value: {fileID: 1542421536}
   m_ExposedReferences:
     m_References:
     - f1167542eb772c44cb2629db1bfaeac8: {fileID: 271813776}
@@ -22196,7 +22208,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5828573, y: 0.38176548}
+  m_Offset: {x: -1.1251587, y: 0.47562104}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -22207,7 +22219,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.46501422, y: 0.41996264}
+  m_Size: {x: 1.5496168, y: 1.3585538}
   m_EdgeRadius: 0
 --- !u!1 &812407345
 GameObject:
@@ -38717,7 +38729,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536784124}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -104.81489, y: 48.78254, z: -10}
+  m_LocalPosition: {x: -97.43258, y: 114.72306, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1297159946}
@@ -38817,7 +38829,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -6359977545375631545, guid: 5d8dc06e5f776a846b4fc9ecb1e9072c,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
