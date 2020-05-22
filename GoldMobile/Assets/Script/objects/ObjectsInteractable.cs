@@ -46,10 +46,8 @@ public class ObjectsInteractable : MonoBehaviour
 
     public void setAction()
     {
-        if (tdialogue.DoneTalking)
-        {
-
-         
+        if (tdialogue.DoneTalking && Cinematic == null)
+        { 
 
             if (DoorSytem == null)
             {
@@ -90,9 +88,11 @@ public class ObjectsInteractable : MonoBehaviour
                     IEnumerator waitForDestroy()
                     {
                         tdialogue.DialPass(dialPlayer[0]);
+
+                        yield return new WaitForSeconds(1);
                         Player.GetComponent<InventorySystem>().AddItem(ItemName);
                         GameManager._instance.TakeObject(ItemName);
-                        yield return new WaitForSeconds(1);
+                        Debug.Log("hiooii");
                         Destroy(gameObject);
                     }
                 }
@@ -141,13 +141,29 @@ public class ObjectsInteractable : MonoBehaviour
         if (/*ID == 0 && */collision.gameObject.CompareTag("Player"))
         {
             isPIn = true;
+        }
+    }
 
-            if (Cinematic != null && !notFirstTalkP && isReadyForCinematic)
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (/*ID == 0 && */collision.gameObject.CompareTag("Player") && tdialogue.DoneTalking)
+        {
+            if (Cinematic != null && !notFirstTalkP && isReadyForCinematic && DoorSytem == null)
             {
                 PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
                 DP.Play(Cinematic);
                 tdialogue.DialPass(dialPlayer[0]);
                 notFirstTalkP = true;
+            }
+            else if (Cinematic != null && !notFirstTalkP && isReadyForCinematic && DoorSytem != null)
+            {
+                DoorSytem.actionDoor(Player);
+                if (DoorSytem.HasItem)
+                {
+                    PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
+                    DP.Play(Cinematic);
+                    notFirstTalkP = true;
+                }
             }
         }
     }

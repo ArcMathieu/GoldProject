@@ -8,6 +8,7 @@ public class CheckForKeys : MonoBehaviour
     public string DesiredKey;
     public ObjectsInteractable oi;
 
+    public bool HasItem;
     private bool LAFOLIE = true;
 
     private void Start()
@@ -20,6 +21,7 @@ public class CheckForKeys : MonoBehaviour
         {
             if (Player.GetComponent<InventorySystem>().PlayerItems[i].activeSelf == true && Player.GetComponent<InventorySystem>().PlayerItems[i].name == DesiredKey)
             {
+                HasItem = true;
                 oi.tdialogue.DialPass(oi.dialPlayer[0]);
                 oi.tdialogue.NextDial();
                 LAFOLIE = false;
@@ -36,21 +38,21 @@ public class CheckForKeys : MonoBehaviour
             }
         }
     }
-    private void actionDoorCol(Collision2D collision)
-    {
-        for (int i = 0; i < collision.gameObject.GetComponent<InventorySystem>().PlayerItems.Count; i++)
-        {
-            if (collision.gameObject.GetComponent<InventorySystem>().PlayerItems[i].activeSelf == true && collision.gameObject.GetComponent<InventorySystem>().PlayerItems[i].name == DesiredKey)
-            {
-                Debug.Log(";)");
-                gameObject.SetActive(false);
-                if (DesiredKey == "Secateur")
-                {
-                    FindObjectOfType<Achievement>().UnlockJillWouldBeProud();
-                }
-            }
-        }
-    }
+    //private void actionDoorCol(Collision2D collision)
+    //{
+    //    for (int i = 0; i < collision.gameObject.GetComponent<InventorySystem>().PlayerItems.Count; i++)
+    //    {
+    //        if (collision.gameObject.GetComponent<InventorySystem>().PlayerItems[i].activeSelf == true && collision.gameObject.GetComponent<InventorySystem>().PlayerItems[i].name == DesiredKey)
+    //        {
+    //            Debug.Log(";)");
+    //            gameObject.SetActive(false);
+    //            if (DesiredKey == "Secateur")
+    //            {
+    //                FindObjectOfType<Achievement>().UnlockJillWouldBeProud();
+    //            }
+    //        }
+    //    }
+    //}
     //private void OnCollisionEnter2D(Collision2D collision)
     //{
     //    if (collision.gameObject.CompareTag("Player"))

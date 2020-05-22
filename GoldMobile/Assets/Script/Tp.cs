@@ -8,7 +8,7 @@ public class Tp : MonoBehaviour
     public GameObject ghost;
     public bool canPass = false;
     public bool precedentlyOpened = false;
-    public bool stairs = false;
+    //public bool stairs = false;
     public bool ghostFollowing = false;
     public bool secreteTrap = false;
     public DisplayText tdialogue;
@@ -23,14 +23,14 @@ public class Tp : MonoBehaviour
             if (precedentlyOpened){
                 if (canPass)
                 {
-                    if (stairs)
-                    {
-                        collision.transform.position = new Vector3(tpTo.transform.position.x, tpTo.transform.position.y-5, 0);
-                    }
-                    else
-                    {
-                        collision.transform.position = new Vector3(tpTo.transform.position.x, tpTo.transform.position.y, 0);
-                    }
+                    //if (stairs)
+                    //{
+                    //    collision.transform.position = new Vector3(tpTo.transform.position.x, tpTo.transform.position.y-5, 0);
+                    //}
+                    //else
+                    //{
+                        collision.transform.position = new Vector2(tpTo.transform.position.x, tpTo.transform.position.y);
+                    //}
                     if (ghostFollowing)
                     {
                         ghost.transform.position = new Vector3(collision.transform.position.x +0.5f, collision.transform.position.y + 0.5f, 0);
