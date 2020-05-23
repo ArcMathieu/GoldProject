@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: CollierP1
   m_EditorClassIdentifier: 
   LesDialogues:
-  - Un collier.
+  - <color=#dbc08e> Un collier...
+  - "Oui c'est son collier ! Merci de l'avoir r\xE9cuper\xE9"
   SpeedDialogues:
+  - 0.05
   - 0.05
