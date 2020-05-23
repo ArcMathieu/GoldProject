@@ -6,14 +6,14 @@ public class CheckForKeys : MonoBehaviour
 {
 
     public string DesiredKey;
-    public ObjectsInteractable oi;
+    public ObjectsInteractable ObjectsInter;
 
-    public bool HasItem;
     private bool LAFOLIE = true;
 
+    public bool HasItem;
     private void Start()
     {
-        oi = GetComponent<ObjectsInteractable>();
+        ObjectsInter = GetComponent<ObjectsInteractable>();
     }
     public void actionDoor(GameObject Player)
     {
@@ -22,15 +22,10 @@ public class CheckForKeys : MonoBehaviour
             if (Player.GetComponent<InventorySystem>().PlayerItems[i].activeSelf == true && Player.GetComponent<InventorySystem>().PlayerItems[i].name == DesiredKey)
             {
                 HasItem = true;
-                oi.tdialogue.DialPass(oi.dialPlayer[0]);
-                oi.tdialogue.NextDial();
-                LAFOLIE = false;
-                if (!LAFOLIE){
-                    Player.GetComponent<InventorySystem>().PlayerItems[i].SetActive(false);
-                    Player.GetComponent<InventorySystem>().AddItem(oi.ItemName);
-                    GameManager._instance.TakeObject(oi.ItemName);
-                    gameObject.SetActive(false);
-                }
+                Player.GetComponent<InventorySystem>().PlayerItems[i].SetActive(false);
+                ObjectsInter.tdialogue.DialPass(ObjectsInter.dialPlayer[0]);
+                ObjectsInter.tdialogue.NextDial();
+    //        
                 if (DesiredKey == "Secateur")
                 {
                     FindObjectOfType<Achievement>().UnlockJillWouldBeProud();
