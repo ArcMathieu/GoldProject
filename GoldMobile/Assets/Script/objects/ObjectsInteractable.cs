@@ -24,10 +24,10 @@ public class ObjectsInteractable : MonoBehaviour
     //    public InteractionManager interact;
     public GameObject Player;
 
-    private CheckForKeys DoorSytem;
-    private ActivateLock LockSytem;
+    public CheckForKeys DoorSytem;
+    public ActivateLock LockSytem;
 
-    public bool HasItem;
+    public bool HasTalked;
 
     private void Start()
     {
@@ -39,64 +39,34 @@ public class ObjectsInteractable : MonoBehaviour
 
     public void setAction()
     {
-        if (tdialogue.DoneTalking && Cinematic == null)
-        { 
+        if (Cinematic == null)
+        {
+            tdialogue.isAutomatique = false;
+            //if (isIn)
+            //{
+            //    //ghost = GameObject.FindGameObjectWithTag("GhostPlayer").GetComponent<GhostManager>();
+            //    if (!notFirstTalkG)
+            //    {
+            //        tdialogue.DialPass(dialGhost[0]);
+            //        notFirstTalkG = true;
+            //    }
+            //    else
+            //    {
+            //        tdialogue.DialPass(dialGhost[1]);
+            //    }
+            //}
 
-            if (DoorSytem == null)
+            if (isPIn && HasTalked == false)
             {
-                tdialogue.NextDial();
-            }
-
-            if (isIn)
-            {
-                //ghost = GameObject.FindGameObjectWithTag("GhostPlayer").GetComponent<GhostManager>();
-                if (!notFirstTalkG)
-                {
-                    tdialogue.DialPass(dialGhost[0]);
-                    notFirstTalkG = true;
-                }
-                else
-                {
-                    tdialogue.DialPass(dialGhost[1]);
-                }
-            }
-
-            if (isPIn)
-            {
-
-                if (LockSytem != null && tdialogue.DoneTalking && notFirstTalkP)
-                {
-                    Debug.Log("hpppiooii");
-                    LockSytem.Action(Player);
-                }
-                else if (DoorSytem != null)
-                {
-                    DoorSytem.actionDoor(Player);
-                    Debug.Log("hiii");
-                }
-                else if (isPickable && tdialogue.DoneTalking && ItemName != null)
-                {
-                    Debug.Log("hiooii");
-                    StartCoroutine(waitForDestroy());
-                    IEnumerator waitForDestroy()
-                    {
-                        tdialogue.DialPass(dialPlayer[0]);
-
-                        yield return new WaitForSeconds(1);
-                        Player.GetComponent<InventorySystem>().AddItem(ItemName);
-                        GameManager._instance.TakeObject(ItemName);
-                        Debug.Log("hiooii");
-                        Destroy(gameObject);
-                    }
-                }
                 if (DoorSytem == null)
                 {
+                    
                     if (!notFirstTalkP)
                     {
-                        if (tdialogue.DoneTalking && DoorSytem != null)
-                        {
-                            DoorSytem.gameObject.SetActive(false);
-                        }
+                    //    if (DoorSytem != null)
+                    //    {
+                    //        DoorSytem.gameObject.SetActive(false);
+                    //    }
                         tdialogue.DialPass(dialPlayer[0]);
                         notFirstTalkP = true;
                     }
@@ -104,11 +74,38 @@ public class ObjectsInteractable : MonoBehaviour
                     {
                         tdialogue.DialPass(dialPlayer[1]);
                     }
+
+                    tdialogue.NextDial();
                 }
-                if (isDiscoveredByHonoria)
+
+                Debug.Log("help..");
+                //if (LockSytem != null && notFirstTalkP)
+                //{
+                 
+                //    LockSytem.Action(Player);
+                //}
+                 if (DoorSytem != null)
                 {
-                    //action si Honoria à vu un obj
+                    if (DoorSytem.HasItem != true)
+                    {
+                        DoorSytem.actionDoor(Player);
+                    }
+                    else
+                    {
+                        tdialogue.NextDial();
+                    }
+                  
                 }
+                else if (isPickable && ItemName != null)
+                {   
+              //          tdialogue.DialPass(dialPlayer[0]);
+          
+                }
+      
+                //if (isDiscoveredByHonoria)
+                //{
+                //    //action si Honoria à vu un obj
+                //}
                 //if (!endQuest)
                 //{
 
@@ -121,7 +118,20 @@ public class ObjectsInteractable : MonoBehaviour
             }
         }
     }
+    public void UnlockTheDoor()
+    {
+        Player.GetComponent<InventorySystem>().AddItem(ItemName);
+        GameManager._instance.TakeObject(ItemName);
+        gameObject.SetActive(false);
+    }
 
+    public void PickUpObject()
+    {
+        Player.GetComponent<InventorySystem>().AddItem(ItemName);
+        GameManager._instance.TakeObject(ItemName);
+        gameObject.GetComponent<SpriteRenderer>().sprite = null;
+        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+    }
     public bool isReadyForCinematic;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -141,16 +151,23 @@ public class ObjectsInteractable : MonoBehaviour
     {
         if (/*ID == 0 && */collision.gameObject.CompareTag("Player") && tdialogue.DoneTalking)
         {
-                if (Cinematic != null && !notFirstTalkP && isReadyForCinematic && DoorSytem == null)
-                {
-                    PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
+                if (Cinematic != null && isReadyForCinematic && DoorSytem == null)
+            {
+                tdialogue.isAutomatique = true;
+                PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
                     DP.Play(Cinematic);
                     tdialogue.DialPass(dialPlayer[0]);
                     notFirstTalkP = true;
+                if (isPickable)
+                {
+                    Player.GetComponent<InventorySystem>().AddItem(ItemName);
+                    GameManager._instance.TakeObject(ItemName);
+                }
                 }
                 else if (Cinematic != null && !notFirstTalkP && isReadyForCinematic && DoorSytem != null)
-                {
-                    DoorSytem.actionDoor(Player);
+            {
+                tdialogue.isAutomatique = true;
+                DoorSytem.actionDoor(Player);
                     if (DoorSytem.HasItem)
                     {
                         PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
@@ -164,6 +181,11 @@ public class ObjectsInteractable : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         //zone = null;
+        if (isPickable && Cinematic == null) {
+            HasTalked = true;
+        }
+        tdialogue.FirstTalk = true;
+        tdialogue.tmpro.text = null;
         isPIn = false;
         isIn = false;
     }
