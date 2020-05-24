@@ -78,7 +78,6 @@ public class ObjectsInteractable : MonoBehaviour
                     tdialogue.NextDial();
                 }
 
-                Debug.Log("help..");
                 //if (LockSytem != null && notFirstTalkP)
                 //{
                  

@@ -68,7 +68,6 @@ public class DisplayText : MonoBehaviour
 
         if (FirstTalk == true)
         {
-            Debug.Log("hi");
             FirstTalk = false;
             StartCoroutine(DisplayTextOverTime(displaySPD));
         }
@@ -84,7 +83,6 @@ public class DisplayText : MonoBehaviour
                
                 if (!DoneTalking)
                 {
-                    Debug.Log("haha");
                     StartCoroutine(DisplayTextOverTime(displaySPD));
                 }
                 else
@@ -98,7 +96,6 @@ public class DisplayText : MonoBehaviour
                         }
                         if (inter.GetComponent<ObjectsInteractable>().HasTalked)
                         {
-                            Debug.Log("jdiojeio");
                             inter.GetComponent<ObjectsInteractable>().PickUpObject();
                         }
 
@@ -171,14 +168,12 @@ public class DisplayText : MonoBehaviour
                
                     foreach (GameObject inter in Player.GetComponent<PlayerManager>().CurrentInteraction)
                     {
-                        Debug.Log("I'm so done haha");
                         if (inter.GetComponent<ObjectsInteractable>().DoorSytem != null)
                         {
                             inter.GetComponent<ObjectsInteractable>().UnlockTheDoor();
                         }
                         if (inter.GetComponent<ObjectsInteractable>().isPickable && inter.GetComponent<ObjectsInteractable>().Cinematic == null)
-                        {
-                            Debug.Log("jdiojeio");
+                        { 
                             inter.GetComponent<ObjectsInteractable>().PickUpObject();
                         }
                         if (inter.GetComponent<ObjectsInteractable>().LockSytem != null)

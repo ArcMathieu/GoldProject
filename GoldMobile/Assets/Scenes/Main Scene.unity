@@ -7908,7 +7908,7 @@ MonoBehaviour:
   gh: {fileID: 1969605188}
   switchButton: {fileID: 271813776}
   openSecretaire: {fileID: 0}
-  clesParents: {fileID: 876604457}
+  clesParents: {fileID: 0}
   CinAfterTuto: {fileID: 352889380}
   CinClesParents: {fileID: 823764235}
   tp:
@@ -23485,7 +23485,6 @@ GameObject:
   - component: {fileID: 876604455}
   - component: {fileID: 876604459}
   - component: {fileID: 876604458}
-  - component: {fileID: 876604457}
   - component: {fileID: 876604456}
   m_Layer: 0
   m_Name: coffre (Open) (1)
@@ -23519,34 +23518,6 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -4
---- !u!114 &876604457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876604454}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 016954e06cf8f0d4f927f56508599478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemName: 
-  Cinematic: {fileID: 0}
-  isIn: 0
-  isPIn: 0
-  notFirstTalkP: 0
-  isPickable: 0
-  isDiscoveredByHonoria: 0
-  dialPlayer:
-  - {fileID: 11400000, guid: 4afb87319fc637a4c975227565711071, type: 2}
-  dialGhost: []
-  tdialogue: {fileID: 0}
-  Player: {fileID: 0}
-  DoorSytem: {fileID: 0}
-  LockSytem: {fileID: 0}
-  HasTalked: 0
-  isReadyForCinematic: 0
 --- !u!61 &876604458
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41125,7 +41096,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1652345606
 Transform:
   m_ObjectHideFlags: 0
