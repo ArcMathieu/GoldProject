@@ -5,7 +5,7 @@ using TMPro;
 
 public class DisplayText : MonoBehaviour
 {
-    private TextMeshProUGUI tmpro;
+    public TextMeshProUGUI tmpro;
     public GameObject TextBox;
     public DialogueData dial;
 
@@ -19,9 +19,12 @@ public class DisplayText : MonoBehaviour
     private int visibleC;
     public AudioSource Audio;
     public AudioClip KeyStroke;
+
+    private GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
         Audio = GetComponent<AudioSource>();
         tmpro = TextBox.GetComponent<TextMeshProUGUI>();
     }
@@ -29,7 +32,7 @@ public class DisplayText : MonoBehaviour
     public void DialPass(DialogueData thisDial)
     {
         dial = thisDial;
-        dialState = - 1;
+        dialState = -1;
         DoneDisplaying = true;
         DoneTalking = false;
     }
@@ -39,36 +42,79 @@ public class DisplayText : MonoBehaviour
     {
         if (DoneDisplaying == true)
         {
-            if (isAutomatique == false)
-            {
-                NextDial();
-            } else
+            if (isAutomatique)
             {
                 if (!DoneTalking)
                 {
                     StartCoroutine(DisplayTextOverTime(displaySPD));
-                } else
+                }
+                else
                 {
                     tmpro.text = null;
                 }
             }
-        } else if (DoneDisplaying == false)
+        }
+        else if (DoneDisplaying == false)
         {
             tmpro.text = dial.LesDialogues[dialState];
             totalvisibleChara = tmpro.textInfo.characterCount;
-        } 
+        }
     }
 
+    public bool FirstTalk = true;
+    private bool WantsToSkip = false;
     public void NextDial()
     {
-        if (!DoneTalking)
+
+        if (FirstTalk == true)
         {
+            Debug.Log("hi");
+            FirstTalk = false;
             StartCoroutine(DisplayTextOverTime(displaySPD));
         }
-        else if (DoneTalking)
-        {
-            tmpro.text = null;
+        else {
+            if (!DoneDisplaying)
+            {
+                WantsToSkip = true;
+                tmpro.maxVisibleCharacters = totalvisibleChara;
+               Debug.Log("skip");
+            }
+            else
+            {
+               
+                if (!DoneTalking)
+                {
+                    Debug.Log("haha");
+                    StartCoroutine(DisplayTextOverTime(displaySPD));
+                }
+                else
+                {
+                    foreach (GameObject inter in Player.GetComponent<PlayerManager>().CurrentInteraction)
+                    {
+                        //Anti loop
+                        if (inter.GetComponent<ObjectsInteractable>().DoorSytem != null)
+                        {
+                            inter.GetComponent<ObjectsInteractable>().UnlockTheDoor();
+                        }
+                        if (inter.GetComponent<ObjectsInteractable>().HasTalked)
+                        {
+                            Debug.Log("jdiojeio");
+                            inter.GetComponent<ObjectsInteractable>().PickUpObject();
+                        }
+
+                        //if (inter.GetComponent<ObjectsInteractable>().LockSytem != null)
+                        //{
+                        //    inter.GetComponent<ObjectsInteractable>().LockSytem.Action(Player);
+                        //}
+                        FirstTalk = true;
+                        tmpro.text = null;
+                        if(inter.GetComponent<ObjectsInteractable>().LockSytem == null)
+                        Destroy(inter.gameObject);
+                    }
+                }
+            }
         }
+
     }
     public IEnumerator DisplayTextOverTime(float DisplaySpd = 0.03f)
     {
@@ -95,55 +141,64 @@ public class DisplayText : MonoBehaviour
         }
         DoneDisplaying = false;
         int counter = 0;
-
-        //totalvisibleChara = dial.LesDialogues[dialState].Length;
-        Debug.Log("totalVisibleCara : " + totalvisibleChara);
-        float totalTimeToDisplay = totalvisibleChara * displaySPD;
-        float elapsedTime = 0;
         while (!DoneDisplaying)
         {
-            if (Time.timeScale == 1)
             {
-                Audio.pitch = Random.Range(0.9f, 1.1f);
-                Audio.Play();
+                if (Time.timeScale == 1)
+                {
+                    Audio.pitch = Random.Range(0.9f, 1.1f);
+                    Audio.Play();
+                }
+                if (!WantsToSkip)
+                {
+                    visibleC = counter % (totalvisibleChara + 1);
+                    tmpro.maxVisibleCharacters = visibleC;
+                }
+
+                if (visibleC >= totalvisibleChara)
+                    yield return new WaitForSeconds(0.2f);
+                counter++;
+                yield return new WaitForSeconds(DisplaySpd);
             }
-
-            Debug.Log("Frame");
-
-            visibleC = counter % (totalvisibleChara + 1);
-            Debug.Log(totalTimeToDisplay);
-            Debug.Log(totalvisibleChara);
-            Debug.Log(elapsedTime / totalTimeToDisplay);
-           // visibleC = (int)((elapsedTime / totalTimeToDisplay) * totalvisibleChara);
-            Debug.Log("visibleC : " + visibleC);
-            tmpro.maxVisibleCharacters = visibleC;
-
-            if (visibleC >= totalvisibleChara)
-                yield return new WaitForSeconds(0.2f);
-            counter++;
-            yield return new WaitForSeconds(DisplaySpd);
-            elapsedTime += Time.deltaTime;
-            Debug.Log(elapsedTime);
-            //yield return null;
-
-            if (visibleC == totalvisibleChara)
+            if (visibleC == totalvisibleChara || WantsToSkip == true)
             {
 
                 if (dialState >= dial.LesDialogues.Count - 1)
                 {
-                    yield return new WaitForSeconds(1f);
-                        DoneDisplaying = true;
+                    DoneDisplaying = true;
                     DoneTalking = true;
+                    WantsToSkip = false;
+               
+                    foreach (GameObject inter in Player.GetComponent<PlayerManager>().CurrentInteraction)
+                    {
+                        Debug.Log("I'm so done haha");
+                        if (inter.GetComponent<ObjectsInteractable>().DoorSytem != null)
+                        {
+                            inter.GetComponent<ObjectsInteractable>().UnlockTheDoor();
+                        }
+                        if (inter.GetComponent<ObjectsInteractable>().isPickable && inter.GetComponent<ObjectsInteractable>().Cinematic == null)
+                        {
+                            Debug.Log("jdiojeio");
+                            inter.GetComponent<ObjectsInteractable>().PickUpObject();
+                        }
+                        if (inter.GetComponent<ObjectsInteractable>().LockSytem != null)
+                        {
+                            inter.GetComponent<ObjectsInteractable>().LockSytem.Action(Player);
+                            tmpro.text = null;
+                        }
+                    }
                 }
                 else
                 {
                     if (isAutomatique)
                     {
                         yield return new WaitForSeconds(1f);
-                    } else
+                    }
+                    else
                     {
                         yield return new WaitForSeconds(displaySPD);
                     }
+                    WantsToSkip = false;
                     DoneDisplaying = true;
                 }
             }
