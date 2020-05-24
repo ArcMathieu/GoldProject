@@ -95,6 +95,11 @@ public class DisplayText : MonoBehaviour
         }
         DoneDisplaying = false;
         int counter = 0;
+
+        //totalvisibleChara = dial.LesDialogues[dialState].Length;
+        Debug.Log("totalVisibleCara : " + totalvisibleChara);
+        float totalTimeToDisplay = totalvisibleChara * displaySPD;
+        float elapsedTime = 0;
         while (!DoneDisplaying)
         {
             if (Time.timeScale == 1)
@@ -102,13 +107,24 @@ public class DisplayText : MonoBehaviour
                 Audio.pitch = Random.Range(0.9f, 1.1f);
                 Audio.Play();
             }
+
+            Debug.Log("Frame");
+
             visibleC = counter % (totalvisibleChara + 1);
+            Debug.Log(totalTimeToDisplay);
+            Debug.Log(totalvisibleChara);
+            Debug.Log(elapsedTime / totalTimeToDisplay);
+           // visibleC = (int)((elapsedTime / totalTimeToDisplay) * totalvisibleChara);
+            Debug.Log("visibleC : " + visibleC);
             tmpro.maxVisibleCharacters = visibleC;
 
             if (visibleC >= totalvisibleChara)
                 yield return new WaitForSeconds(0.2f);
             counter++;
             yield return new WaitForSeconds(DisplaySpd);
+            elapsedTime += Time.deltaTime;
+            Debug.Log(elapsedTime);
+            //yield return null;
 
             if (visibleC == totalvisibleChara)
             {

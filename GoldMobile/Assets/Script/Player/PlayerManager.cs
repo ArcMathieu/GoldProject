@@ -58,6 +58,21 @@ public class PlayerManager : MonoBehaviour
             FindObjectOfType<Achievement>().UnlockCreature();
         }
 
+        if(collision.gameObject.CompareTag("Armoire"))
+        {
+            if (collision.GetComponent<Animator>().GetBool("pushed"))
+            {
+                collision.GetComponent<Animator>().SetBool("pushed", false);
+                Debug.Log("inArmorytrue");
+
+            }
+            else
+            {
+                collision.GetComponent<Animator>().SetBool("pushed", true);
+                Debug.Log("inArmoryfalse");
+            }
+        }
+
         //if(collision.gameObject.CompareTag("coffre"))
         //{
 

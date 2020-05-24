@@ -16,6 +16,7 @@ TagManager:
   - Canvas
   - LD
   - Story
+  - Armoire
   layers:
   - Default
   - TransparentFX

@@ -13,21 +13,22 @@ public class TimeManager : MonoBehaviour
     }
     void FixedUpdate()
     {
+
         if (Input.GetKey(KeyCode.U))
         {
             Debug.Log("Faster");
-            Time.timeScale = 3f;
+            Time.timeScale = 1f;
         } else if (Input.GetKey(KeyCode.I))
         {
             Debug.Log("Fasterrrrrrrrrr");
             Time.timeScale = 5f;
         } else if (Input.GetKey(KeyCode.P))
         {
-            Time.timeScale = 10f;
+            Time.timeScale = 3f;
         }
         else
         {
-            Time.timeScale = 1f;
+            //Time.timeScale = 1f;
         }
         
     }
