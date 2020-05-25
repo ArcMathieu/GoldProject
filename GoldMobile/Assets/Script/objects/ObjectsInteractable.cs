@@ -150,7 +150,7 @@ public class ObjectsInteractable : MonoBehaviour
     {
         if (/*ID == 0 && */collision.gameObject.CompareTag("Player") && tdialogue.DoneTalking)
         {
-                if (Cinematic != null && isReadyForCinematic && DoorSytem == null)
+                if (Cinematic != null && isReadyForCinematic && DoorSytem == null && !notFirstTalkP)
             {
                 tdialogue.isAutomatique = true;
                 PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
