@@ -17,6 +17,7 @@ TagManager:
   - LD
   - Story
   - Armoire
+  - Chara
   layers:
   - Default
   - TransparentFX

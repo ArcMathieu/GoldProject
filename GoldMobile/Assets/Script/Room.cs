@@ -7,6 +7,7 @@ public class Room : MonoBehaviour
     public int layerRoom = 17;
     //public bool RoomQuest = false;
     public Switch switchButton;
+    public string CurrentTag;
 
     // Use this for initialization
     void Start()
@@ -18,7 +19,7 @@ public class Room : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer != layerRoom && other.gameObject.CompareTag("Player"))
+        if (other.gameObject.layer != layerRoom && other.gameObject.CompareTag("Player") || other.gameObject.layer != layerRoom && other.gameObject.CompareTag("GhostPlayer"))
         {
             //Debug.Log(other.gameObject.name);
             MainCamera.Instance.RoomEnter(this);
@@ -29,7 +30,7 @@ public class Room : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.layer != layerRoom && other.gameObject.CompareTag("Player"))
+        if (other.gameObject.layer != layerRoom && other.gameObject.CompareTag("Player") || other.gameObject.layer != layerRoom && other.gameObject.CompareTag("GhostPlayer"))
         {
             //Debug.Log(other.name);
             DesactivateEnemies();

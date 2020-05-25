@@ -16,7 +16,10 @@ public class Tp : MonoBehaviour
     public DialogueData dialPlayer;
     public StoryGame storyManager;
 
-
+    private void Start()
+    {
+        tdialogue =GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DisplayText>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

@@ -5,12 +5,16 @@ using UnityEngine;
 public class CreatureScript : MonoBehaviour
 {
     private Animator anim;
-    private  GameObject Player;
+    public  GameObject Player;
     public float PlayerPos;
+    public DisplayText tdialogue;
+    public DialogueData dialPlayer;
+   
     // Start is called before the first frame update
     void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
+        tdialogue = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DisplayText>();
+        Player = GameObject.FindGameObjectWithTag("Chara").GetComponentInChildren<GhostManager>(true).gameObject;
         anim = GetComponent<Animator>();
     }
 
@@ -19,4 +23,16 @@ public class CreatureScript : MonoBehaviour
         PlayerPos = Player.transform.position.x - transform.position.x;
         anim.SetFloat("PlayerPositionX",PlayerPos);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("GhostPlayer") && tdialogue.DoneDisplaying)
+        {
+            FindObjectOfType<Achievement>().UnlockCreature();
+            tdialogue.DialPass(dialPlayer);
+            tdialogue.isAutomatique = true;
+            tdialogue.NextDial();
+        }
+    }
 }
+

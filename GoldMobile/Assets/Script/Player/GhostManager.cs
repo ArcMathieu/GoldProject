@@ -44,7 +44,7 @@ public class GhostManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         switch (GhostState)
         {
@@ -70,7 +70,7 @@ public class GhostManager : MonoBehaviour
 
             FindObjectOfType<SoundManager>().PlaySfx("SpawnG");
 
-            rb.MovePosition(transform.position + (new Vector3(0, 1, 0) * joystick.Vertical * speed * Time.deltaTime) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed * Time.deltaTime));
+            rb.MovePosition(transform.position + ((new Vector3(0, 1, 0) * joystick.Vertical * speed) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed )) * Time.deltaTime);
             if (joystick.Vertical != 0 || joystick.Horizontal != 0)
             {
                 anim.SetBool("Walk", true);
