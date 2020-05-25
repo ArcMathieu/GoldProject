@@ -22,7 +22,7 @@ public class Room : MonoBehaviour
         {
             //Debug.Log(other.gameObject.name);
             MainCamera.Instance.RoomEnter(this);
-            Debug.Log(other.gameObject.name);
+            //Debug.Log(other.gameObject.name);
             ActivateEnemies();
         }
     }

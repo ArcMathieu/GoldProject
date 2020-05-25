@@ -790,7 +790,7 @@ Transform:
   m_LocalScale: {x: 1.6954881, y: 2.082321, z: 0.694107}
   m_Children: []
   m_Father: {fileID: 2081082284}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 44.677002}
 --- !u!210 &34749974
 SortingGroup:
@@ -3249,7 +3249,7 @@ Transform:
   m_LocalScale: {x: 1.6954881, y: 2.0823207, z: 0.694107}
   m_Children: []
   m_Father: {fileID: 2081082284}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 136.29701}
 --- !u!210 &98655393
 SortingGroup:
@@ -4032,6 +4032,7 @@ GameObject:
   - component: {fileID: 118693189}
   - component: {fileID: 118693188}
   - component: {fileID: 118693187}
+  - component: {fileID: 118693190}
   m_Layer: 0
   m_Name: Brosse
   m_TagString: Interactable
@@ -4158,6 +4159,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &118693190
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118693185}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -3
 --- !u!1 &118852269
 GameObject:
   m_ObjectHideFlags: 0
@@ -5565,7 +5577,7 @@ GameObject:
   - component: {fileID: 175611697}
   - component: {fileID: 175611699}
   - component: {fileID: 175611698}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: stairsToCorridor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8667,7 +8679,7 @@ GameObject:
   - component: {fileID: 281058949}
   - component: {fileID: 281058951}
   - component: {fileID: 281058950}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: stairsToCave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8842,7 +8854,7 @@ GameObject:
   - component: {fileID: 291470175}
   - component: {fileID: 291470176}
   - component: {fileID: 291470177}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: stairsToSalon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9173,6 +9185,7 @@ MonoBehaviour:
   Honoria: {fileID: 1969605188}
   storyManager: {fileID: 979059964}
   CurrentInteraction: []
+  honoriaLight: {fileID: 0}
 --- !u!58 &295893595
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9611,7 +9624,7 @@ GameObject:
   - component: {fileID: 311441391}
   - component: {fileID: 311441392}
   - component: {fileID: 311441393}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: stairsToSalon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10634,8 +10647,8 @@ Transform:
   m_LocalPosition: {x: 3.8036373, y: 5.5300026, z: 2}
   m_LocalScale: {x: 1.4545453, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 805239255}
-  m_RootOrder: 4
+  m_Father: {fileID: 1636294156}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &354372199
 MonoBehaviour:
@@ -11420,7 +11433,7 @@ GameObject:
   - component: {fileID: 369157801}
   - component: {fileID: 369157803}
   - component: {fileID: 369157802}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: piller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11869,7 +11882,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 2081082284}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &390756893
 SpriteRenderer:
@@ -14641,7 +14654,7 @@ Transform:
   m_LocalScale: {x: 2.0823214, y: 1.6954877, z: 0.694107}
   m_Children: []
   m_Father: {fileID: 2081082284}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &494050453
 SpriteRenderer:
@@ -20025,6 +20038,7 @@ GameObject:
   - component: {fileID: 729390940}
   - component: {fileID: 729390942}
   - component: {fileID: 729390941}
+  - component: {fileID: 729390943}
   m_Layer: 0
   m_Name: meuble
   m_TagString: Untagged
@@ -20122,6 +20136,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &729390943
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729390939}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -3
 --- !u!1 &729549810
 GameObject:
   m_ObjectHideFlags: 0
@@ -22099,7 +22124,6 @@ Transform:
   - {fileID: 1012433140}
   - {fileID: 2145142543}
   - {fileID: 4649776}
-  - {fileID: 354372198}
   - {fileID: 837260796}
   - {fileID: 1636294156}
   m_Father: {fileID: 803187682}
@@ -22638,7 +22662,7 @@ GameObject:
   - component: {fileID: 823764233}
   - component: {fileID: 823764236}
   - component: {fileID: 823764235}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: piller
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -23204,7 +23228,7 @@ Transform:
   - {fileID: 1854093578}
   - {fileID: 176868515}
   m_Father: {fileID: 805239255}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &838155769
 GameObject:
@@ -23436,20 +23460,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.0786467, y: 0.8356911}
   m_EdgeRadius: 0
---- !u!114 &856247990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 856247985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27f1ac626ea6dff4d9340989d376368d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialGhost: {fileID: 11400000, guid: 0b40cceb12fdb52419c8d8c6685021c4, type: 2}
-  tdialogue: {fileID: 1829114194}
 --- !u!1 &864063219 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6733728485718860142, guid: e9e227699232a7342abb8ab373072028,
@@ -25097,7 +25107,7 @@ Transform:
   m_LocalScale: {x: 1.8998829, y: 2.3748536, z: 0.79161793}
   m_Children: []
   m_Father: {fileID: 2081082284}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &945155218
 SpriteRenderer:
@@ -31744,7 +31754,7 @@ GameObject:
   - component: {fileID: 1196242543}
   - component: {fileID: 1196242545}
   - component: {fileID: 1196242544}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: piller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33034,7 +33044,7 @@ PrefabInstance:
     - target: {fileID: 6851587361739229292, guid: b491115f1f4c1194e93fef7f27256668,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6851587361739229293, guid: b491115f1f4c1194e93fef7f27256668,
         type: 3}
@@ -35330,6 +35340,7 @@ GameObject:
   - component: {fileID: 1343226493}
   - component: {fileID: 1343226492}
   - component: {fileID: 1343226497}
+  - component: {fileID: 1343226496}
   m_Layer: 0
   m_Name: placard (1)
   m_TagString: Interactable
@@ -35345,11 +35356,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343226490}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -6.2392187, y: -1.9, z: -6.94107}
-  m_LocalScale: {x: 2.0823214, y: 0.4182203, z: 0.694107}
+  m_LocalPosition: {x: -1.6427382, y: 1.4482707, z: -10}
+  m_LocalScale: {x: 3, y: 0.7399999, z: 1}
   m_Children: []
-  m_Father: {fileID: 2081082284}
-  m_RootOrder: 3
+  m_Father: {fileID: 1833576157}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &1343226492
 BoxCollider2D:
@@ -35482,6 +35493,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1343226496
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343226490}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -2
 --- !u!95 &1343226497
 Animator:
   serializedVersion: 3
@@ -35588,7 +35610,7 @@ Transform:
   m_LocalScale: {x: 1.6954881, y: 2.0823207, z: 0.694107}
   m_Children: []
   m_Father: {fileID: 2081082284}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 136.29701}
 --- !u!210 &1345589239
 SortingGroup:
@@ -41107,8 +41129,9 @@ Transform:
   - {fileID: 221044978}
   - {fileID: 1594322279}
   - {fileID: 1829084783}
+  - {fileID: 354372198}
   m_Father: {fileID: 805239255}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1638102288
 GameObject:
@@ -42807,6 +42830,7 @@ GameObject:
   - component: {fileID: 1714830683}
   - component: {fileID: 1714830682}
   - component: {fileID: 1714830681}
+  - component: {fileID: 1714830685}
   m_Layer: 0
   m_Name: horse
   m_TagString: Interactable
@@ -42959,6 +42983,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1714830685
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714830679}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e6232861fb92ec646a155e6bdd952959, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1725628892
 GameObject:
   m_ObjectHideFlags: 0
@@ -43238,7 +43281,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2081082284}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1736593358
 SpriteRenderer:
@@ -44912,7 +44955,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.031568587, y: 0.016327858}
+  m_Offset: {x: 0.050997734, y: 0.5058021}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -44923,7 +44966,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.7719522, y: 2.812111}
+  m_Size: {x: 2.994739, y: 1.8331624}
   m_EdgeRadius: 0
 --- !u!1 &1809983824
 GameObject:
@@ -46062,6 +46105,7 @@ Transform:
   - {fileID: 137888953}
   - {fileID: 1793341847}
   - {fileID: 1141299214}
+  - {fileID: 1343226491}
   m_Father: {fileID: 196783002}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47099,7 +47143,7 @@ GameObject:
   - component: {fileID: 1863734735}
   - component: {fileID: 1863734738}
   - component: {fileID: 1863734737}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: piller
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -47503,7 +47547,7 @@ MonoBehaviour:
   dialGhost:
   - {fileID: 11400000, guid: 3f57853f620656e4c922b31a41d4ae13, type: 2}
   tdialogue: {fileID: 1829114194}
-  Player: {fileID: 0}
+  Player: {fileID: 691163780}
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
@@ -51944,7 +51988,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 2081082284}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2039756940
 SpriteRenderer:
@@ -53156,7 +53200,6 @@ Transform:
   - {fileID: 729390940}
   - {fileID: 640833194}
   - {fileID: 1436392734}
-  - {fileID: 1343226491}
   - {fileID: 2039756939}
   - {fileID: 494050452}
   - {fileID: 945155217}

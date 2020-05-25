@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class HonoriaZone : MonoBehaviour
 {
     public GhostManager Honoria;
     public StoryGame storyManager;
-
     public List<GameObject> CurrentInteraction;
-
+    public Light2D honoriaLight;
     void Update()
     {
         transform.position = Honoria.transform.position;
@@ -17,15 +17,14 @@ public class HonoriaZone : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Interactable"))
         {
-            Debug.Log("objProche");
+            //Debug.Log("objProche");
+            //honoriaLight.color
         }
         if (collision.gameObject.CompareTag("SpecialDoor"))
         {
             CurrentInteraction.Add(collision.gameObject);
-            Debug.Log("collDoor : " + collision.gameObject.name);
-            Debug.Log("collDoorChild : " + collision.gameObject.GetComponentInChildren<GameObject>().name);
             storyManager.DoorToSerre = true;
-            collision.gameObject.GetComponentInChildren<GameObject>().SetActive(false);
+            collision.gameObject.transform.GetChild(0).gameObject.SetActive(false);
             GameManager._instance.openStep();
         }
     }
@@ -33,13 +32,13 @@ public class HonoriaZone : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Interactable"))
         {
-            Debug.Log("objLoin");
+            //Debug.Log("objLoin");
         }
         if (collision.gameObject.CompareTag("SpecialDoor"))
         {
             CurrentInteraction.Remove(collision.gameObject);
             storyManager.DoorToSerre = false;
-            collision.gameObject.GetComponentInChildren<GameObject>().SetActive(true);
+            collision.gameObject.transform.GetChild(0).gameObject.SetActive(true);
             GameManager._instance.openStep();
         }
     }

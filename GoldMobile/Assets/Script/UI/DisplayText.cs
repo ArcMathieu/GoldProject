@@ -76,7 +76,6 @@ public class DisplayText : MonoBehaviour
             {
                 WantsToSkip = true;
                 tmpro.maxVisibleCharacters = totalvisibleChara;
-               Debug.Log("skip");
             }
             else
             {
