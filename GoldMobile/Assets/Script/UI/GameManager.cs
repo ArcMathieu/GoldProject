@@ -241,11 +241,12 @@ public class GameManager : MonoBehaviour
                 tp[14].precedentlyOpened = true;
                 tp[15].precedentlyOpened = true;
                 //open secrete cave
-
+                //lauchanimtrappe
+                FindObjectOfType<Achievement>().UnlockJillWouldBeProud();
                 //sous sol 2 fond de la librairy
                 //R sauf cinématique
             }
-            if(storyManager.LivreRituel && storyManager.BolRituel && storyManager.dague)
+            if (storyManager.LivreRituel && storyManager.BolRituel && storyManager.dague)
             {
                 Debug.Log("vous avez les 3 objets du rituel");
             }

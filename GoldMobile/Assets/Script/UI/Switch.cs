@@ -10,7 +10,7 @@ public class Switch : MonoBehaviour
     public PlayerManager player;
     public GhostManager ghost;
     public GameManager gameManager;
-
+    public GameObject pictureSwitch;
     public GameObject ghostAppears;
     public Zone zone;
 
@@ -19,9 +19,10 @@ public class Switch : MonoBehaviour
         StartCoroutine(changeColor());
         IEnumerator changeColor()
         {
-            GetComponent<Image>().color = Color.green;
+            GetComponent<Image>().color = Color.grey;
             yield return new WaitForSeconds(0.2f);
-            GetComponent<Image>().color = Color.black;
+            GetComponent<Image>().color = Color.white;
+
         }
 
         if (!controlePlayer && !zone.AlreadyInZone)
@@ -33,7 +34,7 @@ public class Switch : MonoBehaviour
                 ghost.ChangeControl();
                 gameManager.openStep();
                 controlePlayer = true;
-
+                pictureSwitch.SetActive(false);
             }
             
         } else
@@ -45,6 +46,7 @@ public class Switch : MonoBehaviour
                 player.ChangeControl();
                 gameManager.openStep();
                 controlePlayer = false;
+                pictureSwitch.SetActive(true);
             }
         }
 
@@ -57,9 +59,10 @@ public class Switch : MonoBehaviour
             StartCoroutine(changeColor());
             IEnumerator changeColor()
             {
-                GetComponent<Image>().color = Color.green;
+                GetComponent<Image>().color = Color.grey;
                 yield return new WaitForSeconds(0.2f);
-                GetComponent<Image>().color = Color.black;
+                GetComponent<Image>().color = Color.white;
+
             }
 
             if (!controlePlayer && !zone.AlreadyInZone)
@@ -71,7 +74,7 @@ public class Switch : MonoBehaviour
                     ghost.ChangeControl();
                     gameManager.openStep();
                     controlePlayer = true;
-
+                    pictureSwitch.SetActive(false);
                 }
 
             }
@@ -84,6 +87,7 @@ public class Switch : MonoBehaviour
                     player.ChangeControl();
                     gameManager.openStep();
                     controlePlayer = false;
+                    pictureSwitch.SetActive(true);
                 }
             }
 

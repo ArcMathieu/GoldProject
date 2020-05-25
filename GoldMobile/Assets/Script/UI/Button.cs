@@ -38,11 +38,9 @@ public class Button : MonoBehaviour
         StartCoroutine(changeColor());
         IEnumerator changeColor()
         {
-            GetComponent<Image>().color = Color.green;
-      //      player.OnObject = true;
+            GetComponent<Image>().color = Color.grey;
             yield return new WaitForSeconds(0.2f);
-            GetComponent<Image>().color = Color.black;
-          //  player.OnObject = false;
+            GetComponent<Image>().color = Color.white;
 
         }
     }
@@ -73,15 +71,13 @@ public class Button : MonoBehaviour
                     }
                 }
             }
-    
+
             StartCoroutine(changeColor());
             IEnumerator changeColor()
             {
-                GetComponent<Image>().color = Color.green;
-            //    player.OnObject = true;
+                GetComponent<Image>().color = Color.grey;
                 yield return new WaitForSeconds(0.2f);
-                GetComponent<Image>().color = Color.black;
-              //  player.OnObject = false;
+                GetComponent<Image>().color = Color.white;
 
             }
         }

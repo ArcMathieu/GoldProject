@@ -29,7 +29,6 @@ public class CheckForKeys : MonoBehaviour
                 if (DesiredKey == "Secateur")
                 {
                     FindObjectOfType<SoundManager>().PlaySfx("Cut");
-                    FindObjectOfType<Achievement>().UnlockJillWouldBeProud();
                 }
             }
         }
