@@ -109,7 +109,14 @@ public class DisplayText : MonoBehaviour
                         FirstTalk = true;
                         tmpro.text = null;
                         if(inter.GetComponent<ObjectsInteractable>().LockSytem == null && !inter.GetComponent<ObjectsInteractable>().isTrigger)
-                        Destroy(inter.gameObject);
+                        {
+                            StartCoroutine(waitForDestroy());
+                            IEnumerator waitForDestroy()
+                            {
+                                yield return new WaitForSeconds(0.2f);
+                                Destroy(inter.gameObject);
+                            }
+                        }
                     }
                 }
             }

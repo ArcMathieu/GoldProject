@@ -162,7 +162,6 @@ public class ObjectsInteractable : MonoBehaviour
 
             if (Cinematic != null && isReadyForCinematic && DoorSytem == null && !notFirstTalkP && !isTrigger)
             {
-                Joystick._instance.init();
                 tdialogue.isAutomatique = true;
                 PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
                 DP.Play(Cinematic);
@@ -176,7 +175,6 @@ public class ObjectsInteractable : MonoBehaviour
             }
             else if (Cinematic != null && !notFirstTalkP && isReadyForCinematic && DoorSytem != null && !isTrigger)
             {
-                Joystick._instance.init();
                 tdialogue.isAutomatique = true;
                 DoorSytem.actionDoor(Player);
                 if (DoorSytem.HasItem)
@@ -188,7 +186,6 @@ public class ObjectsInteractable : MonoBehaviour
             }
             else if (Cinematic != null && !notFirstTalkP && isReadyForCinematic && DoorSytem == null && isTrigger)
             {
-                Joystick._instance.init();
                 tdialogue.isAutomatique = false;
                 tdialogue.DialPass(dialPlayer[0]);
                 PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
@@ -202,9 +199,10 @@ public class ObjectsInteractable : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         //zone = null;
-        if (isPickable && Cinematic == null || isTrigger && isReadyForCinematic)
+        if ((isPickable && Cinematic == null )|| (isTrigger && isReadyForCinematic))
         {
-            HasTalked = true;
+            if(notFirstTalkP)
+                 HasTalked = true;
         } 
         tdialogue.FirstTalk = true;
         tdialogue.tmpro.text = null;

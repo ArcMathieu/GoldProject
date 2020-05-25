@@ -36,6 +36,7 @@ public class Tp : MonoBehaviour
                 }
 
             } else {
+                tdialogue.isAutomatique = true;
                 tdialogue.DialPass(dialPlayer);
             }
             //Secrete trap

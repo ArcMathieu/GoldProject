@@ -19,9 +19,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject switchButton;
     public ObjectsInteractable openSecretaire;
-    public ObjectsInteractable clesParents;
+    public ObjectsInteractable Brosse;
     public ObjectsInteractable CinAfterTuto;
-    public ObjectsInteractable CinClesParents;
+    public ObjectsInteractable cinAfterCoffre;
     
 
     public Tp[] tp;
@@ -195,7 +195,6 @@ public class GameManager : MonoBehaviour
             tp[9].precedentlyOpened = true;
             //cinématique lié bout de verre
             //using sécateur => clé + journal
-            CinClesParents.isReadyForCinematic = true;
             //code sur pilier
 
         }
@@ -208,15 +207,18 @@ public class GameManager : MonoBehaviour
         if (storyManager.DoorToMother)
         {
             //mother room
+            cinAfterCoffre.isReadyForCinematic = true;
             tp[10].precedentlyOpened = true;
-            tp[11].precedentlyOpened = true;   
-            
+            tp[11].precedentlyOpened = true;
+
+
             //pages livre
             //Tu m'as fait perdre 2h de ma précieuse vie avec cette connerie :)
-            //if (storyManager.CleSecretaire)
-            //{
-            //    openSecretaire.isPickable = true;
-            //}
+            if (storyManager.CleSecretaire)
+            {
+                Brosse.isReadyForCinematic = true;
+                //cinematique
+            }
 
             //cinématique
             if (storyManager.BrosseACheveux)
