@@ -9893,7 +9893,7 @@ MonoBehaviour:
   musique:
   - name: Main_Theme
     clip: {fileID: 8300000, guid: a036d6628e929474683b66416e3b35c6, type: 3}
-    volume: 0
+    volume: 1
     loop: 0
     source: {fileID: 0}
   sfx:
@@ -47130,7 +47130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1863734734
 Transform:
   m_ObjectHideFlags: 0
