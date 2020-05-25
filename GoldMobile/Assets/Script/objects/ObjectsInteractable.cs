@@ -39,6 +39,14 @@ public class ObjectsInteractable : MonoBehaviour
 
     public void setAction()
     {
+        if (isTrigger)
+        {
+            if (isPIn && HasTalked == false)
+            {
+                tdialogue.NextDial();
+                Debug.Log("test");
+            }
+        }
         if (Cinematic == null)
         {
             tdialogue.isAutomatique = false;
@@ -58,15 +66,16 @@ public class ObjectsInteractable : MonoBehaviour
 
             if (isPIn && HasTalked == false)
             {
+                Debug.Log("oscours?");
                 if (DoorSytem == null)
                 {
-                    
+
                     if (!notFirstTalkP)
                     {
-                    //    if (DoorSytem != null)
-                    //    {
-                    //        DoorSytem.gameObject.SetActive(false);
-                    //    }
+                        //    if (DoorSytem != null)
+                        //    {
+                        //        DoorSytem.gameObject.SetActive(false);
+                        //    }
                         tdialogue.DialPass(dialPlayer[0]);
                         notFirstTalkP = true;
                     }
@@ -80,10 +89,10 @@ public class ObjectsInteractable : MonoBehaviour
 
                 //if (LockSytem != null && notFirstTalkP)
                 //{
-                 
+
                 //    LockSytem.Action(Player);
                 //}
-                 if (DoorSytem != null)
+                if (DoorSytem != null)
                 {
                     if (DoorSytem.HasItem != true)
                     {
@@ -93,14 +102,14 @@ public class ObjectsInteractable : MonoBehaviour
                     {
                         tdialogue.NextDial();
                     }
-                  
+
                 }
                 else if (isPickable && ItemName != null)
-                {   
-              //          tdialogue.DialPass(dialPlayer[0]);
-          
+                {
+                    //          tdialogue.DialPass(dialPlayer[0]);
+
                 }
-      
+
                 //if (isDiscoveredByHonoria)
                 //{
                 //    //action si Honoria à vu un obj
@@ -134,7 +143,7 @@ public class ObjectsInteractable : MonoBehaviour
     public bool isReadyForCinematic;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+
         if (/*ID == 1 && */collision.gameObject.CompareTag("GhostPlayer"))
         {
             isIn = true;
@@ -146,43 +155,57 @@ public class ObjectsInteractable : MonoBehaviour
         }
     }
 
+    public bool isTrigger;
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (/*ID == 0 && */collision.gameObject.CompareTag("Player") && tdialogue.DoneTalking)
         {
-                if (Cinematic != null && isReadyForCinematic && DoorSytem == null && !notFirstTalkP)
+
+            if (Cinematic != null && isReadyForCinematic && DoorSytem == null && !notFirstTalkP && !isTrigger)
             {
                 tdialogue.isAutomatique = true;
                 PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
-                    DP.Play(Cinematic);
-                    tdialogue.DialPass(dialPlayer[0]);
-                    notFirstTalkP = true;
+                DP.Play(Cinematic);
+                tdialogue.DialPass(dialPlayer[0]);
+                notFirstTalkP = true;
                 if (isPickable)
                 {
                     Player.GetComponent<InventorySystem>().AddItem(ItemName);
                     GameManager._instance.TakeObject(ItemName);
                 }
-                }
-                else if (Cinematic != null && !notFirstTalkP && isReadyForCinematic && DoorSytem != null)
+            }
+            else if (Cinematic != null && !notFirstTalkP && isReadyForCinematic && DoorSytem != null && !isTrigger)
             {
                 tdialogue.isAutomatique = true;
                 DoorSytem.actionDoor(Player);
-                    if (DoorSytem.HasItem)
-                    {
-                        PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
-                        DP.Play(Cinematic);
-                        notFirstTalkP = true;
-                    }
+                if (DoorSytem.HasItem)
+                {
+                    PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
+                    DP.Play(Cinematic);
+                    notFirstTalkP = true;
                 }
+            }
+            else if (Cinematic != null && !notFirstTalkP && isReadyForCinematic && DoorSytem == null && isTrigger)
+            {
+
+                tdialogue.isAutomatique = false;
+                tdialogue.DialPass(dialPlayer[0]);
+                PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
+                DP.Play(Cinematic);
+                tdialogue.NextDial();
+                notFirstTalkP = true;
+            }
 
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         //zone = null;
-        if (isPickable && Cinematic == null) {
+        if (isPickable && Cinematic == null || isTrigger == true)
+        {
             HasTalked = true;
-        }
+        } 
         tdialogue.FirstTalk = true;
         tdialogue.tmpro.text = null;
         isPIn = false;

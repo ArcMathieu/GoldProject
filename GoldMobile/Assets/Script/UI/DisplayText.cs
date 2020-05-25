@@ -94,18 +94,22 @@ public class DisplayText : MonoBehaviour
                         {
                             inter.GetComponent<ObjectsInteractable>().UnlockTheDoor();
                         }
-                        if (inter.GetComponent<ObjectsInteractable>().HasTalked)
+                        if (inter.GetComponent<ObjectsInteractable>().HasTalked && !inter.GetComponent<ObjectsInteractable>().isTrigger)
                         {
                             inter.GetComponent<ObjectsInteractable>().PickUpObject();
                         }
 
+                        if (inter.GetComponent<ObjectsInteractable>().isTrigger)
+                        {
+                            inter.GetComponent<ObjectsInteractable>().HasTalked = true;
+                        }
                         //if (inter.GetComponent<ObjectsInteractable>().LockSytem != null)
                         //{
                         //    inter.GetComponent<ObjectsInteractable>().LockSytem.Action(Player);
                         //}
                         FirstTalk = true;
                         tmpro.text = null;
-                        if(inter.GetComponent<ObjectsInteractable>().LockSytem == null)
+                        if(inter.GetComponent<ObjectsInteractable>().LockSytem == null && !inter.GetComponent<ObjectsInteractable>().isTrigger)
                         Destroy(inter.gameObject);
                     }
                 }
@@ -172,7 +176,8 @@ public class DisplayText : MonoBehaviour
                         {
                             inter.GetComponent<ObjectsInteractable>().UnlockTheDoor();
                         }
-                        if (inter.GetComponent<ObjectsInteractable>().isPickable && inter.GetComponent<ObjectsInteractable>().Cinematic == null)
+                        if (inter.GetComponent<ObjectsInteractable>().isPickable && inter.GetComponent<ObjectsInteractable>().Cinematic == null && !inter.GetComponent<ObjectsInteractable>().isTrigger)
+                           
                         { 
                             inter.GetComponent<ObjectsInteractable>().PickUpObject();
                         }
@@ -181,6 +186,7 @@ public class DisplayText : MonoBehaviour
                             inter.GetComponent<ObjectsInteractable>().LockSytem.Action(Player);
                             tmpro.text = null;
                         }
+                   
                     }
                 }
                 else

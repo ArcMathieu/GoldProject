@@ -1980,7 +1980,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60284623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -94.17926, y: 130.43008, z: -10}
+  m_LocalPosition: {x: -105.18489, y: 48.31019, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2032,7 +2032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ae32d8aed66ee45acf22cbb4542ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentRoom: {fileID: 196783004}
+  currentRoom: {fileID: 410303753}
   confiner: {fileID: 1536784125}
   confinerGhost: {fileID: 1410782678}
 --- !u!114 &60284632
@@ -4081,6 +4081,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &118693188
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5135,6 +5136,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!212 &137888957
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7094,6 +7096,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!114 &221044981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10574,6 +10577,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 1
 --- !u!61 &352889381
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10664,6 +10668,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &354372200
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11256,6 +11261,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!95 &368253623
 Animator:
   serializedVersion: 3
@@ -15010,6 +15016,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &511889549
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18578,6 +18585,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &677662770
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21500,6 +21508,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &765256402
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22336,6 +22345,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 1
+  isTrigger: 0
 --- !u!61 &806102345
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22753,6 +22763,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 1
 --- !u!61 &823764236
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23398,6 +23409,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 1
+  isTrigger: 1
 --- !u!61 &856247989
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26379,6 +26391,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!95 &993978484
 Animator:
   serializedVersion: 3
@@ -28104,6 +28117,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 1
+  isTrigger: 0
 --- !u!212 &1069995449
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29642,6 +29656,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!212 &1141299218
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30111,6 +30126,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!1 &1155009596
 GameObject:
   m_ObjectHideFlags: 0
@@ -35389,6 +35405,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1343226494
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36457,7 +36474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ConfineMode: 0
   m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 196783003}
+  m_BoundingShape2D: {fileID: 410303752}
   m_ConfineScreenEdges: 1
   m_Damping: 0
 --- !u!114 &1410782679
@@ -36773,6 +36790,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1419670144
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39296,7 +39314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ConfineMode: 0
   m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 196783003}
+  m_BoundingShape2D: {fileID: 410303752}
   m_ConfineScreenEdges: 1
   m_Damping: 0
 --- !u!114 &1536784126
@@ -40015,6 +40033,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1594322281
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41828,6 +41847,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1652345609
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42836,6 +42856,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1714830682
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44499,6 +44520,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 1
+  isTrigger: 0
 --- !u!212 &1793341853
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -44616,6 +44638,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1796490195
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45695,6 +45718,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 1
+  isTrigger: 0
 --- !u!1 &1829114191
 GameObject:
   m_ObjectHideFlags: 0
@@ -47226,6 +47250,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 1
+  isTrigger: 1
 --- !u!1 &1864537735
 GameObject:
   m_ObjectHideFlags: 0
@@ -47483,6 +47508,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1872668618
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51163,6 +51189,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!114 &1984236139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53810,6 +53837,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &2115931096
 BoxCollider2D:
   m_ObjectHideFlags: 0
