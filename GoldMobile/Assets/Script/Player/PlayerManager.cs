@@ -89,7 +89,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         
         switch (PlayerState)
@@ -110,7 +110,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (gameManager.controleP1 && GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DisplayText>().DoneTalking)
         {
-            rb.MovePosition(transform.position + (((new Vector3(0, 1, 0) * joystick.Vertical * speed ) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed)) * Time.deltaTime));
+            rb.MovePosition(transform.position + (((new Vector3(0, 1, 0) * joystick.Vertical * speed ) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed)) * Time.fixedDeltaTime));
             //Debug.Log("Horizontal" +joystick.Horizontal);
             //Debug.Log("Vertical" +joystick.Vertical);
             if(joystick.Vertical != 0 || joystick.Horizontal != 0)

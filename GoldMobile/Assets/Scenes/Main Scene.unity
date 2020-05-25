@@ -9906,33 +9906,33 @@ MonoBehaviour:
   musique:
   - name: Main_Theme
     clip: {fileID: 8300000, guid: a036d6628e929474683b66416e3b35c6, type: 3}
-    volume: 1
-    loop: 0
+    volume: 0.5
+    loop: 1
     source: {fileID: 0}
   sfx:
   - name: Roulette
     clip: {fileID: 8300000, guid: f4eb88a11b971124f91c3ab40cc29ec5, type: 3}
-    volume: 0.7
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: Armoire
     clip: {fileID: 8300000, guid: a095b82f701942c46ab9fc68052bde5c, type: 3}
-    volume: 0.7
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SpawnGhost
+    clip: {fileID: 8300000, guid: 10715b0fa5e39b74dab1b3ba6c4ba6c0, type: 3}
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: Cut
     clip: {fileID: 8300000, guid: 72f3185f7d837974c82c7147da0f0131, type: 3}
-    volume: 0.7
-    loop: 0
-    source: {fileID: 0}
-  - name: SpawnG
-    clip: {fileID: 8300000, guid: 10715b0fa5e39b74dab1b3ba6c4ba6c0, type: 3}
     volume: 1
     loop: 0
     source: {fileID: 0}
   - name: Keys
     clip: {fileID: 8300000, guid: d6432bcbdbf2db040a99f1026e6030ac, type: 3}
-    volume: 0.7
+    volume: 1
     loop: 0
     source: {fileID: 0}
 --- !u!1 &323843252
@@ -22269,7 +22269,7 @@ GameObject:
   - component: {fileID: 806102345}
   - component: {fileID: 806102347}
   - component: {fileID: 806102346}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: bougie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47174,7 +47174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1863734734
 Transform:
   m_ObjectHideFlags: 0
