@@ -6,7 +6,6 @@ public class HonoriaZone : MonoBehaviour
 {
     public GhostManager Honoria;
     public StoryGame storyManager;
-    public GameObject Door;
 
     public List<GameObject> CurrentInteraction;
 
@@ -22,11 +21,12 @@ public class HonoriaZone : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("SpecialDoor"))
         {
-            Debug.Log("PorteOuverte");
+            CurrentInteraction.Add(collision.gameObject);
+            Debug.Log("collDoor : " + collision.gameObject.name);
+            Debug.Log("collDoorChild : " + collision.gameObject.GetComponentInChildren<GameObject>().name);
             storyManager.DoorToSerre = true;
+            collision.gameObject.GetComponentInChildren<GameObject>().SetActive(false);
             GameManager._instance.openStep();
-            collision.gameObject.SetActive(false);
-            //Door.SetActive(false);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -37,10 +37,10 @@ public class HonoriaZone : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("SpecialDoor"))
         {
+            CurrentInteraction.Remove(collision.gameObject);
             storyManager.DoorToSerre = false;
+            collision.gameObject.GetComponentInChildren<GameObject>().SetActive(true);
             GameManager._instance.openStep();
-            collision.gameObject.SetActive(true);
-
         }
     }
 
