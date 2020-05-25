@@ -39,6 +39,7 @@ public class GhostManager : MonoBehaviour
         speed = GameManager._instance.playerSpeed;
         GhostState = State.WAIT;
         anim = gameObject.GetComponentsInChildren<Animator>()[1];
+       
         FindObjectOfType<Achievement>().UnlockTrueFalseExorcist();
     }
 
@@ -66,6 +67,9 @@ public class GhostManager : MonoBehaviour
         if (!gameManager.controleP1)
         {
             //GhostEffectHUD.SetActive(true);
+
+            FindObjectOfType<SoundManager>().PlaySfx("SpawnG");
+
             rb.MovePosition(transform.position + (new Vector3(0, 1, 0) * joystick.Vertical * speed * Time.deltaTime) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed * Time.deltaTime));
             if (joystick.Vertical != 0 || joystick.Horizontal != 0)
             {

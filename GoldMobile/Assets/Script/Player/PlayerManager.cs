@@ -63,12 +63,14 @@ public class PlayerManager : MonoBehaviour
             if (collision.GetComponent<Animator>().GetBool("pushed"))
             {
                 collision.GetComponent<Animator>().SetBool("pushed", false);
+                FindObjectOfType<SoundManager>().PlaySfx("Armoire");
                 Debug.Log("inArmorytrue");
 
             }
             else
             {
                 collision.GetComponent<Animator>().SetBool("pushed", true);
+                FindObjectOfType<SoundManager>().PlaySfx("Armoire");
                 Debug.Log("inArmoryfalse");
             }
         }
