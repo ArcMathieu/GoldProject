@@ -696,6 +696,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &26247200
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -988,6 +989,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!212 &37499999
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2645,6 +2647,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &152704957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3360,7 +3363,7 @@ Transform:
   - {fileID: 72027290}
   - {fileID: 294685367}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &170992615
 GameObject:
@@ -3705,6 +3708,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &182333860
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6839,6 +6843,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &487040984
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8130,6 +8135,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &581927465
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9762,6 +9768,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &675196107
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10665,7 +10672,7 @@ Transform:
   - {fileID: 961655561}
   - {fileID: 119855287}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &717530458
 GameObject:
@@ -10796,6 +10803,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!212 &722045014
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11414,6 +11422,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!212 &781142904
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11642,6 +11651,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &795261445
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12112,6 +12122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   switchButton: {fileID: 1505569109}
+  CurrentTag: 
 --- !u!1 &823903300
 GameObject:
   m_ObjectHideFlags: 0
@@ -12764,8 +12775,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Honoria: {fileID: 119855290}
   storyManager: {fileID: 2018127381}
-  Door: {fileID: 636917423}
   CurrentInteraction: []
+  honoriaLight: {fileID: 0}
 --- !u!58 &856704235
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12846,6 +12857,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &864165031
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13168,7 +13180,7 @@ RectTransform:
   - {fileID: 1580536305}
   - {fileID: 992792945}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -14325,6 +14337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   switchButton: {fileID: 1505569109}
+  CurrentTag: 
 --- !u!4 &927763116
 Transform:
   m_ObjectHideFlags: 0
@@ -15933,6 +15946,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1009120156
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16254,6 +16268,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1031039326
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17985,7 +18000,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1179047761
 GameObject:
@@ -18099,6 +18114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   switchButton: {fileID: 1505569109}
+  CurrentTag: 
 --- !u!1 &1183364513
 GameObject:
   m_ObjectHideFlags: 0
@@ -18348,7 +18364,7 @@ RectTransform:
   - {fileID: 1489281785}
   - {fileID: 562832506}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -20782,9 +20798,9 @@ MonoBehaviour:
   gh: {fileID: 119855290}
   switchButton: {fileID: 1505569108}
   openSecretaire: {fileID: 864165030}
-  clesParents: {fileID: 0}
+  Brosse: {fileID: 0}
   CinAfterTuto: {fileID: 0}
-  CinClesParents: {fileID: 0}
+  cinAfterCoffre: {fileID: 0}
   tp:
   - {fileID: 2109946568}
   - {fileID: 1595043055}
@@ -21245,6 +21261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   switchButton: {fileID: 1505569109}
+  CurrentTag: 
 --- !u!1 &1453139147 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6733728487472302183, guid: e9e227699232a7342abb8ab373072028,
@@ -21505,6 +21522,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!212 &1458310192
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21762,7 +21780,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1460363555
 GameObject:
@@ -21827,6 +21845,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!114 &1460363558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22442,7 +22461,7 @@ Transform:
   m_Children:
   - {fileID: 1102158547}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1502198010
 GameObject:
@@ -22562,6 +22581,7 @@ MonoBehaviour:
   player: {fileID: 961655562}
   ghost: {fileID: 119855290}
   gameManager: {fileID: 1395666712}
+  pictureSwitch: {fileID: 0}
   ghostAppears: {fileID: 119855286}
   zone: {fileID: 633469117}
 --- !u!224 &1505569110
@@ -22762,8 +22782,178 @@ Transform:
   - {fileID: 1669908400}
   - {fileID: 342077567}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1516093032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1516093036}
+  - component: {fileID: 1516093035}
+  - component: {fileID: 1516093034}
+  - component: {fileID: 1516093033}
+  - component: {fileID: 1516093037}
+  - component: {fileID: 1516093038}
+  m_Layer: 0
+  m_Name: Boss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1516093033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516093032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccb096858b969d4eb5d7c9b6d12331c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  gameManager: {fileID: 1395666712}
+  Player: {fileID: 961655561}
+  detected: 0
+  distanceDetect: 10
+  isflip: 1
+--- !u!95 &1516093034
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516093032}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7ad7bed7e7482774e9d231fa0d97f941, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &1516093035
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516093032}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -6120706022216325708, guid: b26139b3827e9a94e8144593ec6081d5,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5, y: 5}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1516093036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516093032}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -96, y: 55, z: -1}
+  m_LocalScale: {x: 0.6, y: 0.8, z: 3}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1516093037
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516093032}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.42}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.2, y: 2.84}
+    newSize: {x: 5, y: 5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 2.84}
+  m_EdgeRadius: 0
+--- !u!50 &1516093038
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516093032}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1525857695
 GameObject:
   m_ObjectHideFlags: 0
@@ -22954,6 +23144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   switchButton: {fileID: 1505569109}
+  CurrentTag: 
 --- !u!1 &1559620863
 GameObject:
   m_ObjectHideFlags: 0
@@ -23041,6 +23232,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!212 &1559620867
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23359,6 +23551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   switchButton: {fileID: 1505569109}
+  CurrentTag: 
 --- !u!1 &1580093759
 GameObject:
   m_ObjectHideFlags: 0
@@ -23655,7 +23848,7 @@ Transform:
   - {fileID: 2018127380}
   - {fileID: 714291434}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1587378783
 GameObject:
@@ -24199,6 +24392,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1610184750
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25442,6 +25636,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1733406700
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26372,6 +26567,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1765084560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26718,6 +26914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   switchButton: {fileID: 1505569109}
+  CurrentTag: 
 --- !u!1 &1784766968
 GameObject:
   m_ObjectHideFlags: 0
@@ -27328,6 +27525,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1806169250
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30187,6 +30385,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!210 &2003795503
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -30434,6 +30633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   switchButton: {fileID: 1505569109}
+  CurrentTag: 
 --- !u!1 &2018127379
 GameObject:
   m_ObjectHideFlags: 0
@@ -30913,6 +31113,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &2038999198
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31494,6 +31695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   switchButton: {fileID: 1505569109}
+  CurrentTag: 
 --- !u!1 &2075140681
 GameObject:
   m_ObjectHideFlags: 0
@@ -31600,7 +31802,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2075681035
 GameObject:
@@ -31968,6 +32170,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &2094277080
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32235,7 +32438,7 @@ Transform:
   m_Children:
   - {fileID: 1093512464}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2109946566
 GameObject:
