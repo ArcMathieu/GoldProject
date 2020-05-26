@@ -18,7 +18,6 @@ public class Boss : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        speed = GameManager._instance.playerSpeed;
 
     }
 
@@ -84,7 +83,7 @@ public class Boss : MonoBehaviour
 
     public void move(Vector2 direction)
     {
-        rb.MovePosition((Vector2)transform.position + (direction * speed * Time.timeScale));
+        rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
     }
 
 
