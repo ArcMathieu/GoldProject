@@ -9,8 +9,8 @@ public class HonoriaZone : MonoBehaviour
     public StoryGame storyManager;
     public List<GameObject> CurrentInteraction;
     public Light2D honoriaLight;
-    Color BaseColor = new Color(131, 219, 255);
-    Color DetectionColor = new Color(131, 170, 255);
+    Color32 BaseColor = new Color32(131, 219, 255, 255);
+    Color32 DetectionColor = new Color32(0, 170, 255, 255);
     void Update()
     {
         transform.position = Honoria.transform.position;
@@ -21,7 +21,8 @@ public class HonoriaZone : MonoBehaviour
         {
             CurrentInteraction.Add(collision.gameObject);
             Debug.Log("objProche");
-            //honoriaLight.color = Color.Lerp(BaseColor, DetectionColor, Mathf.PingPong(Time.time, 1));
+            //honoriaLight.color = Color32.Lerp(BaseColor, DetectionColor, Mathf.PingPong(Time.time, 1));
+            //honoriaLight.intensity = Mathf.Lerp(1.89f, 2.5f, Mathf.PingPong(Time.time, 1));
         }
         if (collision.gameObject.CompareTag("SpecialDoor"))
         {
@@ -38,6 +39,7 @@ public class HonoriaZone : MonoBehaviour
             CurrentInteraction.Remove(collision.gameObject);
             Debug.Log("objLoin");
             //honoriaLight.color = Color.Lerp(DetectionColor, BaseColor, Mathf.PingPong(Time.time, 1));
+            //honoriaLight.intensity = Mathf.Lerp(2.5f, 1.89f, Mathf.PingPong(Time.time, 1));
         }
         if (collision.gameObject.CompareTag("SpecialDoor"))
         {

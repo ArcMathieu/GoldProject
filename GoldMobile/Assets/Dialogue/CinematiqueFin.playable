@@ -9,18 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
-  m_Name: Test1
+  m_Script: {fileID: 11500000, guid: bfda56da833e2384a9677cd3c976a436, type: 3}
+  m_Name: CinematiqueFin
   m_EditorClassIdentifier: 
-  LesDialogues:
-  - Help
-  - iop
-  - ppppppp
-  - oiouiu
-  - ioiop
-  SpeedDialogues:
-  - 0.05
-  - 0.05
-  - 0.05
-  - 0.05
-  - 0.05
+  m_Version: 0
+  m_Tracks: []
+  m_FixedDuration: 0
+  m_EditorSettings:
+    m_Framerate: 60
+  m_DurationMode: 0
+  m_MarkerTrack: {fileID: 0}

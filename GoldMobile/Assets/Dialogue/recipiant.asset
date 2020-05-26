@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: recipiant
   m_EditorClassIdentifier: 
   LesDialogues:
-  - Un recipiant.
+  - "<color=#dbc08e>C'est un recipient rempli d'ingr\xE9dients mysterieux..."
   SpeedDialogues:
   - 0.05

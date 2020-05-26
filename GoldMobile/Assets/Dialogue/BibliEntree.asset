@@ -10,19 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
-  m_Name: Brosse
+  m_Name: BibliEntree
   m_EditorClassIdentifier: 
   LesDialogues:
-  - "Matthew ! Derri\xE8re le placard !"
-  - ' '
-  - "<color=#dbc08e>Ouf, \xE7a p\xE8se son poids !"
-  - "Une brosse \xE0 cheveux ?  Il y a de longs cheveux blonds dessus."
-  - "Ce sont s\xFBrement les miens. Qu\u2019est-ce qu'elle fait la ?"
-  - "<color=#dbc08e>Etrange manie que de cacher des objets partout dans sa maison\u2026 "
+  - "<color=#dbc08e>C'est la biblioth\xE8que, "
+  - <color=#dbc08e>elle est bien sombre
+  - On devrait passer par la gauche
+  - <color=#dbc08e>Viens, ne nous separons pas,
   SpeedDialogues:
-  - 0.08
-  - 1.5
-  - 0.08
-  - 0.08
-  - 0.08
-  - 0.08
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05

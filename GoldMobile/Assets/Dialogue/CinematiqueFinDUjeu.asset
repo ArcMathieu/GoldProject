@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
+  m_Name: CinematiqueFinDUjeu
+  m_EditorClassIdentifier: 
+  LesDialogues:
+  - <color=#dbc08e>Honoria, place toi dans le pentagramme.
+  - Pourquoi faire ?
+  - "<color=#dbc08e>Je vais tenter de te faire passer de l\u2019autre c\xF4t\xE9. "
+  - " Qu\u2019est ce que \xE7a veut dire ?"
+  - <color=#dbc08e>Que tu vas pouvoir partir...
+  - 'Non, je ne veux pas retourner dans le noir ! Je veux rester avec toi ! '
+  - "<color=#dbc08e>Ta place n\u2019est pas ici petite. "
+  - "Je veux rester avec toi ! J\u2019ai peur quand tu n\u2019es pas l\xE0 ! "
+  - "<color=#dbc08e>Petite... Tu m\u2019as dit que tu pensais qu\u2019on t\u2019attendait
+    de l\u2019autre c\xF4t\xE9, "
+  - "<color=#dbc08e>et bien je crois que c\u2019est Katia qui t\u2019attend. Elle
+    sera l\xE0 pour te guider, j\u2019en suis certain."
+  - "Non tu mens ! Tu mens ! Tu mens ! Tu veux juste que je m\u2019en aille pour
+    pouvoir rentrer chez toi ! "
+  - "<color=#dbc08e>Faisons un march\xE9. Tu te places dans le pentagramme, je commence
+    l\u2019invocation,"
+  - "<color=#dbc08e>et si tu sens que tu es en danger, ou que personne ne vient te
+    chercher, j\u2019arr\xEAterais tout."
+  - "<color=#dbc08e>D\u2019accord ?"
+  - "... D\u2019accord..."
+  - <color=#dbc08e>In nomine Patris, et Filii, et Spiritus Sancti. Amen.
+  - '<color=#dbc08e>Exsurgat Deus et dissipentur inimici ejus : et fugiant qui oderunt
+    eum a facie ejus.'
+  - <color=#dbc08e>Sicut deficit fumus, deficiant ;
+  - <color=#dbc08e>sicut fluit cera a facie ignis, sic pereant peccatores a facie
+    Dei.
+  - "<color=#d8bfd8>Honoria\u2026"
+  - "Katia ! Ou es-tu ? Je t\u2019ai cherch\xE9 dans le noir ! "
+  - "<color=#d8bfd8>Je sais, mais tu \xE9tais coinc\xE9e. J\u2019ai tout tent\xE9
+    pour te rejoindre ma ch\xE9rie. "
+  - "J\u2019ai peur ! Je ne veux pas y retourner !"
+  - "<color=#d8bfd8>Viens avec moi, c\u2019est fini maintenant, tu n\u2019as plus
+    a avoir peur, je resterai avec toi pour toujours."
+  - "Mais Matthew, il va \xEAtre tout seul !"
+  - "<color=#dbc08e>Ne t\u2019occupe pas de moi petite, va ! Rejoins-la, c\u2019est
+    l\xE0 qu\u2019est ta place. "
+  - "<color=#d8bfd8>Matthew\u2026 Vous l\u2019avez prot\xE9g\xE9, vous l\u2019avez
+    sauv\xE9. Pourquoi ?"
+  - "<color=#dbc08e>Il y a d\xE9j\xE0 bien assez d\u2019injustice dans la vie, n\u2019en
+    rajoutons pas dans la mort."
+  - "<color=#dbc08e>Et puis, elle me rappelait des personnes tr\xE8s importantes
+    pour moi."
+  - "<color=#d8bfd8>Je vous ai observ\xE9 Matthew, vous \xEAtes un homme bien."
+  - "<color=#d8bfd8>Et j\u2019ai l\u2019impression que la plaie immense en vous commence
+    \xE0 se refermer."
+  - "<color=#d8bfd8>Peut \xEAtre que cette petite vous aura montr\xE9 la voie de
+    la gu\xE9rison."
+  - <color=#dbc08e>Rien ne pourra refermer cette plaie.
+  - "<color=#dbc08e>Elle fait partie de moi, c\u2019est mon histoire."
+  - "<color=#dbc08e>Mais, Honoria, tu m\u2019as appris une chose importante : "
+  - "<color=#dbc08e>\xAB Etre en vie \xBB ne signifie pas \xAB vivre \xBB."
+  - "<color=#dbc08e>Tu es plus vivante dans la mort que je ne l\u2019ai jamais \xE9t\xE9."
+  - "<color=#dbc08e>Cette lumi\xE8re qui t\u2019entoure, j\u2019en garderai toujours
+    un peu avec moi."
+  - "<color=#dbc08e>Alors pars sans craintes, je ne t\u2019oublierai pas, et un jour
+    on se retrouvera."
+  - "Matthew\u2026"
+  - <color=#dbc08e>Merci, petite.
+  - ' Ne me rejoins pas trop vite Matthew !'
+  - ' '
+  - "Oh ? Bonjour ! Qui \xEAtes-vous ? Vous \xEAtes si jolies toutes les deux !"
+  - ' Vous voulez jouer avec moi ? Un message ? Oh oui je peux lui transmettre !'
+  - "La prochaine fois, ce sera \xE0 toi de compter Matthew !"
+  - "<color=#dbc08e>Que\u2026 Compter ? Est-ce que\u2026 ? Lily ? Alice ?"
+  - "J\u2019ai beaucoup entendu parler de vous !"
+  - Matthew vous aime beaucoup !
+  - "Je pourrais jouer avec vous la prochaine fois ! A bient\xF4t !"
+  SpeedDialogues:
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.15
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
