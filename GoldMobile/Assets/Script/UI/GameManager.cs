@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public ObjectsInteractable Brosse;
     public ObjectsInteractable CinAfterTuto;
     public ObjectsInteractable cinAfterCoffre;
+    public ObjectsInteractable TrapBasement;
     
 
     public Tp[] tp;
@@ -173,6 +174,7 @@ public class GameManager : MonoBehaviour
             }
 
 
+         
             //quand entre dans chambre honoria => story.tuto = true
             if (!storyManager.Tuto)
             {
@@ -236,13 +238,14 @@ public class GameManager : MonoBehaviour
             tp[13].precedentlyOpened = true;
 
             //labyrinthe
-            if (storyManager.Lockpick && storyManager.DoorToSecreteCave)
+            if (storyManager.Lockpick)
             {
+                Debug.Log("^^");
                 tp[14].precedentlyOpened = true;
                 tp[15].precedentlyOpened = true;
                 //open secrete cave
                 //lauchanimtrappe
-                FindObjectOfType<Achievement>().UnlockJillWouldBeProud();
+             
                 //sous sol 2 fond de la librairy
                 //R sauf cinématique
             }
@@ -255,6 +258,7 @@ public class GameManager : MonoBehaviour
 
         if (storyManager.cinENDING)
         {
+            FindObjectOfType<Achievement>().UnlockJillWouldBeProud();
             //end
         }
 

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LesDialogues:
   - "<color=#dbc08e> Voil\xE0 sa chambre."
-  - <color=#dbc08e> Bon quand il faut  y aller . . ..
+  - '<color=#dbc08e> Bon quand il faut  y aller . . . '
   SpeedDialogues:
   - 0.08
   - 0.08

@@ -203,7 +203,8 @@ public class ObjectsInteractable : MonoBehaviour
         {
             if(notFirstTalkP)
                  HasTalked = true;
-        } 
+        }
+        tdialogue.WantsToSkip = false;
         tdialogue.FirstTalk = true;
         tdialogue.tmpro.text = null;
         isPIn = false;

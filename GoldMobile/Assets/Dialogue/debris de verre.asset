@@ -13,6 +13,21 @@ MonoBehaviour:
   m_Name: debris de verre
   m_EditorClassIdentifier: 
   LesDialogues:
-  - "Des d\xE9brits de verre..."
+  - Je suis . . .
+  - 'morte . . .  '
+  - "Je suis morte ici\u2026"
+  - "La fen\xEAtre, je crois que je suis tomb\xE9e de la fen\xEAtre."
+  - "<color=#dbc08e>Un accident\u2026 "
+  - "<color=#dbc08e>Me voil\xE0 rassur\xE9, je ne tra\xEEne pas dans la maison de
+    meurtriers."
+  - "<color=#dbc08e>Je vais peut \xEAtre m\u2019en sortir vivant en fin de compte. "
+  - "Tu n\u2019es toujours pas dr\xF4le..."
   SpeedDialogues:
+  - 0.15
+  - 0.15
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
   - 0.05

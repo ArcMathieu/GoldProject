@@ -141,7 +141,6 @@ public class PlayerManager : MonoBehaviour
     public void Waiting()
     {
         //doNothing
-
         anim.SetBool("isWalking", false);
         //Debug.Log("playerWait");
     }

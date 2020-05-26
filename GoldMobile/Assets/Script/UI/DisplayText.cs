@@ -62,7 +62,7 @@ public class DisplayText : MonoBehaviour
     }
 
     public bool FirstTalk = true;
-    private bool WantsToSkip = false;
+    public bool WantsToSkip = false;
     public void NextDial()
     {
 
