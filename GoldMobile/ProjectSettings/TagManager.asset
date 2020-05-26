@@ -18,6 +18,7 @@ TagManager:
   - Story
   - Armoire
   - Chara
+  - Horse
   layers:
   - Default
   - TransparentFX

@@ -86,6 +86,8 @@ public class DisplayText : MonoBehaviour
                 }
                 else
                 {
+                    //vitesse player a mettre à 0
+
                     foreach (GameObject inter in Player.GetComponent<PlayerManager>().CurrentInteraction)
                     {
                         //Anti loop
@@ -175,7 +177,7 @@ public class DisplayText : MonoBehaviour
                     DoneDisplaying = true;
                     DoneTalking = true;
                     WantsToSkip = false;
-               
+                    //vitesse player a mettre à 0
                     foreach (GameObject inter in Player.GetComponent<PlayerManager>().CurrentInteraction)
                     {
                         if (inter.GetComponent<ObjectsInteractable>().DoorSytem != null)

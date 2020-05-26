@@ -25,7 +25,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 5162592246824885036}
-    m_Duration: 51.232530526816845
+    m_Duration: 61.43333333333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: -7572687027652029458}
     m_EaseInDuration: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -4157854811580018742}
-    m_Duration: 52.06666666666661
+    m_Duration: 61.833333333333336
     m_TimeScale: 1
     m_ParentTrack: {fileID: -4240787377480568793}
     m_EaseInDuration: 0
@@ -372,10 +372,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0
+    m_Start: 12.933333333333387
     m_ClipIn: 0
     m_Asset: {fileID: -7443505864707635203}
-    m_Duration: 52.06666666666661
+    m_Duration: 48.89999999999995
     m_TimeScale: 1
     m_ParentTrack: {fileID: 1401738010660713170}
     m_EaseInDuration: 0
@@ -438,7 +438,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 0
+    m_PreExtrapolationTime: 12.933333333333387
     m_DisplayName: PlayerPriestIdle
   m_Markers:
     m_Objects: []
@@ -482,7 +482,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 50.48333333333338
+    m_Start: 60.25000000000009
     m_ClipIn: 0
     m_Asset: {fileID: 4819204913929165369}
     m_Duration: 1.5833333333332398
@@ -824,7 +824,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 50.48333333333338
+    m_Start: 60.25000000000009
     m_ClipIn: 0
     m_Asset: {fileID: 109131528605991836}
     m_Duration: 1.5833333333332433
