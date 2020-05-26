@@ -564,7 +564,6 @@ GameObject:
   - component: {fileID: 12871733}
   - component: {fileID: 12871736}
   - component: {fileID: 12871735}
-  - component: {fileID: 12871737}
   m_Layer: 15
   m_Name: Chaises
   m_TagString: Untagged
@@ -662,17 +661,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!210 &12871737
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 12871732}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -10
 --- !u!1 &14750058
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,6 +705,7 @@ GameObject:
   m_Component:
   - component: {fileID: 16575529}
   - component: {fileID: 16575530}
+  - component: {fileID: 16575531}
   m_Layer: 0
   m_Name: bougie (4)
   m_TagString: Untagged
@@ -732,7 +721,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16575528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.17, y: 32.99, z: 2}
+  m_LocalPosition: {x: -19.17, y: 32.680004, z: 2}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 24847826}
@@ -788,6 +777,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &16575531
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16575528}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015, y: -0.18}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.15, y: 0.22}
+    newSize: {x: 0.15, y: 0.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 0.22}
+  m_EdgeRadius: 0
 --- !u!1 &24847825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,7 +1192,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371351923}
-  m_RootOrder: 12
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &43293646
 MonoBehaviour:
@@ -2048,7 +2063,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60284623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -94.17784, y: 112.1332, z: -10}
+  m_LocalPosition: {x: -86.65486, y: 112.1332, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3437,7 +3452,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 30
   m_LinearDrag: 0
   m_AngularDrag: 3
   m_GravityScale: 0
@@ -6175,14 +6190,10 @@ PlayableDirector:
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: -6124267494038633489, guid: 334d200dc0049c346a2f35fc7d54bf24, type: 2}
-    value: {fileID: 0}
   - key: {fileID: 4771489867749437939, guid: 334d200dc0049c346a2f35fc7d54bf24, type: 2}
     value: {fileID: 1343226497}
   - key: {fileID: 6100700402982341879, guid: 334d200dc0049c346a2f35fc7d54bf24, type: 2}
     value: {fileID: 1542421536}
-  - key: {fileID: -5608092773795816896, guid: 334d200dc0049c346a2f35fc7d54bf24, type: 2}
-    value: {fileID: 1969605189}
   - key: {fileID: 635573758803205507, guid: 334d200dc0049c346a2f35fc7d54bf24, type: 2}
     value: {fileID: 414171490}
   - key: {fileID: -4690017598856635102, guid: 334d200dc0049c346a2f35fc7d54bf24, type: 2}
@@ -6267,6 +6278,18 @@ PlayableDirector:
     value: {fileID: 1542421536}
   - key: {fileID: -4293669715171019276, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
     value: {fileID: 1031574569}
+  - key: {fileID: 2805416985741200691, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+    value: {fileID: 2110934567}
+  - key: {fileID: -9034571517978344072, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+    value: {fileID: 1564299218}
+  - key: {fileID: 8311800342126323079, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+    value: {fileID: 1809983827}
+  - key: {fileID: -9221791358362986063, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+    value: {fileID: 769992868}
+  - key: {fileID: 2516810047607348885, guid: 334d200dc0049c346a2f35fc7d54bf24, type: 2}
+    value: {fileID: 1969605189}
+  - key: {fileID: 5858444347457630202, guid: 334d200dc0049c346a2f35fc7d54bf24, type: 2}
+    value: {fileID: 1542421536}
   m_ExposedReferences:
     m_References:
     - f1167542eb772c44cb2629db1bfaeac8: {fileID: 271813776}
@@ -8211,7 +8234,7 @@ MonoBehaviour:
   - {fileID: 950616254}
   - {fileID: 2074306021}
   - {fileID: 230471031}
-  playerSpeed: 8
+  playerSpeed: 3
 --- !u!4 &249889313
 Transform:
   m_ObjectHideFlags: 0
@@ -9663,7 +9686,6 @@ GameObject:
   - component: {fileID: 308187309}
   - component: {fileID: 308187312}
   - component: {fileID: 308187311}
-  - component: {fileID: 308187313}
   m_Layer: 15
   m_Name: Chaises
   m_TagString: Untagged
@@ -9761,17 +9783,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!210 &308187313
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 308187308}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -10
 --- !u!1 &309041982
 GameObject:
   m_ObjectHideFlags: 0
@@ -10851,6 +10862,7 @@ GameObject:
   - component: {fileID: 354372201}
   - component: {fileID: 354372200}
   - component: {fileID: 354372199}
+  - component: {fileID: 354372202}
   m_Layer: 16
   m_Name: RecipientRituel
   m_TagString: Interactable
@@ -10866,7 +10878,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354372197}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.26, y: 1.11, z: 2}
+  m_LocalPosition: {x: 3.43, y: 5.11, z: 2}
   m_LocalScale: {x: 2, y: 2, z: 0}
   m_Children: []
   m_Father: {fileID: 1636294156}
@@ -10884,15 +10896,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016954e06cf8f0d4f927f56508599478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemName: 
+  ItemName: Recipient Rituel
   Cinematic: {fileID: 0}
   isIn: 0
   isPIn: 0
   notFirstTalkP: 0
-  isPickable: 0
+  isPickable: 1
   isDiscoveredByHonoria: 0
   dialPlayer:
-  - {fileID: 11400000, guid: 252dfc8c483c4d14ead9eb46184f15fa, type: 2}
   - {fileID: 11400000, guid: 252dfc8c483c4d14ead9eb46184f15fa, type: 2}
   dialGhost:
   - {fileID: 11400000, guid: 252dfc8c483c4d14ead9eb46184f15fa, type: 2}
@@ -10980,6 +10991,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &354372202
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354372197}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -3
 --- !u!1 &355765589
 GameObject:
   m_ObjectHideFlags: 0
@@ -11868,9 +11890,6 @@ Transform:
   - {fileID: 1864537736}
   - {fileID: 1478129431}
   - {fileID: 644066651}
-  - {fileID: 1809983825}
-  - {fileID: 2110934565}
-  - {fileID: 1564299216}
   - {fileID: 43293645}
   m_Father: {fileID: 469669784}
   m_RootOrder: 7
@@ -13085,7 +13104,6 @@ GameObject:
   - component: {fileID: 414580287}
   - component: {fileID: 414580290}
   - component: {fileID: 414580289}
-  - component: {fileID: 414580291}
   m_Layer: 15
   m_Name: Chaises
   m_TagString: Untagged
@@ -13183,17 +13201,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!210 &414580291
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414580286}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -10
 --- !u!1 &414819046
 GameObject:
   m_ObjectHideFlags: 0
@@ -13278,6 +13285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 420706620}
   - component: {fileID: 420706621}
+  - component: {fileID: 420706622}
   m_Layer: 0
   m_Name: bougie (9)
   m_TagString: Untagged
@@ -13293,7 +13301,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 420706619}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.22, y: 42.79, z: 2}
+  m_LocalPosition: {x: -17.22, y: 42.480003, z: 2}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 24847826}
@@ -13349,6 +13357,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &420706622
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420706619}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015, y: -0.18}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.15, y: 0.22}
+    newSize: {x: 0.15, y: 0.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 0.22}
+  m_EdgeRadius: 0
 --- !u!1 &421418590
 GameObject:
   m_ObjectHideFlags: 0
@@ -15560,7 +15594,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.11781007, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -15571,7 +15605,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.76437986, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &526985170
 MonoBehaviour:
@@ -17007,6 +17041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 590653008}
   - component: {fileID: 590653009}
+  - component: {fileID: 590653010}
   m_Layer: 0
   m_Name: bougie (3)
   m_TagString: Untagged
@@ -17022,7 +17057,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590653007}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.3, y: 33, z: 2}
+  m_LocalPosition: {x: -32.3, y: 32.690002, z: 2}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 24847826}
@@ -17078,6 +17113,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &590653010
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590653007}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015, y: -0.18}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.15, y: 0.22}
+    newSize: {x: 0.15, y: 0.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 0.22}
+  m_EdgeRadius: 0
 --- !u!1 &590791152
 GameObject:
   m_ObjectHideFlags: 0
@@ -18043,7 +18104,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 637410140}
-  - component: {fileID: 637410141}
   m_Layer: 0
   m_Name: walls
   m_TagString: Untagged
@@ -18080,17 +18140,6 @@ Transform:
   m_Father: {fileID: 24847826}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!210 &637410141
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 637410139}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -15
 --- !u!1 &637615950
 GameObject:
   m_ObjectHideFlags: 0
@@ -19454,7 +19503,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691163780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -85.32, y: 29.65, z: 0}
+  m_LocalPosition: {x: -33.62, y: 61.35, z: 0}
   m_LocalScale: {x: 0.2, y: 0.4, z: 1}
   m_Children:
   - {fileID: 264593415}
@@ -22389,6 +22438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 769992866}
   - component: {fileID: 769992867}
+  - component: {fileID: 769992868}
   m_Layer: 0
   m_Name: LightHonoria1 (4)
   m_TagString: Untagged
@@ -22454,6 +22504,25 @@ MonoBehaviour:
   - {x: 0.2745591, y: 3.9053779, z: 0}
   - {x: -10.4960375, y: -7.0431848, z: 0}
   - {x: -9.808766, y: -11.618151, z: 0}
+--- !u!95 &769992868
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769992865}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &778407466 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6851587361739229291, guid: b491115f1f4c1194e93fef7f27256668,
@@ -22481,6 +22550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 778835639}
   - component: {fileID: 778835640}
+  - component: {fileID: 778835641}
   m_Layer: 0
   m_Name: bougie (5)
   m_TagString: Untagged
@@ -22496,7 +22566,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778835638}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -42.55, y: 34.01, z: 2}
+  m_LocalPosition: {x: -42.55, y: 33.7, z: 2}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 24847826}
@@ -22552,6 +22622,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &778835641
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778835638}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015, y: -0.18}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.15, y: 0.22}
+    newSize: {x: 0.15, y: 0.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 0.22}
+  m_EdgeRadius: 0
 --- !u!1 &781110475
 GameObject:
   m_ObjectHideFlags: 0
@@ -25293,6 +25389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 894232656}
   - component: {fileID: 894232657}
+  - component: {fileID: 894232658}
   m_Layer: 0
   m_Name: bougie (10)
   m_TagString: Untagged
@@ -25308,7 +25405,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894232655}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.2, y: 48.74, z: 2}
+  m_LocalPosition: {x: -14.2, y: 48.430004, z: 2}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 24847826}
@@ -25364,6 +25461,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &894232658
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894232655}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015, y: -0.18}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.15, y: 0.22}
+    newSize: {x: 0.15, y: 0.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 0.22}
+  m_EdgeRadius: 0
 --- !u!1 &900178528
 GameObject:
   m_ObjectHideFlags: 0
@@ -34693,6 +34816,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1269285667}
   - component: {fileID: 1269285668}
+  - component: {fileID: 1269285669}
   m_Layer: 0
   m_Name: bougie (8)
   m_TagString: Untagged
@@ -34708,7 +34832,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269285666}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.89, y: 37.38, z: 2}
+  m_LocalPosition: {x: -13.89, y: 37.070004, z: 2}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 24847826}
@@ -34764,6 +34888,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1269285669
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269285666}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015, y: -0.18}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.15, y: 0.22}
+    newSize: {x: 0.15, y: 0.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 0.22}
+  m_EdgeRadius: 0
 --- !u!1 &1269342535
 GameObject:
   m_ObjectHideFlags: 0
@@ -38449,6 +38599,7 @@ GameObject:
   - component: {fileID: 1419670145}
   - component: {fileID: 1419670144}
   - component: {fileID: 1419670143}
+  - component: {fileID: 1419670146}
   m_Layer: 0
   m_Name: Livre
   m_TagString: Interactable
@@ -38576,6 +38727,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1419670146
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419670141}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -5
 --- !u!1 &1428792480
 GameObject:
   m_ObjectHideFlags: 0
@@ -39986,7 +40148,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 30
   m_LinearDrag: 0
   m_AngularDrag: 3
   m_GravityScale: 0
@@ -40197,6 +40359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1501033272}
   - component: {fileID: 1501033273}
+  - component: {fileID: 1501033274}
   m_Layer: 0
   m_Name: bougie (7)
   m_TagString: Untagged
@@ -40212,7 +40375,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501033271}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.65, y: 48.68, z: 2}
+  m_LocalPosition: {x: -33.65, y: 48.37, z: 2}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 24847826}
@@ -40268,6 +40431,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1501033274
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501033271}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015, y: -0.18}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.15, y: 0.22}
+    newSize: {x: 0.15, y: 0.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 0.22}
+  m_EdgeRadius: 0
 --- !u!1 &1506842519
 GameObject:
   m_ObjectHideFlags: 0
@@ -41167,7 +41356,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536784124}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -105.18489, y: 46.762543, z: -10}
+  m_LocalPosition: {x: -53.48489, y: 78.46254, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1297159946}
@@ -41200,7 +41389,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542421534}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.5585206, y: 0.5585206, z: 0.5585206}
   m_Children: []
@@ -41267,7 +41456,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -6359977545375631545, guid: 5d8dc06e5f776a846b4fc9ecb1e9072c,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -41452,6 +41641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1564299216}
   - component: {fileID: 1564299217}
+  - component: {fileID: 1564299218}
   m_Layer: 0
   m_Name: LightHonoria1 (1)
   m_TagString: Untagged
@@ -41470,8 +41660,8 @@ Transform:
   m_LocalPosition: {x: -60.409996, y: 101.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 371351923}
-  m_RootOrder: 11
+  m_Father: {fileID: 1900938489}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1564299217
 MonoBehaviour:
@@ -41514,6 +41704,25 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!95 &1564299218
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564299215}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1566012038
 GameObject:
   m_ObjectHideFlags: 0
@@ -42181,7 +42390,6 @@ GameObject:
   - component: {fileID: 1608903941}
   - component: {fileID: 1608903944}
   - component: {fileID: 1608903943}
-  - component: {fileID: 1608903945}
   m_Layer: 15
   m_Name: Chaises
   m_TagString: Untagged
@@ -42279,17 +42487,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!210 &1608903945
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608903940}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -10
 --- !u!1 &1618013902
 GameObject:
   m_ObjectHideFlags: 0
@@ -46333,6 +46530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1790303969}
   - component: {fileID: 1790303970}
+  - component: {fileID: 1790303971}
   m_Layer: 0
   m_Name: bougie (2)
   m_TagString: Untagged
@@ -46348,7 +46546,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790303968}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -42.39, y: 22.079126, z: 2}
+  m_LocalPosition: {x: -42.390015, y: 21.769129, z: 2}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 24847826}
@@ -46404,6 +46602,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1790303971
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790303968}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015, y: -0.18}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.15, y: 0.22}
+    newSize: {x: 0.15, y: 0.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 0.22}
+  m_EdgeRadius: 0
 --- !u!1 &1793341846
 GameObject:
   m_ObjectHideFlags: 0
@@ -46962,6 +47186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1809983825}
   - component: {fileID: 1809983826}
+  - component: {fileID: 1809983827}
   m_Layer: 0
   m_Name: LightHonoria1 (2)
   m_TagString: Untagged
@@ -46980,8 +47205,8 @@ Transform:
   m_LocalPosition: {x: -60.629997, y: 91.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 371351923}
-  m_RootOrder: 9
+  m_Father: {fileID: 1900938489}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1809983826
 MonoBehaviour:
@@ -47024,6 +47249,25 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!95 &1809983827
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809983824}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1811783282
 GameObject:
   m_ObjectHideFlags: 0
@@ -48337,7 +48581,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 30
   m_LinearDrag: 0
   m_AngularDrag: 3
   m_GravityScale: 0
@@ -48997,7 +49241,6 @@ GameObject:
   - component: {fileID: 1854093578}
   - component: {fileID: 1854093580}
   - component: {fileID: 1854093579}
-  - component: {fileID: 1854093581}
   m_Layer: 15
   m_Name: meuble
   m_TagString: Untagged
@@ -49095,17 +49338,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!210 &1854093581
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854093577}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -10
 --- !u!1 &1862848021
 GameObject:
   m_ObjectHideFlags: 0
@@ -49585,6 +49817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1869792692}
   - component: {fileID: 1869792693}
+  - component: {fileID: 1869792694}
   m_Layer: 0
   m_Name: bougie (6)
   m_TagString: Untagged
@@ -49600,7 +49833,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869792691}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22.82, y: 43.21, z: 2}
+  m_LocalPosition: {x: -22.82, y: 42.9, z: 2}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 24847826}
@@ -49656,6 +49889,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1869792694
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869792691}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015, y: -0.18}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.15, y: 0.22}
+    newSize: {x: 0.15, y: 0.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 0.22}
+  m_EdgeRadius: 0
 --- !u!1 &1872668615
 GameObject:
   m_ObjectHideFlags: 0
@@ -50843,6 +51102,9 @@ Transform:
   m_Children:
   - {fileID: 414819047}
   - {fileID: 769992866}
+  - {fileID: 1809983825}
+  - {fileID: 2110934565}
+  - {fileID: 1564299216}
   m_Father: {fileID: 469669784}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -53218,7 +53480,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 30
   m_LinearDrag: 0
   m_AngularDrag: 3
   m_GravityScale: 0
@@ -54810,7 +55072,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 30
   m_LinearDrag: 0
   m_AngularDrag: 3
   m_GravityScale: 0
@@ -56103,7 +56365,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -4
 --- !u!1 &2110934564
 GameObject:
   m_ObjectHideFlags: 0
@@ -56114,6 +56376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2110934565}
   - component: {fileID: 2110934566}
+  - component: {fileID: 2110934567}
   m_Layer: 0
   m_Name: LightHonoria1
   m_TagString: Untagged
@@ -56132,8 +56395,8 @@ Transform:
   m_LocalPosition: {x: -72.73, y: 102.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 371351923}
-  m_RootOrder: 10
+  m_Father: {fileID: 1900938489}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2110934566
 MonoBehaviour:
@@ -56176,6 +56439,25 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!95 &2110934567
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110934564}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2114753783
 GameObject:
   m_ObjectHideFlags: 0

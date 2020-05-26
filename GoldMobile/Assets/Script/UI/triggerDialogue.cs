@@ -17,11 +17,14 @@ public class triggerDialogue : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player")){
+                
             if (tdialogue.DoneTalking && !firstTime)
             {
                 tdialogue.DialPass(dialGhost);
                 firstTime = true;
             }
         }
+        
+            
     }
 }
