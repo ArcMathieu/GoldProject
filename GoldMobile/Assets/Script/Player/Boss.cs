@@ -6,14 +6,16 @@ public class Boss : MonoBehaviour
 {
 
     Rigidbody2D rb;
-    public float speed;
+    public float speed = 6;
     private Vector2 mouvement;
     public GameManager gameManager;
     private Animator animat;
     public Transform Player;
+    public Transform ghost;
     public bool detected;
     public float distanceDetect;
     public bool isflip = false;
+
 
     void Start()
     {
@@ -24,7 +26,7 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         if (Player)
         {
             float distance = (Player.position - transform.position).sqrMagnitude;
@@ -38,12 +40,12 @@ public class Boss : MonoBehaviour
                     direction.Normalize();
                     mouvement = direction;
                     move(mouvement);
-                    
 
                 }
                 else
                 {
-                    
+
+
                 }
             }
             else
@@ -51,6 +53,7 @@ public class Boss : MonoBehaviour
                 detected = false;
             }
         }
+
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -60,6 +63,7 @@ public class Boss : MonoBehaviour
             Destroy(Player.gameObject);
         }
     }
+
 
     public void lookPlayer()
     {
