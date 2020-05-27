@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1980,7 +1980,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60284623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -57.56489, y: 50.91254, z: -10}
+  m_LocalPosition: {x: -60.468216, y: 48.022053, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4081,6 +4081,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &118693188
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5115,6 +5116,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!212 &137888957
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6184,6 +6186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   switchButton: {fileID: 271813778}
+  CurrentTag: 
 --- !u!1 &198916886
 GameObject:
   m_ObjectHideFlags: 0
@@ -6990,6 +6993,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!114 &221044981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7908,9 +7912,10 @@ MonoBehaviour:
   gh: {fileID: 1969605188}
   switchButton: {fileID: 271813776}
   openSecretaire: {fileID: 0}
-  clesParents: {fileID: 0}
+  Brosse: {fileID: 0}
   CinAfterTuto: {fileID: 352889380}
-  CinClesParents: {fileID: 823764235}
+  cinAfterCoffre: {fileID: 0}
+  TrapBasement: {fileID: 0}
   tp:
   - {fileID: 281058950}
   - {fileID: 291470177}
@@ -8495,6 +8500,7 @@ MonoBehaviour:
   player: {fileID: 691163785}
   ghost: {fileID: 1969605188}
   gameManager: {fileID: 249889312}
+  pictureSwitch: {fileID: 0}
   ghostAppears: {fileID: 1969605184}
   zone: {fileID: 1524958447}
 --- !u!58 &271813779
@@ -9065,8 +9071,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Honoria: {fileID: 1969605188}
   storyManager: {fileID: 979059964}
-  Door: {fileID: 1803416015}
   CurrentInteraction: []
+  honoriaLight: {fileID: 0}
 --- !u!58 &295893595
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10469,6 +10475,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &352889381
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10559,6 +10566,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &354372200
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11152,6 +11160,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &368253622
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12376,6 +12385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   switchButton: {fileID: 271813778}
+  CurrentTag: 
 --- !u!1 &411236166
 GameObject:
   m_ObjectHideFlags: 0
@@ -14893,6 +14903,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &511889549
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18461,6 +18472,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &677662770
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18716,7 +18728,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691163780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.7, y: 33.8, z: 0}
+  m_LocalPosition: {x: -86.49, y: 29.41, z: 0}
   m_LocalScale: {x: 0.2, y: 0.4, z: 1}
   m_Children:
   - {fileID: 264593415}
@@ -20517,6 +20529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   switchButton: {fileID: 271813778}
+  CurrentTag: 
 --- !u!1 &738987174
 GameObject:
   m_ObjectHideFlags: 0
@@ -20598,6 +20611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   switchButton: {fileID: 271813778}
+  CurrentTag: 
 --- !u!1 &739776365
 GameObject:
   m_ObjectHideFlags: 0
@@ -21381,6 +21395,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &765256402
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22020,6 +22035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   switchButton: {fileID: 271813778}
+  CurrentTag: 
 --- !u!1 &805300630
 GameObject:
   m_ObjectHideFlags: 0
@@ -22215,6 +22231,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 1
+  isTrigger: 0
 --- !u!61 &806102345
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22580,6 +22597,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &823764236
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23256,6 +23274,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 1
+  isTrigger: 0
 --- !u!61 &856247989
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26282,6 +26301,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &993978483
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28924,6 +28944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   switchButton: {fileID: 271813778}
+  CurrentTag: 
 --- !u!1 &1131920391
 GameObject:
   m_ObjectHideFlags: 0
@@ -29161,6 +29182,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!212 &1141299218
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29631,6 +29653,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1150403283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34709,6 +34732,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1343226494
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36187,6 +36211,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1419670144
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38736,7 +38761,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536784124}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -57.56489, y: 50.91254, z: -10}
+  m_LocalPosition: {x: -106.35489, y: 46.52254, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1297159946}
@@ -39409,6 +39434,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1594322281
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41150,6 +41176,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1652345609
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42158,6 +42185,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1714830682
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43824,6 +43852,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 1
+  isTrigger: 0
 --- !u!212 &1793341853
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43941,6 +43970,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1796490195
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45020,6 +45050,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 1
+  isTrigger: 0
 --- !u!1 &1829114191
 GameObject:
   m_ObjectHideFlags: 0
@@ -45163,6 +45194,7 @@ MonoBehaviour:
   tmpro: {fileID: 0}
   TextBox: {fileID: 707294567}
   dial: {fileID: 0}
+  isEnglish: 0
   isAutomatique: 0
   DoneDisplaying: 1
   DoneTalking: 1
@@ -45170,6 +45202,7 @@ MonoBehaviour:
   Audio: {fileID: 0}
   KeyStroke: {fileID: 0}
   FirstTalk: 1
+  WantsToSkip: 0
 --- !u!1 &1829206222
 GameObject:
   m_ObjectHideFlags: 0
@@ -45483,6 +45516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   switchButton: {fileID: 271813778}
+  CurrentTag: 
 --- !u!1 &1839563920
 GameObject:
   m_ObjectHideFlags: 0
@@ -46334,7 +46368,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1863734734
 Transform:
   m_ObjectHideFlags: 0
@@ -46479,6 +46513,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 1
+  isTrigger: 0
 --- !u!1 &1864537735
 GameObject:
   m_ObjectHideFlags: 0
@@ -46668,6 +46703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   switchButton: {fileID: 271813778}
+  CurrentTag: 
 --- !u!224 &1868691549 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6733728487605017364, guid: e9e227699232a7342abb8ab373072028,
@@ -46736,6 +46772,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &1872668618
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47453,6 +47490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerRoom: 17
   switchButton: {fileID: 271813778}
+  CurrentTag: 
 --- !u!1 &1893447341
 GameObject:
   m_ObjectHideFlags: 0
@@ -50418,6 +50456,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!114 &1984236139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53065,6 +53104,7 @@ MonoBehaviour:
   LockSytem: {fileID: 0}
   HasTalked: 0
   isReadyForCinematic: 0
+  isTrigger: 0
 --- !u!61 &2115931096
 BoxCollider2D:
   m_ObjectHideFlags: 0

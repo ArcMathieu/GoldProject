@@ -9,6 +9,8 @@ public class DisplayText : MonoBehaviour
     public GameObject TextBox;
     public DialogueData dial;
 
+    public bool isEnglish;
+
     public bool isAutomatique = false;
     public bool DoneDisplaying = true;
     public bool DoneTalking = false;
@@ -56,7 +58,13 @@ public class DisplayText : MonoBehaviour
         }
         else if (DoneDisplaying == false)
         {
-            tmpro.text = dial.LesDialogues[dialState];
+            if (!isEnglish)
+            {
+                tmpro.text = dial.LesDialogues[dialState];
+            } else
+            {
+                tmpro.text = dial.LesDialoguesEnAnglais[dialState];
+            }
             totalvisibleChara = tmpro.textInfo.characterCount;
         }
     }

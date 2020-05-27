@@ -17,6 +17,9 @@ MonoBehaviour:
     qui les hanterait."
   - "<color=#dbc08e>Allons jeter un oeil dans sa chambre, plus vite j\u2019aurais
     fini ce cirque, plus vite je rentrerai."
+  LesDialoguesEnAnglais:
+  - <color=#dbc08e>According to the parents, they would be hanted by their dead daughter...
+  - <color=#dbc08e>Let's check out her room, let's get it over wtih asap
   SpeedDialogues:
   - 0.08
   - 0.08
