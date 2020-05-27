@@ -19359,7 +19359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 353, y: -186.99951}
+  m_AnchoredPosition: {x: 285, y: -165}
   m_SizeDelta: {x: -970, y: -500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &672439022
@@ -49037,6 +49037,7 @@ MonoBehaviour:
   tmpro: {fileID: 0}
   TextBox: {fileID: 707294567}
   dial: {fileID: 0}
+  isEnglish: 0
   isAutomatique: 0
   DoneDisplaying: 1
   DoneTalking: 1
