@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Livre Rituel
   m_EditorClassIdentifier: 
   LesDialogues:
-  - "Matthew ! Ce livre-l\xE0, en haut de l\u2019\xE9tag\xE8re !"
+  - "Matthew ! Ce livre, l\xE0 !"
   - "Il est \xE9trange, quand je m\u2019en approche,"
   - " j\u2019ai des frisson dans tout mon corps\u2026 "
   - "<color=#dbc08e> C\u2019est bien un livre d\u2019incantations\u2026 Voyons voir\u2026"
