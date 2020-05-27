@@ -35,15 +35,15 @@ MonoBehaviour:
   - "<color=#dbc08e>Ils ont voulu me d\xE9masquer ! Il faut que je sorte d\u2019ici
     avant l\u2019arriv\xE9e de la police !"
   - "J'ai besoin d'aide ! Les m\xE9chantes ombres, elles vont venir me chercher !"
-  - "<color=#dbc08e> Les m\xE9chantes ombres, qu\u2019est-ce que c\u2019est ?"
-  - "<color=#dbc08e> Pourquoi je te r\xE9ponds, tu n\u2019es qu\u2019une illusion
+  - "<color=#dbc08e>Les m\xE9chantes ombres, qu\u2019est-ce que c\u2019est ?"
+  - "<color=#dbc08e>Pourquoi je te r\xE9ponds, tu n\u2019es qu\u2019une illusion
     cr\xE9\xE9e pour me duper ! Par quel proc\xE9d\xE9 tout \xE7a est-il possible
     ?"
-  - "<color=#dbc08e> Des miroirs ? De la lumi\xE8re ?"
+  - "<color=#dbc08e>Des miroirs ? De la lumi\xE8re ?"
   - "Je suis r\xE9elle ! Je m\u2019appelle Honoria, je vis ici ! C\u2019est ma chambre
     !"
-  - "<color=#dbc08e> Qu\u2019est ce que\u2026 Qu\u2019est ce que c\u2019est que \xE7a
-    !  Aah !"
+  - "<color=#dbc08e>Aah ! Qu\u2019est ce que\u2026 Qu\u2019est ce que c\u2019est
+    que \xE7a !"
   - "Les m\xE9chantes ombres ! Laissez le tranquille !"
   - "<color=#dbc08e> Mais qu\u2019est ce qui se passe ici ? Qu\u2019est ce que c\u2019\xE9tait
     que \xE7a\u2026 "
@@ -58,24 +58,25 @@ MonoBehaviour:
   - 
   - "je crois qu\u2019on m\u2019attend ailleurs, mais je ne peux pas y aller, on
     ne me laisse pas passer !"
-  - "<color=#dbc08e> Je n\u2019en reviens pas de ce que je vais dire, mais je vais
+  - "<color=#dbc08e>Je n\u2019en reviens pas de ce que je vais dire, mais je vais
     t\u2019aider."
-  - "<color=#dbc08e> De toutes fa\xE7ons ce n\u2019est pas comme si j\u2019avais
-    le choix."
-  - "<color=#dbc08e> Commen\xE7ons par le d\xE9but. Te rappelles-tu la fa\xE7on dont
+  - "<color=#dbc08e>De toutes fa\xE7ons ce n\u2019est pas comme si j\u2019avais le
+    choix."
+  - "<color=#dbc08e>Commen\xE7ons par le d\xE9but. Te rappelles-tu la fa\xE7on dont
     tu es morte ?"
   - "\u2026Non, je me souviens juste du noir. J\u2019y suis rest\xE9e longtemps. "
-  - "<color=#dbc08e> Aurais-tu une id\xE9e d\u2019o\xF9 peut \xEAtre cette Katia
-    ? Peut \xEAtre qu\u2019elle sait quelque chose ?"
+  - "<color=#dbc08e>Aurais-tu une id\xE9e d\u2019o\xF9 peut \xEAtre cette Katia ?
+    Peut \xEAtre qu\u2019elle sait quelque chose ?"
   - "Non, elle devrait \xEAtre l\xE0. "
   - "<color=#dbc08e>On commence bien\u2026 Me voil\xE0 bloqu\xE9 avec un fant\xF4me
     de gamine amn\xE9sique\u2026"
-  - "<color=#dbc08e> Faisons un tour de la maison, des souvenirs referont s\xFBrement
+  - "<color=#dbc08e>Faisons un tour de la maison, des souvenirs referont s\xFBrement
     surface. "
-  - <color=#dbc08e> Enfin, si tu veux bien me laisser sortir.
+  - <color=#dbc08e>Enfin, si tu veux bien me laisser sortir.
   - "D'accord mais \xE0 une condition, pourrais-tu me retrouver le collier de Katia
     ? "
   - C'est le seul souvenir qu'il me reste d'elle...
+  LesDialoguesEnAnglais: []
   SpeedDialogues:
   - 0.05
   - 0.05
