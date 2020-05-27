@@ -23,6 +23,11 @@ public class triggerDialogue : MonoBehaviour
                 tdialogue.DialPass(dialGhost);
                 firstTime = true;
             }
+            try
+            {
+                GetComponent<Animator>().SetTrigger("horsed");
+            }
+            catch { }
         }
         
             

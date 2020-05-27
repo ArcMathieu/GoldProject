@@ -33,6 +33,11 @@ public class Tp : MonoBehaviour
                     {
                         ghost.transform.position = new Vector3(collision.transform.position.x +0.5f, collision.transform.position.y + 0.5f, 0);
                     }
+                    try
+                    {
+                        GetComponent<Animator>().SetTrigger("opened");
+                    }
+                    catch { }
 
                     tpTo.SendMessage("CoroutToWait");
 
