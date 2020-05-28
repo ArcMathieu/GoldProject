@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1688,7 +1688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &640219046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1702,9 +1702,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musique:
-  - name: Chouette
-    clip: {fileID: 0}
-    volume: 0
+  - name: Main_Theme
+    clip: {fileID: 8300000, guid: f93a8798ff37c0f42864ebe266aee2e7, type: 3}
+    volume: 1
     loop: 0
     source: {fileID: 0}
   sfx: []
@@ -2724,6 +2724,8 @@ PlayableDirector:
     value: {fileID: 829041592}
   - key: {fileID: -4725083079427185939, guid: 7543951c94eb3e941807a739ea365f5b, type: 2}
     value: {fileID: 1586680654}
+  - key: {fileID: -4730803589060334577, guid: 7543951c94eb3e941807a739ea365f5b, type: 2}
+    value: {fileID: 640219045}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &2055073755
