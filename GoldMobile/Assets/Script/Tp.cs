@@ -24,6 +24,7 @@ public class Tp : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            FindObjectOfType<SoundManager>().PlaySfx("Keys");
             if (precedentlyOpened){
                 if (canPass)
                 {
