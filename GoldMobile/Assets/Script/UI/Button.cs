@@ -38,9 +38,9 @@ public class Button : MonoBehaviour
         StartCoroutine(changeColor());
         IEnumerator changeColor()
         {
-            GetComponent<Image>().color = Color.grey;
+            GetComponentInChildren<Image>().color = Color.grey;
             yield return new WaitForSeconds(0.2f);
-            GetComponent<Image>().color = Color.white;
+            GetComponentInChildren<Image>().color = Color.white;
 
         }
     }
@@ -75,9 +75,9 @@ public class Button : MonoBehaviour
             StartCoroutine(changeColor());
             IEnumerator changeColor()
             {
-                GetComponent<Image>().color = Color.grey;
+                GetComponentInChildren<Image>().color = Color.grey;
                 yield return new WaitForSeconds(0.2f);
-                GetComponent<Image>().color = Color.white;
+                GetComponentInChildren<Image>().color = Color.white;
 
             }
         }

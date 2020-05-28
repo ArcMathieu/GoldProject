@@ -26,6 +26,8 @@ public class DisplayText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isEnglish = LanguageSwitcher.English;
+        Debug.Log(LanguageSwitcher.English);
         Player = GameObject.FindGameObjectWithTag("Player");
         Audio = GetComponent<AudioSource>();
         tmpro = TextBox.GetComponent<TextMeshProUGUI>();
@@ -42,6 +44,7 @@ public class DisplayText : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
         if (DoneDisplaying == true)
         {
             if (isAutomatique)
