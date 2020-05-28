@@ -10,13 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
-  m_Name: lockPick
+  m_Name: AppelMattew2
   m_EditorClassIdentifier: 
   LesDialogues:
-  - "<color=#dbc08e>Tiens ? Est-ce que \xE7a serait avec \xE7a qu'elle aurait forc\xE9
-    le coffre de sa fille ?"
-  - "<color=#dbc08e><i>Question intimit\xE9 on est loin du compte dans cette famille.</i>"
+  - Matthew !
+  - <color=#dbc08e>Honoria ! Tout va bien ?
+  - "Je crois oui\u2026"
+  - "<color=#dbc08e>Tu as \xE9t\xE9 tr\xE8s courageuse, petite."
+  - "J\u2019ai eu tr\xE8s peur ! Les m\xE9chantes ombres ont failli t\u2019attraper
+    !"
   LesDialoguesEnAnglais: []
   SpeedDialogues:
-  - 0.09
-  - 0.09
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05

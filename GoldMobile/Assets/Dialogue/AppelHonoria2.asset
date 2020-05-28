@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
+  m_Name: AppelHonoria2
+  m_EditorClassIdentifier: 
+  LesDialogues:
+  - "Oh ? Qu\u2019est ce que c\u2019est que \xE7a au sol ?"
+  - "<color=#dbc08e>On dirait une sorte de trappe\u2026 Ma claustrophobie va adorer..."
+  - "C\u2019est quoi la clautorsphobie ?"
+  - "<color=#dbc08e>Claustrophobie. C\u2019est la peur d\u2019\xEAtre bloqu\xE9 dans
+    un petit espace."
+  - Tu as peur des petits espaces ? Un grand monsieur comme toi ?
+  - <color=#dbc08e>Est-ce que tu te moquerais de moi ?
+  - "Jamais je n\u2019oserais, monsieur le pr\xEAtre !"
+  - "<color=#dbc08e>Tu es mal plac\xE9e pour te moquer, n\u2019est ce pas, petit
+    fant\xF4me qui a peur du noir !"
+  - "Il y a des choses m\xE9chantes dans le noir ! Et puis on y voit rien ...Pourquoi
+    tu ris ?"
+  - "<color=#dbc08e>Pour rien\u2026 Allons-y petit fant\xF4me."
+  LesDialoguesEnAnglais: []
+  SpeedDialogues:
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05

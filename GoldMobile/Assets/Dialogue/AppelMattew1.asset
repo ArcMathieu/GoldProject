@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
-  m_Name: lockPick
+  m_Name: AppelMattew1
   m_EditorClassIdentifier: 
   LesDialogues:
-  - "<color=#dbc08e>Tiens ? Est-ce que \xE7a serait avec \xE7a qu'elle aurait forc\xE9
-    le coffre de sa fille ?"
-  - "<color=#dbc08e><i>Question intimit\xE9 on est loin du compte dans cette famille.</i>"
+  - "<color=#dbc08e>Honoria ! Tu vois les m\xE9chantes ombres ?"
+  - "<color=#dbc08e>Il faut que tu leur fasses peur pour que je puisse avan\xE7er
+    !"
   LesDialoguesEnAnglais: []
   SpeedDialogues:
-  - 0.09
-  - 0.09
+  - 0.05
+  - 0.05

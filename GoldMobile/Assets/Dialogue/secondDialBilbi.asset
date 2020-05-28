@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
+  m_Name: secondDialBilbi
+  m_EditorClassIdentifier: 
+  LesDialogues:
+  - "Matthew ! Matthew j\u2019ai peur !"
+  - "<color=#dbc08e>Ne t\u2019en fait pas petite ! Je suis l\xE0 ! "
+  - "Je sens les m\xE9chantes ombres !"
+  - "<color=#dbc08e>Ecoute moi bien, cette biblioth\xE8que \xE0 l\u2019air d\u2019\xEAtre
+    une sorte de labyrinthe,"
+  - "<color=#dbc08e>on va essayer de se retrouver au milieu d\u2019accord ?"
+  - "Mais les m\xE9chantes ombres ! Elles vont nous attraper !"
+  - "<color=#dbc08e>De la o\xF9 je suis, ta lumi\xE8re me parvient, je ne risque
+    rien."
+  - "<color=#dbc08e>avance en m\xEAme temps, on y arrivera ! "
+  LesDialoguesEnAnglais: []
+  SpeedDialogues:
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
