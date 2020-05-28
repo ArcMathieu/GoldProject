@@ -200,10 +200,6 @@ public class GameManager : MonoBehaviour
             //code sur pilier
 
         }
-        else
-        {
-            tp[8].precedentlyOpened = false;
-        }
 
 
         if (storyManager.DoorToMother)

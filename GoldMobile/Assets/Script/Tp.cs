@@ -15,6 +15,7 @@ public class Tp : MonoBehaviour
     public DisplayText tdialogue;
     public DialogueData dialPlayer;
     public StoryGame storyManager;
+    public bool Stairs;
 
     private void Start()
     {
@@ -27,7 +28,10 @@ public class Tp : MonoBehaviour
             if (precedentlyOpened){
                 if (canPass)
                 {
-                    FindObjectOfType<SoundManager>().PlaySfx("Doors");
+                    if (!Stairs)
+                    {
+                        FindObjectOfType<SoundManager>().PlaySfx("Doors");
+                    }
                     collision.transform.position = new Vector2(tpTo.transform.position.x, tpTo.transform.position.y);
                     if (ghostFollowing)
                     {
