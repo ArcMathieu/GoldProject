@@ -19,9 +19,11 @@ public class Switch : MonoBehaviour
         StartCoroutine(changeColor());
         IEnumerator changeColor()
         {
-            GetComponent<Image>().color = Color.grey;
+            GetComponentsInChildren<Image>()[0].color = Color.grey;
+            GetComponentsInChildren<Image>()[1].color = Color.grey;
             yield return new WaitForSeconds(0.2f);
-            GetComponent<Image>().color = Color.white;
+            GetComponentsInChildren<Image>()[0].color = Color.white;
+            GetComponentsInChildren<Image>()[1].color = Color.white;
 
         }
 
@@ -54,14 +56,17 @@ public class Switch : MonoBehaviour
 
     public void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             StartCoroutine(changeColor());
             IEnumerator changeColor()
             {
-                GetComponent<Image>().color = Color.grey;
+                GetComponentsInChildren<Image>()[0].color = Color.grey;
+                GetComponentsInChildren<Image>()[1].color = Color.grey;
                 yield return new WaitForSeconds(0.2f);
-                GetComponent<Image>().color = Color.white;
+                GetComponentsInChildren<Image>()[0].color = Color.white;
+                GetComponentsInChildren<Image>()[1].color = Color.white;
 
             }
 
@@ -91,6 +96,18 @@ public class Switch : MonoBehaviour
                 }
             }
 
+        }
+
+        if (zone.AlreadyInZone)
+        {
+            Debug.Log("AlreadyInZone");
+            GetComponentsInChildren<Image>()[0].color = Color.grey;
+            GetComponentsInChildren<Image>()[1].color = Color.grey;
+        }
+        else
+        {
+            GetComponentsInChildren<Image>()[0].color = Color.white;
+            GetComponentsInChildren<Image>()[1].color = Color.white;
         }
     }
 }
