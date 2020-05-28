@@ -25,32 +25,5 @@ public class Invocation : MonoBehaviour
         }
     }
 
-    //private void Update()
-    //{
-    //    if (OnCircle && firstTime)
-    //    {
-    //        CanChange = true;
-    //    }
-    //    else CanChange = false;
-    //}
-
-    //public void setAction()
-    //{
-    //    if (CanChange)
-    //    {
-    //        storyManager.cinRituel = true;
-    //        GameManager._instance.openStep();
-    //        collier.isPickable = true;
-    //        //setAnimBougie true
-    //        firstTime = false;
-    //        //fait apparaitre le bouton de switch de perso
-    //    }
-        
-    //}
-    //private void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    OnCircle = false;
-    //}
-
 
 }
