@@ -18,17 +18,18 @@ MonoBehaviour:
     ?"
   - "C\u2019est le coffre \xE0 tr\xE9sors de Katia, elle me l\u2019a montr\xE9 une
     fois."
-  - "Elle m\u2019a dit qu\u2019il contenait son c\u0153ur, et que pour l\u2019ouvrir,
+  - "Elle m\u2019a dit qu\u2019il contenait son coeur, et que pour l\u2019ouvrir,
     il fallait \xEAtre un bon jardinier\u2026"
   - "Elle \xE9tait dr\xF4le Katia lorsqu\u2019elle parlait par \xE9nigmes !"
   - "<color=#dbc08e> Quelle po\xE8te cette Katia. C\u2019est une combinaison \xE0
-    3 lettres, essayons de trouver le code."
+    3 chiffres, essayons de trouver le code."
   - On ne va pas ouvrir son coffre secret ! Ca ne se fait pas !
   - "<color=#dbc08e>Si \xE7a peut te faire retrouver la m\xE9moire et me faire sortir
     d\u2019ici plus vite, je n\u2019ai aucun probl\xE8me avec \xE7a."
   - "...Tu n\u2019es pas tr\xE8s gentil."
   - "<color=#dbc08e>Je n\u2019ai jamais pr\xE9tendu le contraire. Allez, trouvons
     cette combinaison."
+  LesDialoguesEnAnglais: []
   SpeedDialogues:
   - 0.08
   - 0.08

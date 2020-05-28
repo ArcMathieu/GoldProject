@@ -17,7 +17,7 @@ MonoBehaviour:
     au tr\xE9sor toutes les deux. "
   - "C\u2019est mon jeu pr\xE9f\xE9r\xE9. C\u2019\xE9tait quoi toi ton jeu pr\xE9f\xE9r\xE9
     ?"
-  - "<color=#dbc08e>On jouait souvent \xE0 cache-cache avec mes petites s\u0153urs."
+  - "<color=#dbc08e>On jouait souvent \xE0 cache-cache avec mes petites soeurs."
   - "Oh j\u2019aime beaucoup jouer \xE0 cache-cache ! Tu y joues encore ?"
   - Je pourrais jouer avec vous ?
   - <color=#dbc08e>Ca ne sera pas possible.
@@ -29,6 +29,7 @@ MonoBehaviour:
   - '<color=#dbc08e>La ou je ne peux pas les rejoindre. '
   - "<color=#dbc08e>Continuons \xE0 avancer, il faut comprendre ce qu\u2019il t\u2019est
     arriv\xE9."
+  LesDialoguesEnAnglais: []
   SpeedDialogues:
   - 0.08
   - 0.08

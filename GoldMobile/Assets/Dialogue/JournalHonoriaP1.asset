@@ -15,13 +15,15 @@ MonoBehaviour:
   LesDialogues:
   - "Je le reconnais ce journal ! Je crois que c\u2019est le miens\u2026"
   - "Oui ! C\u2019est bien mon \xE9criture ! Pourquoi est-il ici ? "
-  - "J\u2019ai l\u2019impression que tu es tomb\xE9e avec\u2026 Des pages sont d\xE9chir\xE9es."
+  - "<color=#dbc08e>J\u2019ai l\u2019impression que tu es tomb\xE9e avec\u2026 Des
+    pages sont d\xE9chir\xE9es."
   - "Je crois que je me souviens\u2026 "
   - "M\xE8re voulait lire mon journal, mais c\u2019\xE9tait secret, alors j\u2019ai
     tent\xE9 de le r\xE9cup\xE9rer\u2026 "
   - "Et apr\xE8s\u2026 Et apr\xE8s\u2026 Je n\u2019arrive pas \xE0 me rappeler de
     ce qui s\u2019est pass\xE9 apr\xE8s ! "
-  - "Ne t\u2019inqui\xE8te pas, \xE7a va revenir."
+  - "<color=#dbc08e>Ne t\u2019inqui\xE8te pas, \xE7a va revenir."
+  LesDialoguesEnAnglais: []
   SpeedDialogues:
   - 0.08
   - 0.08

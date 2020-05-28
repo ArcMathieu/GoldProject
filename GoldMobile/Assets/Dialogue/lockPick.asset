@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: lockPick
   m_EditorClassIdentifier: 
   LesDialogues:
-  - "Tiens ? Est-ce que \xE7a serait avec \xE7a qu'elle aurait forc\xE9 le coffre
-    de sa fille ?"
-  - "Question intimit\xE9 on est loin du compte dans cette famille."
+  - "<color=#dbc08e>Tiens ? Est-ce que \xE7a serait avec \xE7a qu'elle aurait forc\xE9
+    le coffre de sa fille ?"
+  - "<color=#dbc08e>Question intimit\xE9 on est loin du compte dans cette famille."
+  LesDialoguesEnAnglais: []
   SpeedDialogues:
   - 0.09
   - 0.09

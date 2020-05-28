@@ -8,6 +8,7 @@ public class DisplayText : MonoBehaviour
     public TextMeshProUGUI tmpro;
     public GameObject TextBox;
     public DialogueData dial;
+    public GameObject joystick;
 
     public bool isEnglish;
 
@@ -184,6 +185,7 @@ public class DisplayText : MonoBehaviour
                 {
                     DoneDisplaying = true;
                     DoneTalking = true;
+                    joystick.SetActive(true);
                     WantsToSkip = false;
                     //vitesse player a mettre à 0
                     foreach (GameObject inter in Player.GetComponent<PlayerManager>().CurrentInteraction)

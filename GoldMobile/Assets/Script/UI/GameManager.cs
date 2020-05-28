@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public ObjectsInteractable CinAfterTuto;
     public ObjectsInteractable cinAfterCoffre;
     public ObjectsInteractable TrapBasement;
+    public ObjectsInteractable CineEnding;
     
 
     public Tp[] tp;
@@ -252,6 +253,7 @@ public class GameManager : MonoBehaviour
             if (storyManager.LivreRituel && storyManager.BolRituel && storyManager.dague)
             {
                 Debug.Log("vous avez les 3 objets du rituel");
+                CineEnding.isReadyForCinematic = true;
             }
 
         }
