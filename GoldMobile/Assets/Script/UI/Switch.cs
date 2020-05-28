@@ -13,6 +13,7 @@ public class Switch : MonoBehaviour
     public GameObject pictureSwitch;
     public GameObject ghostAppears;
     public Zone zone;
+    //public GameObject zoneDebug;
 
     public void DoAction()
     {
@@ -98,7 +99,7 @@ public class Switch : MonoBehaviour
 
         }
 
-        if (zone.AlreadyInZone)
+        if (!controlePlayer && zone.AlreadyInZone)
         {
             Debug.Log("AlreadyInZone");
             GetComponentsInChildren<Image>()[0].color = Color.grey;

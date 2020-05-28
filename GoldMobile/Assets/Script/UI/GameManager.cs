@@ -80,7 +80,6 @@ public class GameManager : MonoBehaviour
         if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[0].name)
         {
             //secateur
-            Debug.Log("sécateur");
             storyManager.Secateur = true;
         }
         if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[1].name)
