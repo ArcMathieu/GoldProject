@@ -6,6 +6,7 @@ public class RoomTriggerAction : MonoBehaviour
 {
     public GameObject switchButton;
     public StoryGame storyManager;
+    public bool secreteCaveTrappe;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && !storyManager.Tuto)
@@ -17,13 +18,10 @@ public class RoomTriggerAction : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            switchButton.SetActive(false);
-            //if (!GameManager._instance.controleP1)
-            //{
-            //    GameManager._instance.controleP1 = true;
-            //    GameManager._instance.ChangeState();
-            //    GameManager._instance.ChangeCamera(true);
-            //}
+            if (!secreteCaveTrappe)
+            {
+                switchButton.SetActive(false);
+            }
         }
     }
 }

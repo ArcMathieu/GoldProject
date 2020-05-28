@@ -79,7 +79,9 @@ MonoBehaviour:
   - "<color=#dbc08e>Que\u2026 Compter ? Est-ce que\u2026 ? Lily ? Alice ?"
   - "J\u2019ai beaucoup entendu parler de vous !"
   - Matthew vous aime beaucoup !
-  - "Je pourrais jouer avec vous la prochaine fois ! A bient\xF4t !"
+  - "<color=#dbc08e>Je pourrais jouer avec vous la prochaine fois ! A bient\xF4t
+    !"
+  LesDialoguesEnAnglais: []
   SpeedDialogues:
   - 0.05
   - 0.05
