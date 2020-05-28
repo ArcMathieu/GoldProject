@@ -147,6 +147,7 @@ public class PlayerManager : MonoBehaviour
 
     public void ChangeControl()
     {
+        FindObjectOfType<SoundManager>().PlaySfx("SwitchGhost");
         GameManager._instance.ChangeCamera(isP1);
         //Ghost.gameObject.SetActive(false);
         //gameManager.showGhost(true);

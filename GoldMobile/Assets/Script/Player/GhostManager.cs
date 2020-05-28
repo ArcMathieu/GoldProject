@@ -39,7 +39,7 @@ public class GhostManager : MonoBehaviour
         speed = GameManager._instance.playerSpeed;
         GhostState = State.WAIT;
         anim = gameObject.GetComponentsInChildren<Animator>()[1];
-       
+        FindObjectOfType<SoundManager>().PlaySfx("SpawnG");
         FindObjectOfType<Achievement>().UnlockTrueFalseExorcist();
     }
 
@@ -68,7 +68,7 @@ public class GhostManager : MonoBehaviour
         {
             //GhostEffectHUD.SetActive(true);
 
-            FindObjectOfType<SoundManager>().PlaySfx("SpawnG");
+            
 
             rb.MovePosition(transform.position + ((new Vector3(0, 1, 0) * joystick.Vertical * speed) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed )) * Time.deltaTime);
             if (joystick.Vertical != 0 || joystick.Horizontal != 0)
@@ -130,6 +130,12 @@ public class GhostManager : MonoBehaviour
             CurrentInteraction.Add(collision.gameObject);
             Debug.Log(collision.gameObject.name);
         }
+
+        if (collision.gameObject.CompareTag("creature"))
+        {
+            FindObjectOfType<Achievement>().UnlockCreature();
+        }
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -141,6 +147,7 @@ public class GhostManager : MonoBehaviour
 
     public void ChangeControl()
     {
+        FindObjectOfType<SoundManager>().PlaySfx("SwitchGhost");
         GameManager._instance.ChangeCamera(isP1);
         StartCoroutine(WaitToControl());
         IEnumerator WaitToControl()

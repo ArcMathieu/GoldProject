@@ -23,11 +23,11 @@ public class Tp : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
-        {
+        {           
             if (precedentlyOpened){
                 if (canPass)
                 {
-                    
+                    FindObjectOfType<SoundManager>().PlaySfx("Doors");
                     collision.transform.position = new Vector2(tpTo.transform.position.x, tpTo.transform.position.y);
                     if (ghostFollowing)
                     {
