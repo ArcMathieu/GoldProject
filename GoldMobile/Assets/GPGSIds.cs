@@ -24,6 +24,7 @@
 
 public static class GPGSIds
 {
+        public const string achievement_light_em_up = "CgkIuKrc7IwREAIQDQ"; // <GPGSID>
         public const string achievement_jill_would_be_proud = "CgkIuKrc7IwREAIQBQ"; // <GPGSID>
         public const string leaderboard_41 = "CgkIuKrc7IwREAIQAA"; // <GPGSID>
         public const string achievement_reconstructed_memory = "CgkIuKrc7IwREAIQCA"; // <GPGSID>

@@ -155,6 +155,9 @@ public class ObjectsInteractable : MonoBehaviour
 
     public bool isTrigger;
 
+
+
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && tdialogue.DoneTalking)
@@ -165,6 +168,7 @@ public class ObjectsInteractable : MonoBehaviour
                 tdialogue.isAutomatique = true;
                 PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
                 DP.Play(Cinematic);
+                Debug.Log("hiii");
                 tdialogue.DialPass(dialPlayer[0]);
                 notFirstTalkP = true;
                 if (isPickable)

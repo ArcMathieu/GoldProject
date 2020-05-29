@@ -24,7 +24,7 @@ public class Timeur : MonoBehaviour
         //compteur.text = timerString;
 
 
-        if (currentTime >= 1500)  // && rajouter une condition pour quand le jeu se termine
+        if (currentTime >= 1500 && FindObjectOfType<StoryGame>().cinENDING == true)  // && rajouter une condition pour quand le jeu se termine
         {
             FindObjectOfType<Achievement>().UnlockTripleParked();
 

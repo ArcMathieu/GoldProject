@@ -11,9 +11,39 @@ public class HonoriaZone : MonoBehaviour
     public Light2D honoriaLight;
     Color32 BaseColor = new Color32(131, 219, 255, 255);
     Color32 DetectionColor = new Color32(0, 170, 255, 255);
+
+    public List<GameObject> Ombres;
+
+    Color Invisible = new Color(255, 255, 255, 0);
     void Update()
     {
         transform.position = Honoria.transform.position;
+
+        if (Ombres.Count != 0)
+        {
+            foreach (GameObject Ombre in Ombres)
+            {
+                if (Ombre == null)
+                {
+                    Ombres.Remove(Ombre);
+                }
+                else
+                {
+                    if (!Ombre.GetComponent<OmbresBool>().CollidesWithHonoria)
+                    {
+                        Ombre.GetComponent<SpriteRenderer>().color = Color.Lerp(Ombre.gameObject.GetComponent<SpriteRenderer>().color, new Color(255, 255, 255, 1), 0.05f);
+                    }
+                    else
+                    {
+                        Ombre.gameObject.GetComponent<SpriteRenderer>().color = Color.Lerp(Ombre.gameObject.GetComponent<SpriteRenderer>().color, Invisible, 0.05f);
+                        if (Ombre.gameObject.GetComponent<SpriteRenderer>().color == Invisible)
+                        {
+                            Destroy(Ombre.gameObject);
+                        }
+                    }
+                }
+            }
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -31,7 +61,15 @@ public class HonoriaZone : MonoBehaviour
             collision.gameObject.transform.GetChild(0).gameObject.SetActive(false);
             GameManager._instance.openStep();
         }
+
+        if (collision.gameObject.CompareTag("Ombres"))
+        {
+            Ombres.Add(collision.gameObject);
+            collision.gameObject.GetComponent<OmbresBool>().CollidesWithHonoria = true;
+        }
     }
+
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Interactable"))
@@ -47,6 +85,10 @@ public class HonoriaZone : MonoBehaviour
             storyManager.DoorToSerre = false;
             collision.gameObject.transform.GetChild(0).gameObject.SetActive(true);
             GameManager._instance.openStep();
+        }
+        if (collision.gameObject.CompareTag("Ombres"))
+        {
+            collision.gameObject.GetComponent<OmbresBool>().CollidesWithHonoria = false;
         }
     }
 

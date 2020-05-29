@@ -68,6 +68,11 @@ public class Achievement : MonoBehaviour
     {
         Social.ReportProgress(GPGSIds.achievement_the_boys_are_back_in_town, 100f, null);
         Debug.Log("is ok creature");
+    }   
+    public void UnlockShadows()
+    {
+        Social.ReportProgress(GPGSIds.achievement_light_em_up, 100f, null);
+        Debug.Log("is ok LightEmUp");
     }
 
 }

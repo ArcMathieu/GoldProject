@@ -19,6 +19,7 @@ TagManager:
   - Armoire
   - Chara
   - Horse
+  - Ombres
   layers:
   - Default
   - TransparentFX

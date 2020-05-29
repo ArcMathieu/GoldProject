@@ -34,7 +34,10 @@ public class Switch : MonoBehaviour
             IEnumerator Waiting()
             {
                 yield return new WaitForSeconds(0.2f);
-                ghost.ChangeControl();
+                if (!zone.AlreadyInZone)
+                {
+                    ghost.ChangeControl();
+                }
                 gameManager.openStep();
                 controlePlayer = true;
                 pictureSwitch.SetActive(false);
@@ -46,7 +49,10 @@ public class Switch : MonoBehaviour
             IEnumerator Waiting()
             {
                 yield return new WaitForSeconds(0.2f);
-                player.ChangeControl();
+                if (!zone.AlreadyInZone)
+                {
+                    player.ChangeControl();
+                }
                 gameManager.openStep();
                 controlePlayer = false;
                 pictureSwitch.SetActive(true);
@@ -77,7 +83,10 @@ public class Switch : MonoBehaviour
                 IEnumerator Waiting()
                 {
                     yield return new WaitForSeconds(0.2f);
-                    ghost.ChangeControl();
+                    if (!zone.AlreadyInZone)
+                    {
+                        ghost.ChangeControl();
+                    }
                     gameManager.openStep();
                     controlePlayer = true;
                     pictureSwitch.SetActive(false);
@@ -90,7 +99,10 @@ public class Switch : MonoBehaviour
                 IEnumerator Waiting()
                 {
                     yield return new WaitForSeconds(0.2f);
-                    player.ChangeControl();
+                    if (!zone.AlreadyInZone)
+                    {
+                        player.ChangeControl();
+                    }
                     gameManager.openStep();
                     controlePlayer = false;
                     pictureSwitch.SetActive(true);
@@ -101,7 +113,6 @@ public class Switch : MonoBehaviour
 
         if (!controlePlayer && zone.AlreadyInZone)
         {
-            Debug.Log("AlreadyInZone");
             GetComponentsInChildren<Image>()[0].color = Color.grey;
             GetComponentsInChildren<Image>()[1].color = Color.grey;
         }

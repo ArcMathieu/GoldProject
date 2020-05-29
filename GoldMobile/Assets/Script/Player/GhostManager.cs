@@ -137,6 +137,7 @@ public class GhostManager : MonoBehaviour
         }
 
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Interactable"))
@@ -147,7 +148,7 @@ public class GhostManager : MonoBehaviour
 
     public void ChangeControl()
     {
-        FindObjectOfType<SoundManager>().PlaySfx("SwitchGhost");
+        FindObjectOfType<SoundManager>().PlaySfx("SpawnGhost");
         GameManager._instance.ChangeCamera(isP1);
         StartCoroutine(WaitToControl());
         IEnumerator WaitToControl()

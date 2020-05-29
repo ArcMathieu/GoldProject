@@ -255,7 +255,7 @@ public class GameManager : MonoBehaviour
 
         if (storyManager.cinENDING)
         {
-            FindObjectOfType<Achievement>().UnlockJillWouldBeProud();
+      //      FindObjectOfType<Achievement>().UnlockJillWouldBeProud();
             //end
         }
 

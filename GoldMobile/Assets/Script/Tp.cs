@@ -17,6 +17,7 @@ public class Tp : MonoBehaviour
     public StoryGame storyManager;
     public bool Stairs;
 
+    private bool once = true;
     private void Start()
     {
         tdialogue =GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DisplayText>();
@@ -35,6 +36,11 @@ public class Tp : MonoBehaviour
                     collision.transform.position = new Vector2(tpTo.transform.position.x, tpTo.transform.position.y);
                     if (ghostFollowing)
                     {
+                        if (secreteTrap && once)
+                        {
+                            once = false;
+                            FindObjectOfType<Achievement>().UnlockJillWouldBeProud();
+                        }
                         ghost.transform.position = new Vector3(collision.transform.position.x +0.5f, collision.transform.position.y + 0.5f, 0);
                     }
                     try

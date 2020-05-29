@@ -15,6 +15,7 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
         Play("Main_Theme");
+        Play("Cin_Theme");
     }
 
     void Awake()
@@ -38,6 +39,34 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        foreach (Sound x in musique)
+        {
+            x.source.volume = x.volume;
+        }
+
+        if (isCinematicPlaying)
+        {
+            StartCinMusic();
+        }
+        else
+        {
+            StopCinMusic();
+        }
+    }
+
+    public bool isCinematicPlaying;
+
+    public void killme()
+    {
+        isCinematicPlaying = false;
+    }
+
+    public void killmefirst()
+    {
+        isCinematicPlaying = true;
+    }
     public void Play(string name)
     {
         Sound x = Array.Find(musique, sound => sound.name == name);
@@ -58,6 +87,47 @@ public class SoundManager : MonoBehaviour
         if (y != null)
         {
             y.source.Play();
+        }
+    }
+
+    void StartCinMusic()
+    {
+        if (musique[0].volume >= 0f)
+        {
+            musique[0].volume -= 0.01f;
+        }  
+        if (musique[1].volume <= 0.8f)
+        {  
+           musique[1].volume += 0.01f;
+        }
+
+        if (musique[1].volume > 0.8f)
+        {
+            musique[1].volume = 0.8f;
+        }
+        if (musique[0].volume < 0f)
+        {
+            musique[0].volume = 0f;
+        }
+    }
+    void StopCinMusic()
+    {
+        if (musique[0].volume <= 0.8f)
+        {
+            musique[0].volume += 0.01f;
+        }
+        if (musique[1].volume >= 0f)
+        {
+            musique[1].volume -= 0.01f;
+        }
+
+        if(musique[0].volume > 0.8f)
+        {
+            musique[0].volume = 0.8f;
+        }
+        if (musique[1].volume < 0f)
+        {
+            musique[1].volume = 0f;
         }
     }
 

@@ -34,6 +34,7 @@ public class StoryGame : MonoBehaviour
     public bool Lockpick; //openTrappe
     public bool LivreRituel; //A colecter for ending
     public bool dague; //A colecter for ending
+    public bool SecretCave;
 
     //door
     public bool Tuto;
