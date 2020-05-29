@@ -33,30 +33,28 @@ public class Switch : MonoBehaviour
             StartCoroutine(Waiting());
             IEnumerator Waiting()
             {
+                FindObjectOfType<SoundManager>().PlaySfx("SpawnGhost");
                 yield return new WaitForSeconds(0.2f);
-                if (!zone.AlreadyInZone)
-                {
-                    ghost.ChangeControl();
-                }
+                ghost.ChangeControl();
                 gameManager.openStep();
                 controlePlayer = true;
                 pictureSwitch.SetActive(false);
             }
-            
-        } else
+
+        }
+        else if (controlePlayer)
         {
             StartCoroutine(Waiting());
             IEnumerator Waiting()
             {
+                FindObjectOfType<SoundManager>().PlaySfx("SpawnGhost");
                 yield return new WaitForSeconds(0.2f);
-                if (!zone.AlreadyInZone)
-                {
-                    player.ChangeControl();
-                }
+                player.ChangeControl();
                 gameManager.openStep();
                 controlePlayer = false;
                 pictureSwitch.SetActive(true);
             }
+            
         }
 
     }
@@ -82,27 +80,24 @@ public class Switch : MonoBehaviour
                 StartCoroutine(Waiting());
                 IEnumerator Waiting()
                 {
+
+                    FindObjectOfType<SoundManager>().PlaySfx("SpawnGhost");
                     yield return new WaitForSeconds(0.2f);
-                    if (!zone.AlreadyInZone)
-                    {
-                        ghost.ChangeControl();
-                    }
+                    ghost.ChangeControl();
                     gameManager.openStep();
                     controlePlayer = true;
                     pictureSwitch.SetActive(false);
                 }
 
             }
-            else
+            else if(controlePlayer)
             {
                 StartCoroutine(Waiting());
                 IEnumerator Waiting()
                 {
                     yield return new WaitForSeconds(0.2f);
-                    if (!zone.AlreadyInZone)
-                    {
-                        player.ChangeControl();
-                    }
+                    FindObjectOfType<SoundManager>().PlaySfx("SpawnGhost");
+                    player.ChangeControl();
                     gameManager.openStep();
                     controlePlayer = false;
                     pictureSwitch.SetActive(true);

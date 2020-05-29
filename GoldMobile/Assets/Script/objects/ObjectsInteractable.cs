@@ -15,7 +15,6 @@ public class ObjectsInteractable : MonoBehaviour
     private bool notFirstTalkG = false;
     //private bool endQuest = false;
     public bool isPickable = false;
-    public bool isDiscoveredByHonoria = false;
 
     //public GhostManager ghost;
     public DialogueData[] dialPlayer;
@@ -35,6 +34,14 @@ public class ObjectsInteractable : MonoBehaviour
         tdialogue = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DisplayText>();
         DoorSytem = GetComponent<CheckForKeys>();
         LockSytem = GetComponent<ActivateLock>();
+        isLastCin = false;
+    }
+
+    public bool isLastCin;
+
+    public void setBoolActive()
+    {
+        isLastCin = true;
     }
 
     public void setAction()
@@ -107,18 +114,6 @@ public class ObjectsInteractable : MonoBehaviour
                     //tdialogue.DialPass(dialPlayer[0]);
 
                 }
-
-                //if (isDiscoveredByHonoria)
-                //{
-                //    //action si Honoria à vu un obj
-                //}
-                //if (!endQuest)
-                //{
-
-                //    zone.questStart = false;
-                //    zone.questEnd = true;
-                //    ghost.GhostState = GhostManager.State.CONTROLLED;
-                //}
 
 
             }

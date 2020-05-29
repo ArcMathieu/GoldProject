@@ -9,6 +9,7 @@ public class DisplayText : MonoBehaviour
     public GameObject TextBox;
     public DialogueData dial;
     public GameObject joystick;
+    public ObjectsInteractable lastScene;
 
     public bool isEnglish;
 
@@ -187,8 +188,12 @@ public class DisplayText : MonoBehaviour
                 if (dialState >= dial.LesDialogues.Count - 1)
                 {
                     DoneDisplaying = true;
-
                     DoneTalking = true;
+                    if (lastScene.isLastCin)
+                    {
+                        Debug.Log("lastScene");
+                        FindObjectOfType<LoaderScene>().LoadingScene(2);
+                    }                
                     joystick.SetActive(true);
                     WantsToSkip = false;
                     //vitesse player a mettre à 0

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -229,6 +229,79 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &3129684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3129685}
+  - component: {fileID: 3129687}
+  - component: {fileID: 3129686}
+  m_Layer: 5
+  m_Name: CinematicFin3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &3129685
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3129684}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 13.189176, y: 7.1940956, z: 7.231908}
+  m_Children: []
+  m_Father: {fileID: 2050768622}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 98, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3129686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3129684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4ecec12ab263d794186ab4b937fe83d1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &3129687
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3129684}
+  m_CullTransparentMesh: 0
 --- !u!1 &3843071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,7 +1293,7 @@ Transform:
   - {fileID: 647980828}
   - {fileID: 2065251364}
   m_Father: {fileID: 1783281983}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &43293644
 GameObject:
@@ -1643,7 +1716,7 @@ RectTransform:
   m_LocalScale: {x: 13.189176, y: 7.1940956, z: 7.2319083}
   m_Children: []
   m_Father: {fileID: 2050768622}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2259,7 +2332,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 71c15e2cd8ad8c546ac1826b2f0dce0b, type: 2}
   dialGhost: []
@@ -2268,6 +2340,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 1
   isTrigger: 1
 --- !u!61 &65438860
@@ -4410,7 +4483,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 1
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: b2da7e97dbf87604aa2e41f6a4d5d20d, type: 2}
   dialGhost: []
@@ -4419,6 +4491,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!61 &118693188
@@ -5476,7 +5549,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 1
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: fb54e2bfda3729944918c3f00a2fc7bc, type: 2}
   dialGhost: []
@@ -5485,6 +5557,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!212 &137888957
@@ -6628,7 +6701,7 @@ PlayableDirector:
   m_GameObject: {fileID: 193466130}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: d16314a5e118a8045a2def2a8a314508, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -6784,12 +6857,12 @@ PlayableDirector:
     value: {fileID: 1816807893}
   - key: {fileID: 4720538623440137550, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
     value: {fileID: 0}
-  - key: {fileID: 2498562469938322822, guid: d16314a5e118a8045a2def2a8a314508, type: 2}
-    value: {fileID: 668826041}
-  - key: {fileID: 1388848053741853713, guid: d16314a5e118a8045a2def2a8a314508, type: 2}
-    value: {fileID: 320916828}
   - key: {fileID: -7013165745901986147, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
     value: {fileID: 320916828}
+  - key: {fileID: 7154083718580702452, guid: d16314a5e118a8045a2def2a8a314508, type: 2}
+    value: {fileID: 3129684}
+  - key: {fileID: 2687321046760954229, guid: d16314a5e118a8045a2def2a8a314508, type: 2}
+    value: {fileID: 1194683900}
   m_ExposedReferences:
     m_References:
     - f1167542eb772c44cb2629db1bfaeac8: {fileID: 271813776}
@@ -7745,7 +7818,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 1928c5e32f5df584b88a9f4c9478bb1e, type: 2}
   dialGhost: []
@@ -7754,6 +7826,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!114 &221044981
@@ -9086,6 +9159,21 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 3940271052808467878, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
       propertyPath: m_Name
@@ -9737,6 +9825,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 3940271052808467878, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
@@ -10406,10 +10509,10 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 2.95, y: 5.5}
-      - {x: -5.2941666, y: 5.5480614}
-      - {x: -5.2941666, y: -1.9123192}
-      - {x: -1.0358467, y: -1.8402252}
-      - {x: 2.9230957, y: -1.8642559}
+      - {x: -5.2941666, y: 5.5}
+      - {x: -5.2941666, y: -1.864256}
+      - {x: 0, y: -1.864256}
+      - {x: 2.95, y: -1.8642559}
 --- !u!114 &305098503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10687,7 +10790,7 @@ RectTransform:
   - {fileID: 1468391622}
   - {fileID: 2095209393}
   m_Father: {fileID: 2050768622}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -11033,7 +11136,7 @@ MonoBehaviour:
     volume: 1
     loop: 0
     source: {fileID: 0}
-  isCinematicPlaying: 0
+  isCinematicPlaying: 1
 --- !u!95 &320916828
 Animator:
   serializedVersion: 3
@@ -11722,7 +11825,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: c4d21fc1f155f844998d385ed9b2f6e1, type: 2}
   dialGhost: []
@@ -11731,6 +11833,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 1
 --- !u!61 &352889381
@@ -11811,7 +11914,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 1
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 252dfc8c483c4d14ead9eb46184f15fa, type: 2}
   dialGhost:
@@ -11822,6 +11924,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!61 &354372200
@@ -12417,7 +12520,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 6a32af8fddb50744cade161b61ac56bc, type: 2}
   dialGhost:
@@ -12427,6 +12529,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!95 &368253623
@@ -15036,6 +15139,21 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 3940271052808467878, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
       propertyPath: m_Name
@@ -15588,6 +15706,114 @@ Transform:
   m_Father: {fileID: 1270491991}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &481368266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 481368267}
+  - component: {fileID: 481368269}
+  - component: {fileID: 481368268}
+  m_Layer: 13
+  m_Name: bougie (12)
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &481368267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481368266}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.07, y: -0.44, z: 3.3882139}
+  m_LocalScale: {x: 1.165648, y: 2.082321, z: 2.082321}
+  m_Children: []
+  m_Father: {fileID: 1783281983}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &481368268
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481368266}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.011140538, y: -0.07189694}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.15, y: 0.27}
+    newSize: {x: 0.15, y: 0.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.088610336, y: 0.14278412}
+  m_EdgeRadius: 0
+--- !u!212 &481368269
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481368266}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 1e0f995f520ae8e4aa6968b09d19d8a4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.15, y: 0.22}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &482576403
 GameObject:
   m_ObjectHideFlags: 0
@@ -16375,7 +16601,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 1
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 9b2619b686d73c04caf58d1bdaece104, type: 2}
   dialGhost:
@@ -16385,6 +16610,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!61 &511889549
@@ -18550,7 +18776,7 @@ RectTransform:
   m_LocalScale: {x: 13.189176, y: 7.1940956, z: 7.2319083}
   m_Children: []
   m_Father: {fileID: 2050768622}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -19235,7 +19461,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623900363}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -78.7, y: 8.58, z: 0}
+  m_LocalPosition: {x: -84.57, y: 5.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1377515208}
@@ -19268,8 +19494,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 1.16
-  m_PointLightOuterRadius: 9.75
+  m_PointLightInnerRadius: 1.21
+  m_PointLightOuterRadius: 6.42
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -20454,6 +20680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60bd3833f2024f34c80e666db866d80f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainScene: 0
 --- !u!95 &668826041
 Animator:
   serializedVersion: 3
@@ -20700,7 +20927,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 6a32af8fddb50744cade161b61ac56bc, type: 2}
   dialGhost:
@@ -20710,6 +20936,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!95 &677662771
@@ -21548,7 +21775,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2050768622}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.541154, y: 0.5}
   m_AnchorMax: {x: 0.541154, y: 0.5}
@@ -22005,7 +22232,7 @@ GameObject:
   - component: {fileID: 714882512}
   - component: {fileID: 714882513}
   m_Layer: 16
-  m_Name: GameObject
+  m_Name: GhostShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22924,10 +23151,10 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 2.95, y: 5.5}
-      - {x: -5.2941666, y: 5.5480614}
-      - {x: -5.2941666, y: -1.9123192}
-      - {x: -1.0358467, y: -1.8402252}
-      - {x: 2.9230957, y: -1.8642559}
+      - {x: -5.2941666, y: 5.5}
+      - {x: -5.2941666, y: -1.864256}
+      - {x: 0, y: -1.864256}
+      - {x: 2.95, y: -1.8642559}
 --- !u!114 &738655783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23869,7 +24096,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 3bf93b05fdf64b84d864f27753db9d29, type: 2}
   dialGhost: []
@@ -23878,6 +24104,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!61 &765256402
@@ -24870,7 +25097,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 3a0acc00226c9d044a2edb5c2db86932, type: 2}
   dialGhost: []
@@ -24879,6 +25105,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 1
   isTrigger: 1
 --- !u!61 &800547907
@@ -25014,6 +25241,7 @@ PolygonCollider2D:
     - - {x: 6, y: 14.5}
       - {x: -6, y: 14.5}
       - {x: -6, y: -5.6}
+      - {x: 0, y: -5.6}
       - {x: 6, y: -5.6}
 --- !u!114 &805239257
 MonoBehaviour:
@@ -25218,7 +25446,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: c876db4ea78e8c04c8961ebca556654b, type: 2}
   dialGhost: []
@@ -25227,6 +25454,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 1
   isTrigger: 0
 --- !u!61 &806102345
@@ -25763,7 +25991,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 85fdfb3fdbb247f42a261ec17aa8ce9c, type: 2}
   dialGhost: []
@@ -25772,6 +25999,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 1
 --- !u!61 &823764236
@@ -26293,7 +26521,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: a9004e9d02085624e9d1fec3a0b03594, type: 2}
   dialGhost: []
@@ -26302,6 +26529,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 1
   isTrigger: 1
 --- !u!1 &855266556
@@ -26389,7 +26617,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 0b40cceb12fdb52419c8d8c6685021c4, type: 2}
   dialGhost: []
@@ -26398,6 +26625,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 1
   isTrigger: 1
 --- !u!61 &856247989
@@ -26485,7 +26713,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 6a32af8fddb50744cade161b61ac56bc, type: 2}
   dialGhost:
@@ -26495,6 +26722,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!95 &866587254
@@ -29811,7 +30039,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 6a32af8fddb50744cade161b61ac56bc, type: 2}
   dialGhost:
@@ -29821,6 +30048,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!95 &993978484
@@ -30348,7 +30576,7 @@ GameObject:
   - component: {fileID: 1017614906}
   - component: {fileID: 1017614908}
   - component: {fileID: 1017614907}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TpToBibli
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31450,7 +31678,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 4a5dce5626d40b342ad6fa45cec800cc, type: 2}
   dialGhost: []
@@ -31459,6 +31686,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 1
   isTrigger: 1
 --- !u!61 &1056373874
@@ -31969,7 +32197,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 87841f7c8f58a3d459b3f6cd78aeaf13, type: 2}
   dialGhost: []
@@ -31978,6 +32205,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 1
   isTrigger: 0
 --- !u!212 &1069995449
@@ -33388,11 +33616,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 16.290195, y: -21.902122}
-      - {x: 16.23518, y: 3.8179016}
+    - - {x: 16.23518, y: -21.74253}
+      - {x: 16.23518, y: 3.811729}
       - {x: -2.1867895, y: 3.8117294}
-      - {x: -2.1678257, y: -21.742535}
-      - {x: 7.1402597, y: -21.602135}
+      - {x: -2.18679, y: -21.742535}
+      - {x: 7.8, y: -21.75}
 --- !u!114 &1128777747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33635,7 +33863,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 1
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: a6414ada50be09f4896eb2381627f241, type: 2}
   dialGhost: []
@@ -33644,6 +33871,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!212 &1141299218
@@ -34107,7 +34335,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 6a32af8fddb50744cade161b61ac56bc, type: 2}
   dialGhost:
@@ -34117,6 +34344,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!1 &1155009596
@@ -34879,7 +35107,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: fa989e1298e65de4d8ba9c37c9450f68, type: 2}
   dialGhost: []
@@ -34888,6 +35115,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 1
   isTrigger: 1
 --- !u!212 &1172474756
@@ -35826,6 +36054,7 @@ GameObject:
   - component: {fileID: 1194683897}
   - component: {fileID: 1194683896}
   - component: {fileID: 1194683899}
+  - component: {fileID: 1194683900}
   m_Layer: 0
   m_Name: Invocation bougie (1)
   m_TagString: Interactable
@@ -35840,7 +36069,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194683894}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.49, y: -3.89, z: 3.3882139}
   m_LocalScale: {x: 1.1656479, y: 2.082321, z: 1.7080743}
   m_Children: []
@@ -35952,7 +36181,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 4adde50311c36f54b94b63dc87a9685a, type: 2}
   dialGhost: []
@@ -35961,8 +36189,28 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
+--- !u!95 &1194683900
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194683894}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1196242542
 GameObject:
   m_ObjectHideFlags: 0
@@ -37548,7 +37796,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: b05555b81c9b84543ab270c942c3131b, type: 2}
   dialGhost: []
@@ -37557,6 +37804,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 1
   isTrigger: 1
 --- !u!61 &1269285671
@@ -37842,12 +38090,12 @@ PrefabInstance:
     - target: {fileID: 1515844765605983313, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.199997
+      value: 16.62
       objectReference: {fileID: 0}
     - target: {fileID: 1515844765605983313, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 31.866674
+      value: 50.142
       objectReference: {fileID: 0}
     - target: {fileID: 1515844765605983313, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
@@ -37908,6 +38156,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 3940271052808467878, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
@@ -39827,7 +40090,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer: []
   dialGhost:
   - {fileID: 11400000, guid: 8a42c07a85b5572408bc949ca62c5fc0, type: 2}
@@ -39836,6 +40098,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!212 &1343226495
@@ -40762,6 +41025,21 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 3940271052808467878, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
       propertyPath: m_Name
@@ -41587,7 +41865,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 1
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 03d011c28dac73f4c9c11694ee190d9a, type: 2}
   dialGhost: []
@@ -41596,6 +41873,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!61 &1419670144
@@ -41764,7 +42042,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 6a32af8fddb50744cade161b61ac56bc, type: 2}
   dialGhost:
@@ -41774,6 +42051,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!95 &1423155400
@@ -42670,12 +42948,12 @@ PrefabInstance:
     - target: {fileID: 1515844765605983313, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.681997
+      value: 13.423
       objectReference: {fileID: 0}
     - target: {fileID: 1515844765605983313, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 50.166668
+      value: 24.849
       objectReference: {fileID: 0}
     - target: {fileID: 1515844765605983313, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
@@ -42736,6 +43014,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 3940271052808467878, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
@@ -44100,7 +44393,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: fedae9b587862594986930e6788539e7, type: 2}
   dialGhost: []
@@ -44109,6 +44401,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 1
   isTrigger: 1
 --- !u!1 &1510076355
@@ -44750,7 +45043,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 400648aba172dd6449a42a03d5e14ba5, type: 2}
   dialGhost: []
@@ -44759,6 +45051,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 1
   isTrigger: 1
 --- !u!1 &1535470505
@@ -45728,7 +46021,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 1
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: a657efafc8f1737439165a0249cd1e78, type: 2}
   dialGhost:
@@ -45738,6 +46030,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!61 &1594322281
@@ -46896,6 +47189,21 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 3940271052808467878, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
       propertyPath: m_Name
@@ -47973,7 +48281,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 1
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: b0aa648210a3d364faad3a73796b001e, type: 2}
   dialGhost: []
@@ -47982,6 +48289,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!61 &1652345609
@@ -49022,7 +49330,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: daf880359d6b7c547a643b8ae405393e, type: 2}
   dialGhost: []
@@ -49031,6 +49338,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!1 &1725628892
@@ -50420,6 +50728,7 @@ Transform:
   - {fileID: 174006905}
   - {fileID: 2119231563}
   - {fileID: 1016812855}
+  - {fileID: 481368267}
   - {fileID: 39960203}
   m_Father: {fileID: 738987175}
   m_RootOrder: 2
@@ -50584,7 +50893,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 89d155582aec28e4e918a6f67d4e1a3f, type: 2}
   dialGhost: []
@@ -50593,6 +50901,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 1
   isTrigger: 1
 --- !u!61 &1790303973
@@ -50754,7 +51063,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 1
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: a55e3f92e081d1f449cded579d2f1886, type: 2}
   dialGhost: []
@@ -50763,6 +51071,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 1
   isTrigger: 0
 --- !u!212 &1793341853
@@ -50872,7 +51181,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: c026b3a76060451499c263eb479c24f5, type: 2}
   dialGhost: []
@@ -50881,6 +51189,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!61 &1796490195
@@ -51449,6 +51758,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 3940271052808467878, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
@@ -52176,7 +52500,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 005c9512e37f9c848a177ce4aa9dd6c0, type: 2}
   dialGhost: []
@@ -52185,6 +52508,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 1
   isTrigger: 0
 --- !u!1 &1829114191
@@ -52331,6 +52655,7 @@ MonoBehaviour:
   TextBox: {fileID: 707294567}
   dial: {fileID: 0}
   joystick: {fileID: 1361921001}
+  lastScene: {fileID: 1194683899}
   isEnglish: 0
   isAutomatique: 0
   DoneDisplaying: 1
@@ -53802,7 +54127,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: 38bb8db7c4bc5d04287827dd0d2c95f7, type: 2}
   dialGhost: []
@@ -53811,6 +54135,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 1
   isTrigger: 1
 --- !u!1 &1864537735
@@ -54169,7 +54494,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 1
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: e555fc07772fde243a6339cd5421e974, type: 2}
   dialGhost:
@@ -54179,6 +54503,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!61 &1872668618
@@ -54884,12 +55209,12 @@ PrefabInstance:
     - target: {fileID: 1515844765605983313, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.059998
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 1515844765605983313, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.1333313
+      value: -1.06
       objectReference: {fileID: 0}
     - target: {fileID: 1515844765605983313, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
@@ -54950,6 +55275,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 3940271052808467878, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
@@ -55073,11 +55413,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.55, y: 5.5}
+    - - {x: 7.2, y: 5.5}
       - {x: -6.8, y: 5.5}
       - {x: -6.8, y: -5.1}
-      - {x: 7.5, y: -5.1}
-      - {x: 7.5, y: 5.5}
+      - {x: 7.2, y: -5.1}
 --- !u!114 &1892327017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58375,7 +58714,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 0
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: e49df2552c925e144b92e3abfcffe463, type: 2}
   dialGhost: []
@@ -58384,6 +58722,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!114 &1984236139
@@ -59341,9 +59680,10 @@ RectTransform:
   - {fileID: 646578588}
   - {fileID: 1440400488}
   - {fileID: 1968835519}
-  - {fileID: 591537800}
-  - {fileID: 170160619}
   - {fileID: 48669943}
+  - {fileID: 170160619}
+  - {fileID: 591537800}
+  - {fileID: 3129685}
   - {fileID: 707294570}
   - {fileID: 309041983}
   m_Father: {fileID: 0}
@@ -60383,7 +60723,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085811769}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -69.24, y: 8.58, z: 0}
+  m_LocalPosition: {x: -72.3, y: 8.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1377515208}
@@ -60416,8 +60756,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 1.16
-  m_PointLightOuterRadius: 9.75
+  m_PointLightInnerRadius: 1.21
+  m_PointLightOuterRadius: 6.42
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -60688,7 +61028,7 @@ GameObject:
   - component: {fileID: 2101068535}
   - component: {fileID: 2101068534}
   - component: {fileID: 2101068538}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TpToSerre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61109,7 +61449,6 @@ MonoBehaviour:
   isPIn: 0
   notFirstTalkP: 0
   isPickable: 1
-  isDiscoveredByHonoria: 0
   dialPlayer:
   - {fileID: 11400000, guid: bdc951607a4d03640aad15f57e17830f, type: 2}
   dialGhost: []
@@ -61118,6 +61457,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
+  isLastCin: 0
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!61 &2115931096
@@ -62148,6 +62488,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200899655964835128, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 3940271052808467878, guid: 23a9ab44ec252ab4fa37ac4fa1ab7a46,
         type: 3}
