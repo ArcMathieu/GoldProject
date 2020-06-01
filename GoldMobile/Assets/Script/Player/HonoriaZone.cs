@@ -33,6 +33,10 @@ public class HonoriaZone : MonoBehaviour
                     if (!Ombre.GetComponent<OmbresBool>().CollidesWithHonoria)
                     {
                         Ombre.GetComponent<SpriteRenderer>().color = Color.Lerp(Ombre.gameObject.GetComponent<SpriteRenderer>().color, new Color(255, 255, 255, 1), 0.05f);
+                        if (Ombre.gameObject.GetComponent<SpriteRenderer>().color == Invisible)
+                        {
+                            Destroy(Ombre.gameObject);
+                        }
                     }
                     else
                     {
