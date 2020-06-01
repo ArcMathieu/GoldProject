@@ -26,7 +26,8 @@ MonoBehaviour:
   - "Il y a des choses m\xE9chantes dans le noir ! Et puis on y voit rien ...Pourquoi
     tu ris ?"
   - "<color=#dbc08e>Pour rien\u2026 Allons-y petit fant\xF4me."
-  LesDialoguesEnAnglais: []
+  LesDialoguesEnAnglais:
+  - 
   SpeedDialogues:
   - 0.05
   - 0.05

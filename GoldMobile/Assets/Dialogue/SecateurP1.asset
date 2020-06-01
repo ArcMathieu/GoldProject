@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: SecateurP1
   m_EditorClassIdentifier: 
   LesDialogues:
-  - "Un s\xE9cateur."
-  - Dans la poche, ni vu, ni connu.
+  - "<color=#dbc08e>Un s\xE9cateur."
+  - <color=#dbc08e>Dans la poche, ni vu, ni connu.
+  LesDialoguesEnAnglais:
+  - '<color=#dbc08e> A pruner. '
+  - '<color=#dbc08e>Right in the pocket, nobody will know... '
   SpeedDialogues:
-  - 0.08
-  - 0.08
+  - 0.05
+  - 0.05

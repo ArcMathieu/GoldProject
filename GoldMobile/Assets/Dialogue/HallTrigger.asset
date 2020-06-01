@@ -18,8 +18,10 @@ MonoBehaviour:
   - "<color=#dbc08e>Allons jeter un oeil dans sa chambre, plus vite j\u2019aurais
     fini ce cirque, plus vite je rentrerai."
   LesDialoguesEnAnglais:
-  - <color=#dbc08e>According to the parents, they would be hanted by their dead daughter...
-  - <color=#dbc08e>Let's check out her room, let's get it over wtih asap
+  - <color=#dbc08e>According to the couple, it is be the spirit of their deceased
+    daughter who is haunting them.
+  - '<color=#dbc08e>Let''s take a look in her room, the sooner I finish this circus,
+    the faster I will go home. '
   SpeedDialogues:
   - 0.08
   - 0.08

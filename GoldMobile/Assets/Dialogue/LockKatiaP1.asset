@@ -29,7 +29,20 @@ MonoBehaviour:
   - "...Tu n\u2019es pas tr\xE8s gentil."
   - "<color=#dbc08e>Je n\u2019ai jamais pr\xE9tendu le contraire. Allez, trouvons
     cette combinaison."
-  LesDialoguesEnAnglais: []
+  LesDialoguesEnAnglais:
+  - Look Matthew! There's something under the carpet!
+  - '<color=#dbc08e> A chest. It''s closed, you know what''s in there? '
+  - 'This is Katia''s treasure chest, she showed it to me once. '
+  - 'She told me that it contained her heart, and that in order to open it, you had
+    to be a good gardener ... '
+  - 'She was funny when she spoke in riddles! '
+  - '<color=#dbc08e>What a poet Katia was. It''s a 3 letter combination, let''s try
+    to find out the code. '
+  - We're not going to open her secret chest! One does not do that!
+  - '<color=#dbc08e>If it can get your memory back and get me out of here faster,
+    I have no problem with that. '
+  - '... You are not very nice. '
+  - '<color=#dbc08e>I never claimed otherwise. Come on, let''s find this combination. '
   SpeedDialogues:
   - 0.08
   - 0.08

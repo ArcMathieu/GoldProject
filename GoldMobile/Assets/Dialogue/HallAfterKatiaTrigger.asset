@@ -17,6 +17,11 @@ MonoBehaviour:
   - <color=#dbc08e>Lily et Alice.
   - 'Elles sont avec tes parents ? '
   - "<color=#dbc08e>J\u2019esp\xE8re\u2026"
+  LesDialoguesEnAnglais:
+  - What are your sisters' names?
+  - <color=#dbc08e>Lily and Alice.
+  - Are they with your parents?
+  - <color=#dbc08e>I hope so ...
   SpeedDialogues:
   - 0.08
   - 0.08

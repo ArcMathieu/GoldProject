@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: RoncesP1
   m_EditorClassIdentifier: 
   LesDialogues:
-  - "Eh bien ce s\xE9cateur va me servir, finalement."
+  - "<color=#dbc08e>Eh bien ce s\xE9cateur va me servir, finalement."
+  LesDialoguesEnAnglais:
+  - '<color=#dbc08e>Well, this pruner is going to be useful, after all. '
   SpeedDialogues:
-  - 0.09
+  - 0.08

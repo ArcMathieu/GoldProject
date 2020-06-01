@@ -56,7 +56,7 @@ MonoBehaviour:
   - "<color=#dbc08e> Je ne suis m\xEAme pas un vrai exorciste !"
   - "Je ne sais pas\u2026 Mais je sais que je ne devrais pas \xEAtre l\xE0,"
   - 
-  - "je crois qu\u2019on m\u2019attend ailleurs, mais je ne peux pas y aller, on
+  - "Je crois qu\u2019on m\u2019attend ailleurs, mais je ne peux pas y aller, on
     ne me laisse pas passer !"
   - "<color=#dbc08e>Je n\u2019en reviens pas de ce que je vais dire, mais je vais
     t\u2019aider."
@@ -76,7 +76,57 @@ MonoBehaviour:
   - "D'accord mais \xE0 une condition, pourrais-tu me retrouver le collier de Katia
     ? "
   - C'est le seul souvenir qu'il me reste d'elle...
-  LesDialoguesEnAnglais: []
+  LesDialoguesEnAnglais:
+  - '<color=#dbc08e>A candle will do the trick. Let the show begin. '
+  - <color=#dbc08e>In nomine Patris, and Filii, and Spiritus Sancti.
+  - <color=#dbc08e> Amen.
+  - "<color=#dbc08e>Nostras deprecati\xF3nes ne desp\xEDcias in necessit\xE1tibus "
+  - "<color=#dbc08e>sed a per\xEDculis cunctis l\xEDbera nos semper."
+  - 
+  - <color=#dbc08e>But ... what's going on?
+  - Where am I? Who are you?
+  - '<color=#dbc08e>Stay away from me! Where do you come from? '
+  - <color=#dbc08e>Let me go !
+  - I was lost in the dark,
+  - but your voice led me to the exit.
+  - Where are mother and father? Where's Katia?
+  - What are you doing in my room?
+  - "<color=#dbc08e> What even are you? A ghost? Impossible, it doesn\u2019t exist!"
+  - <color=#dbc08e>This couple is a trap! They wanted to unmask me!
+  - <color=#dbc08e> I have to get out of here before the police arrives!
+  - ' No! Sir! You have to help me! The evil shadows, they will come and get me! '
+  - <color=#dbc08e>What are the evil shadows?
+  - <color=#dbc08e> Why do I even answer to you, you are only an illusion created
+    to trick me!
+  - <color=#dbc08e>How did they do this? Mirrors? Light?
+  - ' I am real! My name is Honoria, I live here! It is my bedroom ! '
+  - <color=#dbc08e>What... What is this?! Aah!
+  - 'The evil shadows! Leave him alone! '
+  - <color=#dbc08e>But what's going on here? What was that...
+  - '<color=#dbc08e>Ghosts don''t exist, and yet... I did feel something trying to
+    catch me... '
+  - You have to help me, if the nasty shadows catch me, they'll bring me back into
+    the dark!
+  - <color=#dbc08e>Let's say you are a ghost, how do you want me to help you?
+  - '<color=#dbc08e>I''m not even a real exorcist! '
+  - I don't know ... But I do know that I shouldn't be here,
+  - 
+  - 'I think I''m expected elsewhere, but I can''t go, they won''t let me pass! '
+  - "<color=#dbc08e>Fine, I can't believe I\u2019m going to say it, but I\u2019ll
+    help you. "
+  - <color=#dbc08e>It's not like I have a choice anyways.
+  - '<color=#dbc08e>Let''s start from the beginning. Do you remember the way you
+    died? '
+  - " \u2026No, I just remember the dark. I stayed there for a long time. "
+  - '<color=#dbc08e>- Do you have any idea where this Katia can be? Maybe she knows
+    something? '
+  - No, she should be there.
+  - '<color=#dbc08e> We are off to a good start... Here I am stuck with the ghost
+    of an amnesic kid ... '
+  - <color=#dbc08e>Let's take a tour of the house, memories will certainly surface.
+  - '<color=#dbc08e>Well, if you don''t mind letting me out. '
+  - 'Okay, but on one condition : could you find Katia''s necklace for me?'
+  - It's the only memory I have of her...
   SpeedDialogues:
   - 0.05
   - 0.05

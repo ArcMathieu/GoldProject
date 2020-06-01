@@ -16,7 +16,10 @@ MonoBehaviour:
   - "<color=#dbc08e>Tiens ? Est-ce que \xE7a serait avec \xE7a qu'elle aurait forc\xE9
     le coffre de sa fille ?"
   - "<color=#dbc08e><i>Question intimit\xE9 on est loin du compte dans cette famille.</i>"
-  LesDialoguesEnAnglais: []
+  LesDialoguesEnAnglais:
+  - "<color=#dbc08e>Did she use this lockpick to break in her daughter\u2019s toy
+    box?"
+  - <color=#dbc08e>This family seems to have some serious privacy issues.
   SpeedDialogues:
   - 0.09
   - 0.09

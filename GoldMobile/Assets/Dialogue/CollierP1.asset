@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: CollierP1
   m_EditorClassIdentifier: 
   LesDialogues:
-  - <color=#dbc08e> Un collier...
-  - "Oui c'est son collier ! Merci de l'avoir r\xE9cuper\xE9"
+  - "C'est le collier pr\xE9f\xE9r\xE9 de Katia! M\xE8re n'aimait pas l'\xE9toile
+    dessus donc Katia me l'a donn\xE9."
+  - "<color=#dbc08e> Un collier avec une \xE9toile de David... Cela doit lui \xEAtre
+    cher."
+  LesDialoguesEnAnglais:
+  - This is Katia's favorite necklace! Mother didn't like the star on it so Katia
+    gave it to me.
+  - '<color=#dbc08e> The Star of David ... It must be very important to her indeed. '
   SpeedDialogues:
   - 0.05
   - 0.05

@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: BibleP1
   m_EditorClassIdentifier: 
   LesDialogues:
-  - Une bible, et le Christ sur sa croix.
-  - " Ils semblent \xEAtre tr\xE8s croyants\u2026 "
-  - "Dieu n\u2019a pas l\u2019air de les avoir prot\xE9g\xE9s des fant\xF4mes en
-    tout cas."
+  - <color=#dbc08e>Une bible, et le Christ sur sa croix.
+  - "<color=#dbc08e> Ils semblent \xEAtre tr\xE8s croyants\u2026 "
+  - "<color=#dbc08e>Dieu n\u2019a pas l\u2019air de les avoir prot\xE9g\xE9s des
+    fant\xF4mes en tout cas."
+  LesDialoguesEnAnglais:
+  - <color=#dbc08e>The Bible, and Christ on his cross.
+  - <color=#dbc08e> they seem to be very religious...
+  - '<color=#dbc08e>God does not seem to have protected them from ghosts though. '
   SpeedDialogues:
-  - 0.09
-  - 0.1
-  - 0.09
+  - 0.08
+  - 0.08
+  - 0.08

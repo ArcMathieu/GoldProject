@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LesDialogues:
   - "C'est ferm\xE9 \xE0 cl\xE9"
+  LesDialoguesEnAnglais:
+  - Locked.
   SpeedDialogues:
   - 0.05

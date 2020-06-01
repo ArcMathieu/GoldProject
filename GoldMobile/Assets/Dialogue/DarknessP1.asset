@@ -20,6 +20,13 @@ MonoBehaviour:
   - "<color=#dbc08e>Ca doit \xEAtre \xE7a qui tourmente les parents. "
   - "<color=#dbc08e>Enfin, en supposant que tout ceci est r\xE9el..."
   - "<color=#dbc08e> Cela semble r\xE9agir \xE0 ta pr\xE9sence !"
+  LesDialoguesEnAnglais:
+  - "This is the greenhouse\u2019s door, Katia took good care of mother\u2019s plants. "
+  - '<color=#dbc08e>And this is also one of your mother''s plants? '
+  - 'No, these are the bad shadows. Don''t come too close, they could hurt you. '
+  - '<color=#dbc08e>It must be what torments your parents. '
+  - '<color=#dbc08e>Well, assuming all of this is real... '
+  - '<color=#dbc08e>They do seem to react to your presence though! '
   SpeedDialogues:
   - 0.09
   - 0.09

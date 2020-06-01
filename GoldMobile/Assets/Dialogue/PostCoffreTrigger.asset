@@ -29,7 +29,19 @@ MonoBehaviour:
   - '<color=#dbc08e>La ou je ne peux pas les rejoindre. '
   - "<color=#dbc08e>Continuons \xE0 avancer, il faut comprendre ce qu\u2019il t\u2019est
     arriv\xE9."
-  LesDialoguesEnAnglais: []
+  LesDialoguesEnAnglais:
+  - Katia was so good at inventing puzzles, we both often did treasure hunts.
+  - It's my favorite game. What was your favorite game ?
+  - <color=#dbc08e>I would often play hide and seek with my little sisters.
+  - I really like playing hide and seek too! Do you still do that?
+  - 'Can I play with you one day? '
+  - "<color=#dbc08e>It\u2019s not possible."
+  - 'It is because I died, right? It is not fair ! '
+  - 'I can always hide you know! '
+  - "<color=#dbc08e>No, it\u2019s because they left. And they won\u2019t come back. "
+  - Left where?
+  - <color=#dbc08e>Where I can't join them.
+  - "<color=#dbc08e> Let\u2019s move on, we have to find out what happened to you. "
   SpeedDialogues:
   - 0.08
   - 0.08

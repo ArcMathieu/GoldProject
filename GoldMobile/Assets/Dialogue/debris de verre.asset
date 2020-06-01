@@ -22,6 +22,15 @@ MonoBehaviour:
     meurtriers."
   - "<color=#dbc08e>Je vais peut \xEAtre m\u2019en sortir vivant en fin de compte. "
   - "Tu n\u2019es toujours pas dr\xF4le..."
+  LesDialoguesEnAnglais:
+  - I...
+  - 'Died... '
+  - I died here...
+  - 'The window, I think I fell from the window. '
+  - "<color=#dbc08e>An accident\u2026 "
+  - "<color=#dbc08e>Here I am reassured, I\u2019m not hanging in the house of murderers. "
+  - <color=#dbc08e>Maybe I'll make it out alive at the end.
+  - You're still not funny ...
   SpeedDialogues:
   - 0.15
   - 0.15

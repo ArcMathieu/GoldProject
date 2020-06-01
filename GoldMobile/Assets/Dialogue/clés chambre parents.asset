@@ -34,6 +34,24 @@ MonoBehaviour:
     pas de temps \xE0 m\u2019accorder. "
   - "Ils \xE9taient tr\xE8s occup\xE9s. Mais je suis s\xFBre qu\u2019ils auraient
     bien voulu passer du temps avec moi"
+  LesDialoguesEnAnglais:
+  - "This is Katia\u2019s father and mother, and this is her little brother. She
+    would read to me the letters they sent to her."
+  - "I did not understand Polish, but I liked to see the look in her eyes when she
+    read her family\u2019s letters."
+  - She missed them a lot.
+  - <color=#dbc08e>If she missed them that much, she shouldn't have left them.
+  - '<color=#dbc08e>Some people are not fortunate enough to still have their families
+    by their side. '
+  - Where is your family?
+  - <color=#dbc08e>Far away.
+  - This is the book of her God. That's what she told me.
+  - ' She had a duplicate of all the keys of the house, just in case. I don''t think
+    mother knew it. '
+  - 'This is my drawing! She kept it in her treasure chest! '
+  - <color=#dbc08e>You meant a lot to her apparently.
+  - 'She was the one who took care of me. Mother and father had no time for me. '
+  - They were very busy. But I'm sure they would have liked to spend time with me!
   SpeedDialogues:
   - 0.08
   - 0.08

@@ -17,6 +17,11 @@ MonoBehaviour:
   - <color=#dbc08e>Matthew.
   - "Matthew\u2026 Je l\u2019aime bien ton pr\xE9nom ! Moi c\u2019est Honoria ! "
   - <color=#dbc08e>Je sais.
+  LesDialoguesEnAnglais:
+  - What is your name?
+  - <color=#dbc08e>Matthew.
+  - "Matthew\u2026 I like this name! I\u2019m Honoria!"
+  - <color=#dbc08e>I know.
   SpeedDialogues:
   - 0.08
   - 0.08

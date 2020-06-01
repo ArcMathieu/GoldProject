@@ -21,9 +21,17 @@ MonoBehaviour:
   - "M\xE8re voulait lire mon journal, mais c\u2019\xE9tait secret, alors j\u2019ai
     tent\xE9 de le r\xE9cup\xE9rer\u2026 "
   - "Et apr\xE8s\u2026 Et apr\xE8s\u2026 Je n\u2019arrive pas \xE0 me rappeler de
-    ce qui s\u2019est pass\xE9 apr\xE8s ! "
+    ce qui s\u2019est pass\xE9 apr\xE8s..."
   - "<color=#dbc08e>Ne t\u2019inqui\xE8te pas, \xE7a va revenir."
-  LesDialoguesEnAnglais: []
+  LesDialoguesEnAnglais:
+  - 'I recognize this diary! I think it''s mine ... '
+  - 'Yes! This is my writing! Why is it here? '
+  - '<color=#dbc08e>You must have fallen with it... Some pages are torn. '
+  - 'I think I recall... '
+  - Mother wanted to read my diary, but I wanted to keep it secret, so I tried to
+    get it back
+  - After that... After that... I can't recall...
+  - <color=#dbc08e>Don't worry, the rest of your memories will come back.
   SpeedDialogues:
   - 0.08
   - 0.08
