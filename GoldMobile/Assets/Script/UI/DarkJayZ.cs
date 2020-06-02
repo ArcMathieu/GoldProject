@@ -9,6 +9,7 @@ public class DarkJayZ : MonoBehaviour
     public GameObject CrossJayZ;
     public GameObject BubbleJayZ;
     public GameObject CurrentBubbleJayZ;
+    public GameObject BloodJayZ;
 
     private PlayerManager playerManager;
     private GhostManager ghostManager;
@@ -69,19 +70,23 @@ public class DarkJayZ : MonoBehaviour
 
 
     }
-
-    public void JayZsChilling()
+    float t; public void JayZsChilling()
     {
         if(CurrentBubbleJayZ != null)
         {
             Destroy(CurrentBubbleJayZ);
+            t = 0f;
+            for(int i = 0; i < 4; i++)
+            {
+                Instantiate(BloodJayZ, new Vector3(Random.Range(-55, -35), Random.Range(121, 136), 1), Quaternion.identity);
+            }
         }
         Player.GetComponent<BoxCollider2D>().enabled = true;
         Player.GetComponentInChildren<SpriteRenderer>().sortingOrder = 0;
         Player.GetComponentsInChildren<Animator>()[1].SetBool("isFloating", false);
         ghostManager.ChangeControl();
     }
-    float t;
+
     public void AttackJayZsBlood()
     {
         Player.GetComponentInChildren<SpriteRenderer>().sortingOrder = 1;
