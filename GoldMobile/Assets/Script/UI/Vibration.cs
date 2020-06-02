@@ -12,7 +12,7 @@ public static class Vibration
     public static AndroidJavaClass unityPlayer;
     public static AndroidJavaObject currentActivity;
     public static AndroidJavaObject vibrator;
-#endif
+#endif 
 
     public static void Vibrate()
     {
