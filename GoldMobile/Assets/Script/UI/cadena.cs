@@ -67,7 +67,7 @@ public class cadena : MonoBehaviour
             Cadena.SetActive(false);
             itemUnlock.SetActive(true);
             FindObjectOfType<SoundManager>().PlaySfx("Keys");
-
+            Vibration.Vibrate(55);
             FindObjectOfType<Achievement>().UnlockWhatinTheBox();
         }
 
