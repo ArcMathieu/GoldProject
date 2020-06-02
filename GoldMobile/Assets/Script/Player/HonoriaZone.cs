@@ -52,6 +52,8 @@ public class HonoriaZone : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Vibration.Vibrate(100);
+        //dial "je sens quelque chose"
         if (collision.gameObject.CompareTag("Interactable"))
         {
             CurrentInteraction.Add(collision.gameObject);

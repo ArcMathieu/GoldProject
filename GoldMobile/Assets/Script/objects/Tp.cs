@@ -70,6 +70,31 @@ public class Tp : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        //if (Input.GetKeyDown("[1]")) //salon
+        //    FindObjectOfType<PlayerManager>().transform.position = new Vector2(-84, 30);        
+        //if (Input.GetKeyDown("[2]")) //couloir
+        //    FindObjectOfType<PlayerManager>().transform.position = new Vector2(-97, 101);        
+        //if (Input.GetKeyDown("[3]")) //honoria
+        //    FindObjectOfType<PlayerManager>().transform.position = new Vector2(-73, 95);        
+        //if (Input.GetKeyDown("[4]")) //mother
+        //    FindObjectOfType<PlayerManager>().transform.position = new Vector2(-68, 116);        
+        //if (Input.GetKeyDown("[5]")) // katia
+        //    FindObjectOfType<PlayerManager>().transform.position = new Vector2(-37, 31);
+        //if (Input.GetKeyDown("[6]")) //serre
+        //    FindObjectOfType<PlayerManager>().transform.position = new Vector2(-37, 52);
+        //if (Input.GetKeyDown("[7]")) //bibli
+        //    FindObjectOfType<PlayerManager>().transform.position = new Vector2(-70, 49);
+        //if (Input.GetKeyDown("[8]")) //cave
+        //    FindObjectOfType<PlayerManager>().transform.position = new Vector2(-100, 10);
+        //if (Input.GetKeyDown("[9]")) //secreteCave
+        //    FindObjectOfType<PlayerManager>().transform.position = new Vector2(-75, 13);
+        //if (Input.GetKeyDown("[0]")) //Boss ?
+        //    FindObjectOfType<PlayerManager>().transform.position = new Vector2(-84, 30);
+
+    }
+
     public void CoroutToWait()
     {
         StartCoroutine(WaitToPass());
