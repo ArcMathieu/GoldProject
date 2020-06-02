@@ -5,8 +5,6 @@ using UnityEngine;
 public class Room : MonoBehaviour
 {
     public int layerRoom = 17;
-    //public bool RoomQuest = false;
-    public Switch switchButton;
     public string CurrentTag;
 
     // Use this for initialization

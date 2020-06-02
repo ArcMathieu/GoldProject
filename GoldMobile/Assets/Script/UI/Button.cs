@@ -8,7 +8,6 @@ public class Button : MonoBehaviour
     public PlayerManager player;
     public GhostManager ghost;
     public DisplayText dialogue;
-    public Invocation Circle;
     public void onClick()
     {
         if (player.PlayerState == PlayerManager.State.MOVABLE)
@@ -64,22 +63,31 @@ public class Button : MonoBehaviour
             }
             else
             {
-                if (player.CurrentInteraction.Count != 0 )
+                if (player.CurrentInteraction.Count != 0)
                 {
-                    try
+                    for (int i = 0; i < player.CurrentInteraction.Count; i++)
                     {
-                        if (player.CurrentInteraction[0].GetComponent<ObjectsInteractable>().isReadyForCinematic)
+                        try
                         {
-                            transform.GetChild(0).gameObject.SetActive(false);
+                            if (player.CurrentInteraction[i].GetComponent<ObjectsInteractable>().isReadyForCinematic)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(false);
+                                transform.GetChild(1).gameObject.SetActive(false);
+                            }
+                            if (player.CurrentInteraction[i].GetComponent<ObjectsInteractable>().isPickable)
+                            {
+                                transform.GetChild(0).gameObject.SetActive(true);
+                                transform.GetChild(1).gameObject.SetActive(false);
+                            }
+                        }
+                        catch
+                        {
+                            transform.GetChild(0).gameObject.SetActive(true);
                             transform.GetChild(1).gameObject.SetActive(false);
                         }
+
                     }
-                    catch
-                    {
-                        transform.GetChild(0).gameObject.SetActive(true);
-                        transform.GetChild(1).gameObject.SetActive(false);
-                    }
-                    
+
                 }
                 else
                 {
@@ -87,13 +95,14 @@ public class Button : MonoBehaviour
                     transform.GetChild(1).gameObject.SetActive(false);
                 }
             }
-        } else if (!dialogue.DoneTalking)
+        }
+        else if (!dialogue.DoneTalking)
         {
             transform.GetChild(0).gameObject.SetActive(false);
             transform.GetChild(1).gameObject.SetActive(true);
             wait = true;
         }
-       
+
 
         //code
         if (Input.GetKeyDown(KeyCode.E))

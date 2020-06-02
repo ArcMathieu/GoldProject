@@ -20,7 +20,6 @@ public class ObjectsInteractable : MonoBehaviour
     public DialogueData[] dialPlayer;
     public DialogueData[] dialGhost;
     public DisplayText tdialogue;
-    //    public InteractionManager interact;
     public GameObject Player;
 
     public CheckForKeys DoorSytem;

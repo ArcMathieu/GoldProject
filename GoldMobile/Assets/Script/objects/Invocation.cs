@@ -17,7 +17,6 @@ public class Invocation : MonoBehaviour
         {
             //OnCircle = true;
             Debug.Log("freee");
-            storyManager.cinRituel = true;
             GameManager._instance.openStep();
             collier.isPickable = true;
             //setAnimBougie true

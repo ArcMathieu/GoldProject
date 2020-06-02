@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -434,7 +434,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -1256,7 +1255,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 1
   tdialogue: {fileID: 0}
@@ -6254,7 +6252,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -6757,7 +6754,7 @@ PlayableDirector:
   m_GameObject: {fileID: 193466130}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: d16314a5e118a8045a2def2a8a314508, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -6919,6 +6916,10 @@ PlayableDirector:
     value: {fileID: 3129684}
   - key: {fileID: 2687321046760954229, guid: d16314a5e118a8045a2def2a8a314508, type: 2}
     value: {fileID: 1194683900}
+  - key: {fileID: -4739392254873722631, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+    value: {fileID: 1542421534}
+  - key: {fileID: -1679883062552511155, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+    value: {fileID: 295893592}
   m_ExposedReferences:
     m_References:
     - f1167542eb772c44cb2629db1bfaeac8: {fileID: 271813776}
@@ -7075,7 +7076,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!1 &198916886
 GameObject:
@@ -8492,7 +8492,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 1829114194}
@@ -9076,12 +9075,10 @@ MonoBehaviour:
   storyManager: {fileID: 979059964}
   player: {fileID: 691163785}
   gh: {fileID: 1969605188}
-  switchButton: {fileID: 271813776}
   openSecretaire: {fileID: 1793341852}
   Brosse: {fileID: 118693187}
   CinAfterTuto: {fileID: 0}
   cinAfterCoffre: {fileID: 823764235}
-  TrapBasement: {fileID: 0}
   CineEnding: {fileID: 1194683899}
   tp:
   - {fileID: 281058950}
@@ -9873,7 +9870,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -10209,7 +10205,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -10447,7 +10442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &295893593
 Transform:
   m_ObjectHideFlags: 0
@@ -10683,7 +10678,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!1001 &305962330
 PrefabInstance:
@@ -11058,7 +11052,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -11321,7 +11314,7 @@ MonoBehaviour:
     volume: 1
     loop: 0
     source: {fileID: 0}
-  isCinematicPlaying: 1
+  isCinematicPlaying: 0
 --- !u!95 &320916828
 Animator:
   serializedVersion: 3
@@ -13893,7 +13886,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!1 &411236166
 GameObject:
@@ -16029,7 +16021,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 1829114194}
@@ -17348,7 +17339,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 1829114194}
@@ -22767,7 +22757,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 1829114194}
@@ -23546,7 +23535,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!1 &738987174
 GameObject:
@@ -23629,7 +23617,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!1001 &740628322
 PrefabInstance:
@@ -25763,7 +25750,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!1 &805300630
 GameObject:
@@ -29848,7 +29834,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -30523,16 +30508,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0cb94d168332cd43958c3835d9010fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinSTART: 0
-  cin1Time: 2
-  cinRituel: 0
-  cin2Time: 2
-  cinVerre: 0
-  cin3Time: 2
-  cinJournal: 0
-  cin4Time: 2
+  START: 0
   cinENDING: 0
-  cin5Time: 2
   CollierKatia: 0
   Secateur: 0
   BolRituel: 0
@@ -31451,7 +31428,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 1829114194}
@@ -33754,7 +33730,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -34476,7 +34451,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!1 &1131920391
 GameObject:
@@ -37031,7 +37005,7 @@ MonoBehaviour:
   DoorSytem: {fileID: 0}
   LockSytem: {fileID: 0}
   HasTalked: 0
-  isLastCin: 0
+  isLastCin: 1
   isReadyForCinematic: 0
   isTrigger: 0
 --- !u!95 &1194683900
@@ -44290,7 +44264,6 @@ MonoBehaviour:
   player: {fileID: 691163785}
   ghost: {fileID: 1969605188}
   dialogue: {fileID: 1829114194}
-  Circle: {fileID: 1031574566}
 --- !u!58 &1458365251
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -46175,7 +46148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1542421535
 Transform:
   m_ObjectHideFlags: 0
@@ -46376,7 +46349,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -54440,7 +54412,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!1 &1839563920
 GameObject:
@@ -55621,7 +55592,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!224 &1868691549 stripped
 RectTransform:
@@ -56725,7 +56695,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!1 &1893447341
 GameObject:
@@ -59208,7 +59177,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -62099,7 +62067,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 1829114194}
@@ -62534,7 +62501,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 1
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}

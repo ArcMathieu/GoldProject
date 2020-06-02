@@ -17,12 +17,10 @@ public class GameManager : MonoBehaviour
     public PlayerManager player;
     public GhostManager gh;
 
-    public GameObject switchButton;
     public ObjectsInteractable openSecretaire;
     public ObjectsInteractable Brosse;
     public ObjectsInteractable CinAfterTuto;
     public ObjectsInteractable cinAfterCoffre;
-    public ObjectsInteractable TrapBasement;
     public ObjectsInteractable CineEnding;
     
 
@@ -56,13 +54,13 @@ public class GameManager : MonoBehaviour
         }else ghost.SetActive(false);
     }
 
-    public void IsFollowingGirl()
-    {
-        for (int i = 0; i < tp.Length; i++)
-        {
-            tp[i].ghostFollowing = true;
-        }
-    }
+    //public void IsFollowingGirl()
+    //{
+    //    for (int i = 0; i < tp.Length; i++)
+    //    {
+    //        tp[i].ghostFollowing = true;
+    //    }
+    //}
 
     public void launchCorout(float time)
     {
@@ -137,59 +135,28 @@ public class GameManager : MonoBehaviour
 
     public void openStep()
     {
-        if (!storyManager.cinSTART)
+        //Start
+        if (!storyManager.START)
         {
-            //Exterieur cinematique => coroutine
-            //launchCorout(storyManager.cin1Time);
-            //chambre mother, sous sol 2, serre & librairy fermés
             for (int i = 0; i < 6; i++)
             {
                tp[i].precedentlyOpened = true;
-            }
-            //if fin cinématique
-        }
 
-        if (storyManager.cinSTART)
-        {
+            }
+            tp[5].precedentlyOpened = false;
+        } else {
             //main hall
-            //active player mvmt
-            if (storyManager.Tuto)
+            if (storyManager.CollierKatia)
             {
-                if (!storyManager.CollierKatia)
+                CinAfterTuto.isReadyForCinematic = true;
+                for (int i = 5; i < 8; i++)
                 {
-                    //lumière on + déplacement libre joueur
-                    if (storyManager.cinRituel) //a declencher quand rituel invocation
-                    {
-                        //lumière off
-                        //FindObjectOfType<Lamp>().lightOn = false;
-                        IsFollowingGirl();
-                    }
+                    tp[i].precedentlyOpened = true;
+
                 }
-                else
-                {
-                    CinAfterTuto.isReadyForCinematic = true;
-                    storyManager.Tuto = false;
-                    switchButton.SetActive(false);
-                    tp[6].precedentlyOpened = true;
-                    tp[7].precedentlyOpened = true;
-                }
-
+                //FindObjectOfType<Lamp>().lightOn = false;
+                //IsFollowingGirl();
             }
-
-
-         
-            //quand entre dans chambre honoria => story.tuto = true
-            if (!storyManager.Tuto)
-            {
-                tp[5].precedentlyOpened = true;
-            }
-            else
-            {
-                tp[5].precedentlyOpened = false;
-            }
-
-            //sous sol 1
-            
 
         }
 
@@ -198,12 +165,7 @@ public class GameManager : MonoBehaviour
             //serre (lié à chambre)
             tp[8].precedentlyOpened = true;
             tp[9].precedentlyOpened = true;
-            //cinématique lié bout de verre
-            //using sécateur => clé + journal
-            //code sur pilier
-
         }
-
 
         if (storyManager.DoorToMother)
         {
@@ -212,13 +174,10 @@ public class GameManager : MonoBehaviour
             tp[10].precedentlyOpened = true;
             tp[11].precedentlyOpened = true;
 
-
             //pages livre
-            //Tu m'as fait perdre 2h de ma précieuse vie avec cette connerie :)
             if (storyManager.CleSecretaire)
             {
                 Brosse.isReadyForCinematic = true;
-                //cinematique
             }
 
             //cinématique
@@ -239,14 +198,9 @@ public class GameManager : MonoBehaviour
             //labyrinthe
             if (storyManager.Lockpick)
             {
-                Debug.Log("^^");
                 tp[14].precedentlyOpened = true;
                 tp[15].precedentlyOpened = true;
                 //open secrete cave
-                //lauchanimtrappe
-             
-                //sous sol 2 fond de la librairy
-                //R sauf cinématique
             }
             if (storyManager.LivreRituel && storyManager.BolRituel && storyManager.dague)
             {
@@ -258,12 +212,13 @@ public class GameManager : MonoBehaviour
 
         if (storyManager.cinENDING)
         {
-      //      FindObjectOfType<Achievement>().UnlockJillWouldBeProud();
+            FindObjectOfType<Achievement>().UnlockJillWouldBeProud();
             //end
         }
 
 
     }
+
 
     public void ChangeState()
     {

@@ -434,7 +434,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -1256,7 +1255,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 1
   tdialogue: {fileID: 0}
@@ -1295,7 +1293,7 @@ Transform:
   - {fileID: 647980828}
   - {fileID: 2065251364}
   m_Father: {fileID: 1783281983}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &43293644
 GameObject:
@@ -2233,7 +2231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60284623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -103.94489, y: 48.598328, z: -10}
+  m_LocalPosition: {x: -101.56489, y: 54.878242, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6202,7 +6200,7 @@ Transform:
   m_Children:
   - {fileID: 661945626}
   m_Father: {fileID: 1783281983}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &175611696
 GameObject:
@@ -6254,7 +6252,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -6757,7 +6754,7 @@ PlayableDirector:
   m_GameObject: {fileID: 193466130}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: d16314a5e118a8045a2def2a8a314508, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -6919,6 +6916,26 @@ PlayableDirector:
     value: {fileID: 3129684}
   - key: {fileID: 2687321046760954229, guid: d16314a5e118a8045a2def2a8a314508, type: 2}
     value: {fileID: 1194683900}
+  - key: {fileID: -4739392254873722631, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+    value: {fileID: 1542421534}
+  - key: {fileID: -1679883062552511155, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+    value: {fileID: 295893592}
+  - key: {fileID: 5237672026955965351, guid: baa91004fc1615042a580f20f05fc92a, type: 2}
+    value: {fileID: 691163786}
+  - key: {fileID: -4053236356540905201, guid: baa91004fc1615042a580f20f05fc92a, type: 2}
+    value: {fileID: 414171490}
+  - key: {fileID: 2798888723779460832, guid: baa91004fc1615042a580f20f05fc92a, type: 2}
+    value: {fileID: 1969605189}
+  - key: {fileID: -7755072569092285379, guid: baa91004fc1615042a580f20f05fc92a, type: 2}
+    value: {fileID: 1542421534}
+  - key: {fileID: -594989053604459902, guid: baa91004fc1615042a580f20f05fc92a, type: 2}
+    value: {fileID: 295893592}
+  - key: {fileID: 422373547999729794, guid: baa91004fc1615042a580f20f05fc92a, type: 2}
+    value: {fileID: 1542421536}
+  - key: {fileID: 272348474015039760, guid: baa91004fc1615042a580f20f05fc92a, type: 2}
+    value: {fileID: 414171490}
+  - key: {fileID: 4083608860030766219, guid: baa91004fc1615042a580f20f05fc92a, type: 2}
+    value: {fileID: 1542421536}
   m_ExposedReferences:
     m_References:
     - f1167542eb772c44cb2629db1bfaeac8: {fileID: 271813776}
@@ -7075,7 +7092,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!1 &198916886
 GameObject:
@@ -8492,7 +8508,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 1829114194}
@@ -9076,12 +9091,10 @@ MonoBehaviour:
   storyManager: {fileID: 979059964}
   player: {fileID: 691163785}
   gh: {fileID: 1969605188}
-  switchButton: {fileID: 271813776}
   openSecretaire: {fileID: 1793341852}
   Brosse: {fileID: 118693187}
-  CinAfterTuto: {fileID: 0}
+  CinAfterTuto: {fileID: 1579612719}
   cinAfterCoffre: {fileID: 823764235}
-  TrapBasement: {fileID: 0}
   CineEnding: {fileID: 1194683899}
   tp:
   - {fileID: 281058950}
@@ -9873,7 +9886,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -10209,7 +10221,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -10447,7 +10458,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &295893593
 Transform:
   m_ObjectHideFlags: 0
@@ -10683,7 +10694,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!1001 &305962330
 PrefabInstance:
@@ -10780,12 +10790,22 @@ PrefabInstance:
     - target: {fileID: 6851587361739229292, guid: b491115f1f4c1194e93fef7f27256668,
         type: 3}
       propertyPath: m_Size.x
-      value: 1
+      value: 0.55094147
       objectReference: {fileID: 0}
     - target: {fileID: 6851587361739229292, guid: b491115f1f4c1194e93fef7f27256668,
         type: 3}
       propertyPath: m_Size.y
-      value: 1
+      value: 0.7159033
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851587361739229292, guid: b491115f1f4c1194e93fef7f27256668,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.16032967
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851587361739229292, guid: b491115f1f4c1194e93fef7f27256668,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.021052465
       objectReference: {fileID: 0}
     - target: {fileID: 6851587361739229293, guid: b491115f1f4c1194e93fef7f27256668,
         type: 3}
@@ -11058,7 +11078,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -11741,6 +11760,7 @@ GameObject:
   - component: {fileID: 344268839}
   - component: {fileID: 344268841}
   - component: {fileID: 344268840}
+  - component: {fileID: 344268842}
   m_Layer: 0
   m_Name: BG
   m_TagString: Untagged
@@ -11823,6 +11843,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &344268842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344268838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a057c2127f2b3ff489d8b4f91b248653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchButton: {fileID: 271813776}
+  storyManager: {fileID: 979059964}
+  secreteCaveTrappe: 0
 --- !u!1 &346983984
 GameObject:
   m_ObjectHideFlags: 0
@@ -13893,7 +13928,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!1 &411236166
 GameObject:
@@ -15876,7 +15910,7 @@ Transform:
   m_LocalScale: {x: 1.165648, y: 2.082321, z: 2.082321}
   m_Children: []
   m_Father: {fileID: 1783281983}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &481368268
 BoxCollider2D:
@@ -16029,7 +16063,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 1829114194}
@@ -17348,7 +17381,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 1829114194}
@@ -18383,7 +18415,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.15, y: 0.27}
+    oldSize: {x: 0.15, y: 0.22}
     newSize: {x: 0.15, y: 0.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -18704,7 +18736,7 @@ Transform:
   m_LocalScale: {x: 1.4934864, y: 2.082321, z: 0.694107}
   m_Children: []
   m_Father: {fileID: 738987175}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!210 &575245659
 SortingGroup:
@@ -20707,7 +20739,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.15, y: 0.27}
+    oldSize: {x: 0.15, y: 0.22}
     newSize: {x: 0.15, y: 0.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -21549,7 +21581,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691163780}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -84.08, y: 30.45, z: 0}
   m_LocalScale: {x: 0.2, y: 0.4, z: 1}
   m_Children:
@@ -22601,7 +22633,7 @@ Transform:
   - {fileID: 1454289750}
   - {fileID: 876488968}
   m_Father: {fileID: 1783281983}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &714882511
 GameObject:
@@ -22767,7 +22799,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 1829114194}
@@ -23546,7 +23577,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!1 &738987174
 GameObject:
@@ -23579,6 +23609,7 @@ Transform:
   m_Children:
   - {fileID: 1205248795}
   - {fileID: 230471032}
+  - {fileID: 1535470506}
   - {fileID: 1783281983}
   - {fileID: 1627512931}
   - {fileID: 575245658}
@@ -23629,7 +23660,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!1001 &740628322
 PrefabInstance:
@@ -25224,7 +25254,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.15, y: 0.27}
+    oldSize: {x: 0.15, y: 0.22}
     newSize: {x: 0.15, y: 0.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -25763,7 +25793,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!1 &805300630
 GameObject:
@@ -25926,7 +25955,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.15, y: 0.27}
+    oldSize: {x: 0.15, y: 0.22}
     newSize: {x: 0.15, y: 0.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -25981,7 +26010,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.15, y: 0.27}
+    oldSize: {x: 0.15, y: 0.22}
     newSize: {x: 0.15, y: 0.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -26007,7 +26036,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.15, y: 0.27}
+    oldSize: {x: 0.15, y: 0.22}
     newSize: {x: 0.15, y: 0.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -26033,7 +26062,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.15, y: 0.27}
+    oldSize: {x: 0.15, y: 0.22}
     newSize: {x: 0.15, y: 0.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -29848,7 +29877,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -30523,16 +30551,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0cb94d168332cd43958c3835d9010fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinSTART: 0
-  cin1Time: 2
-  cinRituel: 0
-  cin2Time: 2
-  cinVerre: 0
-  cin3Time: 2
-  cinJournal: 0
-  cin4Time: 2
+  START: 0
   cinENDING: 0
-  cin5Time: 2
   CollierKatia: 0
   Secateur: 0
   BolRituel: 0
@@ -31330,7 +31350,7 @@ Transform:
   - {fileID: 1222619029}
   - {fileID: 68552282}
   m_Father: {fileID: 1783281983}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1017614903
 GameObject:
@@ -31451,7 +31471,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 1829114194}
@@ -31924,8 +31943,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1031574564}
   - component: {fileID: 1031574568}
-  - component: {fileID: 1031574567}
-  - component: {fileID: 1031574566}
   - component: {fileID: 1031574565}
   - component: {fileID: 1031574569}
   m_Layer: 0
@@ -31964,50 +31981,6 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -5
---- !u!114 &1031574566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1031574563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42907cba3bf20fd49926f6deccce1673, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ghostAppears: {fileID: 1969605184}
-  storyManager: {fileID: 979059964}
-  collier: {fileID: 1872668617}
-  firstTime: 1
-  OnCircle: 0
-  CanChange: 0
---- !u!61 &1031574567
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1031574563}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.011820927, y: -0.004433185}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.2, y: 1.2}
-    newSize: {x: 5, y: 5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.44384018, y: 0.39669043}
-  m_EdgeRadius: 0
 --- !u!212 &1031574568
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33754,7 +33727,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -34476,7 +34448,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!1 &1131920391
 GameObject:
@@ -44290,7 +44261,6 @@ MonoBehaviour:
   player: {fileID: 691163785}
   ghost: {fileID: 1969605188}
   dialogue: {fileID: 1829114194}
-  Circle: {fileID: 1031574566}
 --- !u!58 &1458365251
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -45964,11 +45934,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535470505}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.049999237, y: -5.18, z: 10}
+  m_LocalPosition: {x: -0.049999237, y: -5.1800003, z: 10}
   m_LocalScale: {x: 1.13, y: 1.99, z: 1}
   m_Children: []
-  m_Father: {fileID: 1783281983}
-  m_RootOrder: 0
+  m_Father: {fileID: 738987175}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1535470507
 MonoBehaviour:
@@ -46150,7 +46120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536784124}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -103.94489, y: 47.562542, z: -10}
+  m_LocalPosition: {x: -101.56489, y: 115.11254, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1297159946}
@@ -46175,7 +46145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1542421535
 Transform:
   m_ObjectHideFlags: 0
@@ -46376,7 +46346,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -48194,7 +48163,7 @@ Transform:
   - {fileID: 2101036654}
   - {fileID: 1056373872}
   m_Father: {fileID: 738987175}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1631600459
 PrefabInstance:
@@ -48587,7 +48556,7 @@ Transform:
   - {fileID: 909998181}
   - {fileID: 955664366}
   m_Father: {fileID: 1783281983}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1640276610
 GameObject:
@@ -52039,7 +52008,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1535470506}
   - {fileID: 712658426}
   - {fileID: 1638102289}
   - {fileID: 174006905}
@@ -52048,7 +52016,7 @@ Transform:
   - {fileID: 481368267}
   - {fileID: 39960203}
   m_Father: {fileID: 738987175}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1785744638
 GameObject:
@@ -54440,7 +54408,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!1 &1839563920
 GameObject:
@@ -55621,7 +55588,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!224 &1868691549 stripped
 RectTransform:
@@ -56725,7 +56691,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerRoom: 17
-  switchButton: {fileID: 271813778}
   CurrentTag: 
 --- !u!1 &1893447341
 GameObject:
@@ -58917,7 +58882,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1969605185
 Transform:
   m_ObjectHideFlags: 0
@@ -58925,8 +58890,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969605184}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -74.4, y: 97.97, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -84.22, y: 29.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1542421535}
@@ -59208,7 +59173,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -62099,7 +62063,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 1829114194}
@@ -62534,7 +62497,6 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 1
-  ghostFollowing: 0
   secreteTrap: 0
   honoriaDoor: 0
   tdialogue: {fileID: 0}
@@ -63204,7 +63166,7 @@ Transform:
   - {fileID: 1455184943}
   - {fileID: 1624961366}
   m_Father: {fileID: 1783281983}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2122770289
 GameObject:

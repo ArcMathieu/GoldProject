@@ -5,21 +5,10 @@ using UnityEngine;
 public class StoryGame : MonoBehaviour
 {
     //début du jeu
-    public bool cinSTART;
-    public float cin1Time = 1;
-
-    public bool cinRituel;
-    public float cin2Time = 2;
-
-    public bool cinVerre;
-    public float cin3Time = 2;
-
-    public bool cinJournal;
-    public float cin4Time = 2;
+    public bool START;
 
     //fin du jeu
     public bool cinENDING;
-    public float cin5Time = 2;
 
     //objectPicked
     public bool CollierKatia; //ouvre la chambre Honoria
@@ -50,5 +39,14 @@ public class StoryGame : MonoBehaviour
 
     //Enigme
     public bool coffre;//coffre fort de katia
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            FindObjectOfType<GameManager>().openStep();
+        }
+    }
 
 }

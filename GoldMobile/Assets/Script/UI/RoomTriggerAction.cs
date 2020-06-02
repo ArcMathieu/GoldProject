@@ -9,7 +9,7 @@ public class RoomTriggerAction : MonoBehaviour
     public bool secreteCaveTrappe;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && !storyManager.Tuto)
+        if (collision.gameObject.CompareTag("Player") && storyManager.START)
         {
             switchButton.SetActive(true);
         }

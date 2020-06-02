@@ -42,7 +42,7 @@ public class InteractionManager : MonoBehaviour
         StartCoroutine(waitBeforePushAgain());
         IEnumerator waitBeforePushAgain()
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1.5f);
             isPressedButton = false;
         }
     }

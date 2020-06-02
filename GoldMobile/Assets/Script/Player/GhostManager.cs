@@ -24,11 +24,6 @@ public class GhostManager : MonoBehaviour
     public enum State { CONTROLLED, WAIT, MOVABLE }
     public State GhostState;
 
-    //public void Awake()
-    //{
-    //    FindObjectOfType<Achievement>().UnlockTrueFalseExorcist();
-    //}
-
     //Objet dans lequel on est rentré en collision avec
     public List<GameObject> CurrentInteraction;
 
@@ -66,8 +61,6 @@ public class GhostManager : MonoBehaviour
     {
         if (!gameManager.controleP1)
         {
-            //GhostEffectHUD.SetActive(true);
-
             
 
             rb.MovePosition(transform.position + ((new Vector3(0, 1, 0) * joystick.Vertical * speed) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed )) * Time.deltaTime);
