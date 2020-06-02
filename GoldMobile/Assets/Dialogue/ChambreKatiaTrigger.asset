@@ -20,6 +20,13 @@ MonoBehaviour:
   - J'aimerais bien y aller un jour...
   - "<color=#dbc08e>Je ne suis pas s\xFBr que tu saisisses ce que le mot \u201Cfant\xF4me\u201D
     implique."
+  LesDialoguesEnAnglais:
+  - "This is Katia\u2019s room. I liked coming here when mother was in town. Katia
+    would tell me about her country,"
+  - Po...
+  - Poland!
+  - I would love to go there one day.
+  - "<color=#dbc08e>I'm not sure you understand what the word \u201Cghost\u201D implies."
   SpeedDialogues:
   - 0.08
   - 0.15

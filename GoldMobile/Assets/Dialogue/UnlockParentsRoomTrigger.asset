@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: UnlockParentsRoomTrigger
   m_EditorClassIdentifier: 
   LesDialogues:
-  - "La cl\xE9 ouvrait bien cette porte."
+  - "<color=#dbc08e>La cl\xE9 ouvrait bien cette porte."
   - "M\xE8re ne va pas \xEAtre contente si elle apprend qu\u2019on est entr\xE9\u2026"
-  - <color=#dbc08e>Eh bien on ne lui dira pas
+  - <color=#dbc08e>Eh bien on ne lui dira pas.
+  LesDialoguesEnAnglais:
+  - '<color=#dbc08e>The key opened this door. '
+  - Mother will not be happy if she learns that we broke in...
+  - Well, we won't tell her.
   SpeedDialogues:
   - 0.08
   - 0.08

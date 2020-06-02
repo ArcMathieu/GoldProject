@@ -17,14 +17,26 @@ MonoBehaviour:
   - "<color=#dbc08e>C\u2019\xE9tait aussi le jouet pr\xE9f\xE9r\xE9 de mes petites
     s\u0153urs\u2026"
   - "Ca ne l\u2019est plus ?"
-  - "<color=#dbc08e>: Elles ne sont\u2026"
+  - "<color=#dbc08e>Elles ne sont\u2026"
   - <color=#dbc08e> . . .
   - "<color=#dbc08e>Pourquoi je te raconterais \xE7a ? "
-  - "<color=#dbc08e>Au mieux tu es un fant\xF4me qui ne conna\xEEt rien \xE0 la vie,
+  - "<color=#dbc08e>Au mieux tu es une gamine qui ne conna\xEEt rien \xE0 la vie,
     au pire tu n\u2019es qu\u2019une illusion."
   - "Arr\xEAte de dire \xE7a ! Je suis r\xE9elle ! "
   - "<color=#dbc08e> Continuons. Plus vite tout \xE7a sera termin\xE9,  plus vite
     je partirai d\u2019ici."
+  LesDialoguesEnAnglais:
+  - It's my favorite toy!
+  - '<color=#dbc08e>It used to be my sisters'' favorite toy too... '
+  - It is not anymore?
+  - <color=#dbc08e>They are not...
+  - <color=#dbc08e> . . .
+  - <color=#dbc08e>Why would I tell you this?
+  - '<color=#dbc08e>At best, you are a little girl who doesn''t knowhow to live,
+    at worst you are an illusion. '
+  - Stop saying that! I'm real!
+  - <color=#dbc08e>Let's move on. The sooner it is all over, the faster I will get
+    out of here.
   SpeedDialogues:
   - 0.08
   - 0.08

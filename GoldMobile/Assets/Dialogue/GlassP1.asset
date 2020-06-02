@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LesDialogues:
   - "Matthew\u2026 Je me rappelle quelque chose\u2026 "
+  LesDialoguesEnAnglais:
+  - "Matthew\u2026 I remember something\u2026"
   SpeedDialogues:
   - 0.09

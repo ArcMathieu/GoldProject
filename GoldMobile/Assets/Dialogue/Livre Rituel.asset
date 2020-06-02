@@ -29,6 +29,21 @@ MonoBehaviour:
   - <color=#dbc08e> Elle devait se sentir responsable de ton accident...
   - "<color=#dbc08e> Il semble y avoir une formule pour renvoyer les esprits dans
     l\u2019au del\xE0, peut \xEAtre que \xE7a pourrait marcher !"
+  LesDialoguesEnAnglais:
+  - Matthew! That book, here!
+  - It is strange, when I approach it,
+  - 'I get shivers all over my body... '
+  - "<color=#dbc08e>It\u2019s a book of incantations\u2026 Let's see\u2026"
+  - <color=#dbc08e>It seems to have been opened on the same page very often.
+  - <color=#dbc08e>"Resurrectionem est mortuis",
+  - <color=#dbc08e>the resurrection of the dead...
+  - <color=#dbc08e> Did she use Katia to try to bring Honoria back to life?
+  - <color=#dbc08e>The objects required for the ritual could correspond to those
+    that were hidden everywhere in the house.
+  - Mother would have done all of this for me?
+  - <color=#dbc08e>Maybe she felt responsible for your accident...
+  - '<color=#dbc08e>Look, it has a formula to send spirits in the other world. Maybe
+    it will work! '
   SpeedDialogues:
   - 0.05
   - 0.05

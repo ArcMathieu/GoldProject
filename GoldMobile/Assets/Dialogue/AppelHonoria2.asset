@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LesDialogues:
   - "Oh ? Qu\u2019est ce que c\u2019est que \xE7a au sol ?"
-  - "<color=#dbc08e>On dirait une sorte de trappe\u2026 Ma claustrophobie va adorer..."
+  - "<color=#dbc08e>On dirait une sorte de trappe\u2026 Et moi qui suis claustrophobe..."
   - "C\u2019est quoi la clautorsphobie ?"
   - "<color=#dbc08e>Claustrophobie. C\u2019est la peur d\u2019\xEAtre bloqu\xE9 dans
     un petit espace."
@@ -25,9 +25,19 @@ MonoBehaviour:
     fant\xF4me qui a peur du noir !"
   - "Il y a des choses m\xE9chantes dans le noir ! Et puis on y voit rien ...Pourquoi
     tu ris ?"
-  - "<color=#dbc08e>Pour rien\u2026 Allons-y petit fant\xF4me."
+  - "<color=#dbc08e>Pour rien\u2026 Allons-y."
   LesDialoguesEnAnglais:
-  - 
+  - Huh? What is that on the ground?
+  - <color=#dbc08e>It looks like a trapdoor... And I am claustrophobic, great.
+  - What is a caultorsphobic?
+  - <color=#dbc08e>Claustrophobic. It is somebody who is scared of narrow spaces.
+  - For real? A tall man like you is scared of narrow spaces?
+  - <color=#dbc08e>Are you making fun of me?
+  - I would never, mister priest!
+  - <color=#dbc08e>You are in the wrong place to make fun of me, aren't you, little
+    ghost who is afraid of the dark?
+  - There is evil things in the dark! And I can't see anything... Why are you laughing?
+  - <color=#dbc08e>For nothing... Let's go.
   SpeedDialogues:
   - 0.05
   - 0.05

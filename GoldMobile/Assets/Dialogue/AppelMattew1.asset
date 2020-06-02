@@ -16,7 +16,9 @@ MonoBehaviour:
   - "<color=#dbc08e>Honoria ! Tu vois les m\xE9chantes ombres ?"
   - "<color=#dbc08e>Il faut que tu leur fasses peur pour que je puisse avan\xE7er
     !"
-  LesDialoguesEnAnglais: []
+  LesDialoguesEnAnglais:
+  - <color=#dbc08e>Honoria! See the wicked shadows?
+  - '<color=#dbc08e>You have to scare them so I can move on! '
   SpeedDialogues:
   - 0.05
   - 0.05

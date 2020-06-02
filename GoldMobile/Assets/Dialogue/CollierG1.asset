@@ -16,6 +16,7 @@ MonoBehaviour:
   - 'Je me souviens de ce collier! '
   - C'est celui que Katia m'avait offert.
   - J'y tiens beacuoup..
+  LesDialoguesEnAnglais: []
   SpeedDialogues:
   - 0.05
   - 0.05

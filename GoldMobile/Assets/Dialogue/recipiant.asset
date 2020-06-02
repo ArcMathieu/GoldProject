@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LesDialogues:
   - "<color=#dbc08e>C'est un recipient rempli d'ingr\xE9dients mysterieux..."
+  LesDialoguesEnAnglais:
+  - <color=#dbc08e>It is a receptacle full of mysterious ingredients.
   SpeedDialogues:
   - 0.05

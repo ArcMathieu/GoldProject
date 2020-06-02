@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: BougieP2
   m_EditorClassIdentifier: 
   LesDialogues:
-  - "Cette bougie est d\xE9j\xE0 allum\xE9e"
+  - "<color=#dbc08e>Cette bougie est d\xE9j\xE0 allum\xE9e"
+  LesDialoguesEnAnglais:
+  - <color=#dbc08e>This candle is already lit.
   SpeedDialogues:
   - 0.05
   - 0.05

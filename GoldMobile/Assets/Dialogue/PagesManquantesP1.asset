@@ -29,6 +29,19 @@ MonoBehaviour:
   - "<color=#dbc08e>Les adultes sont compliqu\xE9s."
   - . . .
   - "<color=#dbc08e>Continuons \xE0 chercher."
+  LesDialoguesEnAnglais:
+  - Mother read my diary... She was very angry because of what I had written in it...
+  - I tried to get it back, but she tore off the pages. I was very scared, I slipped...
+  - . . .
+  - '. . .and I fell out of the window. It was an accident. '
+  - '<color=#dbc08e>It seems like Katia''s religion caused her some trouble with
+    your mother... '
+  - '<color=#dbc08e>I think she couldn''t stand you being so attached to her. '
+  - But Katia was so nice, she always took good care of me,
+  - 'so what if she doesn''t believe in the same thing as us? '
+  - '<color=#dbc08e>Adults are complicated. '
+  - . . .
+  - <color=#dbc08e>Let's keep searching.
   SpeedDialogues:
   - 0.05
   - 0.05

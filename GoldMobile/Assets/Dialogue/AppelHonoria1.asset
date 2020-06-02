@@ -15,7 +15,9 @@ MonoBehaviour:
   LesDialogues:
   - Je ne peux pas avancer !
   - "Un gros meuble me bloque l'all\xE9e ! Je suis trop petite !"
-  LesDialoguesEnAnglais: []
+  LesDialoguesEnAnglais:
+  - I can't move forward!
+  - A big desk is blocking me! I am too small!
   SpeedDialogues:
   - 0.05
   - 0.05

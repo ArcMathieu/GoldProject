@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: BougieG2
   m_EditorClassIdentifier: 
   LesDialogues:
-  - j'ai si froid
+  - J'ai si froid
+  LesDialoguesEnAnglais: []
   SpeedDialogues:
   - 0.05

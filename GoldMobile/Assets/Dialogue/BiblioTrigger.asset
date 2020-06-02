@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: BiblioTrigger
   m_EditorClassIdentifier: 
   LesDialogues:
-  - "Une biblioth\xE8que ? Pourquoi \xE9tait-elle verrouill\xE9e ?"
+  - "<color=#dbc08e>Une biblioth\xE8que ? Pourquoi \xE9tait-elle verrouill\xE9e ?"
+  LesDialoguesEnAnglais:
+  - <color=#dbc08e>A library? Why was it locked?
   SpeedDialogues:
   - 0.08

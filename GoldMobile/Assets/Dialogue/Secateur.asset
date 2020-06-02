@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LesDialogues:
   - "Un s\xE9cateur."
+  LesDialoguesEnAnglais:
+  - A pruner.
   SpeedDialogues:
   - 0.05

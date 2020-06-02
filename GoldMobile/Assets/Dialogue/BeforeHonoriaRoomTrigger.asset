@@ -17,7 +17,7 @@ MonoBehaviour:
   - '<color=#dbc08e> Bon quand il faut y aller . . . '
   LesDialoguesEnAnglais:
   - <color=#dbc08e>This is her room.
-  - '<color=#dbc08e>Well, a man''s gotta do what a man''s gotta do ... '
+  - '<color=#dbc08e>Well, a man''s gotta do what a man''s gotta do... '
   SpeedDialogues:
   - 0.05
   - 0.05

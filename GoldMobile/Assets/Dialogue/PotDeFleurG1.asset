@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LesDialogues:
   - 2
+  LesDialoguesEnAnglais:
+  - 2
   SpeedDialogues:
   - 0.09

@@ -23,7 +23,7 @@ MonoBehaviour:
   - "Je veux rester avec toi ! J\u2019ai peur quand tu n\u2019es pas l\xE0 ! "
   - "<color=#dbc08e>Petite... Tu m\u2019as dit que tu pensais qu\u2019on t\u2019attendait
     de l\u2019autre c\xF4t\xE9, "
-  - "<color=#dbc08e>et bien je crois que c\u2019est Katia qui t\u2019attend. Elle
+  - "<color=#dbc08e>eh bien je crois que c\u2019est Katia qui t\u2019attend. Elle
     sera l\xE0 pour te guider, j\u2019en suis certain."
   - "Non tu mens ! Tu mens ! Tu mens ! Tu veux juste que je m\u2019en aille pour
     pouvoir rentrer chez toi ! "
@@ -79,9 +79,73 @@ MonoBehaviour:
   - "<color=#dbc08e>Que\u2026 Compter ? Est-ce que\u2026 ? Lily ? Alice ?"
   - "J\u2019ai beaucoup entendu parler de vous !"
   - Matthew vous aime beaucoup !
-  - "<color=#dbc08e>Je pourrais jouer avec vous la prochaine fois ! A bient\xF4t
-    !"
-  LesDialoguesEnAnglais: []
+  - "Je pourrais jouer avec vous la prochaine fois ! A bient\xF4t !"
+  LesDialoguesEnAnglais:
+  - <color=#dbc08e>Honoria, place yourself in the pentagram.
+  - Why?
+  - <color=#dbc08e>I'll try to get you back to the other side.
+  - 'What does that mean? '
+  - '<color=#dbc08e>That you will be able to leave. '
+  - 'No, I don''t want to go back into the dark! I want to stay with you! '
+  - '<color=#dbc08e>Your place is not here. '
+  - 'I want to stay with you! I''m scared when you''re not there! '
+  - <color=#dbc08e>Little one... You told me you thought you were expected on the
+    other side,
+  - "<color=#dbc08e>well I think Katia is waiting for you. I\u2019m sure she will
+    be there to guide you. "
+  - 'No, you''re lying! You''re lying! You''re lying! You just want me to go so I
+    can go home! '
+  - '<color=#dbc08e>Let''s make a deal. You place yourself in the pentagram, I begin
+    the invocation, '
+  - and if you feel that you are in danger, or that no one is coming to look for
+    you, I will stop everything.
+  - <color=#dbc08e>Okay ?
+  - "...Okay\u2026 "
+  - <color=#dbc08e>In nomine Patris, et Filii, et Spiritus Sancti. Amen.
+  - '<color=#dbc08e>Exsurgat Deus et dissipentur inimici ejus : et fugiant qui oderunt
+    eum a facie ejus.'
+  - <color=#dbc08e>Sicut deficit fumus, deficiant ;
+  - <color=#dbc08e>sicut fluit cera a facie ignis, sic pereant peccatores a facie
+    Dei.
+  - "<color=#d8bfd8>Honoria\u2026"
+  - 'Katia! Where were you ? I looked for you when I was in the dark! '
+  - '<color=#d8bfd8>I know, but you were stuck. I tried everything to reach you my
+    dear. '
+  - 'I''m afraid! I don''t want to go back! '
+  - '<color=#d8bfd8>Come with me, it''s over now, you no longer have to be afraid,
+    I will stay with you forever. '
+  - 'But Matthew, he''s going to be all alone! '
+  - '<color=#dbc08e>Don''t worry for me little one, come on! Join her, this is where
+    you belong. '
+  - '<color=#d8bfd8>Matthew... You protected her, you saved her. Why? '
+  - "<color=#dbc08e>There is already enough injustice in life, let\u2019s not add
+    in even after death."
+  - '<color=#dbc08e>Plus, she reminded me of some persons who are very important
+    me. '
+  - '<color=#d8bfd8>I watched you Matthew, you''re a good man. '
+  - <color=#d8bfd8>And I feel like the huge wound in you is starting to heal.
+  - <color=#d8bfd8>Maybe this little one showed you the way to recovery.
+  - <color=#dbc08e>Nothing can close this wound.
+  - "<color=#dbc08e>It's part of me, it\u2019s my story."
+  - '<color=#dbc08e>But, Honoria, you taught me one important thing: '
+  - <color=#dbc08e>"Being alive" does not mean "living".
+  - "<color=#dbc08e>You\u2019re more alive being dead than I\u2019ve been in my entire
+    life."
+  - <color=#dbc08e>This light that surrounds you, I will always keep a little piece
+    of it with me.
+  - '<color=#dbc08e>So leave without fear, I will not forget you, and one day we
+    will meet again. '
+  - Matthew...
+  - <color=#dbc08e>Thanks, kid.
+  - 'Don''t join me too soon Matthew! '
+  - 
+  - Oh? Hello! Who are you? You two are so pretty!
+  - ...A message? Oh, yes, I can pass it on!
+  - "Next time, it\u2019s your time to count Matthew! "
+  - "<color=#dbc08e>What... Count? Is it\u2026? Lily? Alice? "
+  - I've heard a lot about you!
+  - 'Matthew loves you two very much!  '
+  - 'I could play with all of you next time! See you soon!  '
   SpeedDialogues:
   - 0.05
   - 0.05

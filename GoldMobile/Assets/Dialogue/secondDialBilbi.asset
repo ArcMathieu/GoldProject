@@ -18,12 +18,22 @@ MonoBehaviour:
   - "Je sens les m\xE9chantes ombres !"
   - "<color=#dbc08e>Ecoute moi bien, cette biblioth\xE8que \xE0 l\u2019air d\u2019\xEAtre
     une sorte de labyrinthe,"
-  - "<color=#dbc08e>on va essayer de se retrouver au milieu d\u2019accord ?"
+  - "<color=#dbc08e>on va se retrouver au milieu d\u2019accord ?"
   - "Mais les m\xE9chantes ombres ! Elles vont nous attraper !"
   - "<color=#dbc08e>De la o\xF9 je suis, ta lumi\xE8re me parvient, je ne risque
     rien."
   - "<color=#dbc08e>avance en m\xEAme temps, on y arrivera ! "
-  LesDialoguesEnAnglais: []
+  LesDialoguesEnAnglais:
+  - 'Matthew ! Matthew I''m afraid! '
+  - '<color=#dbc08e>Don''t worry kid, I''m here! '
+  - 'I feel the wicked shadows! '
+  - <color=#dbc08e>Listen to me, this library seems to be a kind of labyrint.
+  - "<color=#dbc08e>Let\u2019s find ourselves in the middle, OK? "
+  - 'But the wicked shadows! They will catch us! '
+  - "<color=#dbc08e>Your light still reaches me from where I am, so don\u2019t worry
+    for me."
+  - '<color=#dbc08e>Be brave little one. If we advance at the same time, we will
+    get there! '
   SpeedDialogues:
   - 0.05
   - 0.05

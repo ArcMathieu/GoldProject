@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: objetHonorP1
   m_EditorClassIdentifier: 
   LesDialogues:
-  - Cet objet me rappel mon enfance
+  - Cet objet me rappelle mon enfance
+  LesDialoguesEnAnglais: []
   SpeedDialogues:
   - 0.05

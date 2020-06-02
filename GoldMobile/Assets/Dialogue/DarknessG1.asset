@@ -15,6 +15,9 @@ MonoBehaviour:
   LesDialogues:
   - 'Regarde Matthew ! Elles sont parties ! '
   - "Bravo petite ! Allons jeter un \u0153il l\xE0-dedans."
+  LesDialoguesEnAnglais:
+  - 'Look Matthew! They left! '
+  - '<color=#dbc08e>Well done little one! Let''s take a look in there. '
   SpeedDialogues:
   - 0.09
   - 0.09

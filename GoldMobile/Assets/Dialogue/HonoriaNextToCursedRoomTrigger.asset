@@ -22,6 +22,14 @@ MonoBehaviour:
   - " Ni d\u2019aller dans la cuisine ou la biblioth\xE8que. Ou sortir trop loin
     dans le jardin."
   - <color=#dbc08e>Charmant comme enfance...
+  LesDialoguesEnAnglais:
+  - "I only went down here once before, but in my memories there was a door here\u2026"
+  - <color=#dbc08e>Well obviously that is not the case.
+  - '<color=#dbc08e>Are you sure you lived here? Not knowing your own house is a
+    shame. '
+  - I was not allowed to go down here.
+  - 'Nor go to the kitchen, the library or too far into the garden. '
+  - '<color=#dbc08e>What a sweet childhood... '
   SpeedDialogues:
   - 0.08
   - 0.08

@@ -15,6 +15,9 @@ MonoBehaviour:
   LesDialogues:
   - <color=#dbc08e>Une bougie.
   - <color=#dbc08e>Que le spectacle commence.
+  LesDialoguesEnAnglais:
+  - <color=#dbc08e>A candle will do the trick.
+  - '<color=#dbc08e>Let the show begin. '
   SpeedDialogues:
   - 0.08
   - 0.08

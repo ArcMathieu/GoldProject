@@ -17,7 +17,11 @@ MonoBehaviour:
     aille fouiller dedans."
   - "<color=#dbc08e> Ils ont des choses \xE0 cacher ? Ils ont un squelette dans le
     placard ? "
-  - ". . . Tu n\u2019es pas dr\xF4le."
+  - "...Tu n\u2019es pas dr\xF4le."
+  LesDialoguesEnAnglais:
+  - "This is my parent\u2019s bedroom, they wouldn't be happy if we searched in it. "
+  - <color=#dbc08e>They have something to hide? Do they have a skeleton in the closet?
+  - '...You''re not funny. '
   SpeedDialogues:
   - 0.08
   - 0.08

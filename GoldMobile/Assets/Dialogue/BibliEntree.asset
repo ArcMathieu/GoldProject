@@ -17,8 +17,13 @@ MonoBehaviour:
   - <color=#dbc08e>elle est bien sombre
   - On devrait passer par la gauche
   - <color=#dbc08e>Viens, ne nous separons pas,
+  LesDialoguesEnAnglais:
+  - <color=#dbc08e>It's the library,
+  - <color=#dbc08e>it's so dark in here.
+  - We should pass by the left.
+  - <color=#dbc08e>Come, we shouldn't split.
   SpeedDialogues:
-  - 0.05
-  - 0.05
+  - 0
+  - 0
   - 0.05
   - 0.05

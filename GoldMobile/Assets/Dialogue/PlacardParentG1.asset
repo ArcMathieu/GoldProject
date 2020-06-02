@@ -15,6 +15,9 @@ MonoBehaviour:
   LesDialogues:
   - Matthew !
   - " Il y a quelque chose cach\xE9 derri\xE8re le placard !"
+  LesDialoguesEnAnglais:
+  - Matthew!
+  - There is something hidden behind the closet!
   SpeedDialogues:
   - 0
   - 0

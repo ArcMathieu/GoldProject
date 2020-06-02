@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LesDialogues:
   - "C'est mon jeu pr\xE9f\xE9r\xE9! "
-  - "Mes petites soeurs adoraient jouer \xE0 \xE7a aussi..."
+  - "<color=#dbc08e>Mes petites soeurs adoraient jouer \xE0 \xE7a aussi..."
+  LesDialoguesEnAnglais:
+  - That's my favorite game!
+  - <color=#dbc08e>My little sisters used to love this game too...
   SpeedDialogues:
   - 0.05
   - 0.05

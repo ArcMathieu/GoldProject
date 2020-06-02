@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: CoffreP1
   m_EditorClassIdentifier: 
   LesDialogues:
-  - "On dirait qu'il a \xE9t\xE9 forc\xE9"
+  - "<color=#dbc08e>On dirait qu'il a \xE9t\xE9 forc\xE9."
+  LesDialoguesEnAnglais:
+  - <color=#dbc08e>Looks like it has been broken.
   SpeedDialogues:
   - 0.05

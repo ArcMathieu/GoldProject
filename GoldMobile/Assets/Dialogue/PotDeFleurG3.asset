@@ -15,6 +15,9 @@ MonoBehaviour:
   LesDialogues:
   - "Les pots semblent \xEAtre num\xE9rot\xE9s."
   - 3
+  LesDialoguesEnAnglais:
+  - 'The pots seem to be numbered. '
+  - 3
   SpeedDialogues:
   - 0.09
   - 0.15

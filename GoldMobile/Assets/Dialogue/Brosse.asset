@@ -16,9 +16,17 @@ MonoBehaviour:
   - "Matthew ! Derri\xE8re le placard !"
   - ' '
   - "<color=#dbc08e>Ouf, \xE7a p\xE8se son poids !"
-  - "Une brosse \xE0 cheveux ?  Il y a de longs cheveux blonds dessus."
-  - "Ce sont s\xFBrement les miens. Qu\u2019est-ce qu'elle fait la ?"
+  - "<color=#dbc08e>Une brosse \xE0 cheveux ?  Il y a de longs cheveux blonds dessus."
+  - "<color=#dbc08e>Ce sont s\xFBrement les miens. Qu\u2019est-ce qu'elle fait la
+    ?"
   - "<color=#dbc08e>Etrange manie que de cacher des objets partout dans sa maison\u2026 "
+  LesDialoguesEnAnglais:
+  - 'Matthew! Behind the closet! '
+  - 
+  - '<color=#dbc08e>Phew, it weighs its weight! Let''s see... '
+  - <color=#dbc08e>A hairbrush? There are long blond hair on it.
+  - "<color=#dbc08e>They\u2019re Honoria\u2019s. What is it doing there?"
+  - "<color=#dbc08e>What a strange habit to hide objects everywhere in his house\u2026"
   SpeedDialogues:
   - 0.08
   - 1.5

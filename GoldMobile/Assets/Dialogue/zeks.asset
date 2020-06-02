@@ -10,15 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 763e855a9f3f66b4ab514909eca95b77, type: 3}
-  m_Name: SerreTrigger
+  m_Name: zeks
   m_EditorClassIdentifier: 
   LesDialogues:
-  - "C\u2019est la p\xE9riode de l\u2019ann\xE9e que je pr\xE9f\xE8re!"
-  - ' Les fleurs sentaient si bons ! '
-  - "Dommage que les plantes soient toutes fan\xE9es maintenant..."
-  LesDialoguesEnAnglais:
-  - "It\u2019s my favorite time of the year!"
-  - 'The flowers smelled so good! '
-  - Too bad the plants are all wilted now.
-  SpeedDialogues:
-  - 0.08
+  - ;)
+  LesDialoguesEnAnglais: []
+  SpeedDialogues: []

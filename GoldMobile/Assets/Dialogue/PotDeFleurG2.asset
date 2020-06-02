@@ -15,6 +15,9 @@ MonoBehaviour:
   LesDialogues:
   - 'Etrange cette majuscule. '
   - 1
+  LesDialoguesEnAnglais:
+  - 'What does this number mean? '
+  - 1
   SpeedDialogues:
   - 0.09
   - 0.15

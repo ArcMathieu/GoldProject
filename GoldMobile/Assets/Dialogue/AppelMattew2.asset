@@ -19,7 +19,12 @@ MonoBehaviour:
   - "<color=#dbc08e>Tu as \xE9t\xE9 tr\xE8s courageuse, petite."
   - "J\u2019ai eu tr\xE8s peur ! Les m\xE9chantes ombres ont failli t\u2019attraper
     !"
-  LesDialoguesEnAnglais: []
+  LesDialoguesEnAnglais:
+  - Matthew!
+  - '<color=#dbc08e>Honoria! Are you ok? '
+  - I think so...
+  - <color=#dbc08e>You were very brave, kid.
+  - I was very scared! The evil shadows almost caught you!
   SpeedDialogues:
   - 0.05
   - 0.05
