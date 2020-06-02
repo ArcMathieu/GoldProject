@@ -133,9 +133,11 @@ public class Button : MonoBehaviour
             StartCoroutine(changeColor());
             IEnumerator changeColor()
             {
-                GetComponentInChildren<Image>().color = Color.grey;
+                transform.GetChild(0).GetComponent<Image>().color = Color.grey;
+                transform.GetChild(1).GetComponent<Image>().color = Color.grey;
                 yield return new WaitForSeconds(0.2f);
-                GetComponentInChildren<Image>().color = Color.white;
+                transform.GetChild(0).GetComponent<Image>().color = Color.white;
+                transform.GetChild(1).GetComponent<Image>().color = Color.white;
 
             }
         }

@@ -40,7 +40,10 @@ public class StoryGame : MonoBehaviour
     //Enigme
     public bool coffre;//coffre fort de katia
 
+    private void CheckProgression()
+    {
 
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.G))

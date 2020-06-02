@@ -33,7 +33,7 @@ public class GhostManager : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         speed = GameManager._instance.playerSpeed;
         GhostState = State.WAIT;
-        anim = gameObject.GetComponentsInChildren<Animator>()[1];
+        anim = transform.GetChild(0).GetComponent<Animator>();
         FindObjectOfType<SoundManager>().PlaySfx("SpawnG");
         FindObjectOfType<Achievement>().UnlockTrueFalseExorcist();
     }
@@ -61,9 +61,9 @@ public class GhostManager : MonoBehaviour
     {
         if (!gameManager.controleP1)
         {
-            
 
-            rb.MovePosition(transform.position + ((new Vector3(0, 1, 0) * joystick.Vertical * speed) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed )) * Time.deltaTime);
+
+            rb.MovePosition(transform.position + ((new Vector3(0, 1, 0) * joystick.Vertical * speed) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed)) * Time.deltaTime);
             if (joystick.Vertical != 0 || joystick.Horizontal != 0)
             {
                 anim.SetBool("Walk", true);
@@ -89,7 +89,7 @@ public class GhostManager : MonoBehaviour
         //GhostEffectHUD.SetActive(false);
         rb.MovePosition(Vector2.MoveTowards(transform.position, MyPlayer.transform.position, speed * Time.deltaTime));
         anim.SetBool("Walk", true);
-
+        Debug.Log("anim");
         if (footP1.gameObject.transform.position.x < footP2.gameObject.transform.position.x)
         {
             GetComponentInChildren<SpriteRenderer>().flipX = true;
@@ -98,6 +98,11 @@ public class GhostManager : MonoBehaviour
         {
             GetComponentInChildren<SpriteRenderer>().flipX = false;
         }
+        //try
+        //{
+
+        //}
+        //catch { }
     }
 
     public void Wait()
@@ -105,28 +110,37 @@ public class GhostManager : MonoBehaviour
         //GhostEffectHUD.SetActive(false);
         //Stay at this position
         anim.SetBool("Walk", false);
-        if (footP1.gameObject.transform.position.x < footP2.gameObject.transform.position.x)
+        try
         {
-            GetComponentInChildren<SpriteRenderer>().flipX = true;
+            if (footP1.gameObject.transform.position.x < footP2.gameObject.transform.position.x)
+            {
+                GetComponentInChildren<SpriteRenderer>().flipX = true;
+            }
+            else
+            {
+                GetComponentInChildren<SpriteRenderer>().flipX = false;
+            }
+
         }
-        else
-        {
-            GetComponentInChildren<SpriteRenderer>().flipX = false;
-        }
+        catch { }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Interactable"))
+        if (transform.GetChild(0).GetComponent<SpriteRenderer>().color == new Color32(255, 255, 255, 1))
         {
+            if (collision.gameObject.CompareTag("Interactable"))
+            {
 
-            CurrentInteraction.Add(collision.gameObject);
-            Debug.Log(collision.gameObject.name);
-        }
+                CurrentInteraction.Add(collision.gameObject);
+                Debug.Log(collision.gameObject.name);
+            }
 
-        if (collision.gameObject.CompareTag("creature"))
-        {
-            FindObjectOfType<Achievement>().UnlockCreature();
+            if (collision.gameObject.CompareTag("creature"))
+            {
+                FindObjectOfType<Achievement>().UnlockCreature();
+            }
+
         }
 
     }
