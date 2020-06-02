@@ -75,4 +75,10 @@ public class Achievement : MonoBehaviour
         Debug.Log("is ok LightEmUp");
     }
 
+    public void UnlockBoss()
+    {
+        Social.ReportProgress(GPGSIds.achievement_the_end, 100f, null);
+        Debug.Log("boss dead");
+    }
+
 }
