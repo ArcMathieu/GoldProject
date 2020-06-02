@@ -14,7 +14,7 @@ public class HonoriaZone : MonoBehaviour
 
     public List<GameObject> Ombres;
 
-    Color Invisible = new Color(255, 255, 255, 0);
+    Color Invisible = new Color32(255, 255, 255, 0);
     void Update()
     {
         transform.position = Honoria.transform.position;
@@ -32,7 +32,7 @@ public class HonoriaZone : MonoBehaviour
                     Debug.Log("hid");
                     if (!Ombre.GetComponent<OmbresBool>().CollidesWithHonoria)
                     {
-                        Ombre.GetComponent<SpriteRenderer>().color = Color.Lerp(Ombre.gameObject.GetComponent<SpriteRenderer>().color, new Color(255, 255, 255, 1), 0.05f);
+                        Ombre.GetComponent<SpriteRenderer>().color = Color32.Lerp(Ombre.gameObject.GetComponent<SpriteRenderer>().color, new Color32(255, 255, 255, 1), 0.05f);
                         if (Ombre.gameObject.GetComponent<SpriteRenderer>().color == Invisible)
                         {
                             Destroy(Ombre.gameObject);
@@ -40,7 +40,7 @@ public class HonoriaZone : MonoBehaviour
                     }
                     else
                     {
-                        Ombre.gameObject.GetComponent<SpriteRenderer>().color = Color.Lerp(Ombre.gameObject.GetComponent<SpriteRenderer>().color, Invisible, 0.05f);
+                        Ombre.gameObject.GetComponent<SpriteRenderer>().color = Color32.Lerp(Ombre.gameObject.GetComponent<SpriteRenderer>().color, Invisible, 0.05f);
                         if (Ombre.gameObject.GetComponent<SpriteRenderer>().color == Invisible)
                         {
                             Destroy(Ombre.gameObject);
