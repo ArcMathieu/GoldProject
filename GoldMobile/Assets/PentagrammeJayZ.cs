@@ -20,18 +20,20 @@ public class PentagrammeJayZ : MonoBehaviour
     void Update()
     {
         Light.intensity = Mathf.Lerp(0, 4.65f, t);
-        spr.color = Color.Lerp(new Color(255, 255, 255, 0), new Color(255, 255, 255, 1), t);
+
         if (!lol)
         {
-            Debug.Log("hi");
-            t += 0.5f * Time.deltaTime;
+            spr.color = Color.Lerp(new Color(255, 255, 255, 0), new Color(255, 255, 255, 1), t);
+            t += 0.8f * Time.deltaTime;
             if (t >= 1.0f)
             {
                 lol = true;
             }
-        } else
+        }
+        else
         {
-            t -= 0.5f * Time.deltaTime;
+            spr.color = Color.Lerp(new Color(255, 0, 0, 0), new Color(255, 0, 0, 1), t);
+            t -= 0.3f * Time.deltaTime;
             if (t <= 0)
             {
                 Destroy(gameObject);
@@ -43,7 +45,7 @@ public class PentagrammeJayZ : MonoBehaviour
     {
         if (lol && collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("^^");
+            Debug.Log("C'est là que tu prends des dgts");
         }
     }
 }

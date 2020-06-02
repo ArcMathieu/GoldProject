@@ -18,6 +18,20 @@ public class DarkJayZ : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
+    }
+
+    public void JayZsChilling()
+    {
+
+    }
+    public void JayZsAttack2()
+    {
+
+    }
+
+    public void AttackCrossJayZ()
+    {
         if (Timer >= 0)
         {
             Timer -= Time.deltaTime;
