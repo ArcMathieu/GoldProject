@@ -5,7 +5,7 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class Lamp : MonoBehaviour
 {
-    bool lightOn;
+    [HideInInspector] public bool lightOn;
 
     public void setAction()
     {

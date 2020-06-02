@@ -142,7 +142,7 @@ public class GameManager : MonoBehaviour
             //Exterieur cinematique => coroutine
             //launchCorout(storyManager.cin1Time);
             //chambre mother, sous sol 2, serre & librairy fermés
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 6; i++)
             {
                tp[i].precedentlyOpened = true;
             }
@@ -161,6 +161,7 @@ public class GameManager : MonoBehaviour
                     if (storyManager.cinRituel) //a declencher quand rituel invocation
                     {
                         //lumière off
+                        //FindObjectOfType<Lamp>().lightOn = false;
                         IsFollowingGirl();
                     }
                 }
@@ -169,6 +170,8 @@ public class GameManager : MonoBehaviour
                     CinAfterTuto.isReadyForCinematic = true;
                     storyManager.Tuto = false;
                     switchButton.SetActive(false);
+                    tp[6].precedentlyOpened = true;
+                    tp[7].precedentlyOpened = true;
                 }
 
             }

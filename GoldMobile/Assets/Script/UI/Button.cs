@@ -58,7 +58,7 @@ public class Button : MonoBehaviour
                 StartCoroutine(waitToUndisplay());
                 IEnumerator waitToUndisplay()
                 {
-                    yield return new WaitForSeconds(2f);
+                    yield return new WaitForSeconds(0.2f);
                     wait = false;
                 }
             }
@@ -71,6 +71,7 @@ public class Button : MonoBehaviour
                         if (player.CurrentInteraction[0].GetComponent<ObjectsInteractable>().isReadyForCinematic)
                         {
                             transform.GetChild(0).gameObject.SetActive(false);
+                            transform.GetChild(1).gameObject.SetActive(false);
                         }
                     }
                     catch
