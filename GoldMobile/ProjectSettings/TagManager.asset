@@ -20,6 +20,7 @@ TagManager:
   - Chara
   - Horse
   - Ombres
+  - GameManager
   layers:
   - Default
   - TransparentFX
