@@ -7,6 +7,7 @@ public class Button : MonoBehaviour
 {
     public PlayerManager player;
     public GhostManager ghost;
+    public DisplayText dialogue;
     public Invocation Circle;
     public void onClick()
     {
@@ -45,8 +46,55 @@ public class Button : MonoBehaviour
         }
     }
 
+    bool wait;
+
     public void Update()
     {
+        //sprites
+        if (dialogue.DoneTalking)
+        {
+            if (wait)
+            {
+                StartCoroutine(waitToUndisplay());
+                IEnumerator waitToUndisplay()
+                {
+                    yield return new WaitForSeconds(2f);
+                    wait = false;
+                }
+            }
+            else
+            {
+                if (player.CurrentInteraction.Count != 0 )
+                {
+                    try
+                    {
+                        if (player.CurrentInteraction[0].GetComponent<ObjectsInteractable>().isReadyForCinematic)
+                        {
+                            transform.GetChild(0).gameObject.SetActive(false);
+                        }
+                    }
+                    catch
+                    {
+                        transform.GetChild(0).gameObject.SetActive(true);
+                        transform.GetChild(1).gameObject.SetActive(false);
+                    }
+                    
+                }
+                else
+                {
+                    transform.GetChild(0).gameObject.SetActive(false);
+                    transform.GetChild(1).gameObject.SetActive(false);
+                }
+            }
+        } else if (!dialogue.DoneTalking)
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+            transform.GetChild(1).gameObject.SetActive(true);
+            wait = true;
+        }
+       
+
+        //code
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (player.PlayerState == PlayerManager.State.MOVABLE)
