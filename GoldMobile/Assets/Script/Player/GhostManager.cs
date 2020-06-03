@@ -89,7 +89,6 @@ public class GhostManager : MonoBehaviour
         //GhostEffectHUD.SetActive(false);
         rb.MovePosition(Vector2.MoveTowards(transform.position, MyPlayer.transform.position, speed * Time.deltaTime));
         anim.SetBool("Walk", true);
-        Debug.Log("anim");
         if (footP1.gameObject.transform.position.x < footP2.gameObject.transform.position.x)
         {
             GetComponentInChildren<SpriteRenderer>().flipX = true;
