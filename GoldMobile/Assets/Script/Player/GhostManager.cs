@@ -35,7 +35,7 @@ public class GhostManager : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         speed = GameManager._instance.playerSpeed;
-        GhostState = State.WAIT;
+        GhostState = State.CONTROLLED;
         anim = transform.GetChild(0).GetComponent<Animator>();
         FindObjectOfType<SoundManager>().PlaySfx("SpawnG");
         FindObjectOfType<Achievement>().UnlockTrueFalseExorcist();
