@@ -9755,7 +9755,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &271813777
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9795,7 +9795,6 @@ MonoBehaviour:
   gameManager: {fileID: 249889312}
   pictureSwitch: {fileID: 1691165385}
   ghostAppears: {fileID: 1969605184}
-  zone: {fileID: 1524958447}
 --- !u!58 &271813779
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10442,7 +10441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &295893593
 Transform:
   m_ObjectHideFlags: 0
@@ -23059,6 +23058,7 @@ Transform:
   m_Children:
   - {fileID: 1863734734}
   - {fileID: 823764232}
+  - {fileID: 1761955394}
   m_Father: {fileID: 410303751}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45639,7 +45639,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1524958447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46148,7 +46148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1542421535
 Transform:
   m_ObjectHideFlags: 0
@@ -51334,6 +51334,93 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -15
+--- !u!1 &1761955393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1761955394}
+  - component: {fileID: 1761955395}
+  - component: {fileID: 1761955396}
+  m_Layer: 13
+  m_Name: Revive
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1761955394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761955393}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -37.699997, y: 1.6000024, z: -12.881402}
+  m_LocalScale: {x: 6.1768208, y: 4.3220997, z: 1}
+  m_Children: []
+  m_Father: {fileID: 729549811}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1761955395
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761955393}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.21, y: 0.94}
+    newSize: {x: 0.21, y: 0.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.19, y: 0.54}
+  m_EdgeRadius: 0
+--- !u!114 &1761955396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761955393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016954e06cf8f0d4f927f56508599478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemName: 
+  Cinematic: {fileID: 11400000, guid: baa91004fc1615042a580f20f05fc92a, type: 2}
+  isIn: 0
+  isPIn: 0
+  notFirstTalkP: 0
+  isPickable: 0
+  dialPlayer:
+  - {fileID: 11400000, guid: fe418e1f9470652428c15f47805d045a, type: 2}
+  dialGhost: []
+  tdialogue: {fileID: 0}
+  Player: {fileID: 0}
+  DoorSytem: {fileID: 0}
+  LockSytem: {fileID: 0}
+  HasTalked: 0
+  isLastCin: 0
+  isReadyForCinematic: 1
+  isTrigger: 1
 --- !u!1 &1762661124
 GameObject:
   m_ObjectHideFlags: 0
@@ -55260,7 +55347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1863734734
 Transform:
   m_ObjectHideFlags: 0
@@ -58973,6 +59060,7 @@ MonoBehaviour:
   footP1: {fileID: 744710756}
   footP2: {fileID: 228834554}
   MyPlayer: {fileID: 691163780}
+  minDistance: 3
   GhostState: 0
   CurrentInteraction: []
 --- !u!95 &1969605189

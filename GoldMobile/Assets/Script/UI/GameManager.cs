@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,7 +23,6 @@ public class GameManager : MonoBehaviour
     public ObjectsInteractable CinAfterTuto;
     public ObjectsInteractable cinAfterCoffre;
     public ObjectsInteractable CineEnding;
-    
 
     public Tp[] tp;
 
@@ -38,7 +38,6 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
         }
-
         storyManager.Tuto = true;
         controleP1 = true;
         ChangeState();

@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoryGame : MonoBehaviour
+public class SaveSystem
 {
-    //début du jeu
     public bool START;
-
-    //fin du jeu
     public bool cinENDING;
 
     //objectPicked
@@ -15,7 +12,6 @@ public class StoryGame : MonoBehaviour
     public bool Secateur; //enleve ronces dans la serre
     public bool BolRituel; //A colecter for ending
     public bool journalHonoria; //Dialogue
-    //public bool CleParentsRoom; //Dialogue && ouvre chambre
     public bool placardMoved; //Retenir position
     public bool BrosseACheveux; //Dialogue
     public bool CleSecretaire; //openBibli
@@ -38,22 +34,8 @@ public class StoryGame : MonoBehaviour
     public bool bibleChevet;
 
     //Enigme
-    public bool coffre;//coffre fort de katia
+    public bool coffre;//coffre fort de katiapu
 
     
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            FindObjectOfType<GameManager>().openStep();
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            Debug.Log("saved");
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-        }
-    }
-
 }
+

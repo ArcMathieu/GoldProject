@@ -21,6 +21,9 @@ public class GhostManager : MonoBehaviour
     public GameObject footP2;
     public GameObject MyPlayer;
     private Animator anim;
+
+    private float distance;
+    public float minDistance = 1;
     public enum State { CONTROLLED, WAIT, MOVABLE }
     public State GhostState;
 
@@ -86,23 +89,27 @@ public class GhostManager : MonoBehaviour
 
     public void Controlled()
     {
-        //GhostEffectHUD.SetActive(false);
-        rb.MovePosition(Vector2.MoveTowards(transform.position, MyPlayer.transform.position, speed * Time.deltaTime));
-        anim.SetBool("Walk", true);
-        Debug.Log("anim");
-        if (footP1.gameObject.transform.position.x < footP2.gameObject.transform.position.x)
+        distance = Vector3.Distance(Player1.transform.position, transform.position);
+
+        if (distance > minDistance)
         {
-            GetComponentInChildren<SpriteRenderer>().flipX = true;
+            //GhostEffectHUD.SetActive(false);
+            rb.MovePosition(Vector2.MoveTowards(transform.position, MyPlayer.transform.position, speed * Time.deltaTime));
+            anim.SetBool("Walk", true);
+            Debug.Log("anim");
+            if (footP1.gameObject.transform.position.x < footP2.gameObject.transform.position.x)
+            {
+                GetComponentInChildren<SpriteRenderer>().flipX = true;
+            }
+            else
+            {
+                GetComponentInChildren<SpriteRenderer>().flipX = false;
+            }
         }
         else
         {
-            GetComponentInChildren<SpriteRenderer>().flipX = false;
+           Wait();
         }
-        //try
-        //{
-
-        //}
-        //catch { }
     }
 
     public void Wait()

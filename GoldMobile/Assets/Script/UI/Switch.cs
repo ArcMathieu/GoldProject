@@ -12,23 +12,20 @@ public class Switch : MonoBehaviour
     public GameManager gameManager;
     public GameObject pictureSwitch;
     public GameObject ghostAppears;
-    public Zone zone;
-    //public GameObject zoneDebug;
 
     public void DoAction()
     {
         StartCoroutine(changeColor());
         IEnumerator changeColor()
         {
-            GetComponentsInChildren<Image>()[0].color = Color.grey;
-            GetComponentsInChildren<Image>()[1].color = Color.grey;
+            transform.GetChild(0).GetComponent<Image>().color = Color.grey;
+            transform.GetChild(1).GetComponent<Image>().color = Color.grey;
             yield return new WaitForSeconds(0.2f);
-            GetComponentsInChildren<Image>()[0].color = Color.white;
-            GetComponentsInChildren<Image>()[1].color = Color.white;
-
+            transform.GetChild(0).GetComponent<Image>().color = Color.white;
+            transform.GetChild(1).GetComponent<Image>().color = Color.white;
         }
 
-        if (!controlePlayer && !zone.AlreadyInZone)
+        if (!controlePlayer)
         {
             StartCoroutine(Waiting());
             IEnumerator Waiting()
@@ -67,15 +64,15 @@ public class Switch : MonoBehaviour
             StartCoroutine(changeColor());
             IEnumerator changeColor()
             {
-                GetComponentsInChildren<Image>()[0].color = Color.grey;
-                GetComponentsInChildren<Image>()[1].color = Color.grey;
+                transform.GetChild(0).GetComponent<Image>().color = Color.grey;
+                transform.GetChild(1).GetComponent<Image>().color = Color.grey;
                 yield return new WaitForSeconds(0.2f);
-                GetComponentsInChildren<Image>()[0].color = Color.white;
-                GetComponentsInChildren<Image>()[1].color = Color.white;
+                transform.GetChild(0).GetComponent<Image>().color = Color.white;
+                transform.GetChild(1).GetComponent<Image>().color = Color.white;
 
             }
 
-            if (!controlePlayer && !zone.AlreadyInZone)
+            if (!controlePlayer)
             {
                 StartCoroutine(Waiting());
                 IEnumerator Waiting()
@@ -104,17 +101,6 @@ public class Switch : MonoBehaviour
                 }
             }
 
-        }
-
-        if (!controlePlayer && zone.AlreadyInZone)
-        {
-            GetComponentsInChildren<Image>()[0].color = Color.grey;
-            GetComponentsInChildren<Image>()[1].color = Color.grey;
-        }
-        else
-        {
-            GetComponentsInChildren<Image>()[0].color = Color.white;
-            GetComponentsInChildren<Image>()[1].color = Color.white;
         }
     }
 }
