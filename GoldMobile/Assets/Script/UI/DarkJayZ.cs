@@ -19,6 +19,8 @@ public class DarkJayZ : MonoBehaviour
     public float TimerDuration;
 
     public Transform BloodPos;
+
+    public int HurtState = 1;
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
@@ -28,7 +30,7 @@ public class DarkJayZ : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
         Timer = TimerDuration;
     }
-
+    public int NbOfCross = 0;
     public enum State { Chill, Blood, Cross }
     public State BossState;
     // Update is called once per frame
@@ -36,6 +38,9 @@ public class DarkJayZ : MonoBehaviour
     {
         DebugKey();
 
+        CheckHealth();
+
+        NbOfCross = 3 *HurtState;
         switch (BossState)
         {
             case State.Chill:
@@ -50,6 +55,14 @@ public class DarkJayZ : MonoBehaviour
         }
     }
 
+
+    void CheckHealth()
+    {
+        if(HurtState < 3)
+        {
+            Debug.Log("youwin");
+        }
+    }
     void DebugKey()
     {
         if (Input.GetKeyDown(KeyCode.G))
@@ -59,7 +72,6 @@ public class DarkJayZ : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.H))
         {
-          CurrentBubbleJayZ = Instantiate(BubbleJayZ, Player.transform.position, Quaternion.identity);
             BossState = State.Blood;
         }
 
@@ -72,23 +84,37 @@ public class DarkJayZ : MonoBehaviour
     }
     float t; public void JayZsChilling()
     {
-        if(CurrentBubbleJayZ != null)
+        if (CurrentBubbleJayZ != null)
         {
             Destroy(CurrentBubbleJayZ);
             t = 0f;
-            for(int i = 0; i < 4; i++)
+            // Spawn Blood rdm pos
+            for (int i = 0; i < 4; i++)
             {
                 Instantiate(BloodJayZ, new Vector3(Random.Range(-55, -35), Random.Range(121, 136), 1), Quaternion.identity);
             }
+            Timer = TimerDuration * 3;
         }
         Player.GetComponent<BoxCollider2D>().enabled = true;
         Player.GetComponentInChildren<SpriteRenderer>().sortingOrder = 0;
         Player.GetComponentsInChildren<Animator>()[1].SetBool("isFloating", false);
         ghostManager.ChangeControl();
+
+
+        if (Timer >= 0)
+        {
+            Timer -= Time.deltaTime;
+        }
+        else
+        {
+          
+            BossState = State.Cross;
+        }
     }
 
     public void AttackJayZsBlood()
     {
+        CurrentBubbleJayZ.transform.position = Player.transform.position;
         Player.GetComponentInChildren<SpriteRenderer>().sortingOrder = 1;
         playerManager.ChangeControl();
         Player.GetComponentsInChildren<Animator>()[1].SetBool("isFloating", true);
@@ -97,20 +123,41 @@ public class DarkJayZ : MonoBehaviour
             Player.GetComponent<BoxCollider2D>().enabled = false;
             t += 0.008f * Time.deltaTime;
             Player.transform.position = Vector3.Lerp(Player.transform.position, BloodPos.position, t);
-            CurrentBubbleJayZ.transform.position = Player.transform.position;
+  
         }
     }
-
+    int SpawnnedCross = 0;
+  
     public void AttackCrossJayZ()
     {
+
+
         if (Timer >= 0)
         {
             Timer -= Time.deltaTime;
         }
-        else
+        else if (Timer <= 0 && NbOfCross >= SpawnnedCross)
         {
+            SpawnnedCross++;
             Timer = TimerDuration;
             Instantiate(CrossJayZ, Player.transform.position, Quaternion.identity);
+        } else if(Timer <= 0)
+        {
+            CurrentBubbleJayZ = Instantiate(BubbleJayZ, Player.transform.position, Quaternion.identity);
+
+            BossState = State.Blood;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Tonneau" && BossState == State.Blood)
+        {
+            HurtState++;
+            SpawnnedCross = 0;
+            BossState = State.Chill;
+            Destroy(collision.gameObject);
+
         }
     }
 }
