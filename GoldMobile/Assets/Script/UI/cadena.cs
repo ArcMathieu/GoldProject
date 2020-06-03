@@ -22,7 +22,7 @@ public class cadena : MonoBehaviour
     {
         if (number.GetComponent<currentNumber>().number + 1 > 9)
         {
-            number.GetComponent<currentNumber>().number = 0;
+            number.GetComponent<currentNumber>().number = 0; 
         }
         else
         {

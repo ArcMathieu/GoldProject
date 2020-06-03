@@ -111,7 +111,7 @@ public class ObjectsInteractable : MonoBehaviour
                 else if (isPickable && ItemName != null)
                 {
                     //tdialogue.DialPass(dialPlayer[0]);
-
+                    Vibration.Vibrate(55);
                 }
 
 

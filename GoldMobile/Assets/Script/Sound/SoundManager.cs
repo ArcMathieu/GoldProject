@@ -8,7 +8,7 @@ using System;
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager instance;
-
+    public bool isCinematicPlaying;
     public Sound[] musique;
     public Sound[] sfx;
 
@@ -56,7 +56,7 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public bool isCinematicPlaying;
+
 
     public void killme()
     {
