@@ -37,14 +37,13 @@ public class GhostManager : MonoBehaviour
         speed = GameManager._instance.playerSpeed;
         GhostState = State.CONTROLLED;
         anim = transform.GetChild(0).GetComponent<Animator>();
-        FindObjectOfType<SoundManager>().PlaySfx("SpawnGhost");
+//        FindObjectOfType<SoundManager>().PlaySfx("SpawnGhost");
         FindObjectOfType<Achievement>().UnlockTrueFalseExorcist();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(distance);
         switch (GhostState)
         {
             case State.CONTROLLED:

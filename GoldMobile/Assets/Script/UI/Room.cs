@@ -22,8 +22,8 @@ public class Room : MonoBehaviour
             //Debug.Log(other.gameObject.name);
             MainCamera.Instance.RoomEnter(this);
             //Debug.Log(other.gameObject.name);
-            FindObjectOfType<GameManager>().Saving();
-            FindObjectOfType<SaveSystem>().Save();
+ //           FindObjectOfType<GameManager>().Saving();
+//            FindObjectOfType<SaveSystem>().Save();
             ActivateEnemies();
         }
     }
