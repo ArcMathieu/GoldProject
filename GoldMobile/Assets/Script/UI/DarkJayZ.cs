@@ -81,6 +81,7 @@ public class DarkJayZ : MonoBehaviour
         if (HurtState > 4)
         {
             Victory = true;
+            FindObjectOfType<Achievement>().UnlockBoss();
             FindObjectOfType<SoundManager>().CinMusic();
         }
     }
