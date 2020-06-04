@@ -38,7 +38,6 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
         }
-        storyManager.Tuto = true;
         controleP1 = true;
         ChangeState();
         openStep();
@@ -157,63 +156,63 @@ public class GameManager : MonoBehaviour
                 //IsFollowingGirl();
             }
 
-        }
-
-        if (storyManager.DoorToSerre)
-        {
-            //serre (lié à chambre)
-            tp[8].precedentlyOpened = true;
-            tp[9].precedentlyOpened = true;
-        }
-
-        if (storyManager.DoorToMother)
-        {
-            //mother room
-            cinAfterCoffre.isReadyForCinematic = true;
-            tp[10].precedentlyOpened = true;
-            tp[11].precedentlyOpened = true;
-
-            //pages livre
-            if (storyManager.CleSecretaire)
+            if (storyManager.DoorToSerre)
             {
-                Brosse.isReadyForCinematic = true;
+                //serre (lié à chambre)
+                tp[8].precedentlyOpened = true;
+                tp[9].precedentlyOpened = true;
             }
 
-            //cinématique
-            if (storyManager.BrosseACheveux)
+            if (storyManager.DoorToMother)
             {
-                //bruit bibli
-                storyManager.DoorToBibli = true;
+                //mother room
+                cinAfterCoffre.isReadyForCinematic = true;
+                tp[10].precedentlyOpened = true;
+                tp[11].precedentlyOpened = true;
+
+                //pages livre
+                if (storyManager.CleSecretaire)
+                {
+                    Brosse.isReadyForCinematic = true;
+                }
+
+                //cinématique
+                if (storyManager.BrosseACheveux)
+                {
+                    //bruit bibli
+                    storyManager.DoorToBibli = true;
+                }
+
             }
 
-        }
-
-        if (storyManager.DoorToBibli)
-        {
-            //library
-            tp[12].precedentlyOpened = true;
-            tp[13].precedentlyOpened = true;
-
-            //labyrinthe
-            if (storyManager.Lockpick)
+            if (storyManager.DoorToBibli)
             {
-                tp[14].precedentlyOpened = true;
-                tp[15].precedentlyOpened = true;
-                //open secrete cave
+                //library
+                tp[12].precedentlyOpened = true;
+                tp[13].precedentlyOpened = true;
+
+                //labyrinthe
+                if (storyManager.Lockpick)
+                {
+                    tp[14].precedentlyOpened = true;
+                    tp[15].precedentlyOpened = true;
+                    //open secrete cave
+                }
+                if (storyManager.LivreRituel && storyManager.BolRituel && storyManager.dague)
+                {
+                    Debug.Log("vous avez les 3 objets du rituel");
+                    CineEnding.isReadyForCinematic = true;
+                }
+
             }
-            if (storyManager.LivreRituel && storyManager.BolRituel && storyManager.dague)
+
+            if (storyManager.cinENDING)
             {
-                Debug.Log("vous avez les 3 objets du rituel");
-                CineEnding.isReadyForCinematic = true;
+                FindObjectOfType<Achievement>().UnlockJillWouldBeProud();
+                //end
             }
-
         }
 
-        if (storyManager.cinENDING)
-        {
-            FindObjectOfType<Achievement>().UnlockJillWouldBeProud();
-            //end
-        }
 
 
     }
