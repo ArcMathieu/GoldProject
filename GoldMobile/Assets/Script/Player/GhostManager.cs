@@ -44,6 +44,7 @@ public class GhostManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Debug.Log(distance);
         switch (GhostState)
         {
             case State.CONTROLLED:
@@ -89,10 +90,11 @@ public class GhostManager : MonoBehaviour
 
     public void Controlled()
     {
-        distance = Vector3.Distance(Player1.transform.position, transform.position);
-
+        distance = Vector2.Distance(Player1.transform.position, transform.position);
+    
         if (distance > minDistance)
         {
+            Debug.Log("je suis une pute");
             //GhostEffectHUD.SetActive(false);
             rb.MovePosition(Vector2.MoveTowards(transform.position, MyPlayer.transform.position, speed * Time.deltaTime));
             anim.SetBool("Walk", true);

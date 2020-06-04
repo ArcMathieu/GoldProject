@@ -21,6 +21,7 @@ TagManager:
   - Horse
   - Ombres
   - GameManager
+  - Tonneau
   layers:
   - Default
   - TransparentFX

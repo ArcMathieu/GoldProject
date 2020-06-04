@@ -45,7 +45,8 @@ public class PentagrammeJayZ : MonoBehaviour
     {
         if (lol && collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("C'est là que tu prends des dgts");
+            FindObjectOfType<DarkJayZ>().Player.GetComponentInChildren<SpriteRenderer>().enabled = false;
+            StartCoroutine(FindObjectOfType<DarkJayZ>().GameOver());
         }
     }
 }
