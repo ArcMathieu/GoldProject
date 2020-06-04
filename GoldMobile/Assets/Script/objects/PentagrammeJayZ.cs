@@ -23,9 +23,10 @@ public class PentagrammeJayZ : MonoBehaviour
 
         if (!lol)
         {
-            spr.color = Color.Lerp(new Color(255, 255, 255, 0), new Color(255, 255, 255, 1), t);
+            //  spr.color = Color.Lerp(new Color(255, 255, 255, 0), new Color(255, 255, 255, 1), t);
             t += 0.8f * Time.deltaTime;
-            if (t >= 1.0f)
+            //if (t >= 1.0f)
+            if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
             {
                 lol = true;
             }
@@ -41,11 +42,12 @@ public class PentagrammeJayZ : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (lol && collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("C'est là que tu prends des dgts");
+        //    FindObjectOfType<DarkJayZ>().Player.GetComponentInChildren<SpriteRenderer>().enabled = false;
+            StartCoroutine(FindObjectOfType<DarkJayZ>().GameOver());
         }
     }
 }
