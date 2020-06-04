@@ -94,19 +94,21 @@ public class GhostManager : MonoBehaviour
     
         if (distance > minDistance)
         {
-            Debug.Log("je suis une pute");
-            //GhostEffectHUD.SetActive(false);
             rb.MovePosition(Vector2.MoveTowards(transform.position, MyPlayer.transform.position, speed * Time.deltaTime));
-            anim.SetBool("Walk", true);
-            Debug.Log("anim");
-            if (footP1.gameObject.transform.position.x < footP2.gameObject.transform.position.x)
+            try
             {
-                GetComponentInChildren<SpriteRenderer>().flipX = true;
+                anim.SetBool("Walk", true);
+                Debug.Log("anim");
+                if (footP1.gameObject.transform.position.x < footP2.gameObject.transform.position.x)
+                {
+                    GetComponentInChildren<SpriteRenderer>().flipX = true;
+                }
+                else
+                {
+                    GetComponentInChildren<SpriteRenderer>().flipX = false;
+                }
             }
-            else
-            {
-                GetComponentInChildren<SpriteRenderer>().flipX = false;
-            }
+            catch { }
         }
         else
         {
@@ -118,9 +120,10 @@ public class GhostManager : MonoBehaviour
     {
         //GhostEffectHUD.SetActive(false);
         //Stay at this position
-        anim.SetBool("Walk", false);
+        
         try
         {
+            anim.SetBool("Walk", false);
             if (footP1.gameObject.transform.position.x < footP2.gameObject.transform.position.x)
             {
                 GetComponentInChildren<SpriteRenderer>().flipX = true;

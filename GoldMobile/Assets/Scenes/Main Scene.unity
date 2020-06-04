@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6759,6 +6759,14 @@ PlayableDirector:
     value: {fileID: 414171490}
   - key: {fileID: 4083608860030766219, guid: baa91004fc1615042a580f20f05fc92a, type: 2}
     value: {fileID: 1542421536}
+  - key: {fileID: -662604353971466200, guid: 8705c7512b37e9945af0a01262e1737d, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 7955462568490215817, guid: 8705c7512b37e9945af0a01262e1737d, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 5762631782613743195, guid: 8705c7512b37e9945af0a01262e1737d, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8901941772266057226, guid: 8705c7512b37e9945af0a01262e1737d, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - f1167542eb772c44cb2629db1bfaeac8: {fileID: 271813776}
@@ -9054,7 +9062,6 @@ MonoBehaviour:
   storyManager: {fileID: 979059964}
   player: {fileID: 691163785}
   gh: {fileID: 1969605188}
-  openSecretaire: {fileID: 1056236233}
   Brosse: {fileID: 1481023035}
   CinAfterTuto: {fileID: 1149273886}
   cinAfterCoffre: {fileID: 1097700470}
@@ -63763,6 +63770,11 @@ PrefabInstance:
       propertyPath: MyPlayer
       value: 
       objectReference: {fileID: 691163780}
+    - target: {fileID: 5563480799262584737, guid: b834b4629a2bd3849a72a4c88b76ba24,
+        type: 3}
+      propertyPath: minDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5563480799262584740, guid: b834b4629a2bd3849a72a4c88b76ba24,
         type: 3}
       propertyPath: m_LocalPosition.x
