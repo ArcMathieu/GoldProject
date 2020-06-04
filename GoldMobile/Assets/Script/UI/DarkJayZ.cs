@@ -19,8 +19,12 @@ public class DarkJayZ : MonoBehaviour
 
     private float Timer;
     public float TimerDuration;
+    public float distanceDetect = 15f;
 
     public Transform BloodPos;
+
+    public bool detected = false;
+
 
     public int HurtState = 1;
     void Start()
@@ -38,35 +42,46 @@ public class DarkJayZ : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Player.GetComponent<PlayerManager>().isDead && CheckHealth())
+        if (Player)
         {
-            CheckHealth();
-
-            NbOfCross = 3 * HurtState;
-            switch (BossState)
+            float distance = (Player.transform.position - transform.position).sqrMagnitude;
+            if (distance < distanceDetect * distanceDetect)
             {
-                case State.Chill:
-                    JayZsChilling();
-                    break;
-                case State.Blood:
-                    AttackJayZsBlood();
-                    break;
-                case State.Cross:
-                    AttackCrossJayZ();
-                    break;
+                detected = true;
+                if (detected == true)
+                {
+                    FindObjectOfType<SoundManager>().SoundBoss();
+                }
             }
+            else
+            {
+                detected = false;
+            }
+        }
+
+        CheckHealth();
+
+        NbOfCross = 3 * HurtState;
+        switch (BossState)
+        {
+            case State.Chill:
+                JayZsChilling();
+                break;
+            case State.Blood:
+                AttackJayZsBlood();
+                break;
+            case State.Cross:
+                AttackCrossJayZ();
+                break;
         }
     }
 
-    bool CheckHealth()
+
+    void CheckHealth()
     {
         if (HurtState >= 3)
         {
-            return false;
-        }
-        else
-        {
-            return true;
+            Debug.Log("youwin");
         }
     }
     void DebugKey()
@@ -98,9 +113,7 @@ public class DarkJayZ : MonoBehaviour
         Player.GetComponentsInChildren<Animator>()[1].speed = 0;
         Player.GetComponent<PlayerManager>().isDead = true;
         Vibration.Vibrate(10);
-        Debug.Log("hihi");
         yield return new WaitForSeconds(5f);
-        Debug.Log("haha");
         FindObjectOfType<LoaderScene>().LoadingScene(3);
     }
     float t; public void JayZsChilling()
@@ -156,6 +169,7 @@ public class DarkJayZ : MonoBehaviour
             }
             else
             {
+                FindObjectOfType<SoundManager>().PlaySfx("Dead");
                 StartCoroutine(GameOver());
             }
             Air.GetComponent<Image>().color = Color.Lerp(new Color(255, 255, 255, 0), new Color(255, 255, 255, 1), TB);

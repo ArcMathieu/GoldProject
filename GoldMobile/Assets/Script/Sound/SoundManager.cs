@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager instance;
     public bool isCinematicPlaying;
+    public bool isFightBoss = false;
     public Sound[] musique;
     public Sound[] sfx;
 
@@ -67,6 +68,23 @@ public class SoundManager : MonoBehaviour
     {
         isCinematicPlaying = true;
     }
+
+    public void SoundBoss()
+    {
+        isFightBoss = true;
+        if(isFightBoss)
+        {
+            stopCurrentMusic();
+            Play("Boss_theme");
+        }
+    }
+
+    public void stopCurrentMusic()
+    {
+        musique[0].volume = 0f;
+        musique[1].volume = 0f;
+    }
+
     public void Play(string name)
     {
         Sound x = Array.Find(musique, sound => sound.name == name);
