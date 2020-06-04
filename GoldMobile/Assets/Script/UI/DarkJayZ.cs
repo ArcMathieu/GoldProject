@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DarkJayZ : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class DarkJayZ : MonoBehaviour
     public GameObject BubbleJayZ;
     public GameObject CurrentBubbleJayZ;
     public GameObject BloodJayZ;
+    public GameObject Air;
 
     private PlayerManager playerManager;
     private GhostManager ghostManager;
@@ -36,7 +38,6 @@ public class DarkJayZ : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DebugKey();
 
         CheckHealth();
 
@@ -83,16 +84,24 @@ public class DarkJayZ : MonoBehaviour
 
     }
 
+    float colorAlpha = 1.5f;
+    float t2;
     public IEnumerator GameOver()
     {
-        gameManager.controleP1 = false;
-        yield return new WaitForSeconds(3f);
+     
+        ghostManager.ChangeControl();
+        Player.GetComponentsInChildren<Animator>()[1].speed = 0;
+        Player.GetComponent<PlayerManager>().isDead = true;
+        Vibration.Vibrate(10);
+        yield return new WaitForSeconds(5f);
         FindObjectOfType<LoaderScene>().LoadingScene(3);
     }
     float t; public void JayZsChilling()
     {
+        Air.SetActive(false);
         if (CurrentBubbleJayZ != null)
         {
+        
             Destroy(CurrentBubbleJayZ);
             t = 0f;
             // Spawn Blood rdm pos
@@ -120,6 +129,8 @@ public class DarkJayZ : MonoBehaviour
         }
     }
 
+    float TB;
+    float I;
     public void AttackJayZsBlood()
     {
         CurrentBubbleJayZ.transform.position = Player.transform.position;
@@ -131,15 +142,16 @@ public class DarkJayZ : MonoBehaviour
             Player.GetComponent<BoxCollider2D>().enabled = false;
             t += 0.008f * Time.deltaTime;
             Player.transform.position = Vector3.Lerp(Player.transform.position, BloodPos.position, t);
-
             if (Timer >= 0)
             {
+                TB = Timer / 30;
                 Timer -= Time.deltaTime;
             }
             else
             {
                 StartCoroutine(GameOver());
             }
+            Air.GetComponent<Image>().color = Color.Lerp(new Color(255, 255, 255, 0), new Color(255, 255, 255, 1), TB);
         }
     }
     int SpawnnedCross = 0;
@@ -160,7 +172,8 @@ public class DarkJayZ : MonoBehaviour
         {
             CurrentBubbleJayZ = Instantiate(BubbleJayZ, Player.transform.position, Quaternion.identity);
             BossState = State.Blood;
-            Timer = 15f;
+            Air.SetActive(true);
+            Timer = 25f;
             playerManager.ChangeControl();
         }
     }

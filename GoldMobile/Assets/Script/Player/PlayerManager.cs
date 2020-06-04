@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    public bool isDead;
     Rigidbody2D rb;
     private float speed;
     public Joystick joystick;
@@ -16,7 +17,7 @@ public class PlayerManager : MonoBehaviour
     public float currentRotation;
 
     //differents état du joueur
-    public enum State {WAIT, MOVABLE }
+    public enum State { WAIT, MOVABLE }
     public State PlayerState;
 
     //Animation du joueur
@@ -44,7 +45,7 @@ public class PlayerManager : MonoBehaviour
             {
                 collision.gameObject.GetComponent<ObjectsInteractable>().Player = gameObject;
             }
-            catch{}
+            catch { }
             if (collision.gameObject.name == "cadena")
             {
                 cadena.SetActive(true);
@@ -53,12 +54,12 @@ public class PlayerManager : MonoBehaviour
             Debug.Log(collision.gameObject.name);
         }
 
-        if(collision.gameObject.CompareTag("creature"))
+        if (collision.gameObject.CompareTag("creature"))
         {
             FindObjectOfType<Achievement>().UnlockCreature();
         }
 
-        if(collision.gameObject.CompareTag("Armoire"))
+        if (collision.gameObject.CompareTag("Armoire"))
         {
             if (collision.GetComponent<Animator>().GetBool("pushed"))
             {
@@ -88,10 +89,16 @@ public class PlayerManager : MonoBehaviour
             CurrentInteraction.Remove(collision.gameObject);
         }
     }
-
+    float t;
     void FixedUpdate()
     {
-        
+
+        if (isDead == true)
+        {
+               t += 0.3f * Time.deltaTime;
+            GetComponentInChildren<SpriteRenderer>().color = Color.Lerp(new Color(255, 255, 255, 1), new Color(255, 255, 255, 0), t);
+        }
+    
         switch (PlayerState)
         {
             case State.WAIT:
@@ -108,7 +115,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Movable()
     {
-        if (gameManager.controleP1 && GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DisplayText>().DoneTalking)
+        if (gameManager.controleP1 && GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DisplayText>().DoneTalking || !isDead)
         {
             rb.MovePosition(transform.position + (((new Vector3(0, 1, 0) * joystick.Vertical * speed ) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed)) * Time.fixedDeltaTime));
             //Debug.Log("Horizontal" +joystick.Horizontal);
