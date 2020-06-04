@@ -11346,7 +11346,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320916825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.562805, y: -152.39612, z: -3407.4167}
+  m_LocalPosition: {x: -185.8, y: -413.7, z: -3407.4167}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 590219570}
@@ -11365,6 +11365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCinematicPlaying: 1
+  isFightBoss: 0
   musique:
   - name: Main_Theme
     clip: {fileID: 8300000, guid: 9dad10d96b9a6cf4bb72aa8673c5db05, type: 3}
@@ -11372,7 +11373,7 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: Cin_Theme
-    clip: {fileID: 8300000, guid: b9e21955ea27b3e45b40a29fcc7e1f33, type: 3}
+    clip: {fileID: 8300000, guid: 9dad10d96b9a6cf4bb72aa8673c5db05, type: 3}
     volume: 0
     loop: 1
     source: {fileID: 0}
