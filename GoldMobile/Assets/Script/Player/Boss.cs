@@ -11,7 +11,6 @@ public class Boss : MonoBehaviour
     public GameManager gameManager;
     private Animator animat;
     public Transform Player;
-    public Transform ghost;
     public bool detected;
     public float distanceDetect;
     public bool isflip = false;

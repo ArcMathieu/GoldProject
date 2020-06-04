@@ -19,8 +19,12 @@ public class DarkJayZ : MonoBehaviour
 
     private float Timer;
     public float TimerDuration;
+    public float distanceDetect = 15f;
 
     public Transform BloodPos;
+
+    public bool detected = false;
+
 
     public int HurtState = 1;
     void Start()
@@ -38,6 +42,22 @@ public class DarkJayZ : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Player)
+        {
+            float distance = (Player.transform.position - transform.position).sqrMagnitude;
+            if (distance < distanceDetect * distanceDetect)
+            {
+                detected = true;
+                if (detected == true)
+                {
+                    FindObjectOfType<SoundManager>().SoundBoss();
+                }
+            }
+            else
+            {
+                detected = false;
+            }
+        }
 
         CheckHealth();
 
@@ -149,6 +169,7 @@ public class DarkJayZ : MonoBehaviour
             }
             else
             {
+                FindObjectOfType<SoundManager>().PlaySfx("Dead");
                 StartCoroutine(GameOver());
             }
             Air.GetComponent<Image>().color = Color.Lerp(new Color(255, 255, 255, 0), new Color(255, 255, 255, 1), TB);

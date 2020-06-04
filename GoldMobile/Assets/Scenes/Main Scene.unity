@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -11350,7 +11350,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320916825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.562805, y: -152.39612, z: -3407.4167}
+  m_LocalPosition: {x: -185.8, y: -413.7, z: -3407.4167}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 590219570}
@@ -11369,15 +11369,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCinematicPlaying: 1
+  isFightBoss: 0
   musique:
   - name: Main_Theme
-    clip: {fileID: 8300000, guid: d4ff63e50d6bc914dbea33a716a45c0f, type: 3}
+    clip: {fileID: 8300000, guid: 9dad10d96b9a6cf4bb72aa8673c5db05, type: 3}
     volume: 0.8
     loop: 1
     source: {fileID: 0}
   - name: Cin_Theme
-    clip: {fileID: 8300000, guid: b9e21955ea27b3e45b40a29fcc7e1f33, type: 3}
+    clip: {fileID: 8300000, guid: 9dad10d96b9a6cf4bb72aa8673c5db05, type: 3}
     volume: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: Boss_Theme
+    clip: {fileID: 8300000, guid: 2dba3b2fa7d39034b876a696b8504cd6, type: 3}
+    volume: 1
     loop: 1
     source: {fileID: 0}
   sfx:
@@ -11387,7 +11393,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Armoire
-    clip: {fileID: 8300000, guid: a095b82f701942c46ab9fc68052bde5c, type: 3}
+    clip: {fileID: 8300000, guid: 65fc4abba44bc8e4a91814a5ff2c8218, type: 3}
     volume: 1
     loop: 0
     source: {fileID: 0}
@@ -11397,7 +11403,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Cut
-    clip: {fileID: 8300000, guid: 72f3185f7d837974c82c7147da0f0131, type: 3}
+    clip: {fileID: 8300000, guid: 95fcb5a2ed75c27488d0a0894a8ca326, type: 3}
     volume: 1
     loop: 0
     source: {fileID: 0}
@@ -11407,12 +11413,17 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Doors
-    clip: {fileID: 8300000, guid: 9be025f07480f3441ba977dc702f2856, type: 3}
+    clip: {fileID: 8300000, guid: b2b3afe2270ad10429bd40ebb305850c, type: 3}
     volume: 1
     loop: 0
     source: {fileID: 0}
   - name: SwitchGhost
-    clip: {fileID: 8300000, guid: 8a9fab2202e143849b0614967138416e, type: 3}
+    clip: {fileID: 8300000, guid: ff2cae2816c352a4b9ec0b9bc28c35a1, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Dead
+    clip: {fileID: 8300000, guid: d34a5e951e025b240b505a7dbaea4e24, type: 3}
     volume: 1
     loop: 0
     source: {fileID: 0}
