@@ -38,30 +38,35 @@ public class DarkJayZ : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        CheckHealth();
-
-        NbOfCross = 3 * HurtState;
-        switch (BossState)
+        if (!Player.GetComponent<PlayerManager>().isDead && CheckHealth())
         {
-            case State.Chill:
-                JayZsChilling();
-                break;
-            case State.Blood:
-                AttackJayZsBlood();
-                break;
-            case State.Cross:
-                AttackCrossJayZ();
-                break;
+            CheckHealth();
+
+            NbOfCross = 3 * HurtState;
+            switch (BossState)
+            {
+                case State.Chill:
+                    JayZsChilling();
+                    break;
+                case State.Blood:
+                    AttackJayZsBlood();
+                    break;
+                case State.Cross:
+                    AttackCrossJayZ();
+                    break;
+            }
         }
     }
 
-
-    void CheckHealth()
+    bool CheckHealth()
     {
         if (HurtState >= 3)
         {
-            Debug.Log("youwin");
+            return false;
+        }
+        else
+        {
+            return true;
         }
     }
     void DebugKey()
@@ -93,7 +98,9 @@ public class DarkJayZ : MonoBehaviour
         Player.GetComponentsInChildren<Animator>()[1].speed = 0;
         Player.GetComponent<PlayerManager>().isDead = true;
         Vibration.Vibrate(10);
+        Debug.Log("hihi");
         yield return new WaitForSeconds(5f);
+        Debug.Log("haha");
         FindObjectOfType<LoaderScene>().LoadingScene(3);
     }
     float t; public void JayZsChilling()
