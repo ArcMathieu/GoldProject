@@ -78,7 +78,7 @@ public class Switch : MonoBehaviour
                 IEnumerator Waiting()
                 {
 
-                    FindObjectOfType<SoundManager>().PlaySfx("SpawnGhost");
+                    FindObjectOfType<SoundManager>().PlaySfx("SwitchGhost");
                     yield return new WaitForSeconds(0.2f);
                     ghost.ChangeControl();
                     gameManager.openStep();
@@ -93,7 +93,7 @@ public class Switch : MonoBehaviour
                 IEnumerator Waiting()
                 {
                     yield return new WaitForSeconds(0.2f);
-                    FindObjectOfType<SoundManager>().PlaySfx("SpawnGhost");
+                    FindObjectOfType<SoundManager>().PlaySfx("SwitchGhost");
                     player.ChangeControl();
                     gameManager.openStep();
                     controlePlayer = false;
