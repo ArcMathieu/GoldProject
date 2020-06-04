@@ -85,18 +85,7 @@ public class SaveSystem : MonoBehaviour
         {
             trigger.isReadyForCinematic = true;
         }
-        if (revive)
-        {
-            triggers[0].isReadyForCinematic = true;
-            triggers[0].HasTalked = false;
-            triggers[1].isReadyForCinematic = false;
-            revive = false;
-        }
-        else
-        {
-            triggers[0].isReadyForCinematic = false;
-            triggers[1].isReadyForCinematic = true;
-        }
+        triggers[0].isReadyForCinematic = false;
         triggers[4].isReadyForCinematic = false;
         triggers[6].isReadyForCinematic = false;
         triggers[7].isReadyForCinematic = false;
@@ -108,6 +97,13 @@ public class SaveSystem : MonoBehaviour
         UnlockStart();
         FindObjectOfType<StoryGame>().START = true;
         FindObjectOfType<StoryGame>().CollierKatia = true;
+        if (revive)
+        {
+            triggers[0].isReadyForCinematic = true;
+            triggers[0].HasTalked = false;
+            triggers[0].notFirstTalkP = false;
+            revive = false;
+        }
 
         triggers[1].isReadyForCinematic = false;//trigger cin salon
         triggers[2].isReadyForCinematic = false;//trigger cin before room 
@@ -145,7 +141,6 @@ public class SaveSystem : MonoBehaviour
 
         FindObjectOfType<StoryGame>().DoorToBibli = true;
         FindObjectOfType<StoryGame>().DoorToSecreteCave = false;
-        triggers[6].isReadyForCinematic = false;//cinAfterCoffre
         triggers[7].isReadyForCinematic = false;//Secretaire
         triggers[8].isReadyForCinematic = false;//Brosse
         FindObjectOfType<GameManager>().openStep();
@@ -158,7 +153,7 @@ public class SaveSystem : MonoBehaviour
         {
             triggers[i].isReadyForCinematic = false;//Bibli
         }
-
+        triggers[6].isReadyForCinematic = false;//cinAfterCoffre
         FindObjectOfType<GameManager>().openStep();
     }
     private void UnlockSecreteCave()

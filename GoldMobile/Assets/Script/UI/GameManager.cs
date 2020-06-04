@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
     public PlayerManager player;
     public GhostManager gh;
 
-    public ObjectsInteractable openSecretaire;
     public ObjectsInteractable Brosse;
     public ObjectsInteractable CinAfterTuto;
     public ObjectsInteractable cinAfterCoffre;
@@ -84,6 +83,7 @@ public class GameManager : MonoBehaviour
         {
             //collier
             storyManager.CollierKatia = true;
+            CinAfterTuto.isReadyForCinematic = true;
         }
         if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[4].name)
         {
@@ -99,11 +99,13 @@ public class GameManager : MonoBehaviour
         {
             //CléSecretaire
             storyManager.CleSecretaire = true;
+            Brosse.isReadyForCinematic = true;
         }
         if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[7].name)
         {
             //cléCahmbreParents
             storyManager.DoorToMother = true;
+            cinAfterCoffre.isReadyForCinematic = true;
         }
         if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[8].name)
         {
@@ -144,7 +146,7 @@ public class GameManager : MonoBehaviour
             //main hall
             if (storyManager.CollierKatia)
             {
-                CinAfterTuto.isReadyForCinematic = true;
+                
                 for (int i = 5; i < 8; i++)
                 {
                     tp[i].precedentlyOpened = true;
@@ -164,15 +166,8 @@ public class GameManager : MonoBehaviour
             if (storyManager.DoorToMother)
             {
                 //mother room
-                cinAfterCoffre.isReadyForCinematic = true;
                 tp[10].precedentlyOpened = true;
                 tp[11].precedentlyOpened = true;
-
-                //pages livre
-                if (storyManager.CleSecretaire)
-                {
-                    Brosse.isReadyForCinematic = true;
-                }
 
                 //cinématique
                 if (storyManager.BrosseACheveux)
