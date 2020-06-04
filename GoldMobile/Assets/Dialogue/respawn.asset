@@ -13,8 +13,15 @@ MonoBehaviour:
   m_Name: respawn
   m_EditorClassIdentifier: 
   LesDialogues:
-  - "Qu'est ce qu'il s'est pass\xE9 ?"
+  - "<color=#dbc08e>Qu'est ce qu'il s'est pass\xE9 ?"
+  - Je n'arrive pas a me souvenir...
+  - <color=#dbc08e>Nous sommes tous les deux vivants, c'est le principal ! Reprenons
+    nos recherches
   LesDialoguesEnAnglais:
-  - What happened ?
+  - <color=#dbc08e>What happened ?
+  - I can't remember...
+  - <color=#dbc08e>We are both alive, that'is what matters ! Let's resume our research
   SpeedDialogues:
+  - 0.05
+  - 0.05
   - 0.05

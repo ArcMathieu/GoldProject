@@ -69,13 +69,12 @@ public class StoryGame : MonoBehaviour
             FindObjectOfType<SaveSystem>().progress = 6;
             FindObjectOfType<SaveSystem>().LoadProgress();
         }
-        //if (Input.GetKeyDown("[8]")) //cave
-        //    FindObjectOfType<PlayerManager>().transform.position = new Vector2(-100, 10);
-        //if (Input.GetKeyDown("[9]")) //secreteCave
-        //    FindObjectOfType<PlayerManager>().transform.position = new Vector2(-75, 13);
+        if (Input.GetKeyDown("[8]"))
+            FindObjectOfType<SaveSystem>().Save();
+        if (Input.GetKeyDown("[9]"))
+            FindObjectOfType<SaveSystem>().Load();
         if (Input.GetKeyDown("[0]"))
             FindObjectOfType<SaveSystem>().Revive();
-        //    FindObjectOfType<PlayerManager>().transform.position = new Vector2(-84, 30);
     }
 
 }

@@ -39,7 +39,9 @@ public class GameManager : MonoBehaviour
         }
         controleP1 = true;
         ChangeState();
-        openStep();
+        if (DataSaveProgress.isStart)
+            FindObjectOfType<SaveSystem>().Load();
+        FindObjectOfType<SaveSystem>().Revive();
     }
 
     public void showGhost(bool canAppears)
@@ -123,6 +125,23 @@ public class GameManager : MonoBehaviour
             storyManager.dague = true;
         }
         openStep();
+    }
+
+    public void Saving()
+    {
+        if (storyManager.CollierKatia)
+            FindObjectOfType<SaveSystem>().progress = 1;
+        if (storyManager.BolRituel && storyManager.dague)
+            FindObjectOfType<SaveSystem>().progress = 2;
+        if (storyManager.DoorToMother)
+            FindObjectOfType<SaveSystem>().progress = 3;
+        if (storyManager.BrosseACheveux)
+            FindObjectOfType<SaveSystem>().progress = 4;
+        if (storyManager.DoorToSecreteCave)
+            FindObjectOfType<SaveSystem>().progress = 5;
+        if (storyManager.cinENDING)
+            FindObjectOfType<SaveSystem>().progress = 6;
+
     }
 
     public void openStep()

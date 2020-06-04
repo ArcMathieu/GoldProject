@@ -8,6 +8,21 @@ public class SaveSystem : MonoBehaviour
     public ObjectsInteractable[] triggers;
     public GameObject TpRevive;
     private bool revive = false;
+
+    public void Save()
+    {
+        DataSaveProgress.SaveProgression(this);
+    }
+    public void Reestart()
+    {
+        progress = 0;
+        DataSaveProgress.SaveProgression(this);
+    }
+    public void Load()
+    {
+        DataSave data = DataSaveProgress.LoadSave();
+        progress = data.progress;
+    }
     public void LoadProgress()
     {
         switch (progress)
@@ -51,7 +66,8 @@ public class SaveSystem : MonoBehaviour
         }
         else
         {
-            FindObjectOfType<PlayerManager>().transform.position = TpRevive.transform.position;
+            triggers[0].isReadyForCinematic = false;
+            FindObjectOfType<PlayerManager>().transform.position = new Vector2(TpRevive.transform.position.x, TpRevive.transform.position.y+2);
         }
         LoadProgress();
     }
