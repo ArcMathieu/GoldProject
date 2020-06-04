@@ -115,7 +115,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Movable()
     {
-        if (gameManager.controleP1 && GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DisplayText>().DoneTalking || !isDead)
+        if (gameManager.controleP1 && GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DisplayText>().DoneTalking && !isDead)
         {
             rb.MovePosition(transform.position + (((new Vector3(0, 1, 0) * joystick.Vertical * speed ) + (new Vector3(1, 0, 0) * joystick.Horizontal * speed)) * Time.fixedDeltaTime));
             //Debug.Log("Horizontal" +joystick.Horizontal);
