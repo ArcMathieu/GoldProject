@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -30168,22 +30168,16 @@ MonoBehaviour:
   Secateur: 0
   BolRituel: 0
   journalHonoria: 0
-  placardMoved: 0
   BrosseACheveux: 0
   CleSecretaire: 0
   PageLivre: 0
   Lockpick: 0
   LivreRituel: 0
   dague: 0
-  SecretCave: 0
-  Tuto: 1
   DoorToSerre: 0
   DoorToBibli: 0
   DoorToMother: 0
   DoorToSecreteCave: 0
-  dessin: 0
-  lettreFamille: 0
-  bibleChevet: 0
   coffre: 0
 --- !u!1 &980272437
 GameObject:
@@ -33843,9 +33837,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1124230636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14beb091ae74d3345ac54d6652a60dbf, type: 3}
+  m_Script: {fileID: 11500000, guid: f56db9dc65b6e6f4a8f06779ceda1b58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  progress: 0
 --- !u!1 &1126247670
 GameObject:
   m_ObjectHideFlags: 0

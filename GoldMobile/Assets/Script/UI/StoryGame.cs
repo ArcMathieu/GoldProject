@@ -31,20 +31,51 @@ public class StoryGame : MonoBehaviour
     //Enigme
     public bool coffre;//coffre fort de katia
 
-    
-    //private static void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.G))
-    //    {
-    //        FindObjectOfType<GameManager>().openStep();
-    //    }
-    //    if (Input.GetKeyDown(KeyCode.K))
-    //    {
-    //        Debug.Log("saved");
-    //    }
-    //    if (Input.GetKeyDown(KeyCode.L))
-    //    {
-    //    }
-    //}
+
+    private void Update()
+    {
+        if (Input.GetKeyDown("[1]"))
+        {
+            FindObjectOfType<SaveSystem>().progress = 0;
+            FindObjectOfType<SaveSystem>().LoadProgress();
+        }
+        if (Input.GetKeyDown("[2]"))
+        {
+            FindObjectOfType<SaveSystem>().progress = 1;
+            FindObjectOfType<SaveSystem>().LoadProgress();
+        }
+        if (Input.GetKeyDown("[3]"))
+        {
+            FindObjectOfType<SaveSystem>().progress = 2;
+            FindObjectOfType<SaveSystem>().LoadProgress();
+        }
+        if (Input.GetKeyDown("[4]"))
+        {
+            FindObjectOfType<SaveSystem>().progress = 3;
+            FindObjectOfType<SaveSystem>().LoadProgress();
+        }
+        if (Input.GetKeyDown("[5]"))
+        {
+            FindObjectOfType<SaveSystem>().progress = 4;
+            FindObjectOfType<SaveSystem>().LoadProgress();
+        }
+        if (Input.GetKeyDown("[6]"))
+        {
+            FindObjectOfType<SaveSystem>().progress = 5;
+            FindObjectOfType<SaveSystem>().LoadProgress();
+        }
+        if (Input.GetKeyDown("[7]"))
+        {
+            FindObjectOfType<SaveSystem>().progress = 6;
+            FindObjectOfType<SaveSystem>().LoadProgress();
+        }
+        //if (Input.GetKeyDown("[8]")) //cave
+        //    FindObjectOfType<PlayerManager>().transform.position = new Vector2(-100, 10);
+        //if (Input.GetKeyDown("[9]")) //secreteCave
+        //    FindObjectOfType<PlayerManager>().transform.position = new Vector2(-75, 13);
+        if (Input.GetKeyDown("[0]"))
+            FindObjectOfType<SaveSystem>().Revive();
+        //    FindObjectOfType<PlayerManager>().transform.position = new Vector2(-84, 30);
+    }
 
 }

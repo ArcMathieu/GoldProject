@@ -52,14 +52,6 @@ public class GameManager : MonoBehaviour
         }else ghost.SetActive(false);
     }
 
-    //public void IsFollowingGirl()
-    //{
-    //    for (int i = 0; i < tp.Length; i++)
-    //    {
-    //        tp[i].ghostFollowing = true;
-    //    }
-    //}
-
     public void launchCorout(float time)
     {
         StartCoroutine(waitForCinematique());
@@ -136,10 +128,16 @@ public class GameManager : MonoBehaviour
         //Start
         if (!storyManager.START)
         {
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 16; i++)
             {
-               tp[i].precedentlyOpened = true;
-
+                if (i < 6)
+                {
+                    tp[i].precedentlyOpened = true;
+                }
+                else
+                {
+                    tp[i].precedentlyOpened = false;
+                }
             }
             tp[5].precedentlyOpened = false;
         } else {
@@ -153,7 +151,7 @@ public class GameManager : MonoBehaviour
 
                 }
                 //FindObjectOfType<Lamp>().lightOn = false;
-                //IsFollowingGirl();
+                
             }
 
             if (storyManager.DoorToSerre)

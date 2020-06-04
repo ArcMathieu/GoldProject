@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class SaveSystem : MonoBehaviour
 {
-    private int progress;
-
-    private void LoadProgress()
+    public int progress;
+    public ObjectsInteractable[] triggers;
+    public GameObject TpRevive;
+    private bool revive = false;
+    public void LoadProgress()
     {
         switch (progress)
         {
@@ -17,10 +19,10 @@ public class SaveSystem : MonoBehaviour
                 UnlockHonoria();
                 break;
             case 2:
-                UnlockKatia();
+                UnlockSerre();
                 break;
             case 3:
-                UnlockSerre();
+                UnlockKatia();
                 break;
             case 4:
                 UnlockMotherRoom();
@@ -35,8 +37,25 @@ public class SaveSystem : MonoBehaviour
                 UnlockStart();
                 break;
         }
-        
+
     }
+
+    public void Revive()
+    {
+        revive = true;
+        if (progress > 0)
+        {
+            FindObjectOfType<PlayerManager>().transform.position = TpRevive.transform.position;
+            FindObjectOfType<GhostManager>().transform.position = new Vector2(TpRevive.transform.position.x +1, TpRevive.transform.position.y);
+
+        }
+        else
+        {
+            FindObjectOfType<PlayerManager>().transform.position = TpRevive.transform.position;
+        }
+        LoadProgress();
+    }
+
     private void UnlockStart()
     {
         FindObjectOfType<StoryGame>().START = false;
@@ -57,12 +76,31 @@ public class SaveSystem : MonoBehaviour
         FindObjectOfType<StoryGame>().Lockpick = false;
         //bibli
         FindObjectOfType<StoryGame>().LivreRituel = false;
-
+        //door
         FindObjectOfType<StoryGame>().DoorToSerre = false;
         FindObjectOfType<StoryGame>().DoorToBibli = false;
         FindObjectOfType<StoryGame>().DoorToMother = false;
         FindObjectOfType<StoryGame>().DoorToSecreteCave = false;
-
+        foreach (ObjectsInteractable trigger in triggers)
+        {
+            trigger.isReadyForCinematic = true;
+        }
+        if (revive)
+        {
+            triggers[0].isReadyForCinematic = true;
+            triggers[0].HasTalked = false;
+            triggers[1].isReadyForCinematic = false;
+            revive = false;
+        }
+        else
+        {
+            triggers[0].isReadyForCinematic = false;
+            triggers[1].isReadyForCinematic = true;
+        }
+        triggers[4].isReadyForCinematic = false;
+        triggers[6].isReadyForCinematic = false;
+        triggers[7].isReadyForCinematic = false;
+        triggers[8].isReadyForCinematic = false;
         FindObjectOfType<GameManager>().openStep();
     }
     private void UnlockHonoria()
@@ -70,19 +108,10 @@ public class SaveSystem : MonoBehaviour
         UnlockStart();
         FindObjectOfType<StoryGame>().START = true;
         FindObjectOfType<StoryGame>().CollierKatia = true;
-        //trigger cin salon
-        //trigger cin before room 
-        //trigger cin room 
 
-        FindObjectOfType<GameManager>().openStep();
-    }
-    private void UnlockKatia()
-    {
-        UnlockHonoria();
-        FindObjectOfType<StoryGame>().coffre = true;
-        //trigger cin coffre
-
-        FindObjectOfType<StoryGame>().DoorToMother = true;
+        triggers[1].isReadyForCinematic = false;//trigger cin salon
+        triggers[2].isReadyForCinematic = false;//trigger cin before room 
+        triggers[3].isReadyForCinematic = false;//trigger cin Hroom
 
         FindObjectOfType<GameManager>().openStep();
     }
@@ -91,7 +120,18 @@ public class SaveSystem : MonoBehaviour
         UnlockHonoria();
         FindObjectOfType<StoryGame>().BolRituel = true;
         FindObjectOfType<StoryGame>().dague = true;
-        //trigger cin verre 
+        triggers[4].isReadyForCinematic = false;//cinCouloirUp
+        triggers[5].isReadyForCinematic = false;//Verre
+
+        FindObjectOfType<GameManager>().openStep();
+    }
+    private void UnlockKatia()
+    {
+        UnlockSerre();
+        FindObjectOfType<StoryGame>().coffre = true;
+        //trigger cin coffre
+
+        FindObjectOfType<StoryGame>().DoorToMother = true;
 
         FindObjectOfType<GameManager>().openStep();
     }
@@ -105,24 +145,28 @@ public class SaveSystem : MonoBehaviour
 
         FindObjectOfType<StoryGame>().DoorToBibli = true;
         FindObjectOfType<StoryGame>().DoorToSecreteCave = false;
-
+        triggers[6].isReadyForCinematic = false;//cinAfterCoffre
+        triggers[7].isReadyForCinematic = false;//Secretaire
+        triggers[8].isReadyForCinematic = false;//Brosse
         FindObjectOfType<GameManager>().openStep();
     }
     private void UnlockBibli()
     {
         UnlockMotherRoom();
         FindObjectOfType<StoryGame>().LivreRituel = true;
-        //trigger cin enter
+        for (int i = 9; i < 16; i++)
+        {
+            triggers[i].isReadyForCinematic = false;//Bibli
+        }
 
         FindObjectOfType<GameManager>().openStep();
     }
     private void UnlockSecreteCave()
     {
         UnlockBibli();
-        //trigger cin before take trappe
-        //trigger cin enter
-        //trigger cin drap
-        //trigger cin bougie
+        triggers[16].isReadyForCinematic = false;//trigger cin in trappe
+        triggers[17].isReadyForCinematic = false;//trigger cin drap
+        triggers[18].isReadyForCinematic = false;//trigger cin bougie
 
         FindObjectOfType<GameManager>().openStep();
     }
