@@ -12,6 +12,7 @@ public class DarkJayZ : MonoBehaviour
     public GameObject CurrentBubbleJayZ;
     public GameObject BloodJayZ;
     public GameObject Air;
+    public GameObject TpEnd;
 
     private PlayerManager playerManager;
     private GhostManager ghostManager;
@@ -43,18 +44,18 @@ public class DarkJayZ : MonoBehaviour
 
     private void Awake()
     {
-      FindObjectOfType<SoundManager>().SoundBoss();
+        FindObjectOfType<SoundManager>().SoundBoss();
     }
     void Update()
     {
-            
-      
+
+
 
         CheckHealth();
 
         NbOfCross = 3 * HurtState;
 
-        if (playerManager.isDead || !Victory)
+        if (!playerManager.isDead && !Victory)
         {
             switch (BossState)
             {
@@ -78,9 +79,12 @@ public class DarkJayZ : MonoBehaviour
 
     void CheckHealth()
     {
-        if (HurtState > 4)
+        if (HurtState >= 4)
         {
             Victory = true;
+            TpEnd.SetActive(true);
+            FindObjectOfType<PlayerManager>().transform.position = new Vector2(TpEnd.transform.position.x, transform.position.y-3);
+            FindObjectOfType<GhostManager>().transform.position = new Vector2(TpEnd.transform.position.x+1, transform.position.y - 4);
             FindObjectOfType<Achievement>().UnlockBoss();
             FindObjectOfType<SoundManager>().CinMusic();
         }
@@ -120,7 +124,7 @@ public class DarkJayZ : MonoBehaviour
 
     public void JayZsChilling()
     {
-      
+
         if (CurrentBubbleJayZ != null)
         {
             t = 0f;
@@ -130,7 +134,7 @@ public class DarkJayZ : MonoBehaviour
                 Instantiate(BloodJayZ, new Vector3(Random.Range(-55, -35), Random.Range(121, 136), 1), Quaternion.identity);
             }
             Debug.Log("me now");
-            //        Timer = TimerDuration * 3;
+            Timer = TimerDuration * 3;
             Player.GetComponent<BoxCollider2D>().enabled = true;
             Player.GetComponentInChildren<SpriteRenderer>().sortingOrder = 0;
             Debug.Log("ahaha ok kill me now");
@@ -141,19 +145,19 @@ public class DarkJayZ : MonoBehaviour
             Destroy(CurrentBubbleJayZ);
             CurrentBubbleJayZ = null;
         }
-        else
+        else if (!Victory && CurrentBubbleJayZ == null)
         {
-            BossState = State.Cross;
+            if (Timer >= 0)
+            {
+                Timer -= Time.deltaTime;
+            }
+            else
+            {
+                BossState = State.Cross;
+
+            }
         }
- 
-        //if (Timer >= 0)
-        //{
-        //    Timer -= Time.deltaTime;
-        //}
-        //else
-        //{
-            
-        //}
+
     }
 
     float TB;
@@ -176,7 +180,7 @@ public class DarkJayZ : MonoBehaviour
             }
             else
             {
-              
+
                 StartCoroutine(GameOver());
             }
             Air.GetComponent<Image>().color = Color.Lerp(new Color(255, 255, 255, 0), new Color(255, 255, 255, 1), TB);

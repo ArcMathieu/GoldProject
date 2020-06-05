@@ -41,7 +41,7 @@ public class Tp : MonoBehaviour
                             once = false;
                             FindObjectOfType<Achievement>().UnlockJillWouldBeProud();
                         }
-                        ghost.transform.position = new Vector3(collision.transform.position.x +0.5f, collision.transform.position.y + 0.5f, 0);
+                        ghost.transform.position = new Vector2(collision.transform.position.x +0.5f, collision.transform.position.y + 0.5f);
                     //}
                     try
                     {

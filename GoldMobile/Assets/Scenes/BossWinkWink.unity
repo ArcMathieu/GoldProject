@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -11547,6 +11547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCinematicPlaying: 1
   isFightBoss: 0
+  MusicChanged: 0
   musique:
   - name: Main_Theme
     clip: {fileID: 8300000, guid: 9dad10d96b9a6cf4bb72aa8673c5db05, type: 3}
@@ -11604,6 +11605,7 @@ MonoBehaviour:
     volume: 1
     loop: 0
     source: {fileID: 0}
+  AudioSourceSFX: {fileID: 0}
 --- !u!95 &320916828
 Animator:
   serializedVersion: 3
@@ -16856,7 +16858,7 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 7.5, y: 5.5}
       - {x: -6.8, y: 5.5}
-      - {x: -7.5, y: -8.7}
+      - {x: -6.8, y: -8.7}
       - {x: 7.5, y: -8.7}
 --- !u!114 &488426537
 MonoBehaviour:
@@ -27773,7 +27775,7 @@ MonoBehaviour:
   TimerDuration: 1
   distanceDetect: 15
   BloodPos: {fileID: 103103434}
-  detected: 0
+  Victory: 0
   HurtState: 1
   NbOfCross: 3
   BossState: 0

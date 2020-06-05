@@ -77,4 +77,10 @@ public class StoryGame : MonoBehaviour
             FindObjectOfType<SaveSystem>().Revive();
     }
 
+    public void load1(int number)
+    {
+        FindObjectOfType<SaveSystem>().progress = number;
+        FindObjectOfType<SaveSystem>().Revive();
+    }
+
 }

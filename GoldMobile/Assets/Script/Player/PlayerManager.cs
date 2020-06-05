@@ -92,7 +92,7 @@ public class PlayerManager : MonoBehaviour
     float t;
     void FixedUpdate()
     {
-
+        transform.position = new Vector3(transform.position.x, transform.position.y, 5);
         if (isDead == true)
         {
                t += 0.3f * Time.deltaTime;

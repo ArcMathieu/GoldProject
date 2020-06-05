@@ -44,6 +44,7 @@ public class GhostManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        transform.position = new Vector3(transform.position.x, transform.position.y, 5);
         switch (GhostState)
         {
             case State.CONTROLLED:
@@ -90,7 +91,7 @@ public class GhostManager : MonoBehaviour
     public void Controlled()
     {
         distance = Vector2.Distance(Player1.transform.position, transform.position);
-    
+        
         if (distance > minDistance)
         {
             rb.MovePosition(Vector2.MoveTowards(transform.position, MyPlayer.transform.position, speed * Time.deltaTime));

@@ -6,6 +6,8 @@ public class Room : MonoBehaviour
 {
     public int layerRoom = 17;
     public string CurrentTag;
+    public bool Boss;
+    public GameObject darkJZ;
 
     // Use this for initialization
     void Start()
@@ -22,8 +24,13 @@ public class Room : MonoBehaviour
             //Debug.Log(other.gameObject.name);
             MainCamera.Instance.RoomEnter(this);
             //Debug.Log(other.gameObject.name);
- //           FindObjectOfType<GameManager>().Saving();
-//            FindObjectOfType<SaveSystem>().Save();
+            FindObjectOfType<GameManager>().Saving();
+            FindObjectOfType<SaveSystem>().Save();
+            if (Boss)
+            {
+                darkJZ.SetActive(true);
+                Debug.Log("boss");
+            }
             ActivateEnemies();
         }
     }
@@ -41,6 +48,11 @@ public class Room : MonoBehaviour
     private void ActivateEnemies()
     {
         //Debug.Log("isEntitiesActivated");
+        if (CurrentTag == "Boss")
+        {
+            FindObjectOfType<DarkJayZ>().gameObject.SetActive(true);
+            Debug.Log("boss");
+        }
     }
 
     private void DesactivateEnemies()

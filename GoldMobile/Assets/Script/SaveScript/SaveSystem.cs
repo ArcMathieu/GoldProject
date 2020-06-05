@@ -8,6 +8,7 @@ public class SaveSystem : MonoBehaviour
     public ObjectsInteractable[] triggers;
     public List<GameObject> ItemToDelete;
     public GameObject TpRevive;
+    public GameObject TpBoss;
     private bool revive = false;
 
     public void Save()
@@ -49,6 +50,9 @@ public class SaveSystem : MonoBehaviour
             case 6:
                 UnlockSecreteCave();
                 break;
+            case 7:
+                GoBoss();
+                break;
             default:
                 UnlockStart();
                 break;
@@ -61,7 +65,7 @@ public class SaveSystem : MonoBehaviour
         revive = true;
         if (progress > 0)
         {
-            FindObjectOfType<PlayerManager>().transform.position = TpRevive.transform.position;
+            FindObjectOfType<PlayerManager>().transform.position = new Vector2(TpRevive.transform.position.x, TpRevive.transform.position.y);
             FindObjectOfType<GhostManager>().transform.position = new Vector2(TpRevive.transform.position.x +1, TpRevive.transform.position.y);
 
         }
@@ -209,8 +213,15 @@ public class SaveSystem : MonoBehaviour
         triggers[16].isReadyForCinematic = false;//trigger cin in trappe
         triggers[17].isReadyForCinematic = false;//trigger cin drap
         triggers[18].isReadyForCinematic = false;//trigger cin bougie
-
+        
         FindObjectOfType<GameManager>().openStep();
+    }
+    private void GoBoss()
+    {
+        UnlockSecreteCave();
+        FindObjectOfType<GameManager>().openStep();
+        FindObjectOfType<PlayerManager>().transform.position = new Vector2(TpBoss.transform.position.x + 1, TpBoss.transform.position.y);
+        FindObjectOfType<GhostManager>().transform.position = new Vector2(TpBoss.transform.position.x, TpBoss.transform.position.y - 1);
     }
 }
 
