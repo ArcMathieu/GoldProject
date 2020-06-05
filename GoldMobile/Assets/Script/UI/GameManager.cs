@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public GameObject ghost;
     public bool controleP1 = false;
+    public bool Shadow = false;
 
     public StoryGame storyManager;
     public PlayerManager player;
@@ -212,8 +213,17 @@ public class GameManager : MonoBehaviour
                 }
                 if (storyManager.LivreRituel && storyManager.BolRituel && storyManager.dague)
                 {
-                    Debug.Log("vous avez les 3 objets du rituel");
-                    CineEnding.isReadyForCinematic = true;
+                    //if (Shadow)
+                    //{
+                    //    Debug.Log("INSHADOW");
+                    //    CineEnding.isReadyForCinematic = false;
+                    //}
+                    //else
+                    //{
+                    //    Debug.Log("vous avez les 3 objets du rituel");
+                    //}
+                        CineEnding.isReadyForCinematic = true;
+                    
                 }
 
             }

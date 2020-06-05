@@ -15,6 +15,8 @@ public class ObjectsInteractable : MonoBehaviour
     private bool notFirstTalkG = false;
     //private bool endQuest = false;
     public bool isPickable = false;
+    public bool isLastCin = false;
+    public GameObject TpBoss;
 
     //public GhostManager ghost;
     public DialogueData[] dialPlayer;
@@ -33,14 +35,6 @@ public class ObjectsInteractable : MonoBehaviour
         tdialogue = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DisplayText>();
         DoorSytem = GetComponent<CheckForKeys>();
         LockSytem = GetComponent<ActivateLock>();
-        isLastCin = false;
-    }
-
-    public bool isLastCin;
-
-    public void setBoolActive()
-    {
-        isLastCin = true;
     }
 
     public void setAction()
@@ -159,16 +153,24 @@ public class ObjectsInteractable : MonoBehaviour
 
             if (Cinematic != null && isReadyForCinematic && DoorSytem == null && !notFirstTalkP && !isTrigger)
             {
-                tdialogue.isAutomatique = true;
-                PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
-                DP.Play(Cinematic);
-                Debug.Log("hiii");
-                tdialogue.DialPass(dialPlayer[0]);
-                notFirstTalkP = true;
-                if (isPickable)
+                if (GameManager._instance.Shadow && isLastCin)
                 {
-                    Player.GetComponent<InventorySystem>().AddItem(ItemName);
-                    GameManager._instance.TakeObject(ItemName);
+                    FindObjectOfType<PlayerManager>().transform.position = new Vector2(TpBoss.transform.position.x + 1, TpBoss.transform.position.y);
+                    FindObjectOfType<GhostManager>().transform.position = new Vector2(TpBoss.transform.position.x, TpBoss.transform.position.y - 1);
+                }
+                else
+                {
+                    tdialogue.isAutomatique = true;
+                    PlayableDirector DP = GameObject.FindGameObjectWithTag("LD").GetComponent<PlayableDirector>();
+                    DP.Play(Cinematic);
+                    tdialogue.DialPass(dialPlayer[0]);
+                    notFirstTalkP = true;
+                    if (isPickable)
+                    {
+                        Player.GetComponent<InventorySystem>().AddItem(ItemName);
+                        GameManager._instance.TakeObject(ItemName);
+                    }
+
                 }
             }
             else if (Cinematic != null && !notFirstTalkP && isReadyForCinematic && DoorSytem != null && !isTrigger)

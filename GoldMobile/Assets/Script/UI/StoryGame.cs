@@ -31,7 +31,11 @@ public class StoryGame : MonoBehaviour
     //Enigme
     public bool coffre;//coffre fort de katia
 
-
+    public void CinEndingBoolean()
+    {
+        cinENDING = true;
+        FindObjectOfType<SaveSystem>().Save();
+    }
     private void Update()
     {
         if (Input.GetKeyDown("[1]"))

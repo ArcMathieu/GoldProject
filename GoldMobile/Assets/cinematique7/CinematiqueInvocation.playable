@@ -302,15 +302,15 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0
-    functionName: killmefirst
+  - time: 1.4333333
+    functionName: CinMusic
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 191.91667
-    functionName: killme
+    functionName: AmbiantMusic
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.UI;
 using UnityEngine.Experimental.Rendering.Universal;
 
 public class HonoriaZone : MonoBehaviour
@@ -9,6 +10,8 @@ public class HonoriaZone : MonoBehaviour
     public StoryGame storyManager;
     public List<GameObject> CurrentInteraction;
     public Light2D honoriaLight;
+    public int compteur;
+    //public Text textScore;
     Color32 BaseColor = new Color32(131, 219, 255, 255);
     Color32 DetectionColor = new Color32(0, 170, 255, 255);
 
@@ -43,6 +46,8 @@ public class HonoriaZone : MonoBehaviour
                         Ombre.gameObject.GetComponent<SpriteRenderer>().color = Color32.Lerp(Ombre.gameObject.GetComponent<SpriteRenderer>().color, Invisible, 0.05f);
                         if (Ombre.gameObject.GetComponent<SpriteRenderer>().color == Invisible)
                         {
+                            compteur++;
+                            //StartCoroutine(ScoreOmbres());
                             Destroy(Ombre.gameObject);
                         }
                     }
@@ -50,9 +55,16 @@ public class HonoriaZone : MonoBehaviour
             }
         }
     }
+
+    //IEnumerator ScoreOmbres()
+    //{
+    //    textScore.text = "hello"/*compteur.ToString() + "/" + Ombres.Count.ToString()*/;
+    //    yield return new WaitForSeconds(2);
+    //    textScore.text = "";
+
+    //}
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Vibration.Vibrate(100);
         //dial "je sens quelque chose"
         if (collision.gameObject.CompareTag("Interactable"))
         {
@@ -67,11 +79,13 @@ public class HonoriaZone : MonoBehaviour
             storyManager.DoorToSerre = true;
             collision.gameObject.transform.GetChild(0).gameObject.SetActive(false);
             GameManager._instance.openStep();
+            Vibration.Vibrate();
         }
 
         if (collision.gameObject.CompareTag("Ombres"))
         {
             Ombres.Add(collision.gameObject);
+            Vibration.Vibrate(200);
             collision.gameObject.GetComponent<OmbresBool>().CollidesWithHonoria = true;
         }
     }
