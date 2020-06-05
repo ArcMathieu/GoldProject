@@ -46,9 +46,9 @@ public class Achievement : MonoBehaviour
         Debug.Log("is ok ReconstructedMemory");
     }
 
-    public void UnlockApromiseMadeIsApromiseKept()
+    public void Unlockhoardingt()
     {
-        Social.ReportProgress(GPGSIds.achievement_a_promise_made_is_a_promise_kept, 100f, null);
+        Social.ReportProgress(GPGSIds.achievement_hoarding, 100f, null);
         Debug.Log("is ok ApromiseMadeIsApromiseKept");
     }
 

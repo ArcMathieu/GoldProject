@@ -8,7 +8,7 @@ public class Katia : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            FindObjectOfType<Achievement>().UnlockApromiseMadeIsApromiseKept();
+            FindObjectOfType<Achievement>().Unlockhoardingt();
         }
     }
 }
