@@ -37,7 +37,7 @@ public class InventorySystem : MonoBehaviour
 
         if (numberofitems == 11)
         {
-            FindObjectOfType<Achievement>().UnlockSyllogomania();
+            FindObjectOfType<Achievement>().UnlockCompulsiveHoarding();
         }
 
         if (numberofitemsrituel == 3)

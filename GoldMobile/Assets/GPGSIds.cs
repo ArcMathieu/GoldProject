@@ -29,14 +29,14 @@ public static class GPGSIds
         public const string achievement_the_boys_are_back_in_town = "CgkIuKrc7IwREAIQDA"; // <GPGSID>
         public const string achievement_whats_in_the_box = "CgkIuKrc7IwREAIQBw"; // <GPGSID>
         public const string achievement_neversaydie_kinda_guy = "CgkIuKrc7IwREAIQCg"; // <GPGSID>
+        public const string achievement_compulsive_hoarding = "CgkIuKrc7IwREAIQBA"; // <GPGSID>
         public const string achievement_reconstructed_memory = "CgkIuKrc7IwREAIQCA"; // <GPGSID>
         public const string achievement_lumos_maxima = "CgkIuKrc7IwREAIQBg"; // <GPGSID>
-        public const string achievement_hoarding = "CgkIuKrc7IwREAIQCQ"; // <GPGSID>
-        public const string achievement_light_em_up = "CgkIuKrc7IwREAIQDQ"; // <GPGSID>
         public const string leaderboard_41 = "CgkIuKrc7IwREAIQAA"; // <GPGSID>
-        public const string achievement_syllogomania = "CgkIuKrc7IwREAIQBA"; // <GPGSID>
+        public const string achievement_a_promise_made_is_a_promise_kept = "CgkIuKrc7IwREAIQCQ"; // <GPGSID>
         public const string achievement_notsofake_exorcist = "CgkIuKrc7IwREAIQAg"; // <GPGSID>
         public const string achievement_the_end = "CgkIuKrc7IwREAIQDg"; // <GPGSID>
+        public const string achievement_exorcism_101 = "CgkIuKrc7IwREAIQDQ"; // <GPGSID>
 
 }
 

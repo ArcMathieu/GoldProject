@@ -16,9 +16,9 @@ public class Achievement : MonoBehaviour
         Debug.Log("is ok notsofake_exorcist");
     }
 
-    public void UnlockSyllogomania()
+    public void UnlockCompulsiveHoarding()
     {
-        Social.ReportProgress(GPGSIds.achievement_syllogomania, 100f, null);
+        Social.ReportProgress(GPGSIds.achievement_compulsive_hoarding, 100f, null);
         Debug.Log("is ok Syllogomania" );
     }
 
@@ -46,9 +46,9 @@ public class Achievement : MonoBehaviour
         Debug.Log("is ok ReconstructedMemory");
     }
 
-    public void Unlockhoardingt()
+    public void UnlockApromiseMadeIsAPromiseKept()
     {
-        Social.ReportProgress(GPGSIds.achievement_hoarding, 100f, null);
+        Social.ReportProgress(GPGSIds.achievement_a_promise_made_is_a_promise_kept, 100f, null);
         Debug.Log("is ok ApromiseMadeIsApromiseKept");
     }
 
@@ -71,7 +71,7 @@ public class Achievement : MonoBehaviour
     }   
     public void UnlockShadows()
     {
-        Social.ReportProgress(GPGSIds.achievement_light_em_up, 100f, null);
+        Social.ReportProgress(GPGSIds.achievement_exorcism_101, 100f, null);
         Debug.Log("is ok LightEmUp");
     }
 
