@@ -6,6 +6,7 @@ public class SaveSystem : MonoBehaviour
 {
     public int progress;
     public ObjectsInteractable[] triggers;
+    public List<GameObject> ItemToDelete;
     public GameObject TpRevive;
     private bool revive = false;
 
@@ -74,6 +75,7 @@ public class SaveSystem : MonoBehaviour
 
     private void UnlockStart()
     {
+        //Story Bool disabled
         FindObjectOfType<StoryGame>().START = false;
         //Honoria
         FindObjectOfType<StoryGame>().CollierKatia = false;
@@ -97,6 +99,7 @@ public class SaveSystem : MonoBehaviour
         FindObjectOfType<StoryGame>().DoorToBibli = false;
         FindObjectOfType<StoryGame>().DoorToMother = false;
         FindObjectOfType<StoryGame>().DoorToSecreteCave = false;
+        //triggersCinematique enabled
         foreach (ObjectsInteractable trigger in triggers)
         {
             trigger.isReadyForCinematic = true;
@@ -106,13 +109,24 @@ public class SaveSystem : MonoBehaviour
         triggers[6].isReadyForCinematic = false;
         triggers[7].isReadyForCinematic = false;
         triggers[8].isReadyForCinematic = false;
+        //listObjectpickable disabled
+        foreach (GameObject objects in ItemToDelete)
+        {
+            objects.SetActive(true);
+        }
+        FindObjectOfType<InventorySystem>().RemoveItems();
+        //Actualise le gameManager
         FindObjectOfType<GameManager>().openStep();
     }
     private void UnlockHonoria()
     {
         UnlockStart();
         FindObjectOfType<StoryGame>().START = true;
+
         FindObjectOfType<StoryGame>().CollierKatia = true;
+        FindObjectOfType<InventorySystem>().AddItem("CollierK");
+        ItemToDelete[0].SetActive(false);
+
         if (revive)
         {
             triggers[0].isReadyForCinematic = true;
@@ -132,6 +146,13 @@ public class SaveSystem : MonoBehaviour
         UnlockHonoria();
         FindObjectOfType<StoryGame>().BolRituel = true;
         FindObjectOfType<StoryGame>().dague = true;
+        FindObjectOfType<StoryGame>().Secateur = true;
+        FindObjectOfType<InventorySystem>().AddItem("Secateur");
+        FindObjectOfType<InventorySystem>().AddItem("Recipient Rituel");
+        FindObjectOfType<InventorySystem>().AddItem("Dague Ensanglantée");
+        ItemToDelete[5].SetActive(false);
+        ItemToDelete[1].SetActive(false);
+        ItemToDelete[2].SetActive(false);
         triggers[4].isReadyForCinematic = false;//cinCouloirUp
         triggers[5].isReadyForCinematic = false;//Verre
 
@@ -141,6 +162,8 @@ public class SaveSystem : MonoBehaviour
     {
         UnlockSerre();
         FindObjectOfType<StoryGame>().coffre = true;
+        FindObjectOfType<InventorySystem>().AddItem("CleChambreParents");
+        ItemToDelete[8].SetActive(false);
         //trigger cin coffre
 
         FindObjectOfType<StoryGame>().DoorToMother = true;
@@ -152,12 +175,18 @@ public class SaveSystem : MonoBehaviour
         UnlockKatia();
         FindObjectOfType<StoryGame>().BrosseACheveux = true;
         FindObjectOfType<StoryGame>().CleSecretaire = true;
-        FindObjectOfType<StoryGame>().PageLivre = true;
+        //FindObjectOfType<StoryGame>().PageLivre = true;
         FindObjectOfType<StoryGame>().Lockpick = true;
+        FindObjectOfType<InventorySystem>().AddItem("Brosse Cheveux Honoria");
+        FindObjectOfType<InventorySystem>().AddItem("CleSecretaire");
+        //FindObjectOfType<InventorySystem>().AddItem("Pages Manquantes");
+        FindObjectOfType<InventorySystem>().AddItem("Lockpick");
+        ItemToDelete[3].SetActive(false);
+        ItemToDelete[9].SetActive(false);
 
         FindObjectOfType<StoryGame>().DoorToBibli = true;
         FindObjectOfType<StoryGame>().DoorToSecreteCave = false;
-        triggers[7].isReadyForCinematic = false;//Secretaire
+        //triggers[7].isReadyForCinematic = false;//Secretaire
         triggers[8].isReadyForCinematic = false;//Brosse
         FindObjectOfType<GameManager>().openStep();
     }
@@ -165,6 +194,8 @@ public class SaveSystem : MonoBehaviour
     {
         UnlockMotherRoom();
         FindObjectOfType<StoryGame>().LivreRituel = true;
+        FindObjectOfType<InventorySystem>().AddItem("Livre Rituel");
+        ItemToDelete[4].SetActive(false);
         for (int i = 9; i < 16; i++)
         {
             triggers[i].isReadyForCinematic = false;//Bibli

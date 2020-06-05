@@ -46,4 +46,12 @@ public class InventorySystem : MonoBehaviour
         }
     }
 
+    public void RemoveItems()
+    {
+        foreach (GameObject Item in PlayerItems)
+        {
+            Item.SetActive(false);
+        }
+    }
+
 }
