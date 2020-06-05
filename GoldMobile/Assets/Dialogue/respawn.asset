@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LesDialogues:
   - "<color=#dbc08e>Qu'est ce qu'il s'est pass\xE9 ?"
-  - Je n'arrive pas a me souvenir...
+  - "Je n'arrive pas \xE0  me souvenir..."
   - <color=#dbc08e>Nous sommes tous les deux vivants, c'est le principal ! Reprenons
     nos recherches
   LesDialoguesEnAnglais:
