@@ -111,7 +111,7 @@ public class SaveSystem : MonoBehaviour
         triggers[0].isReadyForCinematic = false;
         triggers[4].isReadyForCinematic = false;
         triggers[6].isReadyForCinematic = false;
-        triggers[7].isReadyForCinematic = false;
+        //triggers[7].isReadyForCinematic = false;
         triggers[8].isReadyForCinematic = false;
         //listObjectpickable disabled
         foreach (GameObject objects in ItemToDelete)
