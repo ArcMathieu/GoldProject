@@ -40,9 +40,16 @@ public class GameManager : MonoBehaviour
         }
         controleP1 = true;
         ChangeState();
+        
+    }
+    private void Start()
+    {
         if (DataSaveProgress.isStart)
+        {
             FindObjectOfType<SaveSystem>().Load();
-        FindObjectOfType<SaveSystem>().Revive();
+            FindObjectOfType<SaveSystem>().Revive();
+
+        }
     }
 
     public void showGhost(bool canAppears)

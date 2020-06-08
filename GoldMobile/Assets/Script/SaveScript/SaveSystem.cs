@@ -67,6 +67,7 @@ public class SaveSystem : MonoBehaviour
         {
             FindObjectOfType<PlayerManager>().transform.position = new Vector2(TpRevive.transform.position.x, TpRevive.transform.position.y);
             FindObjectOfType<GhostManager>().transform.position = new Vector2(TpRevive.transform.position.x +1, TpRevive.transform.position.y);
+            triggers[1].isTrigger = false;
 
         }
         else
