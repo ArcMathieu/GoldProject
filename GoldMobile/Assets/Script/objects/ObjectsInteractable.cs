@@ -153,7 +153,7 @@ public class ObjectsInteractable : MonoBehaviour
 
             if (Cinematic != null && isReadyForCinematic && DoorSytem == null && !notFirstTalkP && !isTrigger)
             {
-                if (GameManager._instance.Shadow && isLastCin)
+                if (GameManager._instance.BossEnd3Objects && isLastCin)
                 {
                     FindObjectOfType<PlayerManager>().transform.position = new Vector2(TpBoss.transform.position.x + 1, TpBoss.transform.position.y);
                     FindObjectOfType<GhostManager>().transform.position = new Vector2(TpBoss.transform.position.x, TpBoss.transform.position.y - 1);

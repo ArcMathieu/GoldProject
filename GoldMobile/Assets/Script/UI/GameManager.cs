@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public GameObject ghost;
     public bool controleP1 = false;
-    public bool Shadow = false;
 
     public StoryGame storyManager;
     public PlayerManager player;
@@ -23,6 +22,7 @@ public class GameManager : MonoBehaviour
     public ObjectsInteractable CinAfterTuto;
     public ObjectsInteractable cinAfterCoffre;
     public ObjectsInteractable CineEnding;
+    public bool BossEnd3Objects;
 
     public Tp[] tp;
 
@@ -44,12 +44,12 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        if (DataSaveProgress.isStart)
+       if (DataSaveProgress.isStart)
         {
             FindObjectOfType<SaveSystem>().Load();
             FindObjectOfType<SaveSystem>().Revive();
 
-        }
+        } 
     }
 
     public void showGhost(bool canAppears)
@@ -218,19 +218,13 @@ public class GameManager : MonoBehaviour
                     tp[15].precedentlyOpened = true;
                     //open secrete cave
                 }
-                if (storyManager.LivreRituel && storyManager.BolRituel && storyManager.dague)
+                if (storyManager.LivreRituel)
                 {
-                    //if (Shadow)
-                    //{
-                    //    Debug.Log("INSHADOW");
-                    //    CineEnding.isReadyForCinematic = false;
-                    //}
-                    //else
-                    //{
-                    //    Debug.Log("vous avez les 3 objets du rituel");
-                    //}
-                        CineEnding.isReadyForCinematic = true;
-                    
+                    CineEnding.isReadyForCinematic = true;
+                    if (storyManager.BolRituel && storyManager.dague)
+                    {
+                        BossEnd3Objects = true;
+                    }
                 }
 
             }
