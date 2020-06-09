@@ -45,11 +45,12 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
        if (DataSaveProgress.isStart)
-        {
+       {
             FindObjectOfType<SaveSystem>().Load();
             FindObjectOfType<SaveSystem>().Revive();
 
-        } 
+       }
+        openStep();
     }
 
     public void showGhost(bool canAppears)

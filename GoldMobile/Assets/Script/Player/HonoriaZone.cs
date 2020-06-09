@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.UI;
+using TMPro;
 using UnityEngine.Experimental.Rendering.Universal;
 
 public class HonoriaZone : MonoBehaviour
@@ -11,10 +11,10 @@ public class HonoriaZone : MonoBehaviour
     public List<GameObject> CurrentInteraction;
     public Light2D honoriaLight;
     public int compteur;
-    //public Text textScore;
+    //public TextMeshPro textScore;
     Color32 BaseColor = new Color32(131, 219, 255, 255);
     Color32 DetectionColor = new Color32(0, 170, 255, 255);
-
+    private GameObject currentDoor;
     public List<GameObject> Ombres;
 
     Color Invisible = new Color32(255, 255, 255, 0);
@@ -32,28 +32,33 @@ public class HonoriaZone : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("hid");
-                    if (!Ombre.GetComponent<OmbresBool>().CollidesWithHonoria)
+                    try
                     {
-                        Ombre.GetComponent<SpriteRenderer>().color = Color32.Lerp(Ombre.gameObject.GetComponent<SpriteRenderer>().color, new Color32(255, 255, 255, 1), 0.05f);
-                        if (Ombre.gameObject.GetComponent<SpriteRenderer>().color == Invisible)
+                        if (!Ombre.GetComponent<OmbresBool>().CollidesWithHonoria)
                         {
-                            Destroy(Ombre.gameObject);
+                            Ombre.GetComponent<SpriteRenderer>().color = Color32.Lerp(Ombre.gameObject.GetComponent<SpriteRenderer>().color, new Color32(255, 255, 255, 1), 0.05f);
+                            if (Ombre.gameObject.GetComponent<SpriteRenderer>().color == Invisible)
+                            {
+                                Destroy(Ombre.gameObject);
+                            }
                         }
-                    }
-                    else
-                    {
-                        Ombre.gameObject.GetComponent<SpriteRenderer>().color = Color32.Lerp(Ombre.gameObject.GetComponent<SpriteRenderer>().color, Invisible, 0.05f);
-                        if (Ombre.gameObject.GetComponent<SpriteRenderer>().color == Invisible)
+                        else
                         {
-                            compteur++;
-                            //StartCoroutine(ScoreOmbres());
-                            Destroy(Ombre.gameObject);
+                            Ombre.gameObject.GetComponent<SpriteRenderer>().color = Color32.Lerp(Ombre.gameObject.GetComponent<SpriteRenderer>().color, Invisible, 0.05f);
+                            if (Ombre.gameObject.GetComponent<SpriteRenderer>().color == Invisible)
+                            {
+                                compteur++;
+                                //StartCoroutine(ScoreOmbres());
+                                Destroy(Ombre.gameObject);
+                            }
                         }
+
                     }
+                    catch { }
                 }
             }
         }
+
     }
 
     //IEnumerator ScoreOmbres()
@@ -79,6 +84,7 @@ public class HonoriaZone : MonoBehaviour
             storyManager.DoorToSerre = true;
             collision.gameObject.transform.GetChild(0).gameObject.SetActive(false);
             GameManager._instance.openStep();
+            //Spedoor = true;
             Vibration.Vibrate();
         }
 

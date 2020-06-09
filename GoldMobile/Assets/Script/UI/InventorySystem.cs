@@ -20,7 +20,10 @@ public class InventorySystem : MonoBehaviour
 
     public void AddItem(string nameItem)
     {
-        Items.Add(nameItem);
+        if (nameItem != "Bible")
+        {
+            Items.Add(nameItem);
+        }
          
         foreach (GameObject Item in PlayerItems)
         {
@@ -28,7 +31,7 @@ public class InventorySystem : MonoBehaviour
             {
                 Item.SetActive(true);
                 numberofitems++;
-                if(nameItem == PlayerItems[0].name || nameItem == PlayerItems[1].name || nameItem == PlayerItems[2].name)
+                if(nameItem == PlayerItems[4].name || nameItem == PlayerItems[9].name || nameItem == PlayerItems[10].name)
                 {
                     numberofitemsrituel++;
                 }
