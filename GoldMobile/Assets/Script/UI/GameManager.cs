@@ -42,10 +42,8 @@ public class GameManager : MonoBehaviour
         ChangeState();
 
     }
-    public bool test;
     private void Start()
     {
-        test = DataSaveProgress.isStart;
         if (DataSaveProgress.isStart)
         {
             FindObjectOfType<SaveSystem>().Load();
