@@ -21,13 +21,14 @@ MonoBehaviour:
   - "<color=red>Incontournable pour faire de votre passion votre m\xE9tier,"
   - "<color=red>Mais que cet endroit soit aussi capable de vous en d\xE9go\xFBter."
   LesDialoguesEnAnglais:
-  - <color=red>
-  - <color=red>
-  - <color=red>
-  - <color=red>
-  - <color=red>
-  - <color=red>
-  - <color=red>
+  - <color=red>Finaly... You...
+  - '<color=red>Uncovered me... :smirk: Now...'
+  - <color=red>Can you find out The Message?
+  - '<color=red>Kill me? '
+  - <color=red>I wasn't thinking about that, but I guess it's tempting.
+  - <color=red>I would beat something that looks like me, too.
+  - <color=red>Maybe another time. Anyways, you have the past of a little ghost to
+    find out.
   SpeedDialogues:
   - 0.08
   - 0.08
