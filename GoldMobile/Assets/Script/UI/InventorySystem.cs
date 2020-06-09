@@ -10,13 +10,13 @@ public class InventorySystem : MonoBehaviour
     private int numberofitemsrituel;
 
     // Update is called once per frame
-    void Start()
-    {
-    foreach(GameObject Item in PlayerItems)
-        {
-            Item.SetActive(false);
-        }
-    }
+    //void Start()
+    //{
+    //    foreach(GameObject Item in PlayerItems)
+    //    {
+    //        Item.SetActive(false);
+    //    }
+    //}
 
     public void AddItem(string nameItem)
     {

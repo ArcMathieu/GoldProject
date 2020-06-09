@@ -36571,6 +36571,7 @@ MonoBehaviour:
   progress: 0
   getObjRit1: 0
   getObjRit2: 0
+  getObjRit3: 0
   triggers:
   - {fileID: 287479689}
   - {fileID: 1777146207}
@@ -66136,7 +66137,7 @@ MonoBehaviour:
   ghost: {fileID: 1969605184}
   canPass: 1
   precedentlyOpened: 0
-  secreteTrap: 0
+  secreteTrap: 1
   honoriaDoor: 0
   tdialogue: {fileID: 1829114194}
   dialPlayer: {fileID: 11400000, guid: 3966222baf7415742a13c1c3e9ad477b, type: 2}

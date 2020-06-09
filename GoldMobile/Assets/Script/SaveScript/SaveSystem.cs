@@ -74,6 +74,7 @@ public class SaveSystem : MonoBehaviour
     public void Revive()
     {
         revive = true;
+        //Load();
         if (progress > 0)
         {
             FindObjectOfType<PlayerManager>().transform.position = new Vector2(TpRevive.transform.position.x, TpRevive.transform.position.y);
