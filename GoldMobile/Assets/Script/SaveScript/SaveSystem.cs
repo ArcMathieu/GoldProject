@@ -7,6 +7,7 @@ public class SaveSystem : MonoBehaviour
     public int progress;
     public bool getObjRit1;
     public bool getObjRit2;
+    public bool getObjRit3;
     public ObjectsInteractable[] triggers;
     public List<GameObject> ItemToDelete;
     public GameObject TpRevive;
@@ -22,6 +23,7 @@ public class SaveSystem : MonoBehaviour
         progress = 0;
         getObjRit1 = false;
         getObjRit2 = false;
+        getObjRit3 = false;
         LoadProgress();
         DataSaveProgress.SaveProgression(this);
         Debug.Log("restart");
@@ -32,6 +34,7 @@ public class SaveSystem : MonoBehaviour
         progress = data.progress;
         getObjRit1 = data.getObjRit1;
         getObjRit2 = data.getObjRit2;
+        getObjRit3 = data.getObjRit3;
     }
     public void LoadProgress()
     {
@@ -81,6 +84,7 @@ public class SaveSystem : MonoBehaviour
         {
             getObjRit1 = false;
             getObjRit2 = false;
+            getObjRit3 = false;
             triggers[0].isReadyForCinematic = false;
             FindObjectOfType<PlayerManager>().transform.position = new Vector2(TpRevive.transform.position.x, TpRevive.transform.position.y+2);
         }
@@ -214,9 +218,12 @@ public class SaveSystem : MonoBehaviour
     private void UnlockBibli()
     {
         UnlockMotherRoom();
-        FindObjectOfType<StoryGame>().LivreRituel = true;
-        FindObjectOfType<InventorySystem>().AddItem("Livre Rituel");
-        ItemToDelete[4].SetActive(false);
+        if (getObjRit3)
+        {
+            FindObjectOfType<StoryGame>().LivreRituel = true;
+            FindObjectOfType<InventorySystem>().AddItem("Livre Rituel");
+            ItemToDelete[4].SetActive(false);
+        }
         for (int i = 9; i < 16; i++)
         {
             triggers[i].isReadyForCinematic = false;//Bibli

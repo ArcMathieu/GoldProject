@@ -134,8 +134,9 @@ public class GameManager : MonoBehaviour
         }
         if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[9].name)
         {
-            //Brosse
+            //livre rituel
             storyManager.LivreRituel = true;
+            FindObjectOfType<SaveSystem>().getObjRit3 = true;
         }
         if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[10].name)
         {
