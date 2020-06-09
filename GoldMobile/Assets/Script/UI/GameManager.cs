@@ -40,26 +40,34 @@ public class GameManager : MonoBehaviour
         }
         controleP1 = true;
         ChangeState();
-        
+
     }
+    public bool test;
     private void Start()
     {
-       if (DataSaveProgress.isStart)
-       {
+        test = DataSaveProgress.isStart;
+        if (DataSaveProgress.isStart)
+        {
             FindObjectOfType<SaveSystem>().Load();
             FindObjectOfType<SaveSystem>().Revive();
 
-       }
+        }
+        else
+        {
+            FindObjectOfType<SaveSystem>().Reestart();
+        }
         openStep();
+
     }
 
     public void showGhost(bool canAppears)
     {
         if (canAppears)
         {
-            ghost.SetActive(true);  
+            ghost.SetActive(true);
 
-        }else ghost.SetActive(false);
+        }
+        else ghost.SetActive(false);
     }
 
     public void launchCorout(float time)
@@ -100,6 +108,7 @@ public class GameManager : MonoBehaviour
         {
             //RecipRituel
             storyManager.BolRituel = true;
+            FindObjectOfType<SaveSystem>().getObjRit2 = true;
         }
         if (ItemName == Player.GetComponent<InventorySystem>().PlayerItems[5].name)
         {
@@ -132,25 +141,41 @@ public class GameManager : MonoBehaviour
         {
             //dague
             storyManager.dague = true;
+            FindObjectOfType<SaveSystem>().getObjRit1 = true;
         }
         openStep();
     }
 
     public void Saving()
     {
-        if (storyManager.CollierKatia)
-            FindObjectOfType<SaveSystem>().progress = 1;
-        if (storyManager.BolRituel && storyManager.dague)
-            FindObjectOfType<SaveSystem>().progress = 2;
-        if (storyManager.DoorToMother)
-            FindObjectOfType<SaveSystem>().progress = 3;
-        if (storyManager.BrosseACheveux)
-            FindObjectOfType<SaveSystem>().progress = 4;
-        if (storyManager.DoorToSecreteCave)
-            FindObjectOfType<SaveSystem>().progress = 5;
-        if (storyManager.cinENDING)
-            FindObjectOfType<SaveSystem>().progress = 6;
 
+        if (storyManager.CollierKatia)
+        {
+            FindObjectOfType<SaveSystem>().progress = 1;
+            //if ()
+            //{
+            //    FindObjectOfType<SaveSystem>().progress = 2;
+                if (storyManager.DoorToMother)
+                {
+                    FindObjectOfType<SaveSystem>().progress = 3;
+                    if (storyManager.BrosseACheveux)
+                    {
+                        FindObjectOfType<SaveSystem>().progress = 4;
+                        if (storyManager.DoorToSecreteCave)
+                        {
+                            FindObjectOfType<SaveSystem>().progress = 5;
+                            if (storyManager.cinENDING)
+                            {
+                                FindObjectOfType<SaveSystem>().progress = 6;
+                            }
+                        }
+                    }
+                }
+            //}
+        }
+        else FindObjectOfType<SaveSystem>().progress = 0;
+
+        FindObjectOfType<SaveSystem>().Save();
     }
 
     public void openStep()
@@ -170,18 +195,20 @@ public class GameManager : MonoBehaviour
                 }
             }
             tp[5].precedentlyOpened = false;
-        } else {
+        }
+        else
+        {
             //main hall
             if (storyManager.CollierKatia)
             {
-                
+
                 for (int i = 5; i < 8; i++)
                 {
                     tp[i].precedentlyOpened = true;
 
                 }
                 //FindObjectOfType<Lamp>().lightOn = false;
-                
+
             }
 
             if (storyManager.DoorToSerre)
@@ -244,7 +271,7 @@ public class GameManager : MonoBehaviour
 
     public void ChangeState()
     {
-        switch (controleP1)   
+        switch (controleP1)
         {
             case true:
                 player.PlayerState = PlayerManager.State.MOVABLE;
@@ -267,7 +294,8 @@ public class GameManager : MonoBehaviour
         {
             CamP1.gameObject.SetActive(true);
             CamP2.gameObject.SetActive(false);
-        }else if (selectPlayer)
+        }
+        else if (selectPlayer)
         {
             CamP1.gameObject.SetActive(false);
             CamP2.gameObject.SetActive(true);

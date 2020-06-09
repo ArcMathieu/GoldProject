@@ -5,6 +5,8 @@ using UnityEngine;
 public class SaveSystem : MonoBehaviour
 {
     public int progress;
+    public bool getObjRit1;
+    public bool getObjRit2;
     public ObjectsInteractable[] triggers;
     public List<GameObject> ItemToDelete;
     public GameObject TpRevive;
@@ -18,12 +20,18 @@ public class SaveSystem : MonoBehaviour
     public void Reestart()
     {
         progress = 0;
+        getObjRit1 = false;
+        getObjRit2 = false;
+        LoadProgress();
         DataSaveProgress.SaveProgression(this);
+        Debug.Log("restart");
     }
     public void Load()
     {
         DataSave data = DataSaveProgress.LoadSave();
         progress = data.progress;
+        getObjRit1 = data.getObjRit1;
+        getObjRit2 = data.getObjRit2;
     }
     public void LoadProgress()
     {
@@ -71,6 +79,8 @@ public class SaveSystem : MonoBehaviour
         }
         else
         {
+            getObjRit1 = false;
+            getObjRit2 = false;
             triggers[0].isReadyForCinematic = false;
             FindObjectOfType<PlayerManager>().transform.position = new Vector2(TpRevive.transform.position.x, TpRevive.transform.position.y+2);
         }
@@ -103,6 +113,7 @@ public class SaveSystem : MonoBehaviour
         FindObjectOfType<StoryGame>().DoorToBibli = false;
         FindObjectOfType<StoryGame>().DoorToMother = false;
         FindObjectOfType<StoryGame>().DoorToSecreteCave = false;
+        
         //triggersCinematique enabled
         foreach (ObjectsInteractable trigger in triggers)
         {
@@ -148,15 +159,21 @@ public class SaveSystem : MonoBehaviour
     private void UnlockSerre()
     {
         UnlockHonoria();
-        FindObjectOfType<StoryGame>().BolRituel = true;
-        FindObjectOfType<StoryGame>().dague = true;
+        if (getObjRit2)
+        {
+            FindObjectOfType<StoryGame>().BolRituel = true;
+            FindObjectOfType<InventorySystem>().AddItem("Recipient Rituel");
+            ItemToDelete[2].SetActive(false);
+        }
+        if (getObjRit1)
+        {
+            FindObjectOfType<StoryGame>().dague = true;
+            FindObjectOfType<InventorySystem>().AddItem("Dague Ensanglantée");
+            ItemToDelete[1].SetActive(false);
+        }
         FindObjectOfType<StoryGame>().Secateur = true;
         FindObjectOfType<InventorySystem>().AddItem("Secateur");
-        FindObjectOfType<InventorySystem>().AddItem("Recipient Rituel");
-        FindObjectOfType<InventorySystem>().AddItem("Dague Ensanglantée");
         ItemToDelete[5].SetActive(false);
-        ItemToDelete[1].SetActive(false);
-        ItemToDelete[2].SetActive(false);
         triggers[4].isReadyForCinematic = false;//cinCouloirUp
         triggers[5].isReadyForCinematic = false;//Verre
 

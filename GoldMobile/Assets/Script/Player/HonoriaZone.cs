@@ -84,7 +84,6 @@ public class HonoriaZone : MonoBehaviour
             storyManager.DoorToSerre = true;
             collision.gameObject.transform.GetChild(0).gameObject.SetActive(false);
             GameManager._instance.openStep();
-            //Spedoor = true;
             Vibration.Vibrate();
         }
 

@@ -25,7 +25,7 @@ public class Room : MonoBehaviour
             MainCamera.Instance.RoomEnter(this);
             //Debug.Log(other.gameObject.name);
             FindObjectOfType<GameManager>().Saving();
-            FindObjectOfType<SaveSystem>().Save();
+            
             if (Boss)
             {
                 darkJZ.SetActive(true);

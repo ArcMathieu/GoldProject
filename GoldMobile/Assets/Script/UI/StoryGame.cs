@@ -34,7 +34,7 @@ public class StoryGame : MonoBehaviour
     public void CinEndingBoolean()
     {
         cinENDING = true;
-        FindObjectOfType<SaveSystem>().Save();
+        FindObjectOfType<GameManager>().Saving();
     }
     private void Update()
     {
