@@ -71,12 +71,14 @@ public class SoundManager : MonoBehaviour
     public void AmbiantMusic()
     {
         MusicChanged = false;
+        isFightBoss = false;
         isCinematicPlaying = false;
     }
 
     public void CinMusic()
     {
         MusicChanged = false;
+        isFightBoss = false;
         isCinematicPlaying = true;
     }
 
