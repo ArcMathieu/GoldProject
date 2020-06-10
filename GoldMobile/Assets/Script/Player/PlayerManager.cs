@@ -92,6 +92,7 @@ public class PlayerManager : MonoBehaviour
     float t;
     void FixedUpdate()
     {
+ 
         transform.position = new Vector3(transform.position.x, transform.position.y, 5);
         if (isDead == true)
         {
@@ -109,6 +110,14 @@ public class PlayerManager : MonoBehaviour
                 break;
             default:
                 break;
+        }
+
+        foreach (GameObject Inter in CurrentInteraction)
+        {
+            if (Inter.GetComponent<ObjectsInteractable>().LastCinematique && GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DisplayText>().DoneTalking)
+            {
+                FindObjectOfType<LoaderScene>().LoadingScene(2);
+            }
         }
 
     }

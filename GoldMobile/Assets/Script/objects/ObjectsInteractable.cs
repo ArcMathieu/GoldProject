@@ -144,7 +144,7 @@ public class ObjectsInteractable : MonoBehaviour
     public bool isTrigger;
 
 
-
+    public bool LastCinematique;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -165,6 +165,10 @@ public class ObjectsInteractable : MonoBehaviour
                     DP.Play(Cinematic);
                     tdialogue.DialPass(dialPlayer[0]);
                     notFirstTalkP = true;
+                    if (Cinematic.name == "CinematiqueEndingBoss" || Cinematic.name == "CinematiqueEnding")
+                    {
+                        LastCinematique = true;
+                    }
                     if (isPickable)
                     {
                         Player.GetComponent<InventorySystem>().AddItem(ItemName);

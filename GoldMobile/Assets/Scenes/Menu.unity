@@ -1806,6 +1806,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCinematicPlaying: 0
+  isFightBoss: 0
+  MusicChanged: 0
   musique:
   - name: Main_Theme
     clip: {fileID: 8300000, guid: f93a8798ff37c0f42864ebe266aee2e7, type: 3}
@@ -1813,6 +1815,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   sfx: []
+  AudioSourceSFX: {fileID: 0}
 --- !u!4 &640219047
 Transform:
   m_ObjectHideFlags: 0
