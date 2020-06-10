@@ -17,7 +17,7 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
-
+        Play("Main_Theme");
     }
 
     void Awake()

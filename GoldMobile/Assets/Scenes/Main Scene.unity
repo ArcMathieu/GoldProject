@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2231,7 +2231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60284623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -103.94489, y: 48.598328, z: -5}
+  m_LocalPosition: {x: -94.18336, y: 112.1332, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2283,7 +2283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ae32d8aed66ee45acf22cbb4542ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentRoom: {fileID: 410303753}
+  currentRoom: {fileID: 1867663141}
   confiner: {fileID: 1536784125}
   confinerGhost: {fileID: 1410782678}
 --- !u!114 &60284632
@@ -7388,7 +7388,7 @@ PlayableDirector:
     value: {fileID: 1816807893}
   - key: {fileID: 4720538623440137550, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
     value: {fileID: 0}
-  - key: {fileID: -7013165745901986147, guid: 4ac122d875b2f9140aa5dfc723599553, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 320916828}
   - key: {fileID: 7154083718580702452, guid: d16314a5e118a8045a2def2a8a314508, type: 2}
     value: {fileID: 3129684}
@@ -9790,7 +9790,6 @@ MonoBehaviour:
   - {fileID: 2074306021}
   - {fileID: 230471031}
   playerSpeed: 4
-  test: 0
 --- !u!4 &249889313
 Transform:
   m_ObjectHideFlags: 0
@@ -45665,7 +45664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ConfineMode: 0
   m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 410303752}
+  m_BoundingShape2D: {fileID: 1867663140}
   m_ConfineScreenEdges: 1
   m_Damping: 0
 --- !u!114 &1410782679
@@ -49610,7 +49609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ConfineMode: 0
   m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 410303752}
+  m_BoundingShape2D: {fileID: 1867663140}
   m_ConfineScreenEdges: 1
   m_Damping: 0
 --- !u!114 &1536784126
