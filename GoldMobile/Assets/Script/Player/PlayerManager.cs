@@ -114,10 +114,15 @@ public class PlayerManager : MonoBehaviour
 
         foreach (GameObject Inter in CurrentInteraction)
         {
-            if (Inter.GetComponent<ObjectsInteractable>().LastCinematique && GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DisplayText>().DoneTalking)
+            try
             {
-                FindObjectOfType<LoaderScene>().LoadingScene(2);
+                if (Inter.GetComponent<ObjectsInteractable>().LastCinematique && GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DisplayText>().DoneTalking)
+                {
+                    FindObjectOfType<LoaderScene>().LoadingScene(2);
+                }
             }
+            catch { }
+            
         }
 
     }

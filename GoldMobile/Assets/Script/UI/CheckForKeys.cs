@@ -25,12 +25,12 @@ public class CheckForKeys : MonoBehaviour
                 Player.GetComponent<InventorySystem>().PlayerItems[i].SetActive(false);
                 ObjectsInter.tdialogue.DialPass(ObjectsInter.dialPlayer[0]);
                 ObjectsInter.tdialogue.NextDial();
-    //        
+
                 if (DesiredKey == "Secateur")
                 {
                     FindObjectOfType<SoundManager>().PlaySfx("Cut");
                 }
-            }
+            }   
         }
     }
     //private void actionDoorCol(Collision2D collision)

@@ -16,7 +16,7 @@ public class Tp : MonoBehaviour
     public DialogueData dialPlayer;
     public StoryGame storyManager;
     public bool Stairs;
-
+    public bool demo;
     private bool once = true;
     private void Start()
     {
@@ -25,13 +25,22 @@ public class Tp : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
-        {           
+        {
             if (precedentlyOpened){
                 if (canPass)
                 {
                     if (!Stairs)
                     {
                         FindObjectOfType<SoundManager>().PlaySfx("Doors");
+                        if (demo)
+                        {
+                            try
+                            {
+                                FindObjectOfType<PlayerManager>().GetComponent<InventorySystem>().PlayerItems[1].SetActive(false);
+
+                            }
+                            catch { }
+                        }
                     }
                     collision.transform.position = new Vector2(tpTo.transform.position.x, tpTo.transform.position.y);
                     //if (ghostFollowing)

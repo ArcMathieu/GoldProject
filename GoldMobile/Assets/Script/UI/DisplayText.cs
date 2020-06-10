@@ -128,7 +128,8 @@ public class DisplayText : MonoBehaviour
                             IEnumerator waitForDestroy()
                             {
                                 yield return new WaitForSeconds(0.2f);
-                                Destroy(inter.gameObject);
+                                //Destroy(inter.gameObject);
+                                inter.gameObject.SetActive(false);
                             }
                         }
                     }

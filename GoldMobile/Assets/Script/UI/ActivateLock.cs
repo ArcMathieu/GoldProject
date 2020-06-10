@@ -19,7 +19,7 @@ public class ActivateLock : MonoBehaviour
         {
             Clee.SetActive(true);
             Clee.GetComponent<ObjectsInteractable>().isReadyForCinematic = true;
-           Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
     public  void Action(GameObject Player)
